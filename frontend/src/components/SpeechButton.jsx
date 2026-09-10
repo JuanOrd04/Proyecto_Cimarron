@@ -124,7 +124,7 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
 
   // Calcular barras de audio dinámicas
   const bars = Array.from({ length: 5 }).map((_, i) => {
-    const height = Math.max(4, (micVolume / 255) * 24 * (1 - (Math.abs(2 - i) * 0.2)));
+    const height = Math.max(6, (micVolume / 255) * 32 * (1 - (Math.abs(2 - i) * 0.2)));
     return height;
   });
 
@@ -146,7 +146,7 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
           className="send-button"
           title="Enviar mensaje"
         >
-          <Send size={20} />
+          <Send size={26} />
         </button>
 
         {supportsSpeech && (
@@ -164,7 +164,7 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
                 ))}
               </div>
             ) : (
-              <><Mic size={22} /><span className="mic-label">Hablar</span></>
+              <><Mic size={28} /><span className="mic-label">Hablar</span></>
             )}
           </button>
         )}

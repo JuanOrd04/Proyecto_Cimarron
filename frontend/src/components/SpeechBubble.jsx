@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
 
-const SpeechBubble = ({ text, isSpeaking, isLoading }) => {
+const SpeechBubble = ({ text, isSpeaking, isLoading, isVisible = true }) => {
   const [displayedText, setDisplayedText] = useState("");
 
   useEffect(() => {
@@ -36,7 +36,7 @@ const SpeechBubble = ({ text, isSpeaking, isLoading }) => {
   }, [text, isSpeaking]);
 
   return (
-    <div className="speech-bubble-wrapper">
+    <div className={`speech-bubble-wrapper ${isVisible ? 'show' : 'hide'}`}>
       <div className={`speech-bubble glass-panel ${isSpeaking ? 'active-speaking' : ''}`}>
         <div className="speech-bubble-badge">
           <span> mascota UABC INGENIERÍA </span>

@@ -15,7 +15,12 @@
 
 body {
   font-family: var(--font-body);
-  background: var(--bg-gradient);
+  /* Logo transparente al centro, con un fondo degradado verde infinito detrás */
+  background-image: url('/logo_steam.png'), radial-gradient(circle at center, #0B3A20 0%, #031B0E 100%);
+  background-size: 450px auto, cover;
+  background-position: center, center;
+  background-attachment: fixed, fixed;
+  background-repeat: no-repeat, no-repeat;
   color: #FFFFFF;
   min-height: 100vh;
   overflow-x: hidden;
@@ -178,7 +183,14 @@ body {
 }
 
 /* Globo de Diálogo (Glassmorphism & Karaoke) */
-.speech-bubble-wrapper { max-width: 480px; width: 100%; position: relative; z-index: 5;}
+.speech-bubble-wrapper { 
+  max-width: 480px; width: 100%; position: relative; z-index: 5;
+  margin-top: -14rem;
+  left: -11rem;
+  transition: opacity 0.3s ease, transform 0.3s cubic-bezier(0.4, 0, 0.2, 1), visibility 0.3s;
+}
+.speech-bubble-wrapper.hide { opacity: 0; transform: scale(0.9); visibility: hidden; pointer-events: none; }
+.speech-bubble-wrapper.show { opacity: 1; transform: scale(1); visibility: visible; pointer-events: auto; }
 .speech-bubble {
   position: relative;
   background: var(--bubble-bg);
@@ -203,7 +215,7 @@ body {
 @keyframes blink { 0%, 100% { opacity: 1; } 50% { opacity: 0; } }
 
 .speech-bubble-tail {
-  position: absolute; left: -22px; top: 40px;
+  position: absolute; left: -22px; bottom: 30px; /* Apunta a la boca del avatar */
   border-top: 15px solid transparent; border-right: 22px solid var(--uabc-gold); border-bottom: 15px solid transparent;
 }
 @media (max-width: 767px) {
@@ -223,12 +235,37 @@ body {
 
 /* Tarjetas de Preguntas 3D (Quick Questions) */
 .controls-section { display: flex; flex-direction: column; gap: 1.5rem; width: 100%; max-width: 800px; margin: 0 auto; z-index: 5;}
-.quick-questions-wrapper { padding: 1.2rem; border-radius: 20px; }
-.quick-questions-header { display: flex; align-items: center; gap: 0.5rem; font-weight: 700; font-size: 1rem; color: var(--uabc-gold-light); margin-bottom: 1rem; }
-.animate-spin-slow { animation: spin 4s linear infinite; }
+.quick-questions-wrapper { padding: 1.2rem; border-radius: 20px; transition: all 0.3s ease; }
+.quick-questions-header { 
+  display: flex; align-items: center; justify-content: space-between; 
+  font-weight: 700; font-size: 1.1rem; color: var(--uabc-gold-light); 
+  cursor: pointer; user-select: none;
+}
+.header-left { display: flex; align-items: center; gap: 0.5rem; }
+.chevron-icon { transition: transform 0.4s ease; color: var(--uabc-gold-light); }
+.chevron-icon.open { transform: rotate(-180deg); }
+
+.quick-questions-content {
+  display: grid;
+  grid-template-rows: 0fr;
+  transition: grid-template-rows 0.4s cubic-bezier(0.4, 0, 0.2, 1), opacity 0.3s ease, margin-top 0.3s ease;
+  opacity: 0;
+  margin-top: 0;
+}
+.quick-questions-content.open {
+  grid-template-rows: 1fr;
+  opacity: 1;
+  margin-top: 1rem;
+}
+.quick-questions-grid {
+  overflow: hidden;
+  min-height: 0;
+  display: grid; 
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); 
+  gap: 0.8rem; 
+}
 @keyframes spin { 100% { transform: rotate(360deg); } }
 
-.quick-questions-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 0.8rem; }
 .quick-question-card {
   display: flex; align-items: center; gap: 0.8rem;
   background: rgba(255, 255, 255, 0.1); color: #FFFFFF;
@@ -250,33 +287,33 @@ body {
 .quick-question-card:disabled { opacity: 0.5; cursor: not-allowed; }
 
 /* Speech Button y Mic Visualizer */
-.speech-button-container { padding: 1rem; border-radius: 20px; }
-.input-form { display: flex; gap: 0.6rem; align-items: center; }
+.speech-button-container { padding: 1.5rem; border-radius: 20px; }
+.input-form { display: flex; gap: 0.8rem; align-items: center; }
 .chat-text-input {
-  flex: 1; padding: 1rem 1.2rem; border-radius: 16px; border: 2px solid rgba(255,215,0,0.5);
-  background: rgba(255, 255, 255, 0.9); color: #0F172A; font-size: 1rem; font-weight: 600; outline: none;
+  flex: 1; padding: 1.2rem 1.5rem; border-radius: 16px; border: 2px solid rgba(255,215,0,0.5);
+  background: rgba(255, 255, 255, 0.9); color: #0F172A; font-size: 1.2rem; font-weight: 600; outline: none;
 }
 .chat-text-input:focus { border-color: var(--uabc-gold); background: #FFF; }
 .send-button {
   background: var(--uabc-green); color: #FFFFFF; border: 2px solid var(--uabc-gold);
-  padding: 1rem; border-radius: 16px; cursor: pointer; transition: all 0.2s ease;
+  padding: 1.2rem 1.5rem; border-radius: 16px; cursor: pointer; transition: all 0.2s ease;
 }
 .send-button:hover:not(:disabled) { background: var(--uabc-green-light); transform: scale(1.05); }
 .send-button:disabled { opacity: 0.4; cursor: not-allowed; }
 
 .mic-button {
-  display: flex; align-items: center; gap: 0.5rem;
-  background: var(--uabc-gold); color: #000; border: none; padding: 1rem 1.5rem;
-  border-radius: 16px; font-weight: 700; font-size: 1rem; cursor: pointer; transition: all 0.2s ease;
-  min-width: 140px; justify-content: center;
+  display: flex; align-items: center; gap: 0.6rem;
+  background: var(--uabc-gold); color: #000; border: none; padding: 1.2rem 1.8rem;
+  border-radius: 16px; font-weight: 700; font-size: 1.2rem; cursor: pointer; transition: all 0.2s ease;
+  min-width: 180px; justify-content: center;
 }
 .mic-button:hover:not(:disabled) { background: #FFE066; transform: scale(1.05); }
 
 .listening-active { background: #EF4444 !important; color: #FFF !important; animation: pulseRed 1.5s infinite; }
-@keyframes pulseRed { 0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6); } 70% { box-shadow: 0 0 0 12px rgba(239, 68, 68, 0); } 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
+@keyframes pulseRed { 0% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0.6); } 70% { box-shadow: 0 0 0 16px rgba(239, 68, 68, 0); } 100% { box-shadow: 0 0 0 0 rgba(239, 68, 68, 0); } }
 
-.mic-visualizer { display: flex; gap: 4px; align-items: center; height: 24px; }
-.mic-bar { width: 6px; background-color: #FFF; border-radius: 3px; transition: height 0.05s ease; }
+.mic-visualizer { display: flex; gap: 6px; align-items: center; height: 32px; }
+.mic-bar { width: 8px; background-color: #FFF; border-radius: 4px; transition: height 0.05s ease; }
 
 /* Footer */
 .app-footer { text-align: center; margin-top: 1.5rem; font-size: 0.85rem; padding: 1rem; border-radius: 16px; color: #A7F3D0; font-weight: 600; }

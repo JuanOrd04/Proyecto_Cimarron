@@ -16,6 +16,7 @@ function App() {
   const [mouthFrame, setMouthFrame] = useState(0); // 0 a 3 para 4 poses
   const [isListening, setIsListening] = useState(false);
   const [sfxEnabled, setSfxEnabled] = useState(true);
+  const [showBubble, setShowBubble] = useState(true);
 
   const audioRef = useRef(null);
   const mouthIntervalRef = useRef(null);
@@ -127,11 +128,13 @@ function App() {
             mouthFrame={mouthFrame}
             sfxEnabled={sfxEnabled}
             isThinking={isLoading || isListening}
+            onAvatarClick={() => setShowBubble(!showBubble)}
           />
           <SpeechBubble
             text={responseText}
             isSpeaking={isSpeaking}
             isLoading={isLoading}
+            isVisible={showBubble}
           />
         </main>
 
