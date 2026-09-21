@@ -13,8 +13,8 @@ const PRESET_QUESTIONS = [
   { text: "¿A qué se dedica un ingeniero?", icon: GraduationCap },
   { text: "¿Cómo se construye un puente moderno?", icon: HardHat },
   { text: "¿Qué proyectos de robótica desarrollan en la UABC?", icon: Bot },
-  { text: "¿Cómo logran volar los aviones?", icon: Plane },
-  { text: "¿Cómo funciona internamente una computadora?", icon: Cpu },
+  { text: "¿Qué es STEAM?", icon: Sparkles },
+  { text: "¿Cómo funciona una computadora?", icon: Cpu },
   { text: "¿Qué carreras ofrece la Facultad de Ingeniería?", icon: Zap }
 ];
 

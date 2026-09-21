@@ -21,12 +21,20 @@ function App() {
 
   const audioRef = useRef(null);
   const mouthIntervalRef = useRef(null);
+  const abortControllerRef = useRef(null); // Para cancelar la petición al backend
 
   useEffect(() => {
     return () => {
       if (mouthIntervalRef.current) clearInterval(mouthIntervalRef.current);
     };
   }, []);
+
+  // Efecto para mutear/desmutear en tiempo real si el usuario cambia el volumen mientras el avatar habla
+  useEffect(() => {
+    if (audioRef.current) {
+      audioRef.current.muted = !sfxEnabled;
+    }
+  }, [sfxEnabled]);
 
   const playAudioWithMouthSync = (audioBase64) => {
     if (!audioBase64) return;
@@ -41,6 +49,7 @@ function App() {
 
     try {
       const audio = new Audio(audioBase64);
+      audio.muted = !sfxEnabled; // Aplica el estado actual de volumen
       audioRef.current = audio;
 
       audio.onplay = () => {
@@ -82,11 +91,18 @@ function App() {
     setIsSpeaking(false);
     setMouthFrame(0);
 
+    // Cancelar cualquier petición anterior
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
+    abortControllerRef.current = new AbortController();
+
     try {
       const response = await fetch(BACKEND_URL, {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
         body: JSON.stringify({ message: userMessage }),
+        signal: abortControllerRef.current.signal
       });
 
       if (!response.ok) throw new Error(`HTTP ${response.status}`);
@@ -99,55 +115,77 @@ function App() {
         playAudioWithMouthSync(data.audio);
       }
     } catch (error) {
+      if (error.name === 'AbortError') {
+        console.log('Petición cancelada por el usuario');
+        return;
+      }
       console.error("Error backend:", error);
       setResponseText("¡Ups! Parece que mi servidor local está descansando. ¡Revisa que uvicorn esté corriendo en http://127.0.0.1:8000!");
       setIsLoading(false);
     }
   };
 
+  const handleStop = () => {
+    // 1. Detener petición de red si está pensando
+    if (abortControllerRef.current) {
+      abortControllerRef.current.abort();
+    }
+    // 2. Detener audio si está hablando
+    if (audioRef.current) {
+      audioRef.current.pause();
+      audioRef.current.currentTime = 0;
+    }
+    if (mouthIntervalRef.current) clearInterval(mouthIntervalRef.current);
+    
+    setIsLoading(false);
+    setIsSpeaking(false);
+    setMouthFrame(0);
+  };
+
   return (
     <>
       <ParticlesBackground />
       <div className="app-container">
+        
+        {/* Botón de Volumen (Movido a la esquina superior derecha general) */}
+        <button 
+          className="sfx-toggle-btn" 
+          onClick={() => setSfxEnabled(!sfxEnabled)}
+          title={sfxEnabled ? "Silenciar Efectos (SFX)" : "Activar Efectos (SFX)"}
+        >
+          {sfxEnabled ? <Volume2 size={24} /> : <VolumeX size={24} color="#EF4444" />}
+        </button>
+
         <header className="app-header glass-panel">
           <div className="header-badge">Universidad Autónoma de Baja California</div>
           <h1 className="app-title">Asistente Interactivo "Cimarrón"</h1>
-          <p className="app-subtitle">Facultad de Ingeniería • Visitas de Primaria y Secundaria</p>
-          
-          <button 
-            className="sfx-toggle-btn" 
-            onClick={() => setSfxEnabled(!sfxEnabled)}
-            title={sfxEnabled ? "Silenciar Efectos (SFX)" : "Activar Efectos (SFX)"}
-          >
-            {sfxEnabled ? <Volume2 size={20} /> : <VolumeX size={20} color="#EF4444" />}
-          </button>
+          {/* El subtítulo ha sido eliminado a petición del usuario */}
         </header>
 
         <main className="main-stage">
-          <CimarronAvatar
-            isSpeaking={isSpeaking}
-            mouthFrame={mouthFrame}
-            sfxEnabled={sfxEnabled}
+          <CimarronAvatar 
+            isSpeaking={isSpeaking} 
             isThinking={isLoading}
             isListening={isListening}
+            mouthFrame={mouthFrame} 
             onAvatarClick={() => setShowBubble(!showBubble)}
+            sfxEnabled={sfxEnabled}
           />
-          <SpeechBubble
-            text={responseText}
-            isSpeaking={isSpeaking}
+          <SpeechBubble 
+            text={responseText} 
+            isSpeaking={isSpeaking} 
             isLoading={isLoading}
             isVisible={showBubble}
           />
         </main>
 
         <section className="controls-section">
-          <QuickQuestions
-            onSelectQuestion={handleSendMessage}
-            disabled={isLoading || isSpeaking}
-            sfxEnabled={sfxEnabled}
-          />
+          <QuickQuestions onSelectQuestion={handleSendMessage} disabled={isLoading || isSpeaking} />
           <SpeechButton
             onSpeechResult={handleSendMessage}
+            onStop={handleStop}
+            isLoading={isLoading}
+            isSpeaking={isSpeaking}
             disabled={isLoading || isSpeaking}
             isListening={isListening}
             setIsListening={setIsListening}

@@ -1,9 +1,10 @@
 import React, { useState, useEffect, useRef } from 'react';
 import Mic from 'lucide-react/dist/esm/icons/mic';
 import Send from 'lucide-react/dist/esm/icons/send';
+import Square from 'lucide-react/dist/esm/icons/square';
 import { playChimeOn, playChimeOff } from '../utils/sfx';
 
-const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, sfxEnabled }) => {
+const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, sfxEnabled, onStop, isLoading, isSpeaking }) => {
   const [textInput, setTextInput] = useState('');
   const [recognition, setRecognition] = useState(null);
   const [supportsSpeech, setSupportsSpeech] = useState(true);
@@ -141,33 +142,46 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
           className="chat-text-input"
         />
 
-        <button
-          type="submit"
-          disabled={disabled || !textInput.trim() || isListening}
-          className="send-button"
-          title="Enviar mensaje"
-        >
-          <Send size={26} />
-        </button>
-
-        {supportsSpeech && (
+        {(isLoading || isSpeaking) ? (
           <button
             type="button"
-            onClick={toggleMic}
-            disabled={disabled}
-            className={`mic-button ${isListening ? 'listening-active' : ''}`}
-            title={isListening ? "Escuchando... Haz clic para detener" : "Haz clic y habla"}
+            onClick={onStop}
+            className="stop-button"
+            title="Detener respuesta"
           >
-            {isListening ? (
-              <div className="mic-visualizer">
-                {bars.map((h, i) => (
-                  <div key={i} className="mic-bar" style={{ height: `${h}px` }} />
-                ))}
-              </div>
-            ) : (
-              <><Mic size={28} /><span className="mic-label">Hablar</span></>
-            )}
+            <Square size={24} fill="currentColor" />
           </button>
+        ) : (
+          <>
+            <button
+              type="submit"
+              disabled={disabled || !textInput.trim() || isListening}
+              className="send-button"
+              title="Enviar mensaje"
+            >
+              <Send size={26} />
+            </button>
+
+            {supportsSpeech && (
+              <button
+                type="button"
+                onClick={toggleMic}
+                disabled={disabled}
+                className={`mic-button ${isListening ? 'listening-active' : ''}`}
+                title={isListening ? "Escuchando... Haz clic para detener" : "Haz clic y habla"}
+              >
+                {isListening ? (
+                  <div className="mic-visualizer">
+                    {bars.map((h, i) => (
+                      <div key={i} className="mic-bar" style={{ height: `${h}px` }} />
+                    ))}
+                  </div>
+                ) : (
+                  <><Mic size={28} /><span className="mic-label">Hablar</span></>
+                )}
+              </button>
+            )}
+          </>
         )}
       </form>
     </div>

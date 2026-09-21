@@ -22,8 +22,8 @@ def main():
 
     logger.info("Dividiendo el texto en fragmentos (chunks)...")
     text_splitter = RecursiveCharacterTextSplitter(
-        chunk_size=300,
-        chunk_overlap=50,
+        chunk_size=1000,
+        chunk_overlap=200,
         separators=["\n\n", "\n", ".", " "]
     )
     docs = text_splitter.split_documents(documents)

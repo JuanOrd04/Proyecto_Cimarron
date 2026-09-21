@@ -18,7 +18,8 @@ SYSTEM_PROMPT = (
     "1. Responde con un tono neutro, amable y accesible para todo el público (tanto adultos como niños).\n"
     "2. Da explicaciones claras, breves y precisas sobre la ingeniería y la facultad.\n"
     "3. TUS RESPUESTAS DEBEN SER DE MÁXIMO 2 ORACIONES.\n"
-    "4. Responde siempre en español."
+    "4. Responde siempre en español.\n"
+    "5. MUY IMPORTANTE: Para temas académicos, carreras o datos específicos, SOLO responde con la INFORMACIÓN DE APOYO. Si te preguntan algo que NO está ahí, responde: 'No tengo esa información, pero te invito a preguntar sobre nuestras carreras o instalaciones'. NUNCA inventes datos. Puedes responder normalmente a saludos ('hola', 'cómo estás')."
 )
 
 class CimarronAgent:
@@ -52,7 +53,7 @@ class CimarronAgent:
         if self.vectorstore is not None:
             try:
                 logger.info(f"Buscando información relacionada con: '{user_message}'")
-                resultados = self.vectorstore.similarity_search(user_message, k=2)
+                resultados = self.vectorstore.similarity_search(user_message, k=15)
                 if resultados:
                     fragmentos = [doc.page_content for doc in resultados]
                     contexto_extra = "\n\nINFORMACIÓN DE APOYO PARA RESPONDER (Usa esto si es relevante):\n- " + "\n- ".join(fragmentos)
@@ -68,9 +69,9 @@ class CimarronAgent:
             "prompt": prompt_final,
             "stream": False,
             "options": {
-                "temperature": 0.6,
+                "temperature": 0.1,
                 "num_predict": 250,
-                "num_ctx": 1024 # Aumentado a 1024 para soportar el contexto
+                "num_ctx": 4096 # Ampliado a 4096 tokens para que quepa todo el .txt
             }
         }
         
