@@ -1,6 +1,6 @@
 # Proyecto Cimarrón UABC 🐏
 
-Este es un asistente virtual que hice para que los niños de primaria y secundaria (y el público en general) interactúen con el Cimarrón, la mascota de la Facultad de Ingeniería de la UABC. 
+Este es un asistente virtual que hicimos para que los niños de primaria y secundaria (y el público en general) interactúen con el Cimarrón, la mascota de la Facultad de Ingeniería de la UABC. 
 
 ## ¿Qué hace el proyecto?
 - Responde preguntas sobre las ingenierías usando Inteligencia Artificial local (Ollama).
@@ -17,7 +17,6 @@ cd backend
 venv\Scripts\activate
 uvicorn main:app --reload
 ```
-*(Nota: Asegúrate de tener Ollama abierto en tu compu).*
 
 **2. Frontend (La interfaz)**
 Abre otra terminal y levanta la página en React:
