@@ -1,0 +1,142 @@
+Estructuras
+
+1.
+Introducción a Estructuras
+2
+
+3
+Introducción a Estructuras
+Idea General
+Especie
+ 
+Apodo
+
+Nivel
+
+Experiencia
+
+Tipo
+
+Habilidad
+
+Ataques 
+
+String
+
+String
+
+int
+
+int
+
+String
+
+String
+
+String[ ] 
+
+
+4
+Introducción a Estructuras
+Idea General
+¿Y si tuviéramos más de uno?
+
+Una solución a la respuesta antes planteada sería la utilización de arreglos paralelos, sin embargo, hay una forma más sencilla de operar con múltiples variables que describen o pertenecen una entidad, en este caso, un pokémon, y esto es por medio de lo que se conoce en C como estructuras. 
+
+
+
+
+5
+Introducción a Estructuras
+Idea General
+
+2.
+Estructuras en C
+6
+
+Una estructura en C es una forma de almacenar múltiples variables de tipos diferentes en un mismo lugar, de forma que comprenden lo que podemos llamar como una entidad. A cada una de las variables que la comprenden las conocemos como miembros de la estructura. 
+
+7
+Estructuras en C
+Concepto
+
+8
+Estructuras en C
+Implementación
+
+9
+Acceso y Modificación de los Miembros
+Implementación
+Para acceder a los miembros de una estructura hacemos uso de la sintaxis punto, por ejemplo:
+m_pokemon.apodo
+m_pokemon.nivel
+
+Accedemos al miembro apodo de la variable m_pokemon de tipo struct pokemon
+Accedemos al miembro nivel de la variable m_pokemon de tipo struct pokemon
+
+10
+Acceso a los Miembros
+Implementación
+
+11
+Modificar el Valor de un Miembro
+Implementación
+
+12
+Copiar Estructuras
+Implementación
+Si modifico la copia, ¿Se modifica la original?
+La respuesta sencillamente es NO.
+
+¿Qué otras cosas pudieran representar por medio de Estructuras?
+13
+
+3.
+Temas Adicionales a Estructuras
+14
+
+Se puede utilizar la palabra reservada typedef para nombrar tipos de variables definidas por el usuario (como las estructuras), de tal forma que al crear una variable, por ejemplo, de tipo struct car, únicamente hagamos referencia al nombre especificado por typedef. 
+15
+Temas Adicionales a Estructuras
+Typedef
+
+16
+Temas Adicionales a Estructuras
+Typedef
+Error de dedo, las buenas prácticas indican que el nombre apropiado debió haber sido car_t
+
+17
+Temas Adicionales a Estructuras
+Arreglos de Estructuras
+
+Escribe un programa en C que, por medio de estructuras, represente las propiedades de un rectángulo: base, altura, área, perímetro y caracter de dibujado. 
+El programa solicitará al usuario registrar 3 rectángulos distintos, ingresando únicamente la base, altura y caracter de dibujado para posteriormente mostrar una representación de la figura por medio de su caracter y las propiedades de la misma. 
+18
+Ejemplo 1
+
+19
+Ejemplo 1 : Solución
+
+20
+Ejemplo 1 : Solución
+
+Tarea 8
+Estructuras
+21
+
+Tarea 8
+Estructuras
+22
+Escribe un programa en C que simule un sistema de captura de calificaciones, el cual contará con el siguiente menú. 
+[1] Capturar Calificaciones
+[2] Mostrar Calificaciones del Grupo
+[3] Mostrar Calificaciones de un Alumno
+[4] Salir
+
+
+Tarea 8
+Estructuras
+23
+Capturar calificaciones: esta opción permitirá capturar la matrícula de un alumno, su nombre completo y las calificaciones obtenidas en 3 distintos parciales. 
+Mostrar calificaciones del grupo: mostrará la matrícula y las calificaciones de los 3 parciales de todos los alumnos capturados hasta el momento.
+Mostrar calificaciones de un alumno: el programa solicitará la matrícula de un alumno y mostrará únicamente las calificaciones de dicho alumno. 

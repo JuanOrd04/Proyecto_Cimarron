@@ -6,6 +6,8 @@ from pydantic import BaseModel
 import requests
 import uvicorn
 import logging
+import re
+import unicodedata
 
 from cimarron_agent import cimarron_agent, OLLAMA_URL
 from tts_engine import tts_service
@@ -35,7 +37,15 @@ class ChatResponse(BaseModel):
     response: str
     audio: str  # Audio Data URI en Base64 (data:audio/wav;base64,...)
 
-CACHE_FILE = "qa_cache.json"
+CACHE_FILE = os.path.join(os.path.dirname(__file__), "qa_cache.json")
+
+
+def normalize_question(text: str) -> str:
+    """Normaliza preguntas equivalentes para aumentar los aciertos de caché."""
+    normalized = unicodedata.normalize("NFD", text.lower().strip())
+    normalized = "".join(char for char in normalized if unicodedata.category(char) != "Mn")
+    normalized = re.sub(r"[^a-z0-9\s]", " ", normalized)
+    return " ".join(normalized.split())
 
 def load_cache():
     if os.path.exists(CACHE_FILE):
@@ -82,9 +92,10 @@ def chat_endpoint(request: ChatRequest):
         raise HTTPException(status_code=400, detail="El mensaje no puede estar vacío.")
 
     # 1. VERIFICAR CACHÉ
-    if user_msg in qa_cache:
+    cache_key = normalize_question(user_msg)
+    cached_data = qa_cache.get(cache_key) or qa_cache.get(user_msg)
+    if cached_data:
         logger.info(f"⚡ [CACHÉ HIT] Retornando respuesta guardada para: '{user_msg}'")
-        cached_data = qa_cache[user_msg]
         return ChatResponse(
             response=cached_data["response"],
             audio=cached_data["audio"]
@@ -100,7 +111,7 @@ def chat_endpoint(request: ChatRequest):
     audio_base64 = tts_service.synthesize_to_base64_wav(cimarron_text)
     
     # 4. Guardar en caché
-    qa_cache[user_msg] = {
+    qa_cache[cache_key] = {
         "response": cimarron_text,
         "audio": audio_base64
     }

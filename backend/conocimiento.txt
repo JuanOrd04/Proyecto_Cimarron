@@ -1,24 +1,139 @@
-¡Hola! Aquí tienes la información oficial de la Universidad Autónoma de Baja California (UABC) y de la Facultad de Ingeniería campus Mexicali (FIM).
+BASE DE CONOCIMIENTO DEL ASISTENTE CIMARRÓN UABC
 
-El Cimarrón es la mascota oficial de la UABC. Representa la fuerza, la agilidad y el espíritu indomable de los cimarrones que habitan en la región montañosa de Baja California, como La Rumorosa.
+Estas respuestas están escritas para estudiantes de primaria y secundaria. Cada bloque contiene una idea completa para que el buscador local pueda encontrarla sin depender de Internet.
 
-El lema oficial de la UABC es: "Por la realización plena del ser".
+TEMA: El Cimarrón
+PREGUNTAS: ¿Quién es el Cimarrón? ¿Cuál es la mascota de la UABC? ¿Qué representa el Cimarrón?
+RESPUESTA: El Cimarrón es la mascota oficial de la UABC. Representa fuerza, agilidad y un espíritu que sigue adelante ante los retos.
 
-La Facultad de Ingeniería (FIM) del campus Mexicali tiene una historia increíble:
-Fue fundada en octubre de 1967 gracias al Ingeniero Luis López Moctezuma Torres, quien fue su fundador y primer director. ¡De hecho, el edificio principal de la facultad lleva su nombre!
-Cuando la facultad abrió sus puertas hace más de 50 años, ¡solo había 19 alumnos y 18 profesores! La primera carrera que se enseñó fue Ingeniero Topógrafo y Geodesta.
+TEMA: Hábitat del cimarrón
+PREGUNTAS: ¿Dónde viven los cimarrones? ¿Hay cimarrones en Baja California?
+RESPUESTA: Los borregos cimarrones habitan regiones montañosas y desérticas de Baja California. Están adaptados para desplazarse por terrenos rocosos y difíciles.
 
-Actualmente, la Facultad de Ingeniería Mexicali ofrece 11 carreras fantásticas donde los alumnos diseñan el futuro:
-1. Ingeniería Aeroespacial: ¡Los alumnos construyen y diseñan cohetes, satélites y aviones de verdad!
-2. Ingeniería Civil: Se encargan de construir los puentes más resistentes y los edificios más altos.
-3. Ingeniería en Computación: Programan computadoras, videojuegos y el software del mañana.
-4. Ingeniería Eléctrica: Trabajan con la electricidad para darle energía a ciudades enteras.
-5. Ingeniería Electrónica: Crean los circuitos y tarjetas madre que hacen funcionar nuestros celulares y gadgets.
-6. Ingeniería en Energías Renovables: Salvan al planeta creando fuentes de energía limpia usando el sol y el viento.
-7. Ingeniería Industrial: Mejoran y optimizan el funcionamiento de las fábricas.
-8. Ingeniería Mecánica: Diseñan piezas, motores y máquinas súper complejas.
-9. Ingeniería Mecatrónica: ¡Es la carrera donde diseñan, arman y programan robots inteligentes!
-10. Bioingeniería: Mezclan la tecnología con la medicina para crear aparatos que salvan vidas y cuidan la salud de las personas.
-11. Licenciatura en Sistemas Computacionales: Administran grandes redes y sistemas de información.
+TEMA: Lema de la UABC
+PREGUNTAS: ¿Cuál es el lema de la UABC? ¿Qué frase representa a la UABC?
+RESPUESTA: El lema de la Universidad Autónoma de Baja California es “Por la realización plena del ser”.
 
-Los ingenieros egresados de la UABC son conocidos por su enorme capacidad para resolver problemas difíciles, innovar y construir un mundo mejor. En nuestros laboratorios siempre hay máquinas, circuitos y mucha creatividad.
+TEMA: Historia de la Facultad de Ingeniería Mexicali
+PREGUNTAS: ¿Cuándo se fundó la Facultad de Ingeniería? ¿Quién fundó la Facultad de Ingeniería Mexicali?
+RESPUESTA: La Facultad de Ingeniería Mexicali fue fundada en octubre de 1967. Su fundador y primer director fue el ingeniero Luis López Moctezuma Torres.
+
+TEMA: Primeros años de la Facultad
+PREGUNTAS: ¿Cuántos alumnos tenía la Facultad al comenzar? ¿Cuál fue la primera carrera?
+RESPUESTA: Al comenzar, la Facultad tenía 19 alumnos y 18 profesores. La primera carrera impartida fue Ingeniero Topógrafo y Geodesta.
+
+TEMA: Oferta educativa
+PREGUNTAS: ¿Cuántas carreras ofrece la Facultad de Ingeniería Mexicali? ¿Qué carreras puedo estudiar?
+RESPUESTA: La Facultad de Ingeniería Mexicali ofrece 11 programas: Aeroespacial, Civil, Computación, Eléctrica, Electrónica, Energías Renovables, Industrial, Mecánica, Mecatrónica, Bioingeniería y Sistemas Computacionales.
+
+TEMA: Ingeniería Aeroespacial
+PREGUNTAS: ¿Qué es Ingeniería Aeroespacial? ¿En qué carrera se estudian aviones, cohetes y satélites?
+RESPUESTA: Ingeniería Aeroespacial estudia cómo diseñar y mejorar aviones, cohetes, satélites y otros vehículos que vuelan. Combina matemáticas, física, materiales y tecnología.
+
+TEMA: Ingeniería Civil
+PREGUNTAS: ¿Qué es Ingeniería Civil? ¿Quién diseña puentes, carreteras y edificios?
+RESPUESTA: Ingeniería Civil diseña y supervisa obras como edificios, puentes, carreteras y sistemas de agua. También busca que estas construcciones sean seguras y útiles para la comunidad.
+
+TEMA: Ingeniería en Computación
+PREGUNTAS: ¿Qué es Ingeniería en Computación? ¿En qué carrera se programan computadoras y dispositivos?
+RESPUESTA: Ingeniería en Computación combina programación, electrónica y sistemas digitales. Sus estudiantes pueden crear programas, dispositivos inteligentes, redes y soluciones con computadoras.
+
+TEMA: Ingeniería Eléctrica
+PREGUNTAS: ¿Qué es Ingeniería Eléctrica? ¿Quién trabaja con la energía eléctrica?
+RESPUESTA: Ingeniería Eléctrica estudia cómo producir, transportar, controlar y utilizar la energía eléctrica. Ayuda a que hogares, escuelas, hospitales y ciudades reciban electricidad de forma segura.
+
+TEMA: Ingeniería Electrónica
+PREGUNTAS: ¿Qué es Ingeniería Electrónica? ¿Quién crea circuitos y tarjetas electrónicas?
+RESPUESTA: Ingeniería Electrónica diseña circuitos y sistemas que controlan aparatos como celulares, sensores y equipos de comunicación. Trabaja con señales, componentes y pequeños dispositivos electrónicos.
+
+TEMA: Ingeniería en Energías Renovables
+PREGUNTAS: ¿Qué es Ingeniería en Energías Renovables? ¿En qué carrera se estudia la energía solar y eólica?
+RESPUESTA: Ingeniería en Energías Renovables desarrolla formas de aprovechar fuentes como el sol y el viento. Su objetivo es producir energía con menor impacto ambiental.
+
+TEMA: Ingeniería Industrial
+PREGUNTAS: ¿Qué es Ingeniería Industrial? ¿Quién mejora el trabajo de fábricas y empresas?
+RESPUESTA: Ingeniería Industrial mejora procesos para aprovechar mejor el tiempo, los materiales y el trabajo de las personas. Puede ayudar en fábricas, hospitales, transportes y muchas otras organizaciones.
+
+TEMA: Ingeniería Mecánica
+PREGUNTAS: ¿Qué es Ingeniería Mecánica? ¿Quién diseña motores y máquinas?
+RESPUESTA: Ingeniería Mecánica diseña y analiza máquinas, motores, herramientas y mecanismos. Utiliza física y matemáticas para entender el movimiento, las fuerzas y el calor.
+
+TEMA: Ingeniería Mecatrónica
+PREGUNTAS: ¿Qué es Ingeniería Mecatrónica? ¿En qué carrera se construyen robots?
+RESPUESTA: Ingeniería Mecatrónica combina mecánica, electrónica, control y programación. Sus estudiantes pueden crear robots, máquinas automáticas y sistemas inteligentes.
+
+TEMA: Bioingeniería
+PREGUNTAS: ¿Qué es Bioingeniería? ¿Qué carrera combina medicina y tecnología?
+RESPUESTA: Bioingeniería une conocimientos de ingeniería y ciencias de la salud. Puede utilizarse para desarrollar prótesis, sensores, equipos médicos y tecnologías que apoyan el cuidado de las personas.
+
+TEMA: Licenciatura en Sistemas Computacionales
+PREGUNTAS: ¿Qué es Sistemas Computacionales? ¿Qué se estudia en Sistemas Computacionales?
+RESPUESTA: Sistemas Computacionales estudia el desarrollo y la administración de programas, bases de datos, redes y sistemas de información. Ayuda a organizar y proteger la información de personas y organizaciones.
+
+TEMA: Computación y Sistemas Computacionales
+PREGUNTAS: ¿Cuál es la diferencia entre Computación y Sistemas Computacionales?
+RESPUESTA: Computación suele combinar software con el funcionamiento de equipos y sistemas digitales. Sistemas Computacionales se concentra más en desarrollar, administrar y conectar programas, datos y servicios de información.
+
+TEMA: Eléctrica y Electrónica
+PREGUNTAS: ¿Cuál es la diferencia entre Ingeniería Eléctrica y Electrónica?
+RESPUESTA: Ingeniería Eléctrica trabaja principalmente con producción y uso de energía eléctrica. Electrónica trabaja con circuitos, señales y dispositivos que procesan o controlan información.
+
+TEMA: Mecánica y Mecatrónica
+PREGUNTAS: ¿Cuál es la diferencia entre Ingeniería Mecánica y Mecatrónica?
+RESPUESTA: Mecánica se enfoca en máquinas, movimiento, fuerzas y energía. Mecatrónica integra esas máquinas con electrónica, sensores y programación para automatizarlas.
+
+TEMA: Qué es la ingeniería
+PREGUNTAS: ¿Qué es la ingeniería? ¿Qué hacen los ingenieros?
+RESPUESTA: La ingeniería utiliza ciencia, matemáticas, creatividad y tecnología para resolver problemas. Los ingenieros diseñan, construyen, prueban y mejoran cosas que usamos todos los días.
+
+TEMA: Qué significa STEAM
+PREGUNTAS: ¿Qué es STEAM? ¿Qué significan las letras STEAM?
+RESPUESTA: STEAM reúne Ciencia, Tecnología, Ingeniería, Arte y Matemáticas. Estas áreas trabajan juntas para investigar, imaginar y crear soluciones.
+
+TEMA: Ejemplo de proyecto STEAM
+PREGUNTAS: Dame un ejemplo de STEAM. ¿Qué proyecto STEAM puedo hacer?
+RESPUESTA: Un pequeño robot que riega una planta es un proyecto STEAM: usa ciencia para cuidar la planta, tecnología y programación para medir la humedad, ingeniería para construirlo, arte para diseñarlo y matemáticas para calcular el agua.
+
+TEMA: Habilidades para estudiar ingeniería
+PREGUNTAS: ¿Qué necesito para estudiar ingeniería? ¿Debo ser muy bueno en matemáticas?
+RESPUESTA: Ayudan la curiosidad, la práctica, el trabajo en equipo y las ganas de resolver problemas. No necesitas saberlo todo desde el inicio, porque las habilidades se desarrollan estudiando y experimentando.
+
+TEMA: Niñas y niños en ingeniería
+PREGUNTAS: ¿Las niñas pueden ser ingenieras? ¿Los niños pueden estudiar cualquier ingeniería?
+RESPUESTA: Sí, cualquier niña o niño puede acercarse a la ciencia, la tecnología y la ingeniería. Lo importante es explorar sus intereses, hacer preguntas y seguir aprendiendo.
+
+TEMA: Matemáticas en ingeniería
+PREGUNTAS: ¿Para qué sirven las matemáticas en ingeniería? ¿Los ingenieros usan matemáticas?
+RESPUESTA: Las matemáticas ayudan a medir, comparar, calcular y predecir cómo funcionará un diseño. Los ingenieros las usan como una herramienta para resolver problemas reales.
+
+TEMA: Robótica
+PREGUNTAS: ¿Qué es un robot? ¿Cómo funciona un robot?
+RESPUESTA: Un robot es una máquina que recibe información mediante sensores y realiza acciones siguiendo instrucciones. Puede usar motores, electrónica y programación para moverse o completar una tarea.
+
+TEMA: Inteligencia artificial
+PREGUNTAS: ¿Qué es la inteligencia artificial? ¿Cómo aprende una inteligencia artificial?
+RESPUESTA: La inteligencia artificial es tecnología que permite a una computadora reconocer patrones y realizar algunas tareas que parecen inteligentes. Aprende a partir de ejemplos y necesita información adecuada para dar buenos resultados.
+
+TEMA: Funcionamiento del asistente
+PREGUNTAS: ¿Cómo funciona este chatbot? ¿Usas Internet? ¿De dónde obtienes tus respuestas?
+RESPUESTA: Soy un asistente local que consulta información guardada en esta computadora y genera respuestas con inteligencia artificial. Puedo funcionar sin Internet durante la feria.
+
+TEMA: Límites del asistente
+PREGUNTAS: ¿Lo sabes todo? ¿Puedes responder cualquier pregunta?
+RESPUESTA: No lo sé todo y puedo equivocarme. Estoy preparado principalmente para conversar sobre la UABC, la Facultad de Ingeniería, sus carreras y temas básicos de STEAM y programación.
+
+TEMA: Elegir una ingeniería
+PREGUNTAS: ¿Cuál ingeniería es mejor? ¿Qué carrera debería estudiar?
+RESPUESTA: No existe una ingeniería que sea la mejor para todas las personas. Puedes explorar qué problemas te gusta resolver y conocer varias carreras antes de decidir.
+
+TEMA: Laboratorios y creatividad
+PREGUNTAS: ¿Qué hacen los estudiantes de ingeniería? ¿Solo estudian teoría?
+RESPUESTA: Además de estudiar conceptos, los alumnos pueden diseñar, programar, construir y probar proyectos. Los laboratorios permiten aprender mediante experimentos y trabajo en equipo.
+
+TEMA: Saludo
+PREGUNTAS: Hola. Buenos días. Buenas tardes. ¿Cómo estás?
+RESPUESTA: ¡Hola! Soy el Cimarrón y puedo ayudarte a conocer la UABC, sus ingenierías y algunos temas de STEAM y programación.
+
+TEMA: Despedida
+PREGUNTAS: Adiós. Gracias. Hasta luego.
+RESPUESTA: ¡Gracias por conversar conmigo! Sigue haciendo preguntas, explorando y creando nuevas ideas.

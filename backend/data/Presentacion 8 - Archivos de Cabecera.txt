@@ -1,0 +1,136 @@
+Funciones
+
+4.
+Archivos de Cabecera 
+2
+
+Hasta este momento, se han utilizado archivos de cabecera o “librerías” predefinidas de C, las cuales ponen a disposición un conjunto de funciones que facilitan la implementación de operaciones en nuestros programas. 
+#include <math.h>
+
+
+
+3
+Archivo de Cabecera
+¿Qué es un Archivo de Cabecera?
+Se agregan a nuestro programa con la palabra reservada include
+Son archivos con extensión .h
+
+Estos archivos de cabecera son las librerías definidas en el estándar del lenguaje de programación en C y son incluidas en cualquier compilador de C. 
+Son un total de 31 archivos de cabecera, en los que podemos encontrar los siguientes: math.h, ctype.h, stdio.h, entre otras. 
+
+
+
+4
+Archivo de Cabecera
+Archivos de Cabecera Estándar en C
+
+Este tipo de archivos de cabecera son definidos por el propio programador y suelen contener funciones con propósitos específicos.
+En lugar de escribir un código largo y complejo, es posible crear nuestro propio archivo de cabecera e incluirlo en nuestros programas cuando sea necesario.  
+
+
+
+5
+Archivo de Cabecera
+Archivos de Cabecera Definidos por el Usuario
+
+El primer paso para crear nuestro propio archivo de cabecera (librería) será crear un archivo en C con extensión .h. Este puede contener la declaración de funciones y definición de constantes. Asimismo, se creará un archivo .c con el mismo nombre.
+
+
+
+6
+Archivo de Cabecera
+Creación de un Archivo de Cabecera
+
+En esta ocasión crearemos un archivo de cabecera sencillo que nos permita realizar la operación de potencia, la suma de dos números por medio de funciones y que contenga el valor de pi hasta 6 decimales. Cabe destacar que este archivo no contendrá la función principal.
+
+
+
+7
+Archivo de Cabecera
+Creación de un Archivo de Cabecera
+mi_math.h
+
+En el .h se recomienda tener únicamente la declaración de las funciones, mientras que en el .c con el mismo nombre se define qué es lo que hace la función.
+
+
+
+8
+Archivo de Cabecera
+Creación de un Archivo de Cabecera
+mi_math.c
+
+9
+Archivo de Cabecera
+Creación de un Archivo de Cabecera
+
+10
+Pequeño Paréntesis
+Proceso de Compilación : Programa de Ejemplo
+geometry.c
+main.c
+m_math.h
+m_math.c
+geometry.h
+
+C es un lenguaje de medio nivel. Se requiere de un compilador para crear código ejecutable por la computadora.
+Todo programa de C que realicemos pasa por el proceso de compilación que se observa en la imagen.
+11
+Pequeño Paréntesis
+Proceso de Compilación
+
+La fase de preprocesado incluye:
+Remover comentarios.
+Expandir macros.
+Expandir archivos incluidos (de cabecera)
+Compilación condicional
+archivo generado del ejemplo
+12
+Pequeño Paréntesis
+Proceso de Compilación
+
+Compila el archivo con extensión .i generado y produce instrucciones en ensamblador. 
+archivo generado del ejemplo
+13
+Pequeño Paréntesis
+Proceso de Compilación
+
+El ensamblado toma los archivos de ensamblador y los transforma en instrucciones nivel máquina. Dichos archivos tienen una extension .o
+14
+Pequeño Paréntesis
+Proceso de Compilación
+
+La fase de linking genera un solo archivo ejecutable a partir de todos los archivos con extensión .o
+15
+Pequeño Paréntesis
+Proceso de Compilación
+
+16
+Pequeño Paréntesis
+Header Guards
+Directivas condicionales de compilación que evitan que una función o variable sea definida más de una vez. En caso de que estas sean definidas más de una vez, habrá un error en la compilación.
+
+Las constantes, también conocidas como literales, son valores que no pueden ser alterados durante la ejecución de un programa. Estas pueden ser de cualquier tipo básico en C y son tratadas como cualquier variable, sin embargo su valor no puede ser cambiado una vez este es definido. 
+
+NOTA: las constantes no son exclusivas de los archivos de cabecera.
+
+
+
+17
+Constantes en C 
+
+18
+Constantes en C 
+
+19
+Constantes en C: ¿y si intentamos cambiar su valor? 
+
+Tarea 6
+Archivos de Cabecera
+20
+
+Tarea 6
+Archivos de Cabecera
+21
+Realiza un archivo de cabecera en C de nombre figure_calculations.h que les permita calcular áreas y perímetros de rectángulos, círculos y triángulos.
+Para los cálculos relacionados con rectángulos y triángulos darán las medidas de la base y la altura, mientras que para las del círculo darán la medida del radio.
+Probar cada una de las funciones definidas en este archivo en un programa en C que haga el llamado a cada una de ellas. 

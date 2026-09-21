@@ -1,0 +1,262 @@
+Cadenas de Caracteres
+
+1.
+Introducción a las Cadenas de Caracteres
+2
+
+En otros lenguajes de programación existen los tipos de dato String para almacenar texto, palabras o un conjunto de caracteres. Sin embargo, C no maneja este tipo de dato. En su lugar se maneja un arreglo de datos tipo char para representar texto, palabras o una cadena de caracteres. 
+char msg[ ] = “Hola Mundo”; 
+
+
+
+3
+Cadenas de Caracteres
+¿Qué es una Cadena de Caracteres?
+
+char msg[ ] = “Hola Mundo”; 
+char msg[11] = “Hola Mundo”; 
+char msg[5] = {‘H’, ‘O’, ‘L’, ‘A’ , ‘\0’ } 
+
+
+
+
+4
+Cadenas de Caracteres
+Inicialización de una Cadena de Caracteres
+¿Por qué de longitud 11 si el mensaje tiene 10 caracteres?
+¿Qué es esto?
+
+Una cadena de caracteres en C maneja un último caracter en la cadena para indicar la terminación de la misma, el cual es denotado por \0 y se agrega después del último caracter de la cadena. 
+char msg[ ] = “Hola Mundo”;  
+char msg[11] = “Hola Mundo”; 
+char msg[5] = {‘H’, ‘O’, ‘L’, ‘A’ , ‘\0’ } 
+
+5
+Cadenas de Caracteres
+El Caracter Nulo
+Se ajusta el tamaño de la cadena de forma automática y se agrega el caracter nulo de forma automática.
+
+char msg[ ] = “Hola Mundo”;  
+
+char msg[11] = “Hola Mundo”;
+ 
+char msg[5] = {‘H’, ‘O’, ‘L’, ‘A’ , ‘\0’ } 
+
+6
+Cadenas de Caracteres
+El Caracter Nulo
+Se ajusta el tamaño de la cadena de forma automática y se agrega el caracter nulo de forma automática.
+Se agrega automáticamente. Al definir una longitud somos responsables de dejar espacio para el caracter nulo. 
+Se agrega manualmente
+
+7
+Cadenas de Caracteres
+El Caracter Nulo
+
+2.
+Lectura y Escritura de Cadenas de Caracteres
+8
+
+9
+Cadenas de Caracteres
+Impresión
+
+10
+Cadenas de Caracteres
+Lectura de Cadena de Caracteres
+La lectura de cadenas de caracteres se puede realizar de distintas formas:
+Utilizando la función scanf( )
+Utilizando la función fgets( )
+
+
+
+
+11
+Lectura de Cadena de Caracteres
+Lectura con scanf
+Al utilizar la función scanf( ) se maneja la siguiente sintaxis:
+scanf(“%s”, cadena)
+Se especifica que se leerá una cadena por medio de %s y, al ser cadena un arreglo no es necesario colocar el &. 
+
+
+
+
+12
+Lectura de Cadena de Caracteres
+Lectura con scanf
+
+
+
+Pero…. ¿ y si pusiéramos también el apellido?
+
+
+
+
+13
+Lectura de Cadena de Caracteres
+Lectura con scanf
+La función scanf leerá la cadena de caracteres hasta que detecte un salto de línea, es por esto que en la variable cadena únicamente se almacenó el nombre. Para leer cadenas con espacios, es necesario que la función scanf presente la siguiente sintaxis:
+scanf(“%[^\n]s”, cadena)
+
+
+
+
+
+14
+Lectura de Cadena de Caracteres
+Lectura con scanf
+
+
+
+
+
+NOTA: la función scanf( ) desconoce la longitud del arreglo que contiene la cadena de caracteres lo que la puede llegar a hacer insegura.
+
+15
+Lectura de Cadena de Caracteres
+Lectura con fgets( )
+La función fgets( ) nos permite leer una línea de texto, teniendo que colocar como argumentos de la función la variable en la que se almacenará la cadena de caracteres, la longitud de la cadena y la entrada estándar (STDIN). 
+
+fgets(cadena, sizeof(cadena), stdin);
+
+
+
+16
+Lectura de Cadena de Caracteres
+Lectura con fgets( )
+NOTA: la función fgets( ) también capturará el salto de línea
+
+17
+Lectura de Cadena de Caracteres
+Lectura con fgets( )
+
+18
+Lectura y Escritura de Cadena de Caracteres
+Ejemplos Adicionales
+¿Por qué no capturó todos los alumnos? 
+
+La respuesta tiene que ver con el buffer.
+
+19
+Lectura y Escritura de Cadena de Caracteres
+Ejemplos Adicionales
+
+20
+Lectura y Escritura de Cadena de Caracteres
+Ejemplos Adicionales: con fgets
+Con fgets no es necesario vaciar el buffer
+
+3.
+Funciones con Cadenas de Caracteres 
+21
+
+22
+Funciones con Cadenas de Caracteres
+C ofrece un conjunto de funciones para trabajar con cadenas de caracteres, las cuales se encuentran disponibles en el archivo de cabecera string.h. Algunas de las funciones que se encuentran en este archivo de cabecera son para:
+Determinar la longitud de una cadena.
+Comparar dos cadenas de caracteres. 
+Copiar cadenas de caracteres.
+Concatenar dos cadenas. 
+
+
+
+
+23
+Funciones
+Determinar la Longitud de una Cadena
+Para encontrar la longitud de una cadena de caracteres lo primero que nos vendría a la mente sería realizar lo siguiente: 
+
+
+
+
+24
+Funciones
+Determinar la Longitud de una Cadena
+Por otra parte, el archivo de cabecera proporciona la función strlen( ), la cual tiene la siguiente sintaxis: 
+strlen(cadena[])
+
+
+
+
+
+25
+Funciones
+Concatenar dos cadenas
+Para concatenar dos cadenas, cadena1[20]y cadena2[10], las cuales son de distinta longitud, de tal forma que a cadena1 se le agregaría el contenido de cadena2, habría que garantizar que el arreglo cadena1 es lo suficientemente grande para almacenar su contenido más el contenido de cadena2.
+Veámos el siguiente ejemplo:
+cadena1[20] = “Hola”;
+cadena2[10] = “Mundo”; 
+
+
+
+¿Cómo haríamos que en cadena1 se almacene la frase Hola Mundo?
+
+26
+Funciones
+Concatenar dos cadenas
+
+27
+Funciones
+Concatenar dos cadenas
+La función disponible en el archivo de cabecera string.h que nos facilita la concatenación de cadenas de caracteres tiene la siguiente sintaxis: 
+strcat(cadena1[], cadena2[]);
+en la que ambas cadenas de caracteres se combinarán en cadena1.
+
+
+
+
+
+28
+Funciones
+Concatenar dos cadenas
+
+29
+Funciones
+Copiar Cadenas de Caracteres 
+Para copiar el contenido de una cadena a otra, es posible utilizar la función strcpy( ) disponible en string.h
+strcpy (cadena_destino[], cadena_origen[]);
+cadena_destino debe ser lo suficientemente grande para almacenar la cadena de caracteres contenida en cadena_origen. 
+
+
+
+
+30
+Funciones
+Copiar Cadenas de Caracteres 
+
+31
+Funciones
+Copiar Cadenas de Caracteres 
+
+32
+Funciones
+Comparar Cadenas de Caracteres
+Para comparar dos cadenas de caracteres string.h cuenta con la función strcmp( ), la cual regresa un 0 en caso de que ambas cadenas sean iguales y un valor distinto a 0 en cualquier otro caso.
+strcmp(cadena1[ ], cadena2[ ])
+
+
+
+
+33
+Funciones
+Comparar Cadenas de Caracteres
+
+Tarea 7
+Cadenas de Caracteres
+34
+
+Tarea 7
+Cadenas de Caracteres
+35
+Realizar sus propias funciones en C para su posterior utilización. Estas funciones realizarán las siguientes operaciones:
+Determinar longitud de una cadena.
+Concatenar dos cadenas.
+Comparar dos cadenas.
+Copiar el contenido de una cadena origen a una cadena destino.
+
+
+Tarea 7
+Cadenas de Caracteres
+36
+Verificar el funcionamiento de cada una de las funciones con un programa que incluya el archivo de cabecera.
+

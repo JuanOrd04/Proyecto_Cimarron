@@ -1,0 +1,148 @@
+Expresiones Aritméticas, Lógicas y Relacionales
+
+Contenido
+Operadores Aritméticos
+Operadores Lógicos
+Operadores Relacionales
+2
+
+1.
+Operadores Aritméticos 
+3
+
+Los operadores aritméticos son utilizados para realizar operaciones matemáticas. Estos son:
+
+4
+
+Operadores Aritméticos
+Operador
+Descripción 
+Ejemplo de Uso
++
+Suma dos valores
+x + y
+-
+Le resta un valor a otro
+x - y
+*
+Multiplica dos valores
+x * y
+/
+Divide un valor entre otro valor
+x / y
+%
+Regresa el residuo de la división
+x % y
+
+
+
+5
+
+Operadores Aritméticos en C
+
+2.
+Operadores Relacionales
+6
+
+Los Operadores Relacionales se utilizan para comparar dos valores o variables. 
+
+7
+
+Operadores Relacionales 
+Operador
+Descripción 
+Ejemplo de Uso
+==
+Igual a
+x == y
+!=
+No igual a
+x != y
+>
+Mayor que
+x > y
+<
+Menor que
+x < y
+>=
+Mayor o igual que
+x >= y
+<=
+Menor o igual que
+x <= y
+
+Al realizar una operación relacional en C, la respuesta a dicha operación puede ser un 0 ó 1. 
+0: también conocida como falso, indica que la condición no se cumplió.
+
+1: también conocida como verdadero, indica que la condición se cumplió.
+Estos valores reciben el nombre de Valores Booleanos.
+
+			
+8
+Operadores Relacionales
+¿Qué respuesta nos proporciona esta operación?
+
+9
+Operadores Relacionales
+¿Qué respuesta nos proporciona esta operación?
+Los Operadores Relacionales son empleados para los condicionales que se verán más adelante.
+
+3.
+Operadores Lógicos
+10
+
+Los Operadores Lógicos son utilizados para unir dos condiciones 
+
+11
+
+Operadores Lógicos
+Operador
+Descripción 
+Ejemplo de Uso
+&&
+Regresa verdadero si ambas condiciones se cumplen
+x < 4 && x >2
+Si x es menor a 4  Y mayor a 2
+||
+Regresa verdadero si una o ambas condiciones se cumplen
+x < 4 || x < 3
+Si x es menor a 4 O es menor a 3
+!
+Invierte el resultado de la condición
+! ( x < 4) 
+Si x NO es menor a 4
+
+Si estudio y obtengo 60 o más en el examen, aprobaré el parcial de Programación Estructurada.
+
+
+estudié == ‘S’ && calificacionParcial >= 60
+
+			
+12
+Operadores Lógicos
+Expresiones con Lenguaje Natural
+
+Si el valor es mayor a 100 o es negativo, no lo tomes en cuenta 
+
+
+valor > 100 || valor < 0
+
+			
+13
+Operadores Lógicos
+Expresiones con Lenguaje Natural
+
+14
+
+Jerarquía de Operadores
+
+15
+
+Jerarquía de Operadores
+12<=6*2 || 18>15
+
+!(6<5) && !(5>6 || 6>5)
+
+
+
+			

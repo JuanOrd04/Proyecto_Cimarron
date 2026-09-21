@@ -11,12 +11,16 @@ Este es un asistente virtual que hicimos para que los niños de primaria y secun
 ## ¿Cómo correr el proyecto?
 
 **1. Backend (El cerebro)**
-Abre una terminal, activa el entorno virtual y corre el servidor de Python:
+Abre una terminal, activa el entorno virtual, instala las dependencias y crea la base vectorial. La ingestión utiliza `backend/conocimiento.txt` y todos los archivos `.txt` dentro de `backend/data` y sus subcarpetas:
 ```bash
 cd backend
 venv\Scripts\activate
+pip install -r requirements.txt
+python ingest_knowledge.py
 uvicorn main:app --reload
 ```
+
+Vuelve a ejecutar `python ingest_knowledge.py` cada vez que agregues o modifiques un archivo de conocimiento. Detén el backend antes de reconstruir la base.
 
 **2. Frontend (La interfaz)**
 Abre otra terminal y levanta la página en React:
