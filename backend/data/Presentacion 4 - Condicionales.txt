@@ -1,0 +1,125 @@
+Condicionales
+
+
+Contenido
+Sentencia if
+Sentencia if-else
+Sentencia Switch
+3
+
+1.
+Sentencia if
+4
+
+La sentencia if se utiliza para especificar que un bloque de código será ejecutado si una condición es verdadera.
+			
+5
+
+Sentencia if
+¿condición?
+acción
+condición falsa
+condición verdadera
+
+Sentencia if
+6
+La condición va entre paréntesis después de la palabra reservada if.
+
+El código a ejecutar cuando se cumpla la condición debe estar contenido entre llaves { }. 
+			
+
+Sentencia if
+7
+¿Qué pasa si el número es menor a 10? 
+
+2.
+Sentencia if - else
+8
+
+La sentencia else sirve para indicar un bloque de código a ejecutar si la condición es falsa. 
+			
+9
+
+Sentencia if - else
+¿condición?
+acción 1
+condición falsa
+condición verdadera
+acción 2
+
+Sentencia if-else
+10
+
+Ejemplo 1
+11
+Escribe un programa que solicite dos números y muestre cuál fue el número mayor ingresado o si ambos son iguales.
+			
+
+Ejemplo 1
+12
+Escribe un programa que solicite dos números y muestre cuál fue el número mayor ingresado o si ambos son iguales.
+			
+
+Sentencia else-if
+13
+El ejemplo anterior muestra la anidación de condicionales en múltiples niveles como sea necesario, haciendo que nuestro programa pueda seguir varias rutas diferentes
+			
+n1 > n2
+F
+V
+“n1 es mayor”
+n1 < n2
+“n2 es mayor”
+“Son iguales”
+F
+V
+
+Sentencia else-if
+14
+Para facilitar la anidación de condicionales, múltiples lenguajes de programación incorporan la sentencia else-if, haciendo que la lectura de código sea más fácil y resulte en un código más corto.
+			
+
+3.
+Sentencia switch
+15
+
+Sentencia switch
+16
+En lugar de escribir múltiples sentencias if-else, se puede utilizar la sentencia switch, el cual selecciona uno de múltiples bloques de código para ser ejecutado.
+			
+¿condición a?
+acción 1
+¿condición b?
+acción 2
+¿condición c?
+acción 3
+
+Sentencia switch
+17
+break: marca el fin del bloque de código y termina el switch
+Sentencia switch
+default: en caso de no haber coincidencia se ejecutará este bloque
+
+Ejemplo 2
+18
+Escribe un programa, que dependiendo de un número ingresado por el usuario, le indique el día de la semana que le corresponde:
+1 - Domingo
+2 - Lunes
+3 - Martes
+…
+7 - Sábado
+			
+
+Ejemplo 2
+19
+
+Tarea 2
+Condicionales
+20
+
+Tarea 2 
+Condicionales
+21
+Escribe un programa en C que le solicite la edad al usuario y le indique si es mayor o menor de edad.
+Escribe un programa en C que le pida el número del mes al usuario. El programa le indicará el nombre del mes que le corresponde.  Validar la entrada del usuario.
+Escribe un programa en C que admita los tres coeficientes de una ecuación de segundo grado y diga si tiene raíces reales o no. 

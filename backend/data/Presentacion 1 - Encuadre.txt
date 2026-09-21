@@ -1,0 +1,117 @@
+Programación Estructurada
+
+1.
+Encuadre del Curso
+2
+
+Descripción de la Unidad de Aprendizaje
+Nombre de la Asignatura: Programación Estructurada
+Programa Educativo: Ingeniero en Computación
+Crédito y total de horas: 4 créditos, 2 horas taller, 2 horas laboratorio
+Carácter de la Unidad de Aprendizaje: Obligatoria
+3
+
+Datos del Maestro
+Nombre: Jesús Albany Armenta García
+Formación: Ingeniero en Computación
+Contacto:
+Correo: jesus.armenta92@uabc.edu.mx
+Ubicación: Instituto de Ingeniería - Laboratorio de Ciencia de Datos
+4
+
+Esta unidad de aprendizaje requiere que el alumno haya cursado Metodología de la Programación. Por otra parte, los conceptos adquiridos en esta unidad de aprendizaje son necesarios para otras como Programación Orientada a Objetos y Algoritmos y Estructura de Datos, donde es necesario que el alumno tenga bases sobre un lenguaje de programación estructurado de alto nivel. 
+Es de carácter obligatorio, pertenece a la etapa básica. Contribuye a la formación del estudiante permitiéndole adquirir destreza en el manejo del paradigma de la programación estructurada a fin de elaborar programas eficientes que resuelvan problemas específicos.
+5
+Propósito
+¿Por qué llevar este curso?
+
+Diseñar programas correctamente estructurados, aplicando los principios de abstracción procedimental del diseño descendente, para construir programas eficaces, eficientes y fáciles de actualizar, con una actitud analítica y creativa.
+6
+Competencia
+¿Qué voy a aprender durante el curso?
+¿Abstracción procedimental del diseño descendente?
+¡Divide el problema y Vencerás!
+
+Abstracción Procedimental del Diseño Descendente
+7
+Competencia
+¿Qué voy a aprender durante el curso?
+META
+PARTIDA
+Niv. 1
+
+Abstracción Procedimental del Diseño Descendente
+8
+Competencia
+¿Qué voy a aprender durante el curso?
+META
+PARTIDA
+Niv. 1
+Subir de nivel
+Ganar Medallas del Gimnasio
+Capturar 
+Vencer al alto mando
+
+Lecturas
+Videos
+Analizando
+Resolviendo ejercicios
+Desarrollando programas en C
+Teniendo una actitud positiva y esforzándose
+
+9
+Competencia
+¿Cómo voy a aprender?
+
+Elaboré un prototipo funcional de un sistema donde apliqué toda la teoría aprendida. 
+Desarrollé habilidades de análisis de problemas que me permiten plantear su solución en un programa en C. 
+
+10
+Competencia
+¿Cómo saber que aprendí lo necesario?
+
+Examen Parcial 1…………………………………………. 15%
+Examen Parcial 2…………………………………………. 15%
+Examen Parcial 3…………………………………………..20%
+Tareas……………………………………………………… 10%
+Proyecto Final……………………………………………. 20%
+Laboratorio………………………………………………. 20%
+TOTAL……………………………………………………   100%
+
+11
+¿Cómo saber que aprendí lo necesario?
+Criterios de Evaluación
+
+Para tener derecho a examen ordinario y extraordinario, el estudiante debe cumplir con los porcentajes de asistencia que establece el Estatuto Escolar vigente (80% ordinario, 60% extraordinario).
+Calificación mínima aprobatoria de 60.
+Se requiere aprobar el laboratorio para tener derecho a calificación ordinaria y/o extraordinaria.
+Para tener derecho a calificación ordinaria debe tener calificación aprobatoria en el proyecto final. 
+
+12
+¿Cómo saber que aprendí lo necesario?
+Criterios de Evaluación
+
+Tipos de datos
+Expresiones aritméticas, lógicas y relacionales
+Estructuras de control de selección
+Estructuras de control de iteración
+Abstracción procedimental
+Diseño descendente, tareas y subtareas.
+Módulos
+Parámetros y argumentos
+Resultados (valores de retorno)
+
+13
+
+Contenido del Curso
+Vectores y cadenas de caracteres
+Archivos
+Estructuras
+
+
+Programación Estructurada en C, editorial Pearson, formato electrónico disponible de manera gratuita mediante Biblioteca UABC.
+
+Learn C Programming in 20 Days!
+14
+
+Referencias

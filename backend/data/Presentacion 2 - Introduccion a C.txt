@@ -1,0 +1,222 @@
+Introducción a C
+
+Contenido
+Estructura Básica de un Programa en C
+Tipos de Datos Básicos en C
+Variables
+Salida de Datos
+Entrada de Datos
+Talleres a resolver por los alumnos
+2
+
+1.
+Estructura Básica de un Programa en C
+3
+
+¿Qué es un Programa?
+4
+
+¿Qué es un Programa?
+Un programa es una colección de instrucciones que, al ser debidamente traducidas, serán ejecutadas por una computadora para realizar una tarea en específico.
+5
+
+Nuestro Primer Programa
+6
+Nombre del Programa
+Encabezado: incluye funciones básicas que estaremos utilizando
+Comentarios
+Marca el comienzo del programa
+Instrucciones: le indican a la computadora que mostrará un mensaje en pantalla
+NOTAS: 
+Cada instrucción debe terminar con ;
+El inicio y fin del conjunto de instrucciones deberán estar delimitados entre { }
+
+Nuestro Primer Programa
+7
+
+2.
+Tipos de Datos en C Básicos
+8
+
+En C, la palabra reservada para especificar que un dato será entero es int. Este tipo de dato puede ser utilizado para representar tanto números enteros positivos como negativos. 
+En el estándar actual de C los números que se pueden representar con un int se encuentran dentro del siguiente rango:
+-2,147,483,648 a 2,147,483,647
+
+9
+Tipos de Datos Básicos en C 
+Tipo de Dato int
+
+Algunos ejemplos de qué puede ser almacenado en un int son:
+Edad
+Día del mes
+El nivel de un Pokémon
+Un año
+¿Qué otro tipo de información pudiera ser almacenada?
+10
+Tipos de Datos Básicos en C 
+Tipo de Dato int
+
+El tipo de dato float se refiere a todos los números reales, es decir, pueden llegar a incluir punto decimal, por ejemplo 20.5, 11.4353, 5.0.
+En el estándar actual de C los números que se pueden representar con un float se encuentran dentro del siguiente rango:
+1.175494351E- 38 a 3.402823466E+ 38
+
+
+11
+Tipos de Datos Básicos en C
+Tipo de Dato float
+
+Algunos ejemplos de qué puede puede representar un dato float son:
+
+Magnitudes físicas: fuerza, presión, temperatura, velocidad.
+
+Cantidad monetaria con centavos 
+
+12
+Tipos de Datos Básicos en C
+Tipo de Dato float
+
+Este tipo de dato se puede asociar como una forma corta de decir caracter en inglés (character), por lo tanto podemos inferir que se utiliza para referir a caracteres ASCII, así como letras del abecedario.
+
+13
+Tipos de Datos Básicos en C
+Tipo de Dato char
+
+¿Para qué me sirve conocer los tipos de datos?
+14
+
+3.
+Variables
+15
+
+Una variable en programación puede ser vista como una variable en sentido matemática, es decir, es el nombre de un valor, que en su defecto puede ser numérico o contener un caracter. 
+Desde un punto de vista técnico, una variable es una zona de memoria a la que se le asigna un nombre y que posee un cierto tipo de dato. 
+16
+Variables
+Concepto
+
+Para poder usar una variable en C es necesario declararla. En la declaración se incluye qué tipo de dato tendrá nuestra variable y su nombre. Por ejemplo:
+int edad 
+float velocidad
+char inicial_apellido
+17
+Variables
+Declaración de Variables
+
+La declaración consiste en decir que vamos a tener una variable con un nombre y de un tipo de dato en particular, pero ¿cómo le asignamos un valor? Basta con utilizar el símbolo de igual = . 
+
+18
+Variables
+Asignándole valor a Variables
+
+Otra forma de inicializar las variables es al momento en el que realizamos la declaración, es decir: 
+
+19
+Variables
+Asignándole valor a Variables
+
+REGLA DE ORO 1 : todas las variables que se utilicen en un programa escrito en C deben ser declaradas con anterioridad.
+REGLA DE ORO 2 : una variable que solo ha sido declarada no tiene un valor definido. 
+REGLA DE ORO 3: dar nombres descriptivos a las variables sin espacios, de querer separar el nombre usar _. 
+
+float velocidad   promedio				float a
+				float velocidad_promedio
+20
+Variables
+Consideraciones
+
+REGLA DE ORO 4: El nombre de la variable solo deberá tener letras del abecedario, números y guión bajo.
+REGLA DE ORO 5: El nombre de la variable solo debe empezar con una letra del abecedario.
+REGLA DE ORO 6: Asegurarse que el nombre de la variable no sea una palabra reservada.
+
+				
+			
+21
+Variables
+Consideraciones
+
+4.
+Salida de Datos
+22
+
+
+
+				
+			
+23
+Salida de Datos
+¿Cómo imprimir los distintos Tipos de Datos?
+Tipo de Dato
+Instrucción
+char
+printf(“%c”, letra);
+printf(“La primer letra de mi apellido es %c”, letra);
+int
+printf(“%d”, edad);
+printf(“Mi edad es: %d”, edad);
+float
+printf(“%f”, promedio);
+printf(“Mi promedio en la escuela es de %f”, promedio);
+
+24
+
+Salida de Datos
+
+25
+
+Salida de Datos
+
+Para realizar operaciones matemáticas en C se pueden utilizar los mismos operadores que utilizaríamos para expresar una operación matemática entre dos o más variables:
+
+			
+26
+Salida de Datos
+Operaciones Matemáticas con Datos
+
+Para realizar operaciones matemáticas en C se pueden utilizar los mismos operadores que utilizaríamos para expresar una operación matemática entre dos o más variables:
+
+			
+27
+Salida de Datos
+Operaciones Matemáticas con Datos
+
+Para realizar operaciones matemáticas en C se pueden utilizar los mismos operadores que utilizaríamos para expresar una operación matemática entre dos o más variables:
+
+			
+28
+Salida de Datos
+Operaciones Matemáticas con Datos
+
+5.
+Entrada de Datos
+29
+
+Así como printf nos permite mostrar la salida al usuario, hay una forma de hacer que el usuario pueda interactuar con el programa por medio del teclado por medio de la función scanf, considerando que lo que se lea del teclado se guardará en una variable.
+
+				
+			
+30
+
+Entrada de Datos
+
+31
+
+Entrada de Datos
+
+Tarea 1
+Ejercicios Introductorios a C
+32
+
+Tarea 1 
+Ejercicios Introductorios a C 
+33
+Escribe un programa en C que solicite tu matrícula,  edad y estatura en metros para que posteriormente el programa te muestre los datos ingresados.
+
+Tarea 1 
+Ejercicios Introductorios a C 
+34
+Escribe un programa en C que solicite dos números y te muestre el resultado de sumarlos, restarlos, dividirlos y multiplicarlos. 
+
+Tarea 1 
+Ejercicios Introductorios a C 
+35
+Escribe un programa en C que permita calcular la hipotenusa de un triángulo rectángulo dada la medida de los catetos.  Consultar el archivo de cabecera math para manejo de raíces cuadradas y potencias.

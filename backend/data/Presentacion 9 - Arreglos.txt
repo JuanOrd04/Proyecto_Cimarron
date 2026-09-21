@@ -1,0 +1,157 @@
+Arreglos
+
+Un arreglo es una estructura de datos la cual nos permite almacenar una colección de elementos de un mismo tipo. Esta colección es de una longitud fija, es decir que la cantidad de elementos a almacenar debe ser previamente definida. 
+Podemos ver un arreglo como una colección de variables de un mismo tipo. 
+
+
+
+2
+Concepto
+¿Qué es un arreglo?
+
+3
+Concepto
+¿Por qué utilizar arreglos?
+Pero, ¿y si fuera un grupo tan numeroso como el nuestro?
+
+La implementación de arreglos nos facilita la tarea de almacenar múltiples datos de un mismo tipo sin tener que estar creando variables individuales para almacenar cada elemento. Sin embargo, hay que dominar su uso. 
+
+
+
+4
+Concepto
+¿Por qué utilizar arreglos?
+
+float promedios [ ] = {100, 95, 84, 76, 94}
+
+
+
+5
+Operación
+¿Cómo definimos un arreglo?
+Tipo de dato de los elementos que almacenará el arreglo
+Al definir un arreglo debemos utilizar corchetes
+Valores que almacena nuestro arreglo
+
+float promedios [ ] = {100, 95, 84, 76, 94}
+
+El arreglo promedios tiene un total de 5 elementos, por lo que su longitud (L) es de 5. 
+El valor 100 está en la posición 0, mientras que el valor 94 está en la posición 4 (L-1). 
+
+
+
+6
+Operación
+¿Cómo definimos un arreglo?
+
+7
+Operación
+¿Cómo accedemos a la información de un arreglo?
+Para acceder a un elemento en específico de nuestro arreglo lo hacemos a través de la posición que ocupa en el arreglo: 
+
+
+
+Los elementos de un arreglo son almacenados en memoria de forma continua. 
+
+
+
+100
+95
+84
+76
+94
+0
+1
+2
+3
+4
+
+8
+Operación
+¿Cómo accedemos a la información de un arreglo?
+
+9
+Operación
+¿Cómo accedemos a la información de un arreglo?
+
+10
+Operación
+Creación por Tamaño
+Es común que al hacer uso de arreglos no se conozcan con antelación los elementos que almacenará, por lo que al crearlos es posible únicamente definir su tamaño. 
+
+float promedios [5];
+
+
+
+
+
+11
+Operación
+Creación por Tamaño
+¿Y si intentamos agregar un elemento adicional?
+
+12
+Operación
+Creación por Tamaño
+Ese quinto elemento realmente NO PERTENECE al arreglo, simplemente es la posición contigua al elemento en la posición 4!!!!
+100
+95
+84
+76
+94
+0
+1
+2
+3
+4
+50
+promedios [ ] 
+
+13
+Operación
+Arreglos y Funciones 
+Cuando un arreglo es envíado a una función, esta NO GENERA una copia del arreglo. Se envía el arreglo original y cualquier modificación en este se verá reflejado en el original ya que un arreglo es envíado por referencia (se envía su posición en memoria). 
+
+
+
+
+
+14
+Operación
+Arreglos y Funciones 
+
+15
+Pequeño Paréntesis
+Variables por Referencia
+Anteriormente, las variables enviadas a funciones eran pasadas por valor, es decir que la función maneja una copia del valor de la variable que se define como argumento, por lo que la función no modifica la variable especificada en el llamado a la función, sin embargo, cuando una variable es pasada por referencia, se envía la posición en memoria de la variable, por lo que la función si puede modificar su valor. 
+
+
+
+
+
+16
+Pequeño Paréntesis
+Variables por Referencia
+A las variables que manejan una posición en memoria en lugar del valor que contiene se les conoce como punteros o apuntadores. 
+
+
+
+
+
+17
+
+Ejemplo 1
+Crea un programa en C que solicite y capture la calificación de 15 alumnos para posteriormente calcular el promedio del grupo con la ayuda de una función que regrese el promedio y reciba como parámetro el arreglo de calificaciones. 
+
+
+
+
+
+18
+
+Ejemplo 1
+
+
+
+
+

@@ -1,0 +1,163 @@
+1.
+Archivos de Texto 
+1
+
+Un archivo de texto suelen ser aquellos archivos con extensión .txt cuyo contenido puede ser visualizado y editado en cualquier editor de texto ya que se encuentran en un formato comprensible para nosotros los usuarios, ya que su contenido es texto plano. 
+
+
+
+
+2
+Archivos de Texto
+Concepto
+
+En programación, el uso de archivos permite la persistencia de información, es decir, si un programa es detenido, el utilizar archivos permite preservar la información pese a que el programa haya terminado, pudiendo ser cargados una vez que el programa sea reanudado. 
+
+
+
+
+3
+Archivos de Texto
+Concepto
+
+En C, es posible realizar principalmente 4 operaciones sobre archivos de texto. Dichas operaciones son:
+Crear un archivo
+Abrir un archivo existente
+Cerrar un archivo
+Realizar operaciones de Lectura y Escritura en el archivo.
+Las funciones para llevar a cabo dichas operaciones están disponibles en el archivo de cabecera stdio.h.
+
+
+
+
+4
+Archivos de Texto
+Implementación en C
+
+FILE * fptr
+fptr = fopen(nombre_archivo,modo);
+La función fopen( ) nos permite abrir (o crear) el archivo especificado por nombre_archivo en alguno de los siguientes modos:
+
+5
+Implementación en C
+Abrir o Crear un archivo de texto
+
+6
+Implementación en C
+Abrir o Crear un archivo de texto
+Modo
+Descripción
+“r”
+Permite abrir el archivo en modo solo lectura, regresando un valor NULL en caso de no existir.
+“w”
+Permite abrir el archivo en modo escritura, y, en caso de no existir, crea el archivo. NOTA: en caso de existir, su contenido será sobrescrito.  
+“a”
+Permite abrir el archivo en modo añadir, lo que agrega nuevo contenido justo al final del archivo. De no existir, el archivo será creado.
+
+Cabe destacar que la función fopen nos regresa un valor de tipo FILE*, el cual es un tipo de dato que apunta a la información del archivo.
+Por último, siempre que abramos un archivo de texto, deberemos cerrarlo con la función fclose( ): 
+int fclose (FILE * fptr);
+
+
+7
+Implementación en C
+Abrir o Crear un archivo de texto
+
+8
+Implementación en C
+Abrir o Crear un archivo de texto
+¿Por qué ocurrió un error?
+
+9
+Implementación en C
+Abrir o Crear un archivo de texto
+
+2.
+Lectura y Escritura en Archivos de Texto 
+10
+
+Para escribir en un archivo de texto, es necesario abrir el archivo en modo escritura (“w”), mientras que hay dos funciones que nos ayudan a lograr nuestro cometido, fprintf( ) y fputs( ). Ambas nos permiten escribir una cadena de caracteres en un archivo, sin embargo la primera maneja formato, lo que permite escribir tipos diferentes de variables en el archivo. 
+
+
+11
+Lectura y Escritura en Archivos de Texto
+Escritura en Archivos de Texto
+
+12
+Lectura y Escritura en Archivos de Texto
+Escritura en Archivos de Texto
+Con la función fprintf
+
+13
+Lectura y Escritura en Archivos de Texto
+Escritura en Archivos de Texto
+Con la función fputs
+
+Noten que el contenido del archivo fue sobrescrito
+
+En caso que no deseemos que se sobrescriba el contenido de un archivo de texto, es necesario utilizar el modo añadir (“a”), ya que cada elemento que agreguemos al archivo se agregará hasta el final del mismo.
+
+
+14
+Lectura y Escritura en Archivos de Texto
+Escritura en Archivos de Texto
+
+15
+Lectura y Escritura en Archivos de Texto
+Escritura en Archivos de Texto
+
+Si deseamos únicamente leer el contenido de un archivo, tenemos que abrirlo en modo lectura (“r”) y hacer uso de las funciones fgets o fscanf para acceder a su contenido, considerando que fgets leerá línea por línea el archivo de texto hasta detectar un salto de línea, mientras que fscanf detiene su lectura cuando detecta un espacio o salto de línea. 
+
+
+16
+Lectura y Escritura en Archivos de Texto
+Lectura de Archivos de Texto
+
+17
+Lectura y Escritura en Archivos de Texto
+Lectura de Archivos de Texto
+Con la función fgets
+
+
+
+18
+Lectura y Escritura en Archivos de Texto
+Lectura de Archivos de Texto
+Con la función fscanf
+
+
+
+19
+Lectura y Escritura en Archivos de Texto
+Lectura de Archivos de Texto
+fscanf para leer otro tipo de dato
+
+
+
+20
+Lectura y Escritura en Archivos de Texto
+Lectura de Archivos de Texto
+fscanf para lectura de datos separados por comas
+
+
+
+Tarea 9
+Archivos de Texto 
+21
+
+Tarea 9
+Archivos de Texto
+22
+En tu editor de texto de preferencia, crea un archivo de texto y escribe lo siguiente:
+Lista de Materias:
+Programación Estructurada
+Electricidad y Magnetismo
+Programación en Python
+Matemáticas Discretas
+
+
+Tarea 9
+Archivos de Texto
+23
+Una vez escrito y guardado el archivo de texto, escribe un programa en C que lea cada una de las líneas de dicho archivo y las escriba una por una en otro archivo llamado copia_tarea9. Verificar que el contenido del archivo original se haya copiado de forma correcta. 
+

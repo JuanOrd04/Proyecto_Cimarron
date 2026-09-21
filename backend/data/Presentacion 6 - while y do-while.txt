@@ -1,0 +1,131 @@
+Estructuras de Control de Iteración 
+
+3.
+Ciclo while
+2
+
+Otro tipo de estructura de control de iteración es el ciclo while, el cual realiza un bloque de código mientras se cumpla una condición específica. 
+while (condición) {
+//Bloque de código
+}
+
+3
+Ciclo while
+Concepto
+Noten que carece de espacio para las cláusulas de iniciación y actualización
+
+Código con comportamiento análogo al de ciclo for( ).
+
+
+4
+Ciclo while
+Ejemplo 1
+Ejemplo con for ( ) 
+Ejemplo con while ( ) 
+
+¿Qué ocurre si numero = 10 antes del ciclo while?
+
+
+5
+Ciclo while
+Ejemplo 1
+
+Con el ejemplo anterior, se tiene la intención de resaltar que el ciclo while evalúa la condición antes de ejecutar el bloque de código. 
+
+
+6
+Ciclo while
+Flujo de Operación 
+Condición
+V
+Ejecutar bloque de código
+F
+De cumplirse la condición, sigue dentro del ciclo ejecutando el bloque de código
+Si la condición no se cumple, terminará el ciclo sin ejecutar el bloque de código en dicha iteración
+
+Escribe un programa en C que solicite al usuario ingresar números. El programa dejará de solicitar  números hasta que la suma de todos los números ingresados sea mayor o igual a 100 o bien, cuando el usuario ingrese un -1. Al final, el programa mostrará la suma acumulada y cuántos números fueron ingresados. 
+
+NOTA: el programa no deberá sumar el -1 ni contabilizarlo.
+
+
+7
+Ciclo while
+Ejemplo 2
+
+
+
+
+8
+Ciclo while
+Ejemplo 2
+
+4.
+Ciclo do-while
+9
+
+El ciclo do-while es una variante del ciclo while, cuya principal diferencia radica en el hecho de que la comprobación de iteración se produce después de haber ejecutado al menos una vez el contenido del bloque de instrucciones.
+
+
+10
+Ciclo do-while
+Concepto
+
+La comprobación de iteración se realiza después de haber ejecutado al menos una vez el bloque de código y se repetirá siempre y cuando la condición sea verdadera:
+
+
+11
+Ciclo do-while
+Flujo de Operación 
+Condición
+V
+Ejecutar bloque de código
+F
+
+do {
+//Bloque de código
+condición = nuevo_valor;
+} while (condición)
+
+Esta sintaxis garantiza que el ciclo será ejecutado al menos una vez, aunque la condición sea falsa.
+
+12
+Ciclo do-while
+Sintaxis
+No olviden agregar una cláusula de actualización para la condición al final del bloque.
+
+13
+Ciclo do-while
+Ejemplo 1
+
+14
+Conclusión
+Resumen de Diferencias
+Ciclo For
+Ciclo While
+Cuando se conoce con anterioridad el número de iteraciones.
+Cuando el número de iteraciones no está determinado previamente.
+El bloque de código se ejecutará un número definido de veces.
+El bloque de código será ejecutado mientras la condición sea verdadera.
+Se tiene una variable contador declarada en la cláusula de inicialización.
+No cuenta con una cláusula de inicialización en su sintaxis (es responsabilidad del programador).
+
+15
+Conclusión
+Resumen de Diferencias
+Ciclo While
+Ciclo Do-While
+La condición se evalúa antes de ejecutar el bloque de código.
+El bloque de código es ejecutado antes de evaluar la condición.
+El bloque de código solo se ejecuta si se cumple la condición, y termina una vez que esta es falsa.
+El bloque de código se ejecuta al menos una vez, sin importar si la condición se cumple o no.
+
+16
+Ciclo do-while
+Ejemplo 2
+Escribe un programa en C que le esté solicitando al usuario números positivos e irá acumulándolos. El programa se detendrá cuando el usuario escriba un número negativo (no se acumula), mostrando a su vez el valor acumulado.
+
+
+
+17
+Ciclo do-while
+Ejemplo 2

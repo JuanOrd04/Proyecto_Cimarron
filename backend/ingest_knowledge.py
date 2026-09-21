@@ -1,24 +1,33 @@
 import os
-from langchain_community.document_loaders import TextLoader
-from langchain_text_splitters import RecursiveCharacterTextSplitter
-from langchain_community.embeddings import OllamaEmbeddings
-from langchain_chroma import Chroma
 import logging
+from langchain_community.document_loaders import DirectoryLoader, TextLoader
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_ollama import OllamaEmbeddings
+from langchain_chroma import Chroma
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("IngestKnowledge")
 
 DB_DIR = os.path.join(os.path.dirname(__file__), "chroma_db")
-KNOWLEDGE_FILE = os.path.join(os.path.dirname(__file__), "conocimiento.txt")
+DATA_DIR = os.path.join(os.path.dirname(__file__), "data")
 
 def main():
-    if not os.path.exists(KNOWLEDGE_FILE):
-        logger.error(f"No se encontró el archivo {KNOWLEDGE_FILE}")
+    if not os.path.exists(DATA_DIR):
+        logger.error(f"No se encontró la carpeta {DATA_DIR}")
         return
 
     logger.info("Cargando documentos...")
-    loader = TextLoader(KNOWLEDGE_FILE, encoding="utf-8")
+    loader = DirectoryLoader(
+        DATA_DIR,
+        glob="*.txt",
+        loader_cls=TextLoader,
+        loader_kwargs={"encoding": "utf-8"}
+    )
     documents = loader.load()
+
+    if not documents:
+        logger.warning(f"No se encontraron documentos .txt en {DATA_DIR}")
+        return
 
     logger.info("Dividiendo el texto en fragmentos (chunks)...")
     text_splitter = RecursiveCharacterTextSplitter(
@@ -31,15 +40,12 @@ def main():
     logger.info(f"Se crearon {len(docs)} fragmentos.")
 
     logger.info("Inicializando modelo de embeddings (nomic-embed-text)...")
-    # Utilizamos el modelo nomic-embed-text en Ollama local
     embeddings = OllamaEmbeddings(
         model="nomic-embed-text",
         base_url="http://127.0.0.1:11434"
     )
 
     logger.info(f"Construyendo base de datos vectorial en {DB_DIR}...")
-    
-    # Creamos o actualizamos la base de datos Chroma
     vectorstore = Chroma.from_documents(
         documents=docs,
         embedding=embeddings,

@@ -1,0 +1,132 @@
+Arreglos Bidimensionales y Paralelos
+
+1.
+Arreglos Bidimensionales
+2
+
+Un arreglo bidimensional o multidimensional de 2 dimensiones, es un arreglo que puede ser representado como una tabla de datos de un mismo tipo, cuyo número de elementos es obtenido al multiplicar el tamaño en las dos dimensiones. 
+A este tipo de arreglos también se les conoce como matrices. 
+
+
+
+3
+Arreglos Bidimensionales
+¿Qué es un Arreglo Bidimensional?
+
+int nombre_matriz [renglones] [columnas]
+
+int pixeles_en_imagen[720][1024];
+float tabla_datos [50][10]; 
+
+
+
+4
+Arreglos Bidimensionales
+¿Cómo se define una matriz?
+
+int nombre_matriz [3] [4]
+
+
+
+
+5
+Arreglos Bidimensionales
+¿Cómo se define una matriz?
+valor[0][0]
+valor[0][1]
+valor[0][2]
+valor[0][3]
+valor[1][0]
+valor[1][1]
+valor[1][2]
+valor[1][3]
+valor[2][0]
+valor[2][1]
+valor[2][2]
+valor[2][3]
+Columnas (4)
+Renglones (3)
+
+6
+Arreglos Bidimensionales
+¿Cómo definimos una matriz?
+
+Elabora un programa en C que realice la suma de dos matrices de dimensiones 3x3. 
+
+
+
+7
+Arreglos Bidimensionales
+Ejemplo 1
+
+8
+Arreglos Bidimensionales
+Ejemplo 1
+
+¿Y si quisiéramos elementos de distintos tipos de datos?
+9
+
+2.
+Arreglos Paralelos
+10
+
+Un arreglo paralelo consiste en múltiples arreglos de un mismo tamaño y cuyos elementos están relacionados, constituyendo una entidad. 
+Por ejemplo:
+Arreglos para representar el peso y estatura de un grupo de personas. 
+
+
+
+11
+Arreglos Paralelos
+¿Qué es un Arreglo Paralelo?
+
+12
+Arreglos Paralelos
+Implementación
+1.75
+1.45
+1.56
+1.90
+1.85
+1.66
+68
+42
+70
+89
+100
+56
+21
+26
+41
+67
+25
+18
+Estatura
+Peso
+Edad
+Persona 1
+Persona 5
+
+13
+Arreglos Paralelos
+Implementación
+
+Tarea 7
+Arreglos
+14
+
+Tarea 7
+Arreglos
+15
+Escribe un programa en C que simule un sistema de captura de calificaciones, el cual contará con el siguiente menú. 
+[1] Capturar Calificaciones
+[2] Mostrar Calificaciones del Grupo
+[3] Mostrar Calificaciones de un Alumno
+[4] Salir
+
+Tarea 7
+Arreglos
+16
+Capturar calificaciones: esta opción permitirá capturar la matrícula de un alumno seguida de las calificaciones obtenidas en 3 distintos parciales. Después de capturar la información de un alumno, regresan al menú. Habrá un máximo de 10 alumnos, y si se desea capturar uno adicional, el programa mostrará un mensaje de error.
+Mostrar calificaciones del grupo: mostrará la matrícula y las calificaciones de los 3 parciales de todos los alumnos capturados hasta el momento.
+Mostrar calificaciones de un alumno: el programa solicitará la matrícula de un alumno y mostrará únicamente las calificaciones de dicho alumno. 

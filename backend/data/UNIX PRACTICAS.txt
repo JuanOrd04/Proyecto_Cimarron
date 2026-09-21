@@ -1,0 +1,776 @@
+
+DATOS GENERALES
+
+Institución: Universidad Autónoma de Baja California - Facultad de Ingeniería Mexicali
+Docente: Jesus Albany Armenta Garcia
+Práctica: Práctica 1: Introducción a los Sistemas Operativos Unix y Linux
+
+FORMATO DE PRÁCTICA DE LABORATORIO
+
+Programa Educativo: Ingeniero en Computación
+Plan de Estudios: 2020-1
+Unidad de Aprendizaje: Taller de Sistema Operativo Unix (Clave 36303)
+Práctica No.: 1
+Nombre de la Práctica: Introducción a los Sistemas Operativos Unix y Linux
+Duración: 2 Horas
+
+INTRODUCCIÓN
+Dada la importancia y auge de los sistemas operativos Linux, es relevante mencionar su origen y las diferentes distribuciones que existen, así como su rápida evolución a través del tiempo, el cual tiene en su base al sistema operativo Unix.
+
+OBJETIVO (COMPETENCIA)
+El alumno conocerá la historia del sistema operativo UNIX/LINUX y el papel que juega dentro del ámbito de la computación, para ubicarse dentro de la temática que se estudiará durante el transcurso del taller.
+
+FUNDAMENTO
+Un sistema operativo es el grupo de programas encargados de funcionar como intermediario entre un usuario y el hardware, permitiendo la interacción entre el usuario y la máquina permitiendo la ejecución de programas.
+
+Un sistema operativo de gran importancia en la computación, siendo la base de muchos sistemas operativos utilizados hoy en día. Este sistema operativo tuvo su nacimiento mediante las ideas planteadas por los desarrolladores de MULTICS, que si bien este anterior fue un fracaso, aportó la idea base en la que Unix se desarrolló.
+
+Unix, conocido en sus inicios como UNICS, fue influenciado por otros sistemas operativos del momento, el cual tuvo su auge cuando este fue reescrito en C, lo cual fue muy bien recibido por sus usuarios.
+
+Por otro lado, tenemos a Linux el cual es un kernel desarrollado por el estudiante de la Universidad de Helsinki Linus Torvalds, el cual fue inspirado en Minix, un sistema Unix desarrollado por Andrew Tanenbaum.
+
+PROCEDIMIENTO
+
+Equipo Necesario:
+• Computadora con acceso a Internet
+
+Material de Apoyo:
+• Formato de Práctica
+
+Desarrollo de la Práctica:
+Realice una investigación acerca del sistema operativo LINUX:
+
+¿Qué es el proyecto GNU? ¿Cómo se involucra con LINUX?
+El Proyecto GNU, fundado por el informático Richard Stallman consta de un sistema operativo diseñado con el propósito de iniciar un sistema de software libre, sus inicios fueron durante el año 1984, cuando Richard renunció a su trabajo en el MIT debido a la posibilidad de que el MIT se apoderara de su sistema y lo comercializara de forma privativa, lo cual era lo que menos deseaba Richard, después de todo el principal objetivo del proyecto GNU era ser un software libre, incluso si este no contara con ventajas sobre otros sistemas operativos como Unix [1].
+
+El proyecto GNU se integró con el kernel Linux por el año 1991, cuando este kernel fue creado, esto debido a que GNU era software libre y linux era el núcleo que este necesitaba para que ambos se convirtieran en el sistema operativo GNU/Linux, el cual constituye la base en la que fueron desarrolladas una gran cantidad de distribuciones utilizadas hoy en día [2].
+
+Defina qué es una distribución de LINUX.
+Una distribución Linux es un sistema operativo desarrollado sobre la base del kernel linux, estas varían entre sí, convirtiéndolas en sistemas operativos multipropósito ya que cada una tiene implementada herramientas distintas desarrolladas u obtenidas del proyecto GNU [3].
+
+Cada distribución de linux puede ser utilizada para un propósito específico donde podemos tener elementos distintos como su gestor de paquetes, la interfaz gráfica de usuario, bibliotecas, compiladores, entre otras herramientas [4].
+
+Mencione 3 distribuciones de LINUX, sus características y ejemplos de en qué sistemas actuales se utilizan.
+
+Ubuntu:
+Ubuntu es una de las distribuciones más intuitivas y fáciles de utilizar, fue desarrollada por el emprendedor sudafricano Mark Shuttleworth basado en la distribución Debian pero con la peculiaridad de que fue creado con el propósito de hacer un sistema operativo de código abierto, fácil de utilizar y accesible para todos [5].
+
+Kali Linux:
+Kali Linux es un sistema operativo más desarrollado en base a Debian el cual está orientado a la seguridad informática gracias a sus herramientas que facilitan las pruebas de penetración y las auditorías de seguridad [6]. Esta distribución está altamente preparada para todo tipo de pruebas de seguridad como lo son el análisis forense informático, la ingeniería inversa, pruebas de vulnerabilidad, entre otras, además de que el kernel está preparado con parches de inyección [7].
+
+Arch Linux:
+Arch Linux es un sistema operativo centrado en el usuario, de tal forma que casi en su totalidad de herramientas están libres a escoger por parte del usuario, donde el mismo usuario decidirá por su interfaz gráfica, gestores de elementos, entre otras.
+Esta distribución está orientada hacia desarrolladores y usuarios con experiencia previa en sistemas GNU/Linux ya que esta distribución es pragmática y simplista, especializada en el desarrollo con un enfoque específico [8].
+
+¿Qué ventajas tienen las distribuciones de Linux con respecto a otros sistemas operativos?
+Las distribuciones de Linux toman un papel muy importante cuando de multitareas se habla, son sistemas operativos orientados a un uso en específico o incluso con distribuciones donde no se requiere de gran conocimiento o habilidad para su uso.
+
+Una de las grandes ventajas que tienen las distribuciones de Linux son su versatilidad, velocidad y su estabilidad, obtenidas gracias a ser código libre donde todos pueden aportar al proyecto o incluso armar y mejorar constantemente tu sistema operativo instalado (objetivo esperado en distribuciones como Arch) [9].
+
+RESULTADOS Y CONCLUSIONES
+El sistema operativo Unix es la base en la que fue desarrollado GNU/Linux, el cual es un sistema operativo de código abierto multitarea, con distribuciones dedicadas a distintos propósitos.
+
+Durante el desarrollo de la investigación encontré interesante muchos temas, tal como el desarrollo del proyecto GNU el cual considero que es un gran aporte base al movimiento del software libre, mostrando su dedicación y ética hacia el mundo del software, donde más tarde se integró Linus Torvalds con el desarrollo del kernel Linux y se pudo fusionar con las herramientas del proyecto GNU, logrando uno de los hitos más importantes en el desarrollo de sistemas operativos de software libre.
+
+REFERENCIAS
+[1] Free Software Foundation, "El sistema operativo GNU y el movimiento del software libre," GNU, (s. f.), https://www.gnu.org/home.es.html.
+[2] R. Stallman, "Acerca de GNU - El Proyecto GNU," GNU, (s. f.), https://www.gnu.org/gnu/thegnuproject.es.html.
+[3] ComputerNewAge, "GNU/Linux. Introducción. Como Funciona y Principales Ventajas", (s. f.), https://computernewage.com/gnu-linux/introduccion/.
+[4] AprendoLinux, "El Universo de las distribuciones de Linux," (s. f.), https://aprendolinux.com/universo-distribuciones-linux/.
+[5] phoenixNAP, "¿Qué es una distribución de Linux?", Glosario de TI, (04/2024), https://phoenixnap.mx/glosario/que-es-una-distribucion-de-linux.
+[6] OffSec Services Limited, "What is Kali Linux?," Kali Linux Documentation, (05/2025), https://www.kali.org/docs/introduction/what-is-kali-linux.
+[7] Campus Ciberseguridad, "¿Qué es Kali Linux y para qué sirve?", (s. f.), https://www.campusciberseguridad.com/blog/que-es-kali-linux-y-para-que-sirve.
+[8] ArchWiki, "Arch Linux," (s. f.), https://wiki.archwiki.org/title/Arch Linux.
+[9] Ciberaula, "Ventajas e inconvenientes de Linux", (s. f.), https://linux.ciberaula.com/articulo/ventajas inconvenientes linux.
+
+LimonOrozco_01197973_Practica8.pdfUNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
+FACULTAD DE INGENIERÍA
+Formato de Práctica de Laboratorio
+Ingeniería en Computación
+Trabajo: Práctica 8: Redireccionamiento Entrada.
+Asignatura: Taller de Sistemas Operativos Unix.
+Docente: Jesus Albany Armenta Garcia.
+Alumno(a): Limon Orozco Yael Alfonso
+Matrícula: 01197973
+Mexicali B.C. 18 de Septiembre del 2025.   INTRODUCCIÓN
+Los sistemas Linux manejan cada objeto como un archivo. Esto incluye los procesos de entrada y salida, identificando cada objeto de archivo por medio de un descriptor de archivo. Este descriptor es un identificador numérico único que sirve para identificar los archivos abiertos en una sesión. Hay 3 descriptores de archivos reservados para propósitos especiales, los cuales son:
+0 STDIN Entrada Estándar
+1 STDOUT Salida Estándar
+2 STDERR Error Estándar
+El shell de Linux usa estos descriptores para direccionar la entrada y salida de comandos por defecto al monitor, sin embargo, en ocasiones puede ser deseado guardar el resultado de un comando en un archivo en vez de mostrarlo en el monitor.   En esta práctica trabajaremos con los comandos que nos permiten modificar la entrada estándar de los comandos, lo que comúnmente se conoce como Redireccionamiento de Entrada.   OBJETIVO (COMPETENCIA)
+El alumno aprenderá acerca del descriptor de archivos para el direccionamiento de entrada, aplicándolo de forma eficiente en comandos de Linux con actitud analítica.   FUNDAMENTO
+Redireccionamiento
+La redirección se refiere al hecho de que se puede indicar al intérprete de comandos (shell) que modifique tanto la entrada como salida estándar, los cuales por defecto están asociados al teclado y el monitor respectivamente, haciendo posible la asociación con un comando o un archivo. Para esta práctica, nos centraremos únicamente en el redireccionamiento de entrada.   Redireccionamiento de Entrada Estándar
+Como se mencionó anteriormente, el descriptor de archivo STDIN hace referencia a la entrada estándar del shell. Por defecto, dicha entrada estándar es el teclado. El shell recibe la entrada desde el teclado al descriptor de archivo STDIN y se procesa cada carácter conforme se van tecleando.
+Una forma de reemplazar la entrada estándar es mediante el símbolo de redireccionamiento de entrada <. Este hace que se lea el archivo especificado y se maneje su información como si hubiera sido ingresada desde teclado, siendo compatible con cualquier otro comando que acepte datos desde STDIN.   Canalización o Entubamiento
+Analizando los ejemplos anteriores, puede resultar rebuscado la utilización de redireccionamiento de entrada con los comandos cat y sort, ya que estos comandos son capaces de recibir directamente como parámetro un archivo, por lo que una aplicación práctica que hace redireccionamiento no solo de entrada, sino también de salida, es la canalización o entubamiento. La canalización o entubamiento son un tipo especial de redireccionamiento que permite enviar la salida estándar de un comando como entrada estándar de otro, lo cual permite realizar funciones más complejas y ofrece la posibilidad de concatenar comandos.
+El símbolo que se utiliza para efectuar el entubamiento o canalización recibe el nombre de pipe y su símbolo es |.   Bifurcación de Redireccionamiento
+Retomando lo visto en la práctica anterior acerca de redireccionamiento de salida, si además de redireccionar la salida de un comando a un archivo se desea visualizar en pantalla el resultado obtenido se puede utilizar el comando tee. El comando tee lee la entrada estándar y escribe su salida tanto en la salida estándar como en uno o más archivos.   (Nota: Se omiten las capturas de pantalla de la terminal y comandos por formato, pero el texto descriptivo está íntegro).   PROCEDIMIENTO
+Desarrollo de la Práctica   Inicie sesión ssh en el servidor de computación.   Genere un archivo llamado conectados con todos los usuarios que están conectados al servidor actualmente ordenados alfabéticamente y simultáneamente que se visualice en pantalla.   Cree un archivo llamado usuarios que contenga los usuarios que se obtienen a partir del comando who ordenados en orden descendente y simultáneamente que se visualice en pantalla.   Utilizando el comando tee, agregue el contenido del archivo conectados al final del archivo nombres.   Muestre únicamente el nombre de los primeros 5 archivos o directorios de su directorio home.   Utilice entubamiento para mostrar únicamente el apellido de las últimas 5 líneas del archivo usuarios.   Termine la sesión.   RESULTADOS Y CONCLUSIONES
+A diferencia del redireccionamiento de salida estándar, el redireccionamiento de entrada nos puede ayudar para utilizar la información de algún archivo para dársela a algún comando y que este haga lo maneje, por otro lado, el entubamiento nos ayuda a trabajar con un archivo o más de distintas formas con distintos comandos dentro de una misma línea de comando.   Practca18_LimonOrozco_01197973.docx.pdfUNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
+FACULTAD DE INGENIERÍA MEXICALI
+Trabajo: Práctica 18: Mando para el manejo de procesos.
+Asignatura: Taller de Sistemas Operativos Unix.
+Docente: Jesus Albany Armenta Garcia.
+Alumno(a): Limon Orozco Yael Alfonso
+Matrícula: 01197973
+Mexicali B.C. 18 de Noviembre del 2025.   INTRODUCCIÓN
+Un proceso es una instancia de un programa. En UNIX, un proceso se crea cuando se invoca o ejecuta un programa, ya sea mediante un mando del shell o por medio de otro programa. En la presente práctica se conocerán y utilizarán los principales mandos con los que cuenta UNIX para el manejo de los procesos.   OBJETIVO (COMPETENCIA)
+El alumno utilizará los mandos de UNIX para supervisar y manipular la ejecución de los procesos en el sistema.   FUNDAMENTO
+Se le llama proceso en Unix a un programa en ejecución y al objeto abstracto que crea el sistema operativo para manejar el acceso de ese programa a los recursos del sistema (memoria, CPU, dispositivos de E/S). Pueden coexistir varias instancias de un mismo programa ejecutando en forma simultánea. Cada una de ellas es un proceso diferente.
+En Unix, a los ojos de un usuario en un momento dado hay múltiples programas en ejecución, cada uno de ellos avanzando en su tarea. Sin embargo en una máquina con un solo procesador hay en cada instante solamente un proceso ejecutando. Es el sistema operativo el que va rotando el uso del procesador a intervalos breves (alguna decena de milisegundos) entre los procesos definidos en el sistema de forma que se crea la ilusión que todos avanzan simultáneamente.   Identificadores
+Process ID (PID): Al crearse un nuevo proceso se le asigna un identificador de proceso único.
+Parent Process ID (PPID): Los procesos a su vez pueden crear subprocesos, llamados procesos hijo (child process), un proceso puede tener varios procesos hijo, pero un proceso hijo sólo tendrá un padre.
+UID y EUID: El User ID (UID) del proceso identifica al creador del proceso. El Effective User ID (EUID) en cambio se utiliza para determinar si el proceso tiene permiso para acceder a archivos y otros recursos del sistema.   Supervisión de procesos
+Mando ps (process status): La herramienta básica para diagnosticar problemas relacionados con procesos es el mando ps. Este mando muestra información acerca de los procesos activos.
+Mando top: El mando ps muestra todos los procesos en un momento determinado, pero si quieres verlos en tiempo real de ejecución puedes utilizar el mando top.   Manipulación de procesos
+Procesos en primer plano (Foreground): Cuando se ingresa un mando, el shell crea un proceso hijo en el cual se ejecuta el mando.
+Tareas en segundo plano (Background Jobs): Un proceso que se inicie desde la línea de mandos se puede ejecutar en el segundo plano como una tarea (job) y así evitar que se bloquee la terminal. Para hacer esto sólo se requiere agregar un símbolo & (ampersand) al final del mando.   Terminando procesos
+El procedimiento usual en estos casos es obtener el PID del proceso con la ayuda del mando ps y luego terminarlo con el comando kill, que se utiliza para enviar una señal al proceso.   RESULTADOS Y CONCLUSIONES
+Dentro de esta práctica utilizamos los comandos ps, top, jobs, fg, kill para visualizar, manipular y terminar procesos que están siendo ejecutados en primer y segundo plano dentro de nuestro usuario del servidor, siendo capaces de observar como podemos ver los procesos nuestros, de otro usuario o de un grupo entero además de manejar como se ejecutaban los nuestros y como terminarlos.   Practica 7.pdfUNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
+Trabajo: Práctica 7: Redireccionamiento de Flujos de Salida.
+Asignatura: Taller de Sistemas Operativos Unix.
+Alumno(a): Limon Orozco Yael Alfonso
+Mexicali B.C. 18 de Septiembre del 2025.   INTRODUCCIÓN
+Los sistemas Linux manejan cada objeto como un archivo. Esto incluye los procesos de entrada y salida, identificando cada objeto de archivo por medio de un descriptor de archivo.
+En esta práctica se trabajará con el redireccionamiento de salida, haciendo que los resultados de un comando y los respectivos mensajes de error que pudieran ser generados al utilizarlos sean redireccionados a un archivo en vez de al monitor.   OBJETIVO (COMPETENCIA)
+El alumno aprenderá acerca de los descriptores de archivos para el direccionamiento de salida, realizando ejercicios los cuales involucrarán comandos para la visualización de archivos.   FUNDAMENTO
+Redireccionamiento de Salida Estándar
+Toda salida del shell (programas, resultados de un comando, scripts) es direccionada a la salida estándar, el monitor. Sin embargo, es posible redireccionar la salida por medio del símbolo >. También es posible agregar datos al final de un archivo sin eliminar su contenido por medio del símbolo >>.   Redireccionamiento del Error Estándar
+Cuando un comando produce un mensaje de error, el shell no redirecciona dicho mensaje de error al archivo al que se está redireccionando el resultado de un comando. El shell maneja los mensajes de error usando el descriptor de archivo especial STDERR. Para redireccionar los mensajes de error es necesario especificar el descriptor de archivo que se desea redireccionar agregando el valor del descriptor (el cual tiene un valor de 2) justo antes del símbolo de redireccionamiento.   RESULTADOS Y CONCLUSIONES
+Durante esta práctica aprendí el uso del redireccionamiento de salida, para poder almacenar lo que tenga la salida estándar dentro de archivos o para poder almacenar modificaciones de archivos dentro de otros.   Practica 11.pdfUNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
+Trabajo: Práctica 11: Comandos Avanzados de Vi.
+Alumno(a): Limon Orozco Yael Alfonso
+Mexicali B.C. 14 de Octubre del 2025.   INTRODUCCIÓN
+Llegado a esta práctica, el alumno posee conocimientos básicos de cómo realizar las funciones básicas que otros editores de texto poseen. Sin embargo, vi ofrecen un conjunto de funciones que no se encuentran en editores convencionales, tales como la definición de macros, abreviaciones y configuraciones del documento a las que se puede acceder por medio de sencillos comandos los cuales serán repasados y utilizados en esta práctica.   FUNDAMENTO
+El Comando :set
+En el editor vi es posible cambiar opciones que permiten la personalización del editor. Dichas opciones pueden ser lo que se conoce como toggle options, es decir, opciones de encendido o apagado, o bien, opciones en las que se tienen que definir valores numéricos o de texto.   Abreviaciones
+Vi permite implementar abreviaciones, las cuales expandirá automáticamente en una palabra completa cada vez que se escriba dicha abreviación en modo inserción.   Mapeo
+En ocasiones, mientras se está utilizando el editor se puede dar el caso de estar utilizando una secuencia de comandos de manera frecuente, la cual puede ser una secuencia compleja o larga de escribir, lo que vendría a ser lo que se conoce como macro en algunos programas. Debido a esto, vi ofrece la capacidad de poder asignar una secuencia a una tecla no utilizada por medio del comando map.   El Archivo .exrc
+Las configuraciones, macros y abreviaciones definidas hasta el momento son temporales, es decir, al momento de salir del editor vi todas estas definiciones se pierden. En caso de desear guardarlas, todas estas deberán ser añadidas en un archivo llamado exrc situado en el directorio home del usuario.   RESULTADOS Y CONCLUSIONES
+Dentro del editor vi se puede personalizar dependiendo del uso que le queramos dar, de tal forma que podremos definir a nuestro criterio como se observa y trabaja con el editor. Funciones que se trabajaron durante el desarrollo de esta practica las cuales considero más importantes fueron las de set y map, donde set nos ayuda a personalizar el editor y map que nos ayuda a crear una macro para una función en específica con solo una tecla.   Practica2_TallerUnix_LimonOrozco.pdfUNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA
+Trabajo: Práctica 2: Creación de Máquina Virtual Ubuntu.
+Alumnos: Limon Orozco Yael Alfonso / Ruiz Jimenez Jhostin Rene
+Matrículas: 01197973 / 2101189
+Mexicali B.C. a 18 de Mayo del 2025.   INTRODUCCIÓN
+Para que el alumno sea capaz de realizar las próximas prácticas es necesario que cuente con las herramientas necesarias, para ello realizará la creación de una máquina virtual en la cual se instalará el sistema operativo Ubuntu 20.04 LTS con la herramienta VirtualBox.   OBJETIVO (COMPETENCIA)
+El alumno comprenderá lo que es una máquina virtual y será capaz de llevar a cabo el proceso de instalación y configuración de Ubuntu en la misma.   FUNDAMENTO
+Una Máquina Virtual es un entorno virtual que se forma mediante software y simula una computadora física, este entorno simula su propio cpu, memoria, almacenamiento y más elementos dedicados.
+VirtualBox es un software que funciona como hipervisor de Oracle donde se puede tener uno o más máquinas virtuales con sistemas operativos propios los cuales pueden ser distintos a los demás, estos incluso pueden ser ejecutados al mismo tiempo.   RESULTADOS
+Pasos para instalar Windows Subsystem for Linux:
+1-Como primer paso debemos entrar al CMD
+2-Comprobar que tenemos instalado el Ubuntu
+3-De no tener ubuntu instalado procederemos a las instalación con el codigo "wsl.exe -install"
+4- Volver y verificar que hora si está instalado
+5-Una vez verificado que se instalo correctamente nos pedirá que reiniciemos la pc y regresaremos a crear nuestra cuenta de ubuntu
+6-Entramos a ubuntu y nos pedirá crear una cuenta de ubuntu, solo seguimos los pasos de creación de cuenta y listo.   
+
+
+Practica5_TallerUnix_LimonOrozco_4.pdfDatos de IdentificaciónInstitución: UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA, FACULTAD DE INGENIERÍA MEXICALI, Ingeniería en Computación.   Trabajo: Práctica 5: Comandos para manejo de archivos.   Asignatura: Taller de Sistemas Operativos Unix.   Docente: Jesus Albany Armenta Garcia.   Alumno(a): Limon Orozco Yael Alfonso (Matrícula: 01197973).   Fecha: Mexicali B.C. 4 de Septiembre del 2025.   1. Introducción
+Siendo nuevos usuarios de sistemas Linux, una de las primeras cosas que notarán es que estos sistemas manejan de forma diferente archivos y directorios en comparación a los sistemas operativos Windows. "En sistemas Unix, todo es un archivo; si algo no es un archivo, es un proceso". El enunciado anterior es utilizado con frecuencia para describir sistemas tanto Unix como Linux y, considerando que en las siguientes prácticas estaremos trabajando con archivos, resulta de vital importancia el conocer cómo consultar, crear, modificar y eliminar archivos y directorios en sistemas Linux.   2. Objetivo (Competencia)
+El alumno comprenderá y utilizará comandos para el manejo de archivos y directorios de manera analítica y responsable.   3. Fundamento
+Un archivo es un conjunto de datos que se guardan dentro de nuestro dispositivo con su respectivo nombre, estos se almacenan dentro de directorios los cuales a su vez son un tipo de archivo especial que pueden contener otros archivos logrando una mayor organización. Dentro de Linux tenemos un manejo de archivos un poco diferente a la de windows, ya que se utiliza una estructura de un solo archivo donde existen todas las rutas de los archivos del sistema. Esta ruta raíz tiene distintos subdirectorios dentro, tales como el /, /bin, /sbin, /dev, /etc, /home, /media, entre otros y los instalados en nuestra computadora. Para el manejo de archivos en linux tenemos un sin fin de comandos para modificarlos, identificarlos y manejarlos, siendo que estos necesitan la ruta del archivo a tratar, la cual puede ser una ruta absoluta (ruta que va desde la raíz hasta el archivo) o la ruta relativa (ruta que puede variar dependiendo de en qué ruta nos encontremos).   4. Procedimiento y Desarrollo
+El equipo necesario consistió en una computadora con sistema operativo Ubuntu instalado y el formato de práctica como material de apoyo. Se desarrollaron los siguientes pasos en la terminal:   Se inició sesión SSH en el servidor de computación (ssh limon.yael@computacion.mxl.uabc.mx).   Se mostraron archivos en formato largo usando ls -l ~ y ls -l /externos/home/.   Se listaron archivos en /etc que comienzan con 'g' mediante ls -d g*.   Se creó el directorio archivos_configuracion con el comando mkdir.   Se copiaron archivos terminados en .conf y que inician con 's' desde /etc usando cp ./s*.conf ~/archivos_configuracion.   Se visualizó el archivo copiado con el comando more sensors3.conf.   Se creó una copia renombrada como copia_sensors3.conf en el directorio home.   Se eliminó el directorio archivos_configuracion recursivamente usando rm -r.   Se investigó y utilizó el comando rm -i para solicitar confirmación antes de eliminar un archivo.   Se creó un árbol de directorios frutas/rojas/fresas/cosechadas usando mkdir -p y se visualizó con tree.   Se eliminó dicho directorio con rm -r frutas.   Se construyó un árbol complejo para la carpeta Clases (incluyendo 2022-1, Ecuaciones, POO, Taller_Unix, etc.) usando múltiples rutas con mkdir -p y se comprobó con tree Clases.   Se hizo una copia completa de este directorio con cp -r Clases Copia_Clases.   Se copió el archivo .bash_history a una de las carpetas internas y se le nombró historial.   Se generó un enlace llamado enlace_historial apuntando a historial usando ln.   Se modificó el archivo insertando el nombre "Yael Alfonso Limon Orozco" y se verificó con cat historial.   Se renombró el enlace a ultimos_comandos con el comando mv.   Se eliminaron el enlace y los directorios creados (Clases y Copia_Clases) con rm y rm -r.   Se revisó el espacio disponible en disco con df ~ y el espacio ocupado por el directorio home en formato legible con du -h ~.   Se investigaron las diferencias: du muestra información del uso del disco de los ficheros, df muestra el espacio disponible en el sistema, y quota muestra el uso del disco y los límites del usuario.   5. Conclusiones y Referencias
+En esta práctica utilice comandos para el manejo de archivos y directorios, a su vez que comprendí cómo desplazarse entre rutas mediante rutas absolutas y rutas relativas. Considero que esta práctica fue de gran utilidad para futuras prácticas debido a que nos ayudara a movernos y manejar archivos entre distintas rutas, creando, modificando y manejando archivos y directorios.   Referencia: R. Blum and C. Bresnahan, Linux command line and shell scripting bible. Indianapolis, IN: John Wiley & Sons, 2015.   Practica6_TallerUnix_LimonOrozco_4.pdfDatos de IdentificaciónTrabajo: Práctica 6: Comandos para visualización, ordenación, detección de redundancia y control de acceso de archivos.   Asignatura: Taller de Sistemas Operativos Unix.   Alumno(a): Limon Orozco Yael Alfonso (Matrícula: 01197973).   Fecha: Mexicali B.C. 9 de Septiembre del 2025.   1. Introducción
+En ocasiones es deseable visualizar únicamente parte de contenido de esta práctica u obtener datos del archivo tales como el número de líneas de contiene, palabras o caracteres; así como será deseable proteger la información o archivos. Es por esto que en esta práctica se analizarán los comandos head, tail, cut y wc los cuales permiten obtener información específica del archivo y de su contenido y el comando chmod para poder modificar permisos de los archivos. De manera adicional, también se analizarán los comandos para ordenar archivos y verificar su redundancia.   2. Objetivo (Competencia)
+El alumno aprenderá a utilizar los comandos pertinentes para resolver problemas los cuales requieran de visualizar únicamente cierta información, así como a modificar los derechos de acceso, ordenación y redundancia de archivos.   3. Fundamento
+Dentro de la terminal del sistema operativo de linux podemos utilizar comandos para visualizar el contenido de distintos archivos como los archivos de texto o los csv, logrando mostrar ciertas lineas, columnas dentro del archivo csv, cantidad de caracteres o bytes ocupados, etc.. Para esto utilizamos los comandos head, el cual muestra las primeras líneas e incluso bytes de un archivo, por otro lado tenemos el tail, el cual nos muestra las ultimas lineas o bytes del archivo. El comando wc nos muestra la cantidad de líneas, palabras o caracteres que contiene un archivo, esto dependiendo de la opción que se utilice, además del comando cut, el cual nos muestra una parte del archivo dependiendo de lo elegido. Por otro lado, tenemos comandos los cuales nos ayudaran a ordenar o a mostrar unicamente ciertas lineas, tal como sort y uniq.   Desarrollo de la PrácticaSe creó el directorio Practica_6 y se copió el archivo inventario.txt dentro de él.   Se mostraron las primeras 5 líneas con head -5 inventario.txt y las últimas 5 líneas con tail -5 inventario.txt.   Se visualizaron los primeros 50 bytes usando head -c 50 y los últimos 50 bytes con tail -c 50.   Se revisaron los permisos iniciales con ls -l (-rw-r--r--), correspondientes a lectura y escritura para usuarios, y solo lectura para grupo y todos.   Se utilizaron las variantes del comando wc: wc -c mostró 235 caracteres, wc -l mostró 10 líneas, y wc -w mostró 12 palabras.   Se extrajo la columna del nombre de los productos con cut -d, -f 2 inventario.txt y la de nombre y precio con cut -d, -f 2,4.   Se ordenó el inventario por precio unitario de forma descendente con sort -t, -k4 -n -r inventario.txt y alfabéticamente por nombre con sort -t, -k2.   Se encontraron registros duplicados usando el comando uniq -d inventario.txt.   Se modificaron permisos numéricamente con chmod 744 inventario.txt (rwxr--r--) y luego con chmod 700 (rwx------).   Se experimentó copiando el archivo de un compañero, notando que el comando marcaba Permission denied si el compañero restringía los permisos de lectura.   Se modificaron permisos de forma simbólica para el grupo con chmod g=r inventario.txt.   Se eliminó la carpeta completa con rm -r Practica_6.   5. Conclusiones y Referencias
+Con esta práctica entendi mucho mejor el funcionamiento de ciertos comandos para la lectura y modificación de archivos, siendo que podemos cambiar los permisos de un archivo para que no todos sean capaces de modificarlo o incluso leerlo, además de que tenemos una gran cantidad de comandos que nos son útiles para mostrar la información de un archivo de manera específica.   Referencia: R. Blum and C. Bresnahan, Linux command line and shell scripting bible. Indianapolis, IN: John Wiley & Sons, 2015.   Practica9_TallerUnix_LimonOrozco_4.pdfDatos de IdentificaciónTrabajo: Práctica 9: Editor de texto Vi.   Asignatura: Taller de Sistemas Operativos Unix.   Alumno(a): Limon Orozco Yael Alfonso (Matrícula: 01197973).   Fecha: Mexicali B.C. 7 de Octubre del 2025.   1. Introducción
+La edición de texto es una de las tareas más comunes que se realizan en una computadora, por lo que resulta de gran importancia que el sistema que utilicemos cuente con un editor de texto. Las distribuciones de Linux no son la excepción, los usuarios que utilizan estos sistemas operativos también requieren de un editor de texto y es aquí donde entra el editor de texto "vi", siendo este uno de los más populares porque tiene características especiales orientadas a la programación. Sin embargo, para personas que apenas comienzan a utilizarlo, vi puede parecer poco intuitivo, ya que es requerido conocer los comandos que maneja, así como sus modos de operación.   2. Objetivo (Competencia)
+El alumno utilizará las funciones básicas del editor vi requeridas para el procesamiento de archivos de texto con actitud positiva y responsable.   3. Fundamento
+Vi (por su nombre en inglés, visual editor), es un editor de texto de pantalla que funciona completamente en modo texto, es decir, que requiere comandos de texto para realizar todas las tareas que se lleven a cabo dentro de él. Vi tiene dos modos de operación, el modo comando, en donde todo lo que se teclee por medio de las teclas del comando es para llevar a cabo una acción determinada por medio de una instrucción o comando; y el modo inserción, el cual permite ingresar texto en pantalla. Para entrar a modo inserción, el método más común es presionar la tecla i. Para salir de modo inserción basta con presionar la tecla ESC.
+Cuando se abre un archivo utilizando vi, siempre se entrará en modo comando. Estos comandos permiten navegar por el archivo, hacer ediciones de texto de forma rápida, salir del archivo, guardar el archivo, o bien, entrar a modo inserción.
+Se documentan diversas teclas de navegación como h, k, j, l, G, [CTRL] F, [CTRL] B, }, {, H, L, 0, $, w, W, b, B, y comandos de búsqueda/salto como / o %. También comandos de edición como x (borrar carácter), dd (borrar línea), r (reemplazar), cc (modificar línea), y de copiado como yy (copiar línea), p (pegar). Se menciona el modo de edición de línea (usando :).   Desarrollo de la PrácticaSe creó el directorio ejercicios-vi y se copiaron los archivos calculadoras.txt y programa.c.   Se abrió calculadoras.txt con el editor vi y se salió con el comando :q.   Se reingresó a vi y se abrió el archivo internamente usando :e calculadoras.txt.   Se practicaron múltiples comandos de navegación (h, l, k, j para movimientos simples, ctrl f y ctrl b para páginas, llaves para párrafos, $, t, T, % y <#>G para líneas específicas y ocurrencias).   Se modificó el archivo y se salió descartando los cambios con el comando :q!.   Se guardó el archivo modificado bajo un nombre distinto usando :w nuevoCalculadora.txt.   Se practicaron copias complejas de texto. Se copió el párrafo 2 empleando 13yyGp (para copiar 10 líneas y pegar hasta abajo) y el párrafo 4 empleando 7yyGp.   Se borraron dichos párrafos de su posición original con 13dd y 7dd respectivamente.   Se utilizó el salto directo a la línea 27 mediante el comando 27G.   Dentro del archivo programa.c, se buscaron paréntesis y corchetes usando el comando % para saltar a su respectivo cierre de línea. (Ej. 11G para ir a la línea 11, t( para ir al paréntesis y % para el cierre).   Se describieron acciones de edición: 2w (avanzar 2 palabras), dw (borrar 1 palabra), 2dd (borrar 2 líneas), 3j (bajar 3 líneas), yyjp (copiar línea y pegar 1 abajo), 5Kp (subir 5 líneas y pegar).   Se movieron las primeras dos líneas al final utilizando 2dd en la primera línea y luego Gp.   Se documentó que el comando u funciona como "Ctrl+Z" (regresando 1 acción), que ZZ saca del documento (guarda y sale) y que ctrl+d / ctrl+u desplazan media página hacia abajo y arriba.   5. Resultados y Conclusiones / Referencias
+Como resultado de esta práctica se enviará un reporte de práctica el cual deberá contener portada, una breve introducción, el desarrollo de las instrucciones planteadas en el procedimiento, una breve conclusión y sus referencias.   Referencias: R. Blum and C. Bresnahan, Linux command line and shell scripting bible. Indianapolis, IN: John Wiley & Sons, 2015; A. Robbins, E. Hannah and A. Robbins, Learning the vi and Vim editors, 8th ed. 2021.
+
+
+
+Practica10_TallerUnix_LimonOrozco_3.pdfInstitución: UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA, FACULTAD DE INGENIERÍA MEXICALI.   Programa: Ingeniería en Computación (Plan 2020-1).   Trabajo: Práctica 10: Comandos de Búsqueda y Reemplazo del Editor vi.   Asignatura: Taller de Sistemas Operativos Unix (Clave: 36303).   Docente: Jesus Albany Armenta Garcia.   Alumno(a): Limon Orozco Yael Alfonso (Matrícula: 01197973).   Fecha: Mexicali B.C. 7 de Octubre del 2025.   Duración: 2 Horas.   1. INTRODUCCIÓN
+Al ser vi el editor por excelencia de los sistemas operativos basados en Unix, es importante conocer que cuenta con herramientas para la búsqueda y reemplazo de palabras o líneas, tareas que resultan vitales para cualquier editor de texto. Sin embargo, se requiere practicar con dichos comandos ya que, para usuarios nuevos, los comandos de búsqueda y reemplazo pueden resultar complicados.   2. OBJETIVO (COMPETENCIA)
+El alumno comprenderá y aplicará los comandos para la búsqueda y reemplazo utilizando el editor vi para la edición eficiente de archivos.   3. FUNDAMENTO
+Dentro del editor vi es posible utilizar comandos que permitan la realización de búsqueda y/o edición de texto, habiendo que ejecutar todos ellos en el modo comando extendido de vi, al que se accede presionando la tecla ESC y seguido de la tecla dos puntos (:).   Búsqueda de Patrones
+El modo comando extendido permite realizar distintas tareas de búsqueda por medio del símbolo /, seguido de la palabra o patrón. Al escribir /sistema en modo comando, vi sitúa el cursor en la primera coincidencia de la palabra sistema. Una vez encontrada la primera coincidencia, es posible repetir la búsqueda al presionar la tecla n o N.   n: para ir a la siguiente aparición del patrón o palabra ingresada.   N: para ir a la ocurrencia anterior.   Eliminar Líneas con Base en una Búsqueda
+Para eliminar toda una línea que contenga un patrón de búsqueda se utiliza el siguiente comando: :/patrón/d. En caso de que se quieran borrar todas las líneas entre un patrón A y un patrón B, incluyendo las líneas que contienen dicho patrón, el comando anterior se puede extender de la siguiente forma: :/patrón A/,/patrón B/d.   Búsqueda y Reemplazo
+Vi ofrece un comando conocido como reemplazamiento global (global replacement), el cual permite reemplazar automáticamente una palabra de un archivo en cada una de sus ocurrencias. Para realizar una sustitución, se utiliza la letra s seguido de /. La sintaxis completa es: [rango]s/patronAReemplazar/patronNuevo/[banderas].   [rango]: Hace que la búsqueda y reemplazo se realice en el rango especificado (Ej. 10,25s/viejo/nuevo).   s: Comando que indica que se realizará una búsqueda y reemplazo.   patronAReemplazar: Patrón que se desea buscar y reemplazar.   patronNuevo: Patrón que reemplazará al anterior.   [banderas]: g realiza el reemplazo de forma global (en todo el documento); c especifica confirmación de la substitución.   De utilizar el comando sin la bandera g y sin rango, este únicamente reemplazará la primera ocurrencia en la línea actual. Por ejemplo: :%s/sistema/system/g.
+Opciones de confirmación al agregar bandera c (:%s/sistema/system/gc):   y: Confirmación de reemplazo del patrón.   n: No realizar el reemplazo.   a: Realiza todos los reemplazos sin volver a solicitar confirmación.   q: Salir de "modo sustitución".   l: Realiza todas las sustituciones que se encuentren en la línea.   ^E (CTRL+E): Desplaza el documento una línea hacia arriba.   ^Y (CTRL+Y): Desplaza el documento una línea hacia abajo.   Expresiones RegularesMeta-caracteres soportados en vi:. (punto): Coincide con cualquier caracter menos salto de línea (ej. p.p).   *: Coindice con cero o más caracteres del carácter que precede al * (ej. bicho*).   ^: Solo encontrará la expresión que sea el inicio de una línea.   $: Encontrará únicamente lo que precede al meta-caracter al final de una línea.   : Evita que el caracter que siga de él se trate como un meta caracter (ej. \.).   []: Identifica cualquiera de los caracteres entre los corchetes (ej. p[aeiou]t).   &: Coloca o agrega una cadena a una cadena que ya se encuentre en el archivo (ej. :%s/Gonzalez/&, Maria).   Ejemplo para sustituir otra cadena utilizando un patrón: g/patron/s/viejo/nuevo/g.   4. PROCEDIMIENTO (Desarrollo de la Práctica)Inicie sesión ssh en el servidor de computación.   Compruebe el funcionamiento de los ejemplos en el directorio compartido.   Copie a su cuenta el archivo hilos.txt: cp /externos/home/clases/compartido/hilos.txt ~/.   Sustituya la palabra thread en todo el archivo por la palabra hilo.   Modifique el archivo para que, en lugar de leer java, se lea java Oracle.   Modifique el archivo para que la palabra Un al inicio de todas las líneas se modifique por En: :%s/^Un/En/g.   Genere un archivo procesos con salida de ps: ps >> ArchivoPr10.   Sustituya pts/# por pts=>#: :g/pts\/./%s////=>/g.   Copie poemaMargarita a su directorio: cp /externos/home/clases/compartido/poemaMargarita ~/.   Sustituya Margarita por Mariquita: :%s/Margarita/Mariquita/g.   Búsqueda de cantar o contar: /c[a,o]ntar.   Modifique esencia por es[c]encia: :%s/esencia/es\[c\]encia/g y luego revierta :%s/es\[c\]encia/esencia/g.   Efecto del comando :%s/^/>/ sobre procesos: Agrega el símbolo > al inicio de cada línea del archivo.   Elimine la línea que contenga la palabra kiosko: :/kiosko/d.   Elimine a partir de la línea alma hasta rey: :/alma/,/rey/d.   Modificar primera ocurrencia de programa por PROGRAMA en hilos.txt: :s/programa/PROGRAMA.   Termine la sesión.   5. RESULTADOS Y CONCLUSIONES
+Se enviará un reporte de práctica el cual deberá contener portada, introducción, desarrollo de instrucciones, conclusión y referencias. Referencia: A. Robbins, E. Hannah and A. Robbins, Learning the vi and Vim editors, 8th ed. 2021.   Practica12_TallerUnix_LimonOrozco.docx_3.pdfTrabajo: Práctica 12: El comando grep.   Fecha: Mexicali B.C. 21 de Octubre del 2025.   1. INTRODUCCIÓN
+Con los grandes volúmenes de información en la actualidad, es común encontrarse con archivos extensos, lo que dificulta la búsqueda manual. Los sistemas Unix ofrecen el comando grep que facilita la búsqueda en archivos.   2. OBJETIVO (COMPETENCIA)
+El alumno utilizará el comando grep para búsqueda de patrones dentro de archivos de texto y flujos de datos, mostrando apertura hacia el autoaprendizaje.   3. FUNDAMENTO
+El comando grep busca en un flujo de datos o archivo las líneas que contienen caracteres que coinciden con un patrón especificado.   Sintaxis: grep <opciones> patrón <archivo>.   Búsqueda en múltiples archivos: grep <opciones> patrón archivo1 archivo2.   Búsqueda sin distinción de mayúsculas/minúsculas: grep -i patrón <archivo(s)>.   Búsqueda de palabras completas: grep -w patrón <archivo(s)>.   Búsquedas con más de un patrón: grep -e patrón1 -e patrón2 <archivo>.   Búsqueda en directorios recursivamente: grep -r patrón <directorio>.   Opciones adicionales del comando grep:   -A <N>: Muestra las N líneas después del patrón.   -B <N>: Muestra las N líneas antes del patrón.   -C <N>: Muestra las N líneas antes y después del patrón.   -v: Búsqueda inversa (líneas sin coincidencia).   -c: Muestra el número de líneas que contienen el patrón.   Meta-caracteres de Expresiones Regulares Básicas (BRE) soportados:   . (punto): Coincide con cualquier caracter.   *: Coincide con cero o más caracteres anteriores.   ^: Inicio de una línea.   $: Final de una línea.   []: Cualquiera de los caracteres dentro de los corchetes.   \c: Toma el meta-caracter c como caracter normal.   \<c: Busca palabras que inicien con c.   c\>: Busca palabras que terminen con c.   4. PROCEDIMIENTOInicie sesión ssh en el servidor de computación.   Copie el archivo proposito_clase.txt a su directorio home.   Número de veces que se repite la palabra sistema: grep -c sistema proposito_clase.txt (Resultado: 3).   Muestra líneas con palabra sistema: grep sistema proposito_clase.txt.   Muestra líneas que contienen "es" como palabra completa: grep -w es proposito_clase.txt.   Muestra líneas que no terminan con punto: grep '\.' proposito_clase.txt. (Nota extraída: el estudiante ejecutó este comando erróneamente sin -v)   Muestra líneas con palabras de 3 letras: grep -w ... proposito_clase.txt.   Encuentra línea que empieza con E y termine con a: grep "\<E[a-z]*a\>" proposito_clase.txt.   Copia el archivo Productos a su directorio home.   Muestra líneas que contengan sistema ignorando mayúsculas: grep -i sistema proposito_clase.txt Productos.   Muestra 3 productos antes y después de Apple Watch: grep -A3 -B3 "Apple Watch" Productos.   Nombre del producto con clave 787512: grep 787512 Productos | cut -d, -f2.   Productos cuya clave empieza con 8: grep '\<8' Productos | cut -d, -f2.   Líneas que terminan únicamente con una vocal: grep [aeiou]$ proposito_clase.txt.   Número de palabras en líneas que no terminen en vocal ni en punto: grep -v -e[aeiou]$ -e '\.' proposito_clase.txt.   Contar palabras excluyendo vocal y punto final: grep -v -e[aeiou]$ -e '\.' proposito_clase.txt | wc -w (Resultado: 54).   Diferencia entre grep y egrep: grep usa expresiones regulares básicas y egrep usa extendidas sin necesidad de usar \ para meta-caracteres.   Termine la sesión.   5. RESULTADOS Y CONCLUSIONES
+Habrá momentos donde sea mejor hacer búsquedas dentro del shell de linux con grep, el cual ayuda a buscar patrones para analizar o trabajar con texto. Referencia: R. Blum and C. Bresnahan, Linux command line and shell scripting bible, 2015.   Practica13_TallerUnix_LimonOrozco.docx_3.pdfTrabajo: Práctica 13: Expresiones Regulares.   Fecha: Mexicali B.C. 21 de Octubre del 2025.   1. INTRODUCCIÓN
+Una expresión regular es una cadena de caracteres que puede contener símbolos especiales llamados meta-caracteres, vistos como comodines para representar caracteres en un flujo de datos. Se utilizan con comandos para búsquedas avanzadas en texto.   2. OBJETIVO (COMPETENCIA)
+Crear expresiones regulares utilizando meta-caracteres y el comando grep para realizar búsquedas dentro de archivos de texto con actitud analítica y positiva.   3. FUNDAMENTOLinux cuenta con dos motores de expresiones regulares:El motor de Expresiones Regulares Básicas (BRE) de POSIX.   El motor de Expresiones Regulares Extendidas (ERE) de POSIX.   El comando egrep es la versión de grep que soporta ERE.
+Meta-caracteres extendidos:   ?: El caracter anterior es opcional (0 o 1 vez).   *: El caracter anterior se repetirá 0 o más veces.   +: El caracter anterior se repetirá 1 o más veces.   {n}: El caracter anterior se repite exactamente n veces.   {n,}: El caracter anterior se repite n o más veces.   {,m}: El caracter anterior se busca como máximo m veces.   {n,m}: El caracter anterior se busca al menos n y no más de m veces.   expr1 | expr2 | ...: Funciona como un OR lógico para especificar patrones.   (expr): Permite usar paréntesis para agrupar una expresión regular.   4. PROCEDIMIENTOInicie sesión en el servidor de computación.   Muestre los archivos .txt: ls /externos/home/clases/compartido/ | egrep .*.txt.   Cree el archivo Telefonos:
+a. (686)112-3491
+b. 6862
+c. 6861123491
+d. 6993
+e. 686-112-3491
+Buscar el número en a: egrep a.* Telefonos | cut -d' ' -f2.   Expresión regular para números a 10 dígitos sin paréntesis ni guiones: egrep ['1-9']{10} Telefonos | cut -d' ' -f2.   Expresión regular para validar formato a 10 dígitos: egrep '(\([0-9]{3}\)[0-9]{3}-[0-9]{4}|[0-9]{10}|[0-9]{3}-[0-9]{3}-[0-9]{4})' Telefonos.   Cree el archivo Correos:
+a. miCorreo@hotmail.com
+b. miotro_correo@gmail.com
+c. no es correo
+d. ab.123@uabc.edu.mx
+e. correoelectronicogmail.com   Expresión regular para encontrar correos válidos: egrep '.*@.*\..*' Correos.   Termine la sesión.   5. RESULTADOS Y CONCLUSIONES
+Las expresiones regulares ayudan a encontrar patrones y validar de manera específica en un texto. Para esta práctica se utilizaron para encontrar, modificar y limpiar datos como números de teléfono y correos electrónicos. Referencia: R. Blum and C. Bresnahan, Linux command line and shell scripting bible, 2015. 
+
+aelAlfonso_LimonOrozco_01197973_Practica1_2.pdf
+
+NIVERSIDAD AUTONG BAJA CALIFORNIA UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA FACULTAD DE INGENIERÍA MEXICALI FM Facultad de Ingeniería Ingeniería en Computación
+Trabajo: Práctica 1:Introducción a los Sistemas Operativos Unix y Linux.
+Asignatura: Taller de Sistemas Operativos Unix.
+Docente: Jesus Albany Armenta Garcia.
+Alumno(a): Limon Orozco Yael Alfonso Matrícula: 01197973 Mexicali B.C. a 18 de Mayo del 2025.
+
+UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA FACULTAD DE INGENIERÍA Formato de Práctica de Laboratorio
+Programa Educativo | Plan de Estudios | Nombre de la Unidad de Aprendizaje Clave de Unidad de Aprendizaje
+Ingeniero en Computación | 2020-1 | Taller de Sistema Operativo Unix 36303
+Práctica No. 1 | Laboratorio de: Taller de Sistema Operativo Unix | Duración (Horas) 2 | Nombre de la Práctica: Introducción a los Sistemas Operativos Unix y Linux
+
+INTRODUCCIÓN
+Dada la importancia y auge de los sistemas operativos Linux, es relevante mencionar su origen y las diferentes distribuciones que existen, así como su rápida evolución a través del tiempo, el cual tiene en su base al sistema operativo Unix.
+
+OBJETIVO (COMPETENCIA)
+El alumno conocerá la historia del sistema operativo UNIX/LINUX y el papel que juega dentro del ámbito de la computación, para ubicarse dentro de la temática que se estudiará durante el transcurso del taller.
+
+FUNDAMENTO
+Un sistema operativo es el grupo de programas encargados de funcionar como intermediario entre un usuario y el hardware, permitiendo la interacción entre el usuario y la máquina permitiendo la ejecución de programas.
+Un sistema operativo operativo de gran importancia en la computación, siendo la base de muchos sistemas operativos utilizados hoy en día.
+Este sistema operativo tuvo su nacimiento mediante las ideas planteadas por los desarrolladores de MULTICS, que si bien este anterior fue un fracaso, aportó la idea base en la que Unix se desarrolló
+Unix, conocido en sus inicios como UNICS, fue influenciado por otros sistemas operativos del momento, el cual tuvo su auge cuando este fue reescrito en C, lo cual fue muy bien recibido por sus usuarios.
+Por otro lado, tenemos a Linux el cual es un kernel desarrollado por el estudiante de la Universidad de Helsinki Linus Tolvard, el cual fue inspirado en Minix, un sistema Unix desarrollado por Andrew Tanenbaum.
+
+PROCEDIMIENTO
+Equipo Necesario
+
+Computadora con acceso a Internet
+
+Material de Apoyo
+
+Formato de Práctica
+
+Desarrollo de la Práctica
+Realice una investigación acerca del sistema operativo LINUX:
+
+¿Qué es el proyecto GNU? ¿Cómo se involucra con LINUX?
+El Proyecto GNU, fundado por el informático Richard Stallman consta de un sistema operativo diseñado con el propósito de iniciar un sistema de software libre, sus inicios fueron durante el año 1984, cuando Richard renunció a su trabajo en el MIT debido a la posibilidad de que el MIT se apodera de su sistema y lo comercializa de forma privativa, lo cual era lo que menos deseaba Richard, después de todo el principal objetivo del proyecto GNU era ser un software libre, incluso si este no contará con ventajas sobre otros sistemas operativos como Unix.
+El proyecto GNU se integró con el kernel Linux por el año 1991, cuando este kernel fue creado, esto debido a que GNU era software libre y linux era el núcleo que este necesitaba para que ambos se convirtieran en el sistema operativo GNU/Linux, el cual constituye la base en la que fueron desarrolladas una gran cantidad de distribuciones utilizadas hoy en dia.
+
+Defina qué es una distribución de LINUX.
+Una distribución Linux es un sistema operativo desarrollado sobre la base del kernel linux, estas varían entre sí, convirtiéndolas en sistemas operativos multipropósito ya que cada una tiene implementada herramientas distintas desarrolladas u obtenidas del proyecto GNU.
+Cada distribución de linux puede ser utilizada para un propósito específico donde podemos tener elementos distintos como su gestor de paquetes, la interfaz gráfica de usuario, bibliotecas, compiladores, entre otras herramientas.
+
+Mencione 3 distribuciones de LINUX, sus características y ejemplos de en qué sistemas actuales se utilizan.
+Ubuntu: Ubuntu es una de las distribuciones más intuitivas y fáciles de utilizar, fue desarrollada por el emprendedor sudafricano Mark Shuttleworth basado en la distribución Debian pero con la peculiaridad de que fue creado con el propósito de hacer un sistema operativo de código abierto, fácil de utilizar y accesible para todos.
+Kali Linux: Kali Linux es un sistema operativo más desarrollado en base a Debian el cual está orientado a la seguridad informática gracias a sus herramientas que facilitan las pruebas de penetración y las auditorías de seguridad. Esta distribución está altamente preparada para todo tipo de pruebas de seguridad como lo son el análisis forense informático, la ingeniería inversa, pruebas de vulnerabilidad, entre otras, además de que el kernel está preparado con parches de inyección.
+Arch Linux: Arch Linux es un sistema operativo centrado en el usuario, de tal forma que casi en su totalidad de herramientas están libres a escoger por parte del usuario, donde el mismo usuario decidirá por su interfaz gráfica, gestores de elementos, entre otras.
+Esta distribución está orientada hacia desarrolladores y usuarios con experiencia previa en sistemas GNU/Linux ya que esta distribución es pragmática y simplista, especializada en el desarrollo con un enfoque específico.
+
+¿Qué ventajas tienen las distribuciones de Linux con respecto a otros sistemas operativos?
+Las distribuciones de Linux toman un papel muy importante cuando de multitareas se habla, son sistemas operativos orientados a un uso en específico o incluso con distribuciones donde no se requiere de gran conocimiento o habilidad para su uso.
+Una de las grandes ventajas que tienen las distribuciones de Linux son su versatilidad, velocidad y su estabilidad, obtenidas gracias a ser código libre donde todos pueden aportar al proyecto o incluso armar y mejorar constantemente tu sistema operativo instalado (objetivo esperado en distribuciones como Arch).
+
+RESULTADOS Y CONCLUSIONES
+El sistema operativo Unix es la base en la que fue desarrollado GNU/Linux, el cual es un sistema operativo de código abierto multitarea, con distribuciones dedicadas a distintos propósitos.
+Durante el desarrollo de la investigación encontré interesante muchos temas, tal como el desarrollo del proyecto GNU el cual considero que es un gran aporte base al movimiento del software libre, mostrando su dedicación y ética hacia el mundo del software, donde más tarde se integró Linus Torvald con el desarrollo del kernel Linux y se pudo fusionar con las herramientas del proyecto GNU, logrando uno de los hitos más importantes en el desarrollo de sistemas operativos de software libre.
+
+REFERENCIAS
+[1] Free Software Foundation, "El sistema operativo GNU y el movimiento del software libre," GNU, (s. f.), https://www.gnu.org/home.es.html.
+[2] R. Stallman, "Acerca de GNU - El Proyecto GNU," GNU, (s. f.), https://www.gnu.org/gnu/thegnuproject.es.html.
+[3] ComputerNewAge, "GNU/Linux. Introducción. Como Funciona y Principales Ventajas", (s. f.), https://computernewage.com/gnu-linux/introduccion/.
+[4] AprendoLinux, "El Universo de las distribuciones de Linux," (s. f.), https://aprendolinux.com/universo-distribuciones-linux/.
+[5] phoenixNAP, "¿Qué es una distribución de Linux?", Glosario de TI, (04/2024), https://phoenixnap.mx/glosario/que-es-una-distribucion-de-linux.
+[6] OffSec Services Limited, "What is Kali Linux?," Kali Linux Documentation, (05/2025), https://www.kali.org/docs/introduction/what-is-kali-linux.
+[7] Campus Ciberseguridad, "¿Qué es Kali Linux y para qué sirve?", (s. f.), https://www.campusciberseguridad.com/blog/que-es-kali-linux-y-para-que-sirve.
+[8] ArchWiki, "Arch Linux," (s. f.), https://wiki.archlinux.org/title/Arch Linux.
+[9] Ciberaula, "Ventajas e inconvenientes de Linux", (s. f.), https://linux.ciberaula.com/articulo/ventajas inconvenientes linux.
+
+Practica17_LimonOrozco_01197973.docx_2.pdf
+
+DAD AUTO DAJA CALIFORNI ONOMA A UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA FACULTAD DE INGENIERÍA MEXICALI Ingeniería en Computación[cite: 36]
+Trabajo: Práctica 17: Empaquetado y Compresión de Archivos.[cite: 36]
+Asignatura: Taller de Sistemas Operativos Unix.[cite: 36]
+Docente: Jesus Albany Armenta Garcia.[cite: 36]
+Alumno(a): Limon Orozco Yael Alfonso Matrícula: 01197973 FM Facultad de Ingenieria Mexicali B.C. 13 de Noviembre del 2025.[cite: 36]
+Página 1 de 16 Fecha de efectividad: UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA FACULTAD DE INGENIERÍA (UNIDAD MEXICALI) Formato para prácticas de laboratorio[cite: 36]
+PROGRAMA EDUCATIVO | PLAN DE ESTUDIO | CLAVE DE UNIDAD DE APRENDIZAJE | NOMBRE DE LA UNIDAD DE APRENDIZAJE[cite: 36]
+Ingeniero en Computación | 2020-1 | 36303 | Taller de Sistema Operativo Unix[cite: 36]
+PRÁCTICA No. 17 | LABORATORIO DE Taller de Sistema Operativo Unix NOMBRE DE LA PRÁCTICA Empaquetado y Compresión de Archivos | DURACIÓN (HORAS) 2[cite: 36]
+
+INTRODUCCIÓN[cite: 36]
+El empaquetado y compresión de archivos es un recurso muy útil el cual consiste en crear un archivo de menor tamaño a partir de un archivo o varios.[cite: 36]
+Esto nos permite un mejor aprovechamiento de la capacidad de los dispositivos de almacenamiento, también nos permite aprovechar el ancho de banda y disminuir el tiempo de descarga de archivos de Internet.[cite: 36]
+Antes de poder utilizar un archivo que ha sido comprimido o empaquetado, es necesario descomprimirlo para devolverlo a su estado original.[cite: 36]
+En esta práctica vamos a utilizar los formatos de compresión más habituales y los procedimientos para trabajar con ellos.[cite: 36]
+
+OBJETIVO (COMPETENCIA)[cite: 36]
+El alumno conocerá y comprenderá los principales mandos para el empaquetado y compresión de archivos como zip, unzip, gzip, gunzip y tar para poder aplicarlos en una forma eficiente.[cite: 36]
+
+FUNDAMENTO[cite: 36]
+Empaquetado y Compresión:[cite: 36]
+El empaquetado y compresión de archivos son dos pasos diferentes. El empaquetado es el proceso de crear un archivo a partir de múltiples archivos, el archivo resultante es equivalente a la suma de los tamaños de cada uno de los archivos empaquetados.[cite: 36]
+La compresión de archivos es la creación de un archivo de tamaño menor a partir de otro de mayor tamaño. Es común que el empaquetado y la compresión se realicen a la vez.[cite: 36]
+Algunas veces es mejor sólo utilizar el empaquetado, por ejemplo al trabajar con archivos que ya manejan un alto índice de compresión, como son los archivos de música (MP3, OGG, etc) o archivos de imágenes y videos (JPG, MP4, etc.) realizar una nueva compresión de estos archivos produce índices de compresión insignificantes.[cite: 36]
+Para estos tipos de archivos es mejor el empaquetado ya que es un proceso más rápido que la compresión.[cite: 36]
+
+Comprimiendo con el mando zip[cite: 36]
+El mando zip para empaquetar y comprimir archivos tiene la siguiente sintaxis: zip opciones nombre_archivo.zip archivol, archivo2,[cite: 36]
+Ejemplos del mando zip.[cite: 36]
+a. Copiar el siguiente directorio ~compartido/practica20/ a su directorio home.[cite: 36]
+b. Mostrar el contenido del directorio practica20/[cite: 36]
+
+aguilar@comp:-/practica20$ ls -l
+total 1316
+-rw-r--r-- 1 aguilar maestros 45952 Nov 13 08:37 dash home.pdf
+-rw-r--r-- 1 aguilar maestros 3951 Nov 13 08:37 lista.txt
+-rw-r--r-- 1 aguilar maestros 997667 Nov 13 08:37 session.png
+-rw-r--r-- 1 aguilar maestros 293487 Nov 13 08:37 terminal.png
+aguilar@comp:~/practica20$[cite: 36]
+
+Para comprimir los archivos del directorio practica20/hay dos formas de hacerlo:[cite: 36]
+Una es estando dentro del directorio practica20/ y escribir cada uno de los nombres de los archivos a comprimir[cite: 36]
+
+aguilar@comp:~/practica20$ zip archivos.zip dash_home.pdf lista.txt session.png terminal.png
+adding: dash home.pdf (deflated 21%)
+adding: lista.txt (deflated 65%)
+adding: session.png (deflated 2%)
+adding: terminal.png (deflated 4%)
+aguilar@comp:~/practica20$[cite: 36]
+
+Mostramos el contenido del directorio practica20/[cite: 36]
+
+aguilar@comp:-/practica20$ ls -l
+total 2584
+-rw-r--r-- 1 aguilar maestros 1294594 Nov 13 08:44 archivos.zip
+-rw-r--r-- 1 aguilar maestros 45952 Nov 13 08:37 dash_home.pdf
+-rw-r--r-- 1 aguilar maestros 3951 Nov 13 08:37 lista.txt
+-rw-r--r-- 1 aguilar maestros 997667 Nov 13 08:37 session.png
+-rw-r--r-- 1 aguilar maestros 293487 Nov 13 08:37 terminal.png
+aguilar@comp:~/practica20$[cite: 36]
+
+Otra forma es estando fuera de dicho directorio y comprimir todo el directorio[cite: 36]
+
+aguilar@comp:~$ zip -r archivos.zip practica20/
+adding: practica20/ (stored 0%)
+adding: practica20/lista.txt (deflated 65%)
+adding: practica20/session.png (deflated 2%)
+adding: practica20/terminal.png (deflated 4%)
+adding: practica20/dash_home.pdf (deflated 21%)
+aguilar@comp:~$[cite: 36]
+
+En la Figura 20.5 se muestra el contenido del directorio home[cite: 36]
+aguilar@comp:~$ ls -l
+total 2
+-rw-r--r-- 1 aguilar maestros 1294832 Nov 13 09:01 archivos.zip
+drwxr-xr-x 2 aguilar maestros 4096 Nov 13 09:00 practica20
+aguilar@comp:~$[cite: 36]
+
+Para poder manejar el nivel de compresión de los archivos tenemos los parámetros [09] donde es cero por ciento de compresión o mejor dicho es sólo empaquetado de archivos y el 9 es el nivel más alto u óptimo de compresión[cite: 36].
+
+aguilar@comp:~$ zip0r archivos.zip practica20/
+adding: practica20/ (stored 0%)
+adding: practica20/lista.txt (stored 0%)
+adding: practica20/session.png (stored 0%)
+adding: practica20/terminal.png (stored 0%)
+adding: practica20/dash_home.pdf (stored 0%)
+aguilar@comp:-$ zip-1-r archivos.zip practica20/
+adding: practica20/ (stored 0%)
+adding: practica20/lista.txt (deflated 62%)
+adding: practica20/session.png (deflated 2%)
+adding: practica20/terminal.png (deflated 4%)
+adding: practica20/dash_home.pdf (deflated 20%)
+aguilar@comp:~$ zip9r archivos.zip practica20/
+adding: practica20/ (stored 0%)
+adding: practica20/lista.txt (deflated 65%)
+adding: practica20/session.png (deflated 2%)
+adding: practica20/terminal.png (deflated 4%)
+adding: practica20/dash_home.pdf (deflated 21%)
+aguilar@comp:~$[cite: 36]
+
+El mando zip nos permite proteger nuestros archivos mediante contraseñas, para lo cual se utilizan los parámetros P o e.[cite: 36]
+La opción es menos segura que la e ya que la contraseña a dar es escrita en la línea de comando y pudiera ser vista por otras personas.[cite: 36]
+La opción e es más segura ya que pide la contraseña por medio de un prompt[cite: 36].
+
+aguilar@comp:-$ zip P 123456 -r archivos.zip practica20/
+adding: practica20/ (stored 0%)
+adding: practica20/lista.txt (deflated 65%)
+adding: practica20/session.png (deflated 2%)
+adding: practica20/terminal.png (deflated 4%)
+adding: practica20/dash_home.pdf (deflated 21%)
+aguilar@comp:-$ rm archivos.zip
+aguilar@comp:~$ ziper archivos.zip practica20/
+Enter password:
+Verify password:
+adding: practica20/ (stored 0%)
+adding: practica20/lista.txt (deflated 65%)
+adding: practica20/session.png (deflated 2%)
+adding: practica20/terminal.png (deflated 4%)
+adding: practica20/dash_home.pdf (deflated 21%)
+aguilar@comp:-$[cite: 36]
+
+Descomprimiendo archivos con el mando unzip[cite: 36]
+Para la descompresión de archivos.zip utilizaremos el mando unzip su sintaxis es: unzip opciones nombre_archivo.zip[cite: 36]
+Ejemplos del mando unzip.[cite: 36]
+
+aguilar@comp:~$ unzip archivos.zip
+Archive: archivos.zip
+creating: practica20/
+inflating: practica20/lista.txt
+inflating: practica20/session.png
+inflating: practica20/terminal.png
+inflating: practica20/dash_home.pdf
+aguilar@comp:~$[cite: 36]
+
+Para visualizar el contenido de un archivo zip sin desempaquetarlo se utiliza la opción 1[cite: 36]
+
+aguilar@comp:~$ unzip-l archivos.zip
+Archive: archivos.zip
+Length Date Time Name
+0 2012-11-13 09:00 practica20/
+3951 2012-11-13 08:37 practica20/lista.txt
+997667 2012-11-13 08:37 practica20/session.png
+293487 2012-11-13 08:37 practica20/terminal.png
+45952 2012-11-13 08:37 practica20/dash_home.pdf
+1341057 5 files
+aguilar@comp:-$[cite: 36]
+
+Para probar si el contenido de un archivo.zip se encuentra en buen estado se utiliza la opción t[cite: 36].
+
+aguilar@comp:-$ unzipt archivos.zip
+Archive: archivos.zip
+testing: practica20/ OK
+testing: practica20/lista.txt OK
+testing: practica20/session.png OK
+testing: practica20/terminal.png OK
+testing: practica20/dash home.pdf OK
+No errors detected in compressed data of archivos.zip.
+aguilar@comp:~$[cite: 36]
+
+El mando gzip para comprimir archivos.[cite: 36]
+Hay una gran diferencia entre el uso del mando zip y el gzip. Al utilizar el mando zip la fuente utilizada no se ve afectada, en cambio al utilizar el mando gzip la fuente es desaparecida, o más bien sólo nos queda el archivo con extensión.gz[cite: 36]
+
+aguilar@comp:-/practica20$ ls -l
+total 1316
+-rw-r--r-- 1 aguilar maestros 45952 Nov 13 08:37 dash home.pdf
+-rw-r--r-- 1 aguilar maestros 3951 Nov 13 08:37 lista.txt
+-rw-r--r-- 1 aguilar maestros 997667 Nov 13 08:37 session.png
+-rw-r--r-- 1 aguilar maestros 293487 Nov 13 08:37 terminal.png
+aguilar@comp:-/practica20$ gzip session.png
+aguilar@comp:-/practica20$ ls -l
+total 1296
+-rw-r--r-- 1 aguilar maestros 45952 Nov 13 08:37 dash home.pdf
+-rw-r--r-- 1 aguilar maestros 3951 Nov 13 08:37 lista.txt
+-rw-r--r-- 1 aguilar maestros 975467 Nov 13 08:37 session.png.gz
+-rw-r--r-- 1 aguilar maestros 293487 Nov 13 08:37 terminal.png[cite: 36]
+
+Como se puede apreciar en el ejemplo anterior el archivo original session.png fue sustituido por el archivo session.png.gz que resulta de la compresión con el mando gzip.[cite: 36]
+Para evitar que pase esto y conservemos los dos archivos, la fuente original y el archivo .gz utilizaremos el parámetro c y el re direccionamiento de salida >.[cite: 36]
+
+aguilar@comp:-/practica20$ ls -l
+total 1316
+-rw-r--r-- 1 aguilar maestros 45952 Nov 13 08:37 dash_home.pdf
+-rw-r--r-- 1 aguilar maestros 3951 Nov 13 08:37 lista.txt
+-rw-r--r-- 1 aguilar maestros 997667 Nov 13 08:37 session.png
+-rw-r--r-- 1 aguilar maestros 293487 Nov 13 08:37 terminal.png
+aguilar@comp:~/practica20$ gzip -c lista.txt > lista.txt.gz
+aguilar@comp:~/practica20$ ls -l
+total 1320
+-rw-r--r-- 1 aguilar maestros 45952 Nov 13 08:37 dash home.pdf
+-rw-r--r-- 1 aguilar maestros 3951 Nov 13 08:37 lista.txt
+-rw-r--r-- 1 aguilar maestros 1410 Nov 13 10:06 lista.txt.gz
+-rw-r--r-- 1 aguilar maestros 997667 Nov 13 08:37 session.png
+-rw-r--r-- 1 aguilar maestros 293487 Nov 13 08:37 terminal.png[cite: 36]
+
+Como se muestra en la Figura anterior el archivo original no sufre ninguna alteración.[cite: 36]
+Compresión de directorios con gzip.[cite: 36]
+Para poder comprimir o empaquetar un directorio se debe de utilizar el parámetro r con el mando gzip, este parámetro hace que el mando gzip descienda en la estructura de subdirectorios y comprima todos los archivos que existan en él[cite: 36].
+
+aguilar@comp:~$ ls -l practica20/
+total 1316
+-rw-r--r-- 1 aguilar maestros 45952 Nov 13 08:37 dash_home.pdf
+-rw-r--r-- 1 aguilar maestros 3951 Nov 13 08:37 lista.txt
+-rw-r--r-- 1 aguilar maestros 997667 Nov 13 08:37 session.png
+-rw-r--r-- 1 aguilar maestros 293487 Nov 13 08:37 terminal.png
+aguilar@comp:-$ gzip -r practica20/
+aguilar@comp:-$ ls -l practica20/
+total 1272
+-rw-r--r-- 1 aguilar maestros 36146 Nov 13 08:37 dash_home.pdf.gz
+-rw-r--r-- 1 aguilar maestros 1410 Nov 13 08:37 lista.txt.gz
+-rw-r--r-- 1 aguilar maestros 975467 Nov 13 08:37 session.png.gz
+-rw-r--r-- 1 aguilar maestros 281068 Nov 13 08:37 terminal.png.gz[cite: 36]
+
+El único inconveniente con este mando es que perdemos los archivos originales y nada mas quedan los archivos comprimidos.[cite: 36]
+Para obtener la mejor compresión posible tenemos los parámetros [19] donde 1 es menor grado de compresión y el 9 es el mayor grado de compresión.[cite: 36]
+Descompresión de archivos con gunzip[cite: 36]
+El mando gunzip nos sirve para descomprimir archivos que fueron comprimidos con el mando gzip.[cite: 36]
+Si se utiliza el mando gunzip solo, sin el uso de redireccionamiento de salida, entonces perderemos el archivo comprimido y nos quedará el archivo ya descomprimido.[cite: 36]
+Pero si queremos conservar el archivo comprimido tendremos que hacer uso del parámetro y el direccionamiento de salida >[cite: 36].
+
+aguilar@comp:~$ ls -l practica20
+total 1272
+-rw-r--r-- 1 aguilar maestros 36146 Nov 13 08:37 dash_home.pdf.gz
+-rw-r--r-- 1 aguilar maestros 1410 Nov 13 08:37 lista.txt.gz
+-rw-r--r-- 1 aguilar maestros 975467 Nov 13 08:37 session.png.gz
+-rw-r--r-- 1 aguilar maestros 281068 Nov 13 08:37 terminal.png.gz
+aguilar@comp:- gunzip -c practica20/lista.txt.gz > practica20/lista.txt
+aguilar@comp:-$ ls -l practica20
+total 1276
+-rw-r--r-- 1 aguilar maestros 36146 Nov 13 08:37 dash_home.pdf.gz
+-rw-r--r-- 1 aguilar maestros 3951 Nov 13 10:44 lista.txt
+-rw-r--r-- 1 aguilar maestros 1410 Nov 13 08:37 lista.txt.gz
+-rw-r--r-- 1 aguilar maestros 975467 Nov 13 08:37 session.png.gz
+-rw-r--r-- 1 aguilar maestros 281068 Nov 13 08:37 terminal.png.gz
+aguilar@comp:-$[cite: 36]
+
+Empaquetado de archivos con tar[cite: 36]
+El mando tar solo sirve para empaquetar archivos o directorios. Se utilizan los parámetros c y f con los cuales se le especifica al mando tar que va a crear un archivo y que nombre va a tener.[cite: 36]
+
+aguilar@comp:~/practica20$ ls -l
+total 1316
+-rw-r--r-- 1 aguilar maestros 45952 Nov 13 08:37 dash home.pdf
+-rw-r--r-- 1 aguilar maestros 3951 Nov 13 10:44 lista.txt
+-rw-r--r-- 1 aguilar maestros 997667 Nov 13 08:37 session.png
+-rw-r--r-- 1 aguilar maestros 293487 Nov 13 08:37 terminal.png
+aguilar@comp:-/practica20$ tar -cf archivos.tar .
+aguilar@comp:~/practica20$ ls -l
+total 2636
+-rw-r--r-- 1 aguilar maestros 1351680 Nov 13 10:57 archivos.tar
+-rw-r--r-- 1 aguilar maestros 45952 Nov 13 08:37 dash home.pdf
+-rw-r--r-- 1 aguilar maestros 3951 Nov 13 10:44 lista.txt
+-rw-r--r-- 1 aguilar maestros 997667 Nov 13 08:37 session.png
+-rw-r--r-- 1 aguilar maestros 293487 Nov 13 08:37 terminal.png
+aguilar@comp:-/practica20$[cite: 36]
+
+Un ejemplo del uso de mando tar para el empaquetado de directorios[cite: 36].
+
+aguilar@comp:-$ tar -cf archivos.tar practica20/
+aguilar@comp:~$ ls -l
+total 4160
+-rw-r--r-- 1 aguilar maestros 1341057 Nov 13 10:40 archivos.gz
+-rw-r--r-- 1 aguilar maestros 1351680 Nov 13 11:03 archivos.tar
+-rw-r--r-- 1 aguilar maestros 1294828 Nov 13 09:38 archivos.zip
+drwxr-xr-x 2 aguilar maestros 4096 Nov 13 11:03 practica20[cite: 36]
+
+Empaquetado y Compresión de archivos con tar y gzip.[cite: 36]
+Para comprimir un archivo. tar con el compresor gzip se utiliza el parámetro z para indicarle que utilice gzip, el parámetro c es para indicarle que va a crear el archivo, para que nos muestre lo que está haciendo y f para indicar el nombre del archivo a crear.[cite: 36]
+
+aguilar@comp:-$ tar -zcvf archivos.tar.gz practica20/
+practica20/
+practica20/lista.txt
+practica20/session.png
+practica20/terminal.png
+practica20/dash_home.pdf
+aguilar@comp:- ls -l
+total 5256
+-rw-r--r-- 1 aguilar maestros 1341057 Nov 13 10:40 archivos.gz
+-rw-r--r-- 1 aguilar maestros 1351680 Nov 13 11:03 archivos.tar
+-rw-r--r-- 1 aguilar maestros 1295379 Nov 13 11:14 archivos.tar.gz
+-rw-r--r-- 1 aguilar maestros 1294828 Nov 13 09:38 archivos.zip
+drwxr-xr-x 2 aguilar maestros 4096 Nov 13 11:03 practica20[cite: 36]
+
+Para visualizar el contenido de archivo comprimido utilizaremos el parámetro t.[cite: 36]
+
+aguilar@comp:-$ tar tf archivos.tar.gz
+practica20/
+practica20/lista.txt
+practica20/session.png
+practica20/terminal.png
+practica20/dash_home.pdf[cite: 36]
+
+Para visualizar todos los atributos de los archivos contenidos en un archivo comprimido utilizaremos el parámetrov[cite: 36]
+
+aguilar@comp:-$ tar -vtf archivos.tar.gz
+drwxr-xr-x aguilar/maestros 0 2012-11-13 11:03 practica20/
+-rw-r--r-- aguilar/maestros 3951 2012-11-13 10:44 practica20/lista.txt
+-rw-r--r-- aguilar/maestros 997667 2012-11-13 08:37 practica20/session.png
+-rw-r--r-- aguilar/maestros 293487 2012-11-13 08:37 practica20/terminal.png
+-rw-r--r-- aguilar/maestros 45952 2012-11-13 08:37 practica20/dash_home.pdf[cite: 36]
+
+Desempaquetado y descompresión de archivos con el mando tar.[cite: 36]
+Para desempaquetar y descomprimir archivos utilizando el mando tar usaremos las opciones xzvf donde el parámetro x es para extraer los archivos.[cite: 36]
+
+aguilar@comp:-$ tar -xzvf archivos.tar.gz
+practica20/
+practica20/lista.txt
+practica20/session.png
+practica20/terminal.png
+practica20/dash_home.pdf[cite: 36]
+
+PROCEDIMIENTO (DESCRIPCIÓN)[cite: 36]
+A) EQUIPO NECESARIO MATERIAL DE APOYO Computadora con Linux instalado Práctica Impresa[cite: 36]
+B) DESARROLLO DE LA PRÁCTICA[cite: 36]
+
+Iniciar su sesión en Linux.[cite: 36]
+
+Copiar del directorio ~compartido el subdirectorio practica20a/.[cite: 36]
+limon.yael@computacion:/externos/home/clases/compartido$ cp -r practica20a ~
+sftp> get -r practica20a[cite: 36]
+
+Utilizando el mando zip comprimir todos los archivos .txt del directorio comprimibles a un nivel 3 de compresión en un archivo llamado nivel3.zip.[cite: 36]
+pinkumi@ASUS:~/practical7/practica20as zip -3 nivel3.zip .txt
+adding: calculadoras.txt (deflated 51%)
+adding: carros.txt (deflated 35%)
+adding: congreso.txt (deflated 19%)
+adding: lista.txt (deflated 98%)
+pinkumi@ASUS:-/practical7/practica20a$ ls
+calculadoras.txt carros.txt congreso.txt dash_home.pdf lista.txt nivel3.zip session.png terminal.png[cite: 36]
+
+Utilizando el mando zip comprimir todos los archivos .txt del directorio comprimibles a un nivel 9 de compresión en un archivo llamado nivel.zip.[cite: 36]
+pinkumi@ASUS:~/practical7/practica20a$ zip -9 nivel9.zip *.txt
+adding: calculadoras.txt (deflated 52%)
+adding: carros.txt (deflated 35%)
+adding: congreso.txt (deflated 19%)
+adding: lista.txt (deflated 99%)
+pinkumi@ASUS:~/practical7/practica20a$ ls
+calculadoras.txt carros.txt congreso.txt dash_home.pdf lista.txt nivel3.zip nivel9.zip[cite: 36]
+
+Comparar y describir los porcentajes de compresión entre las dos preguntas anteriores.[cite: 36]
+Con el nivel 3 de compresión los archivos presentan un porcentaje un poco menor al de 9 de deflated, lo que nos dice que el de nivel 9 se volvieron unos porcentajes más pequeños que el de nivel 3.[cite: 36]
+
+Comprimir el directorio practica20a/ con el nombre de protegido.zip utilizando una contraseña para protegerlo.[cite: 36]
+pinkumi@ASUS:~/practical7$ zip -r -e protegido.zip practica20a/
+Enter password:
+Verify password:
+adding: practica20a/ (stored 0%)
+adding: practica20a/nivel9.zip (stored 0%)
+adding: practica20a/nivel3.zip (stored 0%)
+adding: practica20a/terminal.png (deflated 4%)
+adding: practica20a/dash_home.pdf (deflated 21%)
+adding: practica20a/carros.txt (deflated 35%)
+adding: practica20a/congreso.txt (deflated 19%)
+adding: practica20a/session.png (deflated 2%)
+adding: practica20a/calculadoras.txt (deflated 52%)
+adding: practica20a/lista.txt (deflated 99%)[cite: 36]
+
+Mostrar el contenido del archivo protegido.zip[cite: 36]
+pinkumi@ASUS:~/practical7$ unzip -l protegido.zip
+Archive: protegido.zip
+Length Date Time Name
+0 2025-11-13 13:40 practica20a/
+166312 2025-11-13 13:40 practica20a/nivel9.zip
+520152 2025-11-13 13:40 practica20a/nivel3.zip
+293487 2025-11-13 13:33 practica20a/terminal.png
+45952 2025-11-13 13:33 practica20a/dash_home.pdf
+235 2025-11-13 13:33 practica20a/carros.txt
+120 2025-11-13 13:33 practica20a/congreso.txt
+997667 2025-11-13 13:33 practica20a/session.png
+2552 2025-11-13 13:33 practica20a/calculadoras.txt
+27969129 2025-11-13 13:33 practica20a/lista.txt
+29995606 10 files[cite: 36]
+
+Verificar el estado del archivo protegido.zip[cite: 36]
+pinkumi@ASUS:~/practical7$ unzip -t protegido.zip
+Archive: protegido.zip
+testing: practica20a/ OK
+[protegido.zip] practica20a/nivel9.zip password:
+testing: practica20a/nivel9.zip OK
+testing: practica20a/nivel3.zip OK
+testing: practica20a/terminal.png OK
+testing: practica20a/dash_home.pdf OK
+testing: practica20a/carros.txt OK
+testing: practica20a/congreso.txt OK
+testing: practica20a/session.png OK
+testing: practica20a/calculadoras.txt OK
+testing: practica20a/lista.txt OK
+No errors detected in compressed data of protegido.zip.[cite: 36]
+
+Qué diferencias hay entre los resultados de las dos preguntas anteriores?[cite: 36]
+Por un lado, con la opción -I nos muestra información del archivo como su peso y fecha de modificación, con -t nos solicita contraseña y nos muestra si está en buen estado.[cite: 36]
+
+Realizar los pasos del 3 al 5 utilizando el mando gzip y gunzip.[cite: 36]
+pinkumi@ASUS:~/practical7/practica20a$ gzip -3 *.txt
+pinkumi@ASUS:~/practical7/practica20a$ ls
+calculadoras.txt.gz congreso.txt.gz lista.txt.gz nivel9.zip terminal.png
+carros.txt.gz dash_home.pdf nivel3.zip session.png
+pinkumi@ASUS:~/practica17/practica20a$ ls -l
+total 2504
+-rwxr-xr-x 1 pinkumi pinkumi 1295 Nov 13 13:33 calculadoras.txt.gz
+-rwxr-xr-x 1 pinkumi pinkumi 181 Nov 13 13:33 carros.txt.gz
+-rwxr-xr-x 1 pinkumi pinkumi 128 Nov 13 13:33 congreso.txt.gz
+-rwxr-xr-x 1 pinkumi pinkumi 45952 Nov 13 13:33 dash_home.pdf
+-rwxr-xr-x 1 pinkumi pinkumi 518043 Nov 13 13:33 lista.txt.gz
+pinkumi@ASUS:~/practica17/practica20a$ gunzip *.txt.gz
+pinkumi@ASUS:~/practical7/practica20a$ gzip -9 *.txt
+pinkumi@ASUS:~/practica17/practica20a$ ls -l
+total 2160
+-rwxr-xr-x 1 pinkumi pinkumi 1252 Nov 13 13:33 calculadoras.txt.gz
+-rwxr-xr-x 1 pinkumi pinkumi 181 Nov 13 13:33 carros.txt.gz
+-rwxr-xr-x 1 pinkumi pinkumi 128 Nov 13 13:33 congreso.txt.gz
+-rwxr-xr-x 1 pinkumi pinkumi 45952 Nov 13 13:33 dash_home.pdf
+-rwxr-xr-x 1 pinkumi pinkumi 164246 Nov 13 13:33 lista.txt.gz
+Podemos observar que los archivos son más pequeños, siendo el de lista.txt el más afectado.[cite: 36]
+
+Crear un directorio llamado practica20b/ y ahí descomprimir todos los archivos creados en los pasos anteriores.[cite: 36]
+pinkumi@ASUS:~/practica17/practica20a$ mv *.gz../practica20b/
+pinkumi@ASUS:~/practical7/practica20a$ cd /practica20b
+pinkumi@ASUS:~/practica17/practica20b$ gunzip *.gz
+pinkumi@ASUS:~/practical17/practica20b$ ls
+calculadoras.txt carros.txt congreso.txt lista.txt[cite: 36]
+
+Utilizando el mando tar empaquetar y comprimir el directorio practica20b/ en un archivo Ilamado comprimidos.tar.gz.[cite: 36]
+pinkumi@ASUS:~/practical7$ tar -zcvf comprimidos.tar.gz practica20b/
+practica20b/
+practica20b/carros.txt
+practica20b/congreso.txt
+practica20b/calculadoras.txt
+practica20b/lista.txt
+pinkumi@ASUS:~/practical7$ ls
+comprimidos.tar.gz practica20a practica20b[cite: 36]
+
+Borrar el directorio practica20b/.[cite: 36]
+pinkumi@ASUS:~/practical7$ rm -r practica20b
+pinkumi@ASUS:~/practical7$ ls
+comprimidos.tar.gz practica20a
+pinkumi@ASUS:~/practical7$[cite: 36]
+
+Mostrar el contenido del archivo comprimidos.tar.gz.[cite: 36]
+pinkumi@ASUS:~/practical7$ tar -tf comprimidos.tar.gz
+practica20b/
+practica20b/carros.txt
+practica20b/congreso.txt
+practica20b/calculadoras.txt
+practica20b/lista.txt
+pinkumi@ASUS:~/practica17$[cite: 36]
+
+Descomprimir el archivo comprimidos.tar.gz[cite: 36]
+pinkumi@ASUS:~/practical7$ tar -xzvf comprimidos.tar.gz
+practica20b/
+practica20b/carros.txt
+practica20b/congreso.txt
+practica20b/calculadoras.txt
+practica20b/lista.txt
+pinkumi@ASUS:~/practical7$ ls
+comprimidos.tar.gz practica20a practica20b
+pinkumi@ASUS:~/practica17$[cite: 36]
+
+Borrar todos los archivos y directorios creados anteriormente.[cite: 36]
+pinkumi@ASUS:~/pract
+
+Salir de Sesión.[cite: 36]C) CÁLCULOS (SI APLICA) Y REPORTE[cite: 36]RESULTADOS Y CONCLUSIONES[cite: 36]Dentro de esta práctica utilizamos distintos comandos para el empaquetado y la compresión de archivos, tales como el de zip, gzip y tar, donde cada uno tiene su utilidad de distintas maneras pero con un propósito similar.[cite: 36]ANEXOS[cite: 36]REFERENCIAS[cite: 36]Manual de Ayuda en Línea[cite: 36]Formuló Omar Aguilar Villavicencio | Revisó Aglay González Pacheco | Aprobó | Autorizó David I. Rosas Almeida[cite: 36]Nombre y Firma del Maestro | Nombre y Firma del Responsable de Programa Educativo | Nombre y Firma del Responsable de Gestión de Calidad | Nombre y Firma del Director / Representante de la Dirección[cite: 36]Código: GCN4017 Revisión: 4 Página 16 de 16[cite: 36]Practica19_LimonOrozco_01197973.docx_2.pdfUNIVERSIDAD AUTS UNIVERSIDAD AU ONOMA D DAI BAJA CALIFORNIA UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA FACULTAD DE INGENIERÍA Formato de Práctica de Laboratorio UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA FACULTAD DE INGENIERÍA MEXICALI FM Facultad de Ingenieria Ingeniería en Computación[cite: 37]Trabajo: Práctica 19: Bash Script.[cite: 37]Asignatura: Taller de Sistemas Operativos Unix.[cite: 37]Docente: Jesus Albany Armenta Garcia.[cite: 37]Alumno(a): Limon Orozco Yael Alfonso Matrícula: 01197973 Mexicali B.C. 21 de Noviembre del 2025.[cite: 37]Página 1 de 9 UNIVERSIDAD AU OND C FORNIA VIVIE OMA DI UNIVERSIDAD AUTÓNOMA DE BAJA CALIFORNIA FACULTAD DE INGENIERÍA Formato de Práctica de Laboratorio[cite: 37]Programa Educativo | Plan de Estudios | Clave de Unidad de Aprendizaje | Nombre de la Unidad de Aprendizaje[cite: 37]Ingeniero en Computación | 2020-1 | 36303 | Taller de Sistema Operativo Unix[cite: 37]Práctica No. 20 | Laboratorio de: Taller de Sistema Operativo Unix | Duración (Horas) 4 | Nombre de la Práctica: Scripts de Bash[cite: 37]INTRODUCCIÓN[cite: 37]Una herramienta disponible en los sistemas operativos de Linux son los scripts de Bash, los cuales son archivos que incluyen un conjunto de comandos y son ejecutados de forma secuencial.[cite: 37]En esta práctica se presentarán tres problemas a los cuales el alumno deberá darles solución creando el script correspondiente.[cite: 37]OBJETIVO (COMPETENCIA)[cite: 37]El alumno será capaz de resolver problemas mediante la implementación de scripts de bash.[cite: 37]FUNDAMENTO[cite: 37]Una de las ventajas de los scripts de Bash es la habilidad de poder ingresar múltiples comandos y procesar el resultado de cada comando, haciendo posible incluso pasar el resultado de un comando a otro.[cite: 37]Para crear un script, lo primero que se necesita es un editor de texto, de tal forma que sea posible crear un archivo y escribir los comandos en él.[cite: 37]En el archivo se deberá especificar qué shell se estará utilizando en la primera línea del archivo de la siguiente forma: #!/bin/bash[cite: 37]Una vez indicado el shell, los comandos pueden ser ingresados uno por uno en cada línea del archivo.[cite: 37]Para ejecutar un script se debe referenciar a la dirección del archivo que contiene el script desde la terminal, sin embargo, es necesario contar con los permisos de ejecución del archivo.[cite: 37]Para esto es necesario utilizar el comando chmod en la terminal: chmod 700 [nombre_script][cite: 37]Así como en otros lenguajes de programación el usuario puede definir variables de usuario en el script, permitiendo almacenar datos para su utilización a lo largo del script.[cite: 37]Las variables definidas por el usuario pueden ser cualquier cadena de texto de hasta 20 letras, dígitos y caracter "_". Es importante destacar que las variables de usuario son sensibles a mayúsculas (case sensitive).[cite: 37]Para asignar un valor a una variable de usuario se utiliza el símbolo de igual "=", sin dejar espacio entre el nombre de la variable, el símbolo de igual y el valor:[cite: 37]$var1=10$var2=-5var3=pruebavar4="otra prueba"[cite: 37]El script de shell automáticamente detectará el tipo de dato usado para el valor de variable.[cite: 37]De igual forma es posible referenciar variables de usuario utilizando el símbolo de dólar "$":[cite: 37]#!/bin/bash#Probando el uso de variablesedad1 $=24$persona1="Jesus"echo "$persona1 tiene una edad de $edad1".[cite: 37]Para guardar la información extraída por un comando en una variable existen dos formatos:[cite: 37]Usar el carácter: fecha=date`[cite: 37]Usar el format $(): $fecha=\$(date)$[cite: 37]Por otra parte, si el usuario quisiera realizar una operación matemática, se debe encerrar dicha operación utilizando el símbolo de dólar y corchetes ($$$operación$$):[cite: 37]$var1=\$\[1+5\]$$var2=\$\[\$var^{*}2\]$[cite: 37]Los operadores matemáticos de bash shell solamente tienen soporte para operaciones aritméticas con números enteros.[cite: 37]PROCEDIMIENTO[cite: 37]Equipo Necesario | Material de Apoyo[cite: 37]Computadora con sistema operativo Ubuntu instalado. | Formato de Práctica Hoja de ayuda de Bash[cite: 37]Escriba los scripts que den solución a los siguientes problemas que se plantean:[cite: 37]Un script que a partir de 3 documentos: productos.txt, precios.txt e inventario.txt, genere un tercer archivo que se llame tienda.txt. A continuación se describe el contenido de cada uno de los primeros 3 archivos:[cite: 37]productos.txt | inventario.txt | precios.txtid, nombre | id, cantidad | id, costo1111,computadora | 1111,5 | 1111,120002222, celular | 2222, 10 | 2222, 40003333, teclado | 3333,5 | 3333,6504444, resistencia | 4444,100 | 4444,35555,fuente_de_poder | 5555,1 | 5555,6006666, capacitor | 6666,60 | 6666,27777,fpga | 7777,8 | 7777,6000[cite: 37]El script deberá reunir la clave, nombre, cantidad y costo de los productos en un solo archivo llamado tienda.txt, resultando de la siguiente manera:[cite: 37]tienda.txtid, nombre, cantidad, costo1111, computadora, 5, 120002222, celular, 10,40003333, teclado,5,6504444, resistencia, 100,35555, fuente_de_poder, 1,6006666, capacitor, 60,27777,fpga,8,6000[cite: 37]limon.yael@computacion:~/practica19$ cat ejl.sh#!/bin/bashARCHIVOSALIDA tienda.txtPRODUCTOS=productos.txtINVENTARIO=inventario.txtPRECIO=precio.txt#Encontre que paste ayuda a unir por campo o columnacut -d, -f2 inventario.txt > p1.txtcut -d, -f2 precios.txt > p2.txtpasted, productos.txt p1.txt p2.txt > tienda.txtlimon.yael@computacion:~/practical9$ ./ejl.shlimon.yael@computacion:~/practica19$ lsejl.sh inventario.txt pl.txt p2.txt precios.txt productos.txt tienda.txtlimon.yael@computacion:~/practica19$ cat tienda.txtid, nombre, cantidad, costo1111, computadora, 5, 120002222, celular, 10, 40003333, teclado, 5, 6504444, resistencia, 100, 35555, fuente_de_poder, 1,6006666, capacitor, 60,27777, fpga, 8,6000limon.yael@computacion:~/practical9$ |[cite: 37]Crear un script que elimine los archivos con un tamaño mayor a una cantidad de MB especificada por el usuario a la hora de ejecutar el script (como argumento). De igual forma, el usuario pasará como argumento el directorio sobre el cual se ejecutará el script. Incorporar las validaciones necesarias para verificar si el directorio existe.[cite: 37]limon.yael@computacion:~/practica19$ cat ej2.sh#!/bin/bashecho $1echo $2if [[ $# -eq 2]]; thenif [[ -d $2]];thenls -l $2find $2 -type f -size +$1M -delete
+else
+echo "Lo enviado no es un directorio"
+fi
+else
+echo "Debes enviar al menos 2 argumentos"
+fi
+limon.yael@computacion:~/practica19$[cite: 37]limon.yael@computacion:~/practica19$ fallocate -l 2M prueba2/ar1limon.yael@computacion:~/practical9$ fallocate -l 5M prueba2/ar2limon.yael@computacion:~/practica19$ fallocate -l 10M prueba2/ar3limon.yael@computacion:~/practica19$ fallocate -l 12M prueba2/ar4limon.yael@computacion:~/practica19$ ls -l prueba2total 29696-rw-r--r-- 1 limon.yael Alumnos 2097152 nov 27 03:03 ar1-rw-r--r-- 1 limon.yael Alumnos 5242880 nov 27 03:03 ar2-rw-r--r-- 1 limon.yael Alumnos 10485760 nov 27 03:03 ar3-rw-r--r-- 1 limon.yael Alumnos 12582912 nov 27 03:03 ar4limon.yael@computacion:~/practica19$ ./ej2.sh 5 prueba25prueba2total 29696-rw-r--r-- 1 limon.yael Alumnos 2097152 nov 27 03:03 arl-rw-r--r-- 1 limon.yael Alumnos 5242880 nov 27 03:03 ar2-rw-r--r-- 1 limon.yael Alumnos 10485760 nov 27 03:03 ar3-rw-r--r-- 1 limon.yael Alumnos 12582912 nov 27 03:03 ar4limon.yael@computacion:~/practica19$ ls -l prueba2total 7168-rw-r--r-- 1 limon.yael Alumnos 2097152 nov 27 03:03 arl-rw-r--r-- 1 limon.yael Alumnos 5242880 nov 27 03:03 ar2limon.yael@computacion:~/practical9$ |[cite: 37]Escribir un script que reciba como argumento un archivo de texto. El script generará un número de línea aleatorio que corresponderá al número de línea a mostrar del archivo.[cite: 37]limon.yael@computacion:~/practica19$ cat ej3.sh#!/bin/bashif [[ $# -eq 1]]; thenif [[ -f $1]]; then
+#tomar linea random y mostrarla
+NLINEAS='wc -l < $1`
+NLINEARANDOM=$(( RANDOM % $NLINEAS + 1))
+echo $NLINEARANDOM
+LINEA='sed -n "$NLINEARANDOM p" $1`
+echo "su linea es $LINEA"
+else
+echo "No es un archivo"
+fi
+else
+echo "Debes de enviar un archivo"
+fi
+limon.yael@computacion:~/practica19$ ./ej3.sh tienda.txt
+2
+su linea es 1111, computadora, 5, 12000
+limon.yael@computacion:~/practica19$ ./ej3.sh tienda.txt
+8
+su linea es 7777, fpga, 8,6000
+limon.yael@computacion:~/practica19$ |[cite: 37]RESULTADOS Y CONCLUSIONES[cite: 37]Los scripts de bash son un conjunto de instrucciones dentro de un archivo ejecutable en el cual podemos tener comandos que usualmente ejecutamos en el shell, estos nos pueden ayudar a ejecutar una serie de comandos o automatizar una tarde en específico.[cite: 37]ANEXOS[cite: 37]REFERENCIAS[cite: 37]R. Blum and C. Bresnahan, Linux command line and shell scripting bible. Indianapolis, IN: John Wiley & Sons, 2015.[cite: 37]
+

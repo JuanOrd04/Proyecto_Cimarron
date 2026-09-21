@@ -1,0 +1,144 @@
+
+Archivos Binarios
+1
+Programación Estructurada
+Unidad 5 - Archivos
+
+A diferencia de los archivos de texto, los archivos binarios almacenan la información en forma binaria, es decir, 0’s y 1’s, siendo esta una forma más eficiente de almacenar información ya que se almacenan de la misma forma que se hace en memoria. 
+
+
+
+
+2
+Archivos Binarios
+Concepto
+
+3
+Archivos Binarios
+¿Por qué son más eficientes?
+7879
+
+7 = 00110111
+8 = 00111000
+7 = 00110111
+9 = 00111001
+
+¡No olvidemos el salto de línea!
+\n = 00001010
+Estos valores en binario vienen de sus respectivos valores en la tabla ASCII
+Almacenados como Texto
+
+4
+Archivos Binarios
+¿Por qué son más eficientes?
+Almacenados como Texto
+¡Se están utilizando 5 bytes para almacenar el archivo con el número 7879!
+
+5
+Archivos Binarios
+¿Por qué son más eficientes?
+7879 = 00011110 11000111
+
+De tratar dicho número tal como lo haría la computadora en lugar de una cadena de texto, el número 7879 puede ser perfectamente almacenado en 2 bytes, ahorrándonos espacio.
+
+
+Almacenado como Archivo Binario
+
+6
+Archivos Binarios
+¿Por qué son más eficientes?
+
+
+Almacenado como Archivo Binario
+¡Se están utilizando 2 bytes para almacenar el número 7879 en el archivo!
+Con esto forzamos a que el número se represente con 16 bits
+
+Para visualizar un archivo binario, no será posible utilizar un editor de texto, se requiere de un programa compatible con los datos, es decir, que conozca cómo fueron escritos los datos para recuperarlos o para realizar operaciones de modificación o escritura de datos.  
+
+
+
+
+7
+Archivos Binarios
+Visualización de Archivos Binarios
+
+FILE * fptr
+fptr = fopen(nombre_archivo,modo);
+La función fopen( ) nos permite abrir (o crear) el archivo especificado por nombre_archivo en alguno de los siguientes modos:
+
+
+
+
+8
+Archivos Binarios
+Abrir un Archivo Binario
+
+9
+Implementación en C
+Abrir o Crear un archivo de texto
+Modo
+Descripción
+“rb”
+Permite abrir el archivo binario en modo solo lectura, regresando un valor NULL en caso de no existir.
+“wb”
+Permite abrir el archivo binario en modo escritura, y, en caso de no existir, crea el archivo. NOTA: en caso de existir, su contenido será sobrescrito.  
+“ab”
+Permite abrir el archivo binario en modo añadir, lo que agrega nuevo contenido justo al final del archivo. De no existir, el archivo será creado.
+
+Cabe destacar que la función fopen nos regresa un valor de tipo FILE*, el cual es un tipo de dato que apunta a la información del archivo.
+Por último, siempre que abramos un archivo de binario, deberemos cerrarlo con la función fclose( ): 
+int fclose (FILE * fptr);
+
+
+10
+Implementación en C
+Abrir o Crear un archivo de texto
+
+4.
+Lectura y Escritura en Archivos Binarios
+11
+
+Para escribir en un archivo binario, es necesario abrir el archivo en modo escritura (“wb”) y hacer uso de la función fwrite( ): 
+
+fwrite(direcciónDatos, tamañoDatos, númeroDatos, apuntadorArchivo)
+
+12
+Lectura y Escritura  en Archivos Binarios
+Escritura en Archivos Binarios
+
+float num = 11; 
+fwrite(&num, sizeof(num), 1, mi_archivo);
+
+13
+Lectura y Escritura  en Archivos Binarios
+Escritura en Archivos Binarios
+float num[5] = {11.9, 10.8, 5.1, 0.0, 2.1}; 
+fwrite(num, sizeof(num), 1, mi_archivo);
+
+float num[5] = {11.9, 10.8, 5.1, 0.0, 2.1}; 
+fwrite(num, sizeof(float), 3, mi_archivo);
+
+Escribe el contenido de la variable num en archivo
+Escribe el contenido del arreglo num en archivo
+Escribe los primeros 3 elementos del arreglo num en archivo
+¿Y si quisiéramos almacenar estructuras en archivos?
+
+14
+Lectura y Escritura  en Archivos Binarios
+Escritura en Archivos Binarios
+
+Para leer un archivo binario, es necesario abrir el archivo en modo lectura (“rb”) y hacer uso de la función fread( ): 
+
+fread(direcciónDatos, tamañoDatos, númeroDatos, apuntadorArchivo)
+
+15
+Lectura y Escritura  en Archivos Binarios
+Lectura de Archivos Binarios
+
+16
+Lectura y Escritura  en Archivos Binarios
+Lectura de Archivos Binarios
+
+
+Gracias por su Atención durante el Curso
+17

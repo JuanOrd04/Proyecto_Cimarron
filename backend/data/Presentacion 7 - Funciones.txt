@@ -1,0 +1,177 @@
+Funciones
+
+1.
+Introducción a las Funciones en C
+2
+
+Una función puede ser vista como un subprograma, el cual solo es ejecutado cuando se hace un llamado a la función. 
+Las funciones pueden ser utilizadas para realizar acciones específicas que pudieran repetirse múltiples veces dentro de un programa, por lo que su importancia radica en la reutilización de código.
+
+
+
+3
+Introducción a las Funciones en C
+¿Qué es una Función?
+
+Si bien anteriormente no se había presentado formalmente la definición de una función, ya se encontraban implementando funciones en sus programas:
+La función pow disponible en math.h.
+La función sqrt, igual disponible en math.h. 
+La propia función main que utilizamos para marcar el comienzo de nuestro programa. 
+
+
+
+4
+Introducción a las Funciones en C
+¿Qué es una Función?
+
+Las funciones presentadas hasta el momento ya se encuentran definidas en un archivo de cabecera para ser utilizadas por los programadores, pero…
+
+¿Sabían que ustedes pueden hacer sus propias funciones?
+
+
+
+5
+Introducción a las Funciones en C
+¿Qué es una Función?
+
+6
+Introducción a las Funciones en C
+Ejemplo de una Función Simple
+
+2.
+Elementos de una Función en C
+7
+
+8
+Elementos de una Función en C
+Prototipo de una Función
+
+9
+Elementos de una Función en C
+Prototipo de una Función
+Para utilizar una función en nuestro programa, es necesario presentar nuestra función al programa. A esta parte se le conoce como prototipo de la función y consta de tres bloques de información:
+tipo_proporcionado nombre_función (signatura);
+
+
+
+
+10
+Elementos de una Función en C
+Prototipo de una Función
+tipo_proporcionado nombre_función (signatura);
+
+Es el valor que toma la función cuando concluye su ejecución. Esta puede ser de cualquier tipo válido en C y se puede almacenar en una variable de tipo compatible.  De igual forma podemos indicar que nuestra función no toma ningún valor al escribir void en esta parte. 
+Se refiere al tipo de dato de lo que comúnmente se conoce como valor de retorno.
+
+
+11
+Elementos de una Función en C
+Prototipo de una Función
+tipo_proporcionado nombre_función (signatura);
+
+Identificador de la función. Se utilizará este identificador cuando queramos hacer una llamada a la función.
+Esta no debe ser una palabra reservada de C y es una buena práctica escribir el nombre de la función con letra inicial minúscula. 
+
+
+12
+Elementos de una Función en C
+Prototipo de una Función
+tipo_proporcionado nombre_función (signatura);
+
+En la signatura se definen los argumentos (variables) que recibirá la función para tratarlas como variables locales. Sus valores serán definidos al hacer el llamado de la función y dentro de la función serán tratados como una copia de los originales.
+
+13
+Elementos de una Función en C
+Cuerpo de la Función
+
+14
+Elementos de una Función en C
+Cuerpo de la Función
+El cuerpo de la función se define escribiendo una copia del prototipo definido anteriormente, sin ; al final, en su lugar se utilizan llaves { } para delimitar el conjunto de instrucciones que se realizarán al hacer el llamado de la función. Dicho conjunto termina cuando alcanza la sentencia return o bien, si tipo_proporcionado fue void, se puede omitir dicha sentencia. 
+
+
+
+
+15
+Elementos de una Función en C
+Un ejemplo más elaborado
+
+3.
+Tipos de Funciones
+16
+
+17
+
+Tipos de Funciones
+Comúnmente, las funciones se pueden clasificar en 4 tipos:
+Funciones sin parámetros y sin valor de retorno
+Funciones sin parámetros y con valor de retorno
+Funciones con parámetros y sin valor de retorno
+Funciones con parámetros y con valor de retorno
+
+
+
+
+Más que memorizar la clasificación piensen, ¿Qué necesito que haga mi función? 
+
+18
+Tipos de Funciones
+Sin parámetros ni valor de retorno
+Una función la cual no recibe parámetros y no regresa valor alguno.
+
+
+
+19
+Tipos de Funciones
+Sin parámetros con valor de retorno
+Una función la cual no recibe parámetros pero regresa valor alguno.
+
+
+
+20
+Tipos de Funciones
+Con parámetros sin valor de retorno
+Una función que recibe parámetros pero no regresa valor alguno. 
+
+
+
+21
+Tipos de Funciones
+Con parámetros con valor de retorno
+Una función que recibe parámetros y regresa un valor.
+
+
+
+22
+Tipos de Funciones
+Ejemplo 1
+Escribe un programa en C para calcular el volumen de una esfera utilizando funciones.
+
+
+
+23
+Tipos de Funciones
+Ejemplo 1
+
+24
+Tipos de Funciones
+Ejemplo 2
+
+Tarea 5
+Funciones en C
+25
+
+Tarea 5
+Funciones en C
+26
+Escribe un programa en C que muestre el siguiente menú de opciones con su respectiva acción:
+[1] Calcular área de un círculo
+[2] Calcular área de un rectángulo
+[3] Calcular perímetro de un círculo
+[4] Calcular perímetro de un rectángulo
+[5] Salir
+
+Tarea 5
+Funciones en C
+27
+Para cada una de las opciones anteriores se tendrá una función con parámetros (las medidas de la figura) y valor de retorno, el cuál será el resultado de la operación respectiva. 

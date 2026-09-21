@@ -1,0 +1,128 @@
+Estructuras de Control de Iteración 
+
+1.
+Introducción a las Estructuras de Control de Iteración
+2
+
+En ocasiones resulta ser necesario realizar una operación más de una vez. Por ejemplo, la sumatoria:
+
+
+En donde los números que sumaremos serán los que se encuentren entre 1 y N.
+
+3
+Estructuras de Control de Iteración
+Idea General
+
+Suponiendo que N = 5:
+
+
+
+¿Cómo haríamos esto en código?
+
+4
+Estructuras de Control de Iteración
+Idea General
+
+
+
+
+
+
+5
+Estructuras de Control de Iteración
+Idea General
+Pero… ¿y si N = 50? ó ¿N=1000?  
+¿Y si N fuera una variable que el usuario pueda determinar desde teclado?
+¿Sería esta la solución adecuada?
+
+Al utilizar Estructuras de Control de Iteración (Ciclo) en programación, podemos traducir el código anterior a una sola instrucción, la cual será repetida hasta que una condición se cumpla. 
+En programación tenemos  los siguientes tipos de ciclos:
+Ciclo for
+Ciclo while
+Ciclo do-while
+
+6
+Estructuras de Control de Iteración
+Ciclos
+
+2.
+Ciclo for
+7
+
+El ciclo for es una Estructura de Control de Iteración que tiene como propósito ejecutar un conjunto de instrucciones una cantidad específica de veces. 
+for (cláusula de iniciación; condición de iteración;
+cláusula de actualización){
+Bloque de Instrucciones
+}
+
+8
+Ciclo for
+¿Qué es?
+
+for (cláusula de iniciación; condición de iteración;
+cláusula de actualización){
+Bloque de Instrucciones
+}
+
+Se ejecuta una sola vez al inicio del ciclo y sirve para declarar la variable que nos permitirá controlar las ejecuciones del ciclo: int i = 1. Dicha variable sólo existirá dentro del ciclo.
+
+9
+Ciclo for
+¿Qué es?
+
+for (cláusula de iniciación; condición de iteración;
+cláusula de actualización){
+Bloque de Instrucciones
+}
+
+Condición que es evaluada antes de ejecutar el bloque de instrucciones. Si es verdadera procederá a ejecutarlas. De ser falsa terminará el ciclo y no se ejecutará el contenido del bloque.
+
+10
+Ciclo for
+¿Qué es?
+
+for (cláusula de iniciación; condición de iteración;
+cláusula de actualización){
+Bloque de Instrucciones
+}
+
+Esta actualización se realiza después de ejecutar el Bloque de instrucciones y antes de evaluar la Condición de Iteración. Aquí se suele incrementar o decrementar la variable de control de ejecuciones de ciclo que definimos en la cláusula de iniciación.
+
+11
+Ciclo for
+¿Qué es?
+
+Programa que muestra los números del 0 al 9 utilizando un ciclo for. 
+
+12
+Ciclo for
+Ejemplo 1 
+
+También es posible mostrar los números en el orden opuesto, es decir, del 9 al 0.
+
+13
+Ciclo for
+Ejemplo 1.5 
+
+Realicemos el programa de la sumatoria. En esta ocasión, el usuario puede determinar el valor de N. 
+
+14
+Ciclo for
+Ejemplo 2 
+
+Realicemos el programa de la sumatoria. En esta ocasión, el usuario puede determinar el valor de N. 
+
+15
+Ciclo for
+Ejemplo 2 
+
+Tarea 3
+Ciclo for
+16
+
+Tarea 2 
+Condicionales
+17
+Escribe un programa en C que permita encontrar el factorial de un número ingresado por el usuario.
+Escribe un programa en C que muestre N términos de números impares y su suma. 
+Escribe un programa en C que realice y muestre la tabla de multiplicar de los números del 1 al 12. Cada número deberá llegar a multiplicarse hasta 10. 
