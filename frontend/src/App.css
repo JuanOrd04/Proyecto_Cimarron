@@ -16,7 +16,7 @@
 body {
   font-family: var(--font-body);
   /* Logo transparente al centro, con un fondo degradado verde infinito detrás */
-  background-image: url('/logo_steam.png'), radial-gradient(circle at center, #0B3A20 0%, #031B0E 100%);
+  background-image: url('/logo_steam.webp'), radial-gradient(circle at center, #0B3A20 0%, #031B0E 100%);
   background-size: 450px auto, cover;
   background-position: center, center;
   background-attachment: fixed, fixed;
@@ -196,15 +196,40 @@ body {
   background: var(--bubble-bg);
   padding: 1.5rem; border-radius: 24px;
   border: 3px solid var(--uabc-gold);
-  min-height: 140px; display: flex; flex-direction: column; justify-content: center;
+  min-height: 140px; 
+  max-height: 280px; 
+  overflow-y: auto;
+  display: flex; flex-direction: column; 
+  justify-content: flex-start;
+}
+/* Scrollbar personalizado para la burbuja */
+.speech-bubble::-webkit-scrollbar {
+  width: 8px;
+}
+.speech-bubble::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.05);
+  border-radius: 10px;
+  margin-block: 10px; /* Separación superior/inferior */
+}
+.speech-bubble::-webkit-scrollbar-thumb {
+  background: var(--uabc-green);
+  border-radius: 10px;
 }
 .speech-bubble-badge {
   position: absolute; top: -14px; left: 20px;
   background: var(--uabc-green); color: var(--uabc-gold-light);
   font-size: 0.75rem; font-weight: 800; padding: 0.2rem 0.8rem;
   border-radius: 12px; border: 2px solid var(--uabc-gold); text-transform: uppercase;
+  z-index: 2; /* Para que quede encima del scroll */
 }
-.speech-bubble-text { font-family: var(--font-heading); font-size: 1.3rem; line-height: 1.4; font-weight: 600; color: #0F172A; }
+.speech-bubble-text { 
+  font-family: var(--font-heading); 
+  font-size: 1.15rem; /* Letra un poco más pequeña */
+  line-height: 1.5; 
+  font-weight: 600; 
+  color: #0F172A; 
+  margin-top: 5px; /* Para que no pegue con el borde superior al scrollear */
+}
 
 .karaoke-text { transition: all 0.1s ease; }
 .karaoke-cursor {

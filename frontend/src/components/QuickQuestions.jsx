@@ -1,14 +1,21 @@
 import React, { useState } from 'react';
-import { Sparkles, Bot, HardHat, Plane, Cpu, GraduationCap, Zap, ChevronDown } from 'lucide-react';
+import Sparkles from 'lucide-react/dist/esm/icons/sparkles';
+import GraduationCap from 'lucide-react/dist/esm/icons/graduation-cap';
+import HardHat from 'lucide-react/dist/esm/icons/hard-hat';
+import Bot from 'lucide-react/dist/esm/icons/bot';
+import Plane from 'lucide-react/dist/esm/icons/plane';
+import Cpu from 'lucide-react/dist/esm/icons/cpu';
+import Zap from 'lucide-react/dist/esm/icons/zap';
+import ChevronDown from 'lucide-react/dist/esm/icons/chevron-down';
 import { playHover } from '../utils/sfx';
 
 const PRESET_QUESTIONS = [
-  { text: "¿Qué hace un ingeniero?", icon: GraduationCap },
-  { text: "¿Cómo construyen un puente gigante?", icon: HardHat },
-  { text: "¿Cómo funcionan los robots de la UABC?", icon: Bot },
-  { text: "¿Por qué pueden volar los aviones?", icon: Plane },
-  { text: "¿Cómo funcionan las computadoras por dentro?", icon: Cpu },
-  { text: "¿Qué puedo aprender en la Facultad de Ingeniería?", icon: Zap }
+  { text: "¿A qué se dedica un ingeniero?", icon: GraduationCap },
+  { text: "¿Cómo se construye un puente moderno?", icon: HardHat },
+  { text: "¿Qué proyectos de robótica desarrollan en la UABC?", icon: Bot },
+  { text: "¿Cómo logran volar los aviones?", icon: Plane },
+  { text: "¿Cómo funciona internamente una computadora?", icon: Cpu },
+  { text: "¿Qué carreras ofrece la Facultad de Ingeniería?", icon: Zap }
 ];
 
 const QuickQuestions = ({ onSelectQuestion, disabled, sfxEnabled }) => {

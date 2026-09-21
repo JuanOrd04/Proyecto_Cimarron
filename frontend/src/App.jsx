@@ -1,5 +1,6 @@
 import React, { useState, useRef, useEffect } from 'react';
-import { Volume2, VolumeX } from 'lucide-react';
+import Volume2 from 'lucide-react/dist/esm/icons/volume-2';
+import VolumeX from 'lucide-react/dist/esm/icons/volume-x';
 import CimarronAvatar from './components/CimarronAvatar';
 import SpeechBubble from './components/SpeechBubble';
 import SpeechButton from './components/SpeechButton';
@@ -10,7 +11,7 @@ import './App.css';
 const BACKEND_URL = "http://127.0.0.1:8000/chat";
 
 function App() {
-  const [responseText, setResponseText] = useState("¡Hola explorador! ¡Bienvenido a la Facultad de Ingeniería de la UABC! ¿Qué te gustaría descubrir hoy?");
+  const [responseText, setResponseText] = useState("¡Hola! Bienvenido a la Facultad de Ingeniería de la UABC. ¿En qué te puedo ayudar hoy?");
   const [isLoading, setIsLoading] = useState(false);
   const [isSpeaking, setIsSpeaking] = useState(false);
   const [mouthFrame, setMouthFrame] = useState(0); // 0 a 3 para 4 poses
@@ -127,7 +128,8 @@ function App() {
             isSpeaking={isSpeaking}
             mouthFrame={mouthFrame}
             sfxEnabled={sfxEnabled}
-            isThinking={isLoading || isListening}
+            isThinking={isLoading}
+            isListening={isListening}
             onAvatarClick={() => setShowBubble(!showBubble)}
           />
           <SpeechBubble

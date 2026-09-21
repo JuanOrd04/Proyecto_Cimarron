@@ -1,7 +1,7 @@
 import React, { useState, useEffect, useRef } from 'react';
 import { playPop } from '../utils/sfx';
 
-const CimarronAvatar = ({ isSpeaking, mouthFrame, onAvatarClick, sfxEnabled, isThinking }) => {
+const CimarronAvatar = ({ isSpeaking, mouthFrame, onAvatarClick, sfxEnabled, isThinking, isListening }) => {
   const [rotate, setRotate] = useState({ x: 0, y: 0 });
   const [isJumping, setIsJumping] = useState(false);
   const containerRef = useRef(null);
@@ -42,14 +42,16 @@ const CimarronAvatar = ({ isSpeaking, mouthFrame, onAvatarClick, sfxEnabled, isT
     setTimeout(() => setIsJumping(false), 600);
   };
 
-  let imageSrc = '/cimarron_boca_cerrada.png';
-  if (isThinking) {
-    imageSrc = '/cimarron_pensando.png';
+  let imageSrc = '/cimarron_boca_cerrada.webp';
+  if (isListening) {
+    imageSrc = '/Cimarron_Pensandoo.webp';
+  } else if (isThinking) {
+    imageSrc = '/cimarron_pensando.webp';
   } else if (isSpeaking) {
     // Alternar con las imágenes originales al hablar
     imageSrc = (mouthFrame % 2 === 0)
-      ? '/cimarron_boca_cerrada.png'
-      : '/cimarron_boca_abierta.png';
+      ? '/cimarron_boca_cerrada.webp'
+      : '/cimarron_boca_abierta.webp';
   }
 
   return (
@@ -78,6 +80,10 @@ const CimarronAvatar = ({ isSpeaking, mouthFrame, onAvatarClick, sfxEnabled, isT
           src={imageSrc}
           alt="Cimarrón UABC"
           className="avatar-image"
+          fetchpriority="high"
+          loading="eager"
+          width="400"
+          height="450"
         />
 
         <div className="avatar-shadow" />

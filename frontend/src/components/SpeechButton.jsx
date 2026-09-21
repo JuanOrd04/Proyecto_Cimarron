@@ -1,5 +1,6 @@
 import React, { useState, useEffect, useRef } from 'react';
-import { Mic, MicOff, Send } from 'lucide-react';
+import Mic from 'lucide-react/dist/esm/icons/mic';
+import Send from 'lucide-react/dist/esm/icons/send';
 import { playChimeOn, playChimeOff } from '../utils/sfx';
 
 const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, sfxEnabled }) => {

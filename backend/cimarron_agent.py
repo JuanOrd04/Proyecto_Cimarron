@@ -12,13 +12,12 @@ MODEL_NAME = "qwen2.5-coder:7b"
 DB_DIR = os.path.join(os.path.dirname(__file__), "chroma_db")
 
 SYSTEM_PROMPT = (
-    "Eres 'Cimarrón', la alegre, enérgica y orgullosa mascota institucional de la Facultad de Ingeniería "
+    "Eres el 'Cimarrón', la orgullosa mascota institucional y asistente virtual de la Facultad de Ingeniería "
     "de la Universidad Autónoma de Baja California (UABC). "
-    "Estás hablando con niños de primaria y secundaria que visitan la Facultad de Ingeniería. "
     "REGLAS OBLIGATORIAS DE RESPUESTA:\n"
-    "1. Responde de forma SÚPER ENTUSIASTA, enérgica y divertida usando signos de exclamación (!).\n"
-    "2. Da explicaciones muy sencillas, breves y accesibles sobre la ingeniería, tecnología y ciencia.\n"
-    "3. ¡TUS RESPUESTAS DEBEN SER DE MÁXIMO 2 ORACIONES!\n"
+    "1. Responde con un tono neutro, amable y accesible para todo el público (tanto adultos como niños).\n"
+    "2. Da explicaciones claras, breves y precisas sobre la ingeniería y la facultad.\n"
+    "3. TUS RESPUESTAS DEBEN SER DE MÁXIMO 2 ORACIONES.\n"
     "4. Responde siempre en español."
 )
 
@@ -62,7 +61,7 @@ class CimarronAgent:
                 logger.error(f"Error al buscar en ChromaDB: {e}")
 
         # Construcción del Prompt final
-        prompt_final = f"{SYSTEM_PROMPT}{contexto_extra}\n\nNiño/Pregunta: {user_message}\nCimarrón:"
+        prompt_final = f"{SYSTEM_PROMPT}{contexto_extra}\n\nUsuario: {user_message}\nCimarrón:"
 
         payload = {
             "model": self.model_name,
@@ -70,25 +69,25 @@ class CimarronAgent:
             "stream": False,
             "options": {
                 "temperature": 0.6,
-                "num_predict": 75,
+                "num_predict": 250,
                 "num_ctx": 1024 # Aumentado a 1024 para soportar el contexto
             }
         }
         
         try:
             logger.info(f"Enviando consulta a Ollama ({self.model_name})...")
-            response = requests.post(self.ollama_url, json=payload, timeout=30)
+            response = requests.post(self.ollama_url, json=payload, timeout=120)
             if response.status_code == 200:
                 result = response.json()
                 text = result.get("response", "").strip()
                 if not text:
-                    text = "¡Hola explorador! ¡Bienvenido a la Facultad de Ingeniería de la UABC!"
+                    text = "¡Hola! Bienvenido a la Facultad de Ingeniería de la UABC."
                 return text
             else:
                 logger.error(f"Ollama retornó código {response.status_code}: {response.text}")
-                return "¡Hola! ¡Qué gusto verte en la UABC! ¡La ingeniería es asombrosa!"
+                return "¡Hola! Qué gusto saludarte. La ingeniería en la UABC es asombrosa."
         except Exception as e:
             logger.error(f"Error al comunicar con Ollama local: {e}")
-            return "¡Hola amigo! ¡Bienvenido a la Facultad de Ingeniería de la UABC! ¡Aquí creamos el futuro!"
+            return "¡Hola! Bienvenido a la Facultad de Ingeniería de la UABC. Estoy aquí para ayudarte."
 
 cimarron_agent = CimarronAgent()

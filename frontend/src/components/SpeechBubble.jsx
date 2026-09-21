@@ -37,11 +37,13 @@ const SpeechBubble = ({ text, isSpeaking, isLoading, isVisible = true }) => {
 
   return (
     <div className={`speech-bubble-wrapper ${isVisible ? 'show' : 'hide'}`}>
+      
+      {/* Badge movido fuera de la burbuja para que no se corte por el overflow-y */}
+      <div className="speech-bubble-badge">
+        <span> MASCOTA UABC INGENIERÍA </span>
+      </div>
+
       <div className={`speech-bubble glass-panel ${isSpeaking ? 'active-speaking' : ''}`}>
-        <div className="speech-bubble-badge">
-          <span> mascota UABC INGENIERÍA </span>
-        </div>
-        
         {isLoading ? (
           <div className="loading-dots">
             <span>¡Pensando respuesta brillante!</span>
@@ -57,10 +59,11 @@ const SpeechBubble = ({ text, isSpeaking, isLoading, isVisible = true }) => {
             {isSpeaking && <span className="karaoke-cursor"></span>}
           </p>
         )}
-
-        {/* Tail / Pico de la burbuja */}
-        <div className="speech-bubble-tail" />
       </div>
+
+      {/* Tail / Pico movido fuera de la burbuja para que no se corte por el overflow-y */}
+      <div className="speech-bubble-tail" />
+      
     </div>
   );
 };
