@@ -155,9 +155,6 @@ function App() {
           />
         </section>
 
-        <footer className="app-footer glass-panel">
-          <p>🟢</p>
-        </footer>
       </div>
     </>
   );
