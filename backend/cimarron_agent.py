@@ -1,7 +1,7 @@
 import os
 import requests
 import logging
-from langchain_community.embeddings import OllamaEmbeddings
+from langchain_ollama import OllamaEmbeddings
 from langchain_chroma import Chroma
 
 logging.basicConfig(level=logging.INFO)
@@ -11,24 +11,16 @@ OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
 MODEL_NAME = "qwen2.5-coder:7b"
 DB_DIR = os.path.join(os.path.dirname(__file__), "chroma_db")
 
-#prompt prueba uso de rac
 SYSTEM_PROMPT = (
-    "Responde a la pregunta utilizando únicamente la información"
-    " entregada en el contexto. Si la respuesta no se encuentra "
-    "en el contexto, responde: 'No dispongo de esa información en"
-    " mi base de datos'."
+    "Eres el Cimarrón, la mascota institucional y asistente virtual de la Facultad de Ingeniería "
+    "de la Universidad Autónoma de Baja California (UABC).\n"
+    "REGLAS OBLIGATORIAS:\n"
+    "1. Responde únicamente con la información de apoyo recuperada de la base local.\n"
+    "2. Responde siempre en español, con tono amable y lenguaje comprensible para primaria y secundaria.\n"
+    "3. Da respuestas claras de máximo dos oraciones.\n"
+    "4. Si la información no aparece en el contexto, responde: "
+    "'No dispongo de esa información en mi base de datos'."
 )
-
-
-# SYSTEM_PROMPT = (
-#     ""Eres el 'Cimarrón', la orgullosa mascota institucional y asistente virtual de la Facultad de Ingeniería "
-#     "de la Universidad Autónoma de Baja California (UABC). "
-#     "REGLAS OBLIGATORIAS DE RESPUESTA:\n"
-#     "1. Responde con un tono neutro, amable y accesible para todo el público (tanto adultos como niños).\n"
-#     "2. Da explicaciones claras, breves y precisas sobre la ingeniería y la facultad.\n"
-#     "3. TUS RESPUESTAS DEBEN SER DE MÁXIMO 2 ORACIONES.\n"
-#     "4. Responde siempre en español.""
-# )
 
 class CimarronAgent:
     def __init__(self, model_name: str = MODEL_NAME, ollama_url: str = OLLAMA_URL):
@@ -61,7 +53,7 @@ class CimarronAgent:
         if self.vectorstore is not None:
             try:
                 logger.info(f"Buscando información relacionada con: '{user_message}'")
-                resultados = self.vectorstore.similarity_search(user_message, k=2)
+                resultados = self.vectorstore.similarity_search(user_message, k=3)
                 if resultados:
                     fragmentos = [doc.page_content for doc in resultados]
                     contexto_extra = "\n\nINFORMACIÓN DE APOYO PARA RESPONDER (Usa esto si es relevante):\n- " + "\n- ".join(fragmentos)
@@ -76,9 +68,10 @@ class CimarronAgent:
             "model": self.model_name,
             "prompt": prompt_final,
             "stream": False,
+            "keep_alive": "30m",
             "options": {
-                "temperature": 0.6,
-                "num_predict": 250,
+                "temperature": 0.3,
+                "num_predict": 90,
                 "num_ctx": 1024 # Aumentado a 1024 para soportar el contexto
             }
         }
