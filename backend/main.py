@@ -69,6 +69,20 @@ def health_check():
         "ollama_status": "conectado" if ollama_online else "desconectado (asegúrate de correr 'ollama serve')"
     }
 
+class TeachRequest(BaseModel):
+    text: str
+
+@app.post("/teach")
+def teach_endpoint(request: TeachRequest):
+    if not request.text.strip():
+        raise HTTPException(status_code=400, detail="El texto no puede estar vacío.")
+    
+    success = cimarron_agent.add_knowledge(request.text)
+    if success:
+        return {"status": "ok", "message": "Base de datos actualizada en tiempo real."}
+    else:
+        raise HTTPException(status_code=500, detail="Error al actualizar la base de datos.")
+
 @app.post("/chat", response_model=ChatResponse)
 def chat_endpoint(request: ChatRequest):
     """

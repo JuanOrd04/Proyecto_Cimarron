@@ -1,6 +1,8 @@
 import React, { useState, useRef, useEffect } from 'react';
 import Volume2 from 'lucide-react/dist/esm/icons/volume-2';
 import VolumeX from 'lucide-react/dist/esm/icons/volume-x';
+import Brain from 'lucide-react/dist/esm/icons/brain';
+import X from 'lucide-react/dist/esm/icons/x';
 import CimarronAvatar from './components/CimarronAvatar';
 import SpeechBubble from './components/SpeechBubble';
 import SpeechButton from './components/SpeechButton';
@@ -18,6 +20,9 @@ function App() {
   const [isListening, setIsListening] = useState(false);
   const [sfxEnabled, setSfxEnabled] = useState(true);
   const [showBubble, setShowBubble] = useState(true);
+  const [showTeachModal, setShowTeachModal] = useState(false);
+  const [teachText, setTeachText] = useState('');
+  const [isTeaching, setIsTeaching] = useState(false);
 
   const audioRef = useRef(null);
   const mouthIntervalRef = useRef(null);
@@ -125,6 +130,29 @@ function App() {
     }
   };
 
+  
+  const handleTeach = async () => {
+    if (!teachText.trim()) return;
+    setIsTeaching(true);
+    try {
+      const response = await fetch("http://127.0.0.1:8000/teach", {
+        method: "POST",
+        headers: { "Content-Type": "application/json" },
+        body: JSON.stringify({ text: teachText })
+      });
+      if (response.ok) {
+        alert("¡Conocimiento guardado! El Cimarrón ya lo aprendió.");
+        setTeachText('');
+        setShowTeachModal(false);
+      } else {
+        alert("Hubo un error al guardar.");
+      }
+    } catch (err) {
+      alert("Error de conexión.");
+    }
+    setIsTeaching(false);
+  };
+
   const handleStop = () => {
     // 1. Detener petición de red si está pensando
     if (abortControllerRef.current) {
@@ -146,6 +174,15 @@ function App() {
     <>
       <ParticlesBackground />
       <div className="app-container">
+        {/* Botón de Enseñar (Esquina superior izquierda general) */}
+        <button 
+          className="teach-toggle-btn"
+          onClick={() => setShowTeachModal(true)} 
+          title="Enseñar algo nuevo al Cimarrón"
+        >
+          <Brain size={24} color="#FFD700" />
+        </button>
+
         
         {/* Botón de Volumen (Movido a la esquina superior derecha general) */}
         <button 
@@ -156,7 +193,8 @@ function App() {
           {sfxEnabled ? <Volume2 size={24} /> : <VolumeX size={24} color="#EF4444" />}
         </button>
 
-        <header className="app-header glass-panel">
+        <header className="app-header glass-panel" style={{position: 'relative'}}>
+          
           <div className="header-badge">Universidad Autónoma de Baja California</div>
           <h1 className="app-title">Asistente Interactivo "Cimarrón"</h1>
           {/* El subtítulo ha sido eliminado a petición del usuario */}
@@ -194,7 +232,33 @@ function App() {
         </section>
 
       </div>
-    </>
+    
+        {showTeachModal && (
+          <div style={{position: 'fixed', top: 0, left: 0, right: 0, bottom: 0, backgroundColor: 'rgba(0,0,0,0.8)', zIndex: 9999, display: 'flex', justifyContent: 'center', alignItems: 'center'}}>
+            <div className="glass-panel" style={{width: '90%', maxWidth: '600px', padding: '2rem', position: 'relative', display: 'flex', flexDirection: 'column', gap: '1rem'}}>
+              <button onClick={() => setShowTeachModal(false)} style={{position: 'absolute', top: '1rem', right: '1rem', background: 'none', border: 'none', cursor: 'pointer', color: 'white'}}>
+                <X size={24} />
+              </button>
+              <h2 style={{color: '#FFD700', marginTop: 0}}>Enseñar nuevo conocimiento</h2>
+              <p style={{color: '#ccc', fontSize: '0.9rem', margin: 0}}>Usa el formato TEMA / PREGUNTAS / RESPUESTA</p>
+              <textarea 
+                value={teachText}
+                onChange={(e) => setTeachText(e.target.value)}
+                placeholder="TEMA: Nuevo tema\nPREGUNTAS: ¿Pregunta 1? ¿Pregunta 2?\nRESPUESTA: Aquí va la respuesta."
+                style={{height: '200px', padding: '1rem', borderRadius: '8px', background: 'rgba(255,255,255,0.1)', color: 'white', border: '1px solid rgba(255,255,255,0.2)', fontFamily: 'monospace', resize: 'none'}}
+              />
+              <button 
+                onClick={handleTeach}
+                disabled={isTeaching}
+                style={{padding: '1rem', borderRadius: '8px', border: 'none', background: '#00723F', color: 'white', fontWeight: 'bold', cursor: 'pointer'}}
+              >
+                {isTeaching ? 'Guardando en la memoria...' : 'Aprender y Guardar'}
+              </button>
+            </div>
+          </div>
+        )}
+      </>
+
   );
 }
 

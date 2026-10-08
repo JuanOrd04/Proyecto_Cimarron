@@ -179,3 +179,10 @@ RESPUESTA: ¡Gracias por conversar conmigo! Sigue haciendo preguntas, explorando
 TEMA: Funcionamiento de una computadora
 PREGUNTAS: ¿Cómo funciona una computadora?
 RESPUESTA: Una computadora funciona recibiendo datos e instrucciones a través de sus circuitos (hardware). Su procesador actúa como un cerebro que calcula y procesa esta información a la velocidad de la luz usando programación (software) para poder jugar, aprender y ver videos.
+
+
+TEMA: Robot Cimatrón y Taller de Robótica
+PREGUNTAS: ¿Quién es Cimatrón? ¿Tienen un robot llamado Cimatrón? ¿Qué robot tienen en la facultad?
+RESPUESTA: Cimatrón es un pequeño robot explorador creado por los estudiantes de Mecatrónica de la UABC. Ayuda al Cimarrón a enseñar ciencia y programación a niños y jóvenes en talleres interactivos.
+
+Tema: persona/ pregunta: quien es gabriel manjarrez?/ respuesta: es un estudiante de la uabc de la carrera de computacion

@@ -3,12 +3,14 @@ import requests
 import logging
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain_chroma import Chroma
+from langchain_text_splitters import RecursiveCharacterTextSplitter
+from langchain_core.documents import Document
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("CimarronAgent")
 
 OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
-MODEL_NAME = "qwen2.5-coder:7b"
+MODEL_NAME = "gemma2:2b"
 DB_DIR = os.path.join(os.path.dirname(__file__), "chroma_db")
 
 SYSTEM_PROMPT = (
@@ -27,6 +29,7 @@ class CimarronAgent:
         self.model_name = model_name
         self.ollama_url = ollama_url
         self.vectorstore = None
+        self.history = []
         
         # Inicializar ChromaDB si existe
         if os.path.exists(DB_DIR):
@@ -52,8 +55,13 @@ class CimarronAgent:
         # Búsqueda en ChromaDB (RAG)
         if self.vectorstore is not None:
             try:
-                logger.info(f"Buscando información relacionada con: '{user_message}'")
-                resultados = self.vectorstore.similarity_search(user_message, k=15)
+                query_to_search = user_message
+                for msg in reversed(self.history):
+                    if msg.startswith("Usuario:"):
+                        query_to_search = msg.replace("Usuario: ", "").strip() + " " + user_message
+                        break
+                logger.info(f"Buscando en BD Vectorial: '{query_to_search}'")
+                resultados = self.vectorstore.similarity_search(query_to_search, k=4)
                 if resultados:
                     fragmentos = [doc.page_content for doc in resultados]
                     contexto_extra = "\n\nINFORMACIÓN DE APOYO PARA RESPONDER (Usa esto si es relevante):\n- " + "\n- ".join(fragmentos)
@@ -62,7 +70,11 @@ class CimarronAgent:
                 logger.error(f"Error al buscar en ChromaDB: {e}")
 
         # Construcción del Prompt final
-        prompt_final = f"{SYSTEM_PROMPT}{contexto_extra}\n\nUsuario: {user_message}\nCimarrón:"
+        self.history.append(f"Usuario: {user_message}")
+        if len(self.history) > 4:
+            self.history = self.history[-4:]
+        historial_texto = "\n".join(self.history)
+        prompt_final = f"{SYSTEM_PROMPT}{contexto_extra}\n\nHISTORIAL DE CONVERSACIÓN:\n{historial_texto}\nCimarrón:"
 
         payload = {
             "model": self.model_name,
@@ -83,6 +95,7 @@ class CimarronAgent:
                 text = result.get("response", "").strip()
                 if not text:
                     text = "¡Hola! Bienvenido a la Facultad de Ingeniería de la UABC."
+                self.history.append(f"Cimarrón: {text}")
                 return text
             else:
                 logger.error(f"Ollama retornó código {response.status_code}: {response.text}")
@@ -90,5 +103,25 @@ class CimarronAgent:
         except Exception as e:
             logger.error(f"Error al comunicar con Ollama local: {e}")
             return "¡Hola! Bienvenido a la Facultad de Ingeniería de la UABC. Estoy aquí para ayudarte."
+
+    def add_knowledge(self, new_text: str) -> bool:
+        try:
+            txt_path = os.path.join(os.path.dirname(__file__), "conocimiento.txt")
+            with open(txt_path, "a", encoding="utf-8") as f:
+                f.write(f"\n\n{new_text}")
+                
+            text_splitter = RecursiveCharacterTextSplitter(
+                chunk_size=1000, chunk_overlap=200, separators=["\n\n", "\n", ".", " "]
+            )
+            chunks = text_splitter.split_text(new_text)
+            docs = [Document(page_content=c) for c in chunks]
+            
+            if self.vectorstore is not None:
+                self.vectorstore.add_documents(docs)
+                logger.info(f"Se inyectaron {len(docs)} fragmentos nuevos en tiempo real.")
+                return True
+        except Exception as e:
+            logger.error(f"Error agregando conocimiento: {e}")
+        return False
 
 cimarron_agent = CimarronAgent()

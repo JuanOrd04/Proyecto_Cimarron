@@ -45,7 +45,9 @@ class LocalTTSEngine:
                 wav, duration = self.tts.synthesize(
                     text=text,
                     voice_style=self.style,
-                    lang="es"
+                    lang="es",
+                    speed=1.3,
+                    total_steps=5
                 )
                 
                 # Guardar el audio usando el método integrado de supertonic
