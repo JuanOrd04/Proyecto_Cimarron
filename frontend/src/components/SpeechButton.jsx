@@ -15,23 +15,63 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
   const mediaStreamRef = useRef(null);
   const animationFrameRef = useRef(null);
 
+  const onSpeechResultRef = useRef(onSpeechResult);
+  useEffect(() => {
+    onSpeechResultRef.current = onSpeechResult;
+  }, [onSpeechResult]);
+
+  const latestTranscriptRef = useRef('');
+  const hasSentRef = useRef(false);
+
+  // Limpiar el recuadro de texto cuando el Cimarrón termina de responder
+  const prevLoadingRef = useRef(isLoading);
+  useEffect(() => {
+    if (prevLoadingRef.current && !isLoading) {
+      setTextInput('');
+      latestTranscriptRef.current = '';
+    }
+    prevLoadingRef.current = isLoading;
+  }, [isLoading]);
+
   useEffect(() => {
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (SpeechRecognition) {
       const rec = new SpeechRecognition();
       rec.continuous = false;
-      rec.interimResults = false;
+      rec.interimResults = true;
       rec.lang = 'es-MX';
 
       rec.onstart = () => {
         setIsListening(true);
+        hasSentRef.current = false;
+        latestTranscriptRef.current = '';
         startVolumeMeter();
       };
 
       rec.onresult = (event) => {
-        const transcript = event.results[0][0].transcript;
-        if (transcript && onSpeechResult) {
-          onSpeechResult(transcript);
+        let interimTranscript = '';
+        let finalTranscript = '';
+
+        for (let i = 0; i < event.results.length; ++i) {
+          const piece = event.results[i][0].transcript;
+          if (event.results[i].isFinal) {
+            finalTranscript += piece;
+          } else {
+            interimTranscript += piece;
+          }
+        }
+
+        const currentText = finalTranscript || interimTranscript;
+        if (currentText) {
+          latestTranscriptRef.current = currentText;
+          setTextInput(currentText);
+        }
+
+        if (finalTranscript.trim() && !hasSentRef.current) {
+          hasSentRef.current = true;
+          if (onSpeechResultRef.current) {
+            onSpeechResultRef.current(finalTranscript.trim());
+          }
         }
       };
 
@@ -44,6 +84,12 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
       rec.onend = () => {
         setIsListening(false);
         stopVolumeMeter();
+        if (!hasSentRef.current && latestTranscriptRef.current.trim()) {
+          hasSentRef.current = true;
+          if (onSpeechResultRef.current) {
+            onSpeechResultRef.current(latestTranscriptRef.current.trim());
+          }
+        }
       };
 
       setRecognition(rec);
@@ -52,7 +98,7 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
     }
 
     return () => stopVolumeMeter();
-  }, [onSpeechResult, setIsListening]);
+  }, [setIsListening]);
 
   const startVolumeMeter = async () => {
     try {
@@ -107,6 +153,9 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
       if (sfxEnabled) playChimeOff();
       recognition.stop();
     } else {
+      setTextInput('');
+      latestTranscriptRef.current = '';
+      hasSentRef.current = false;
       if (sfxEnabled) playChimeOn();
       try {
         recognition.start();
@@ -118,8 +167,8 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
 
   const handleSubmitText = (e) => {
     e.preventDefault();
-    if (textInput.trim() && onSpeechResult) {
-      onSpeechResult(textInput.trim());
+    if (textInput.trim() && onSpeechResultRef.current) {
+      onSpeechResultRef.current(textInput.trim());
       setTextInput('');
     }
   };
@@ -137,9 +186,10 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
           type="text"
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
-          placeholder="Escribe tu pregunta aquí..."
-          disabled={disabled || isListening}
-          className="chat-text-input"
+          placeholder={isListening ? "🎙️ Escuchando... Di tu pregunta..." : "Escribe tu pregunta aquí..."}
+          disabled={disabled}
+          readOnly={isListening}
+          className={`chat-text-input ${isListening ? 'input-listening' : ''}`}
         />
 
         {(isLoading || isSpeaking) ? (

@@ -55,10 +55,10 @@ body {
   position: relative;
 }
 
-.sfx-toggle-btn {
+.sfx-toggle-btn,
+.teach-toggle-btn {
   position: fixed;
   top: 1.5rem;
-  right: 1.5rem;
   z-index: 9999;
   background: rgba(255,255,255,0.1);
   border: 1px solid rgba(255,255,255,0.2);
@@ -72,7 +72,20 @@ body {
   cursor: pointer;
   transition: all 0.2s ease;
 }
-.sfx-toggle-btn:hover { background: rgba(255,255,255,0.2); transform: scale(1.1); }
+
+.sfx-toggle-btn {
+  right: 1.5rem;
+}
+
+.teach-toggle-btn {
+  left: 1.5rem;
+}
+
+.sfx-toggle-btn:hover,
+.teach-toggle-btn:hover {
+  background: rgba(255,255,255,0.2);
+  transform: scale(1.1);
+}
 
 .header-badge {
   display: inline-block;
@@ -320,6 +333,11 @@ body {
   background: rgba(255, 255, 255, 0.9); color: #0F172A; font-size: 1.2rem; font-weight: 600; outline: none;
 }
 .chat-text-input:focus { border-color: var(--uabc-gold); background: #FFF; }
+.chat-text-input.input-listening {
+  border-color: var(--uabc-gold);
+  background: #FFFFFF;
+  box-shadow: 0 0 15px rgba(255, 215, 0, 0.35);
+}
 .send-button {
   background: var(--uabc-green); color: #FFFFFF; border: 2px solid var(--uabc-gold);
   padding: 1.2rem 1.5rem; border-radius: 16px; cursor: pointer; transition: all 0.2s ease;
