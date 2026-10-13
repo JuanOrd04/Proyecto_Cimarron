@@ -4,7 +4,7 @@ import Send from 'lucide-react/dist/esm/icons/send';
 import Square from 'lucide-react/dist/esm/icons/square';
 import { playChimeOn, playChimeOff } from '../utils/sfx';
 
-const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, sfxEnabled, onStop, isLoading, isSpeaking }) => {
+const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, sfxEnabled, onStop, isLoading, isSpeaking, placeholderText = 'Escribe tu pregunta aquí...' }) => {
   const [textInput, setTextInput] = useState('');
   const [recognition, setRecognition] = useState(null);
   const [supportsSpeech, setSupportsSpeech] = useState(true);
@@ -14,6 +14,7 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
   const analyserRef = useRef(null);
   const mediaStreamRef = useRef(null);
   const animationFrameRef = useRef(null);
+  const volumeRequestRef = useRef(0);
 
   const onSpeechResultRef = useRef(onSpeechResult);
   useEffect(() => {
@@ -34,9 +35,11 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
   }, [isLoading]);
 
   useEffect(() => {
+    let activeRecognition = null;
     const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
     if (SpeechRecognition) {
       const rec = new SpeechRecognition();
+      activeRecognition = rec;
       rec.continuous = false;
       rec.interimResults = true;
       rec.lang = 'es-MX';
@@ -97,12 +100,26 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
       setSupportsSpeech(false);
     }
 
-    return () => stopVolumeMeter();
+    return () => {
+      if (activeRecognition) {
+        activeRecognition.onresult = null;
+        activeRecognition.onerror = null;
+        activeRecognition.onend = null;
+        try { activeRecognition.abort(); } catch { /* El navegador puede haberlo detenido. */ }
+      }
+      stopVolumeMeter();
+      setIsListening(false);
+    };
   }, [setIsListening]);
 
   const startVolumeMeter = async () => {
+    const request = ++volumeRequestRef.current;
     try {
       const stream = await navigator.mediaDevices.getUserMedia({ audio: true });
+      if (request !== volumeRequestRef.current) {
+        stream.getTracks().forEach(track => track.stop());
+        return;
+      }
       mediaStreamRef.current = stream;
       const audioCtx = new (window.AudioContext || window.webkitAudioContext)();
       audioContextRef.current = audioCtx;
@@ -137,13 +154,18 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
   };
 
   const stopVolumeMeter = () => {
+    volumeRequestRef.current += 1;
     if (animationFrameRef.current) cancelAnimationFrame(animationFrameRef.current);
+    animationFrameRef.current = null;
     if (mediaStreamRef.current) {
       mediaStreamRef.current.getTracks().forEach(track => track.stop());
+      mediaStreamRef.current = null;
     }
     if (audioContextRef.current) {
-      audioContextRef.current.close();
+      if (audioContextRef.current.state !== 'closed') audioContextRef.current.close().catch(() => {});
+      audioContextRef.current = null;
     }
+    analyserRef.current = null;
     setMicVolume(0);
   };
 
@@ -186,7 +208,8 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
           type="text"
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
-          placeholder={isListening ? "🎙️ Escuchando... Di tu pregunta..." : "Escribe tu pregunta aquí..."}
+          placeholder={isListening ? "🎙️ Escuchando... Te escucho..." : placeholderText}
+          aria-label={placeholderText}
           disabled={disabled}
           readOnly={isListening}
           className={`chat-text-input ${isListening ? 'input-listening' : ''}`}

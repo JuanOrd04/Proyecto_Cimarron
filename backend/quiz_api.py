@@ -1,0 +1,58 @@
+from typing import Literal
+
+from fastapi import APIRouter, HTTPException
+from pydantic import BaseModel, Field
+
+from quiz_engine import quiz_service
+from tts_engine import tts_service
+
+router = APIRouter(prefix='/quiz', tags=['Dinámica de primaria'])
+
+
+class StartRequest(BaseModel):
+    grade: int = Field(ge=1, le=6)
+    subject: Literal['mixto', 'matematicas', 'ciencias_naturales', 'geografia', 'biologia', 'espanol'] = 'mixto'
+
+
+class SessionRequest(BaseModel):
+    session_id: str = Field(min_length=1, max_length=40)
+
+
+class QuestionRequest(SessionRequest):
+    question_id: str = Field(min_length=1, max_length=40)
+
+
+class AnswerRequest(QuestionRequest):
+    answer: str = Field(min_length=1, max_length=300)
+
+
+def respond(action, *args):
+    try:
+        result = action(*args)
+    except KeyError as exc:
+        raise HTTPException(status_code=404, detail=exc.args[0]) from exc
+    except ValueError as exc:
+        raise HTTPException(status_code=422, detail=str(exc)) from exc
+    result['audio'] = tts_service.synthesize_to_base64_wav(result['response'])
+    return result
+
+
+@router.post('/start')
+def start(request: StartRequest):
+    return respond(quiz_service.start, request.grade, request.subject)
+
+
+@router.post('/answer')
+def answer(request: AnswerRequest):
+    return respond(quiz_service.answer, request.session_id, request.question_id, request.answer)
+
+
+@router.post('/next')
+def next_question(request: QuestionRequest):
+    return respond(quiz_service.next, request.session_id, request.question_id)
+
+
+@router.post('/end')
+def end(request: SessionRequest):
+    quiz_service.end(request.session_id)
+    return {'status': 'ok'}

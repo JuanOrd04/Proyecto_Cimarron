@@ -9,6 +9,7 @@ import logging
 
 from cimarron_agent import cimarron_agent, OLLAMA_URL
 from tts_engine import tts_service
+from quiz_api import router as quiz_router
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("MainFastAPI")
@@ -27,6 +28,8 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+
+app.include_router(quiz_router)
 
 class ChatRequest(BaseModel):
     message: str

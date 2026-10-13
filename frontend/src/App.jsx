@@ -8,6 +8,7 @@ import SpeechBubble from './components/SpeechBubble';
 import SpeechButton from './components/SpeechButton';
 import QuickQuestions from './components/QuickQuestions';
 import ParticlesBackground from './components/ParticlesBackground';
+import QuizPanel from './components/QuizPanel';
 import './App.css';
 
 const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000").replace(/\/+$/, "");
@@ -24,6 +25,9 @@ function App() {
   const [showTeachModal, setShowTeachModal] = useState(false);
   const [teachText, setTeachText] = useState('');
   const [isTeaching, setIsTeaching] = useState(false);
+  const [game, setGame] = useState(null);
+  const [showGameSetup, setShowGameSetup] = useState(false);
+  const [gameError, setGameError] = useState('');
 
   const audioRef = useRef(null);
   const mouthIntervalRef = useRef(null);
@@ -90,6 +94,13 @@ function App() {
 
   const handleSendMessage = async (userMessage) => {
     if (!userMessage || isLoading) return;
+
+    if (game) {
+      if (game.phase === 'question') {
+        await requestQuiz('answer', { session_id: game.session_id, question_id: game.question.id, answer: userMessage });
+      }
+      return;
+    }
 
     setIsLoading(true);
     if (audioRef.current) audioRef.current.pause();
@@ -171,10 +182,57 @@ function App() {
     setMouthFrame(0);
   };
 
+  const requestQuiz = async (action, payload) => {
+    handleStop();
+    setGameError('');
+    setIsLoading(true);
+    const controller = new AbortController();
+    abortControllerRef.current = controller;
+    try {
+      const response = await fetch(`${API_BASE_URL}/quiz/${action}`, {
+        method: 'POST',
+        headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify(payload),
+        signal: controller.signal,
+      });
+      const data = await response.json();
+      if (controller.signal.aborted) return;
+      if (!response.ok) {
+        if (response.status === 404) { setGame(null); setShowGameSetup(true); }
+        throw new Error(typeof data.detail === 'string' ? data.detail : 'No pude preparar la dinámica. Inténtalo otra vez.');
+      }
+      setGame(data);
+      setShowGameSetup(false);
+      setShowBubble(true);
+      setResponseText(data.response);
+      setIsLoading(false);
+      if (data.audio) playAudioWithMouthSync(data.audio);
+    } catch (error) {
+      if (error.name === 'AbortError' || controller.signal.aborted) return;
+      setGameError(error.message || 'No pude conectar con el servidor. Inténtalo otra vez.');
+      setIsLoading(false);
+    }
+  };
+
+  const endGame = (openSetup = false) => {
+    handleStop();
+    if (game?.session_id) {
+      fetch(`${API_BASE_URL}/quiz/end`, {
+        method: 'POST', headers: { 'Content-Type': 'application/json' },
+        body: JSON.stringify({ session_id: game.session_id }),
+      }).catch(() => {});
+    }
+    setGame(null);
+    setShowGameSetup(openSetup);
+    setGameError('');
+    setShowBubble(true);
+    setResponseText(openSetup ? '¡Vamos a jugar! Elige tu grado de primaria y la materia que quieres practicar.' : '¡Gracias por jugar! Puedes preguntarme sobre la UABC y sus ingenierías.');
+  };
+
   return (
     <>
       <ParticlesBackground />
-      <div className="app-container">
+      <div className={`app-container ${game || showGameSetup ? 'game-active' : ''}`}>
         {/* Botón de Enseñar (Esquina superior izquierda general) */}
         <button 
           className="teach-toggle-btn"
@@ -219,8 +277,17 @@ function App() {
         </main>
 
         <section className="controls-section">
-          <QuickQuestions onSelectQuestion={handleSendMessage} disabled={isLoading || isSpeaking} />
-          <SpeechButton
+          <QuizPanel
+            game={game} setupOpen={showGameSetup} busy={isLoading || isListening} error={gameError}
+            onOpen={() => endGame(true)} onStart={(settings) => requestQuiz('start', settings)}
+            onAnswer={handleSendMessage}
+            onNext={() => requestQuiz('next', { session_id: game.session_id, question_id: game.question.id })}
+            onEnd={() => endGame(false)}
+          />
+          <QuickQuestions onSelectQuestion={handleSendMessage} disabled={isLoading || isSpeaking || Boolean(game) || showGameSetup} sfxEnabled={sfxEnabled} />
+          {!showGameSetup && (!game || game.phase === 'question') && <SpeechButton
+            key={game?.question.id || 'chat'}
+            placeholderText={game ? 'Escribe tu respuesta u opción A…' : 'Escribe tu pregunta aquí...'}
             onSpeechResult={handleSendMessage}
             onStop={handleStop}
             isLoading={isLoading}
@@ -229,7 +296,7 @@ function App() {
             isListening={isListening}
             setIsListening={setIsListening}
             sfxEnabled={sfxEnabled}
-          />
+          />}
         </section>
 
       </div>
