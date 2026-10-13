@@ -26,3 +26,7 @@ npm run dev
 ```
 
 Y listo, ya puedes abrir la página y platicar con el Cimarrón.
+
+## Ejecutar en Mac o conectar un cliente Windows
+
+La configuración local sigue siendo la predeterminada. Para usar la Mac como servidor y una PC Windows como cliente, consulta [la guía de conexión](docs/CONEXION_MAC_WINDOWS.md). Incluye los comandos locales, `iniciar_servidor_mac.sh` e `iniciar_cliente_windows.bat`.

@@ -10,7 +10,8 @@ import QuickQuestions from './components/QuickQuestions';
 import ParticlesBackground from './components/ParticlesBackground';
 import './App.css';
 
-const BACKEND_URL = "http://127.0.0.1:8000/chat";
+const API_BASE_URL = (import.meta.env.VITE_API_BASE_URL || "http://127.0.0.1:8000").replace(/\/+$/, "");
+const BACKEND_URL = `${API_BASE_URL}/chat`;
 
 function App() {
   const [responseText, setResponseText] = useState("¡Hola! Bienvenido a la Facultad de Ingeniería de la UABC. ¿En qué te puedo ayudar hoy?");
@@ -125,7 +126,7 @@ function App() {
         return;
       }
       console.error("Error backend:", error);
-      setResponseText("¡Ups! Parece que mi servidor local está descansando. ¡Revisa que uvicorn esté corriendo en http://127.0.0.1:8000!");
+      setResponseText("¡Ups! No pude conectar con el servidor del Cimarrón. Revisa que esté encendido.");
       setIsLoading(false);
     }
   };
@@ -135,7 +136,7 @@ function App() {
     if (!teachText.trim()) return;
     setIsTeaching(true);
     try {
-      const response = await fetch("http://127.0.0.1:8000/teach", {
+      const response = await fetch(`${API_BASE_URL}/teach`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify({ text: teachText })
