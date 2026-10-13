@@ -12,7 +12,7 @@ const SUBJECTS = [
   ['espanol', 'Español'],
 ];
 
-export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStart, onAnswer, onNext, onEnd }) {
+export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStart, onAnswer, onNext, onEnd, voiceMode, voiceStatus, onToggleVoice }) {
   const [grade, setGrade] = useState(1);
   const [subject, setSubject] = useState('mixto');
   const finished = game?.phase === 'finished';
@@ -51,6 +51,10 @@ export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStar
 
       {game && (
         <div className="quiz-content">
+          {!finished && <div className="quiz-voice-controls">
+            <p role="status">{voiceMode ? `Modo de voz · ${voiceStatus}` : 'Modo de voz pausado. Puedes usar los botones o escribir.'}</p>
+            <button className="quiz-exit" onClick={onToggleVoice} aria-pressed={voiceMode}>{voiceMode ? 'Pausar voz' : 'Reanudar voz'}</button>
+          </div>}
           <div className="quiz-meta">
             <span>{game.grade}.º de primaria · {game.subject_label}</span>
             <span>{finished ? 'Ronda completada' : `Pregunta ${Math.min(game.answered + (game.phase === 'question' ? 1 : 0), game.total)} de ${game.total}`}</span>
@@ -70,7 +74,7 @@ export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStar
                   </button>
                 ))}
               </div>
-              <p className="quiz-hint">Elige una opción o responde abajo. Puedes decir el texto de tu respuesta o «opción A».</p>
+              <p className="quiz-hint">{voiceMode ? 'Cuando termine de hablar, el micrófono se abrirá solo. ' : ''}Puedes decir tu respuesta o «opción A», elegir un botón o escribir abajo.</p>
             </>
           )}
 
@@ -81,7 +85,10 @@ export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStar
             </div>
           )}
 
-          {game.phase === 'feedback' && <button className="quiz-primary" onClick={onNext} disabled={busy}>{busy ? 'Preparando…' : 'Siguiente pregunta'} <ArrowRight size={18} /></button>}
+          {game.phase === 'feedback' && <>
+            {voiceMode && <p className="quiz-hint">Pasaremos a la siguiente pregunta al terminar la explicación.</p>}
+            <button className="quiz-primary" onClick={onNext} disabled={busy}>{busy ? 'Escucha la explicación…' : 'Siguiente pregunta'} <ArrowRight size={18} /></button>
+          </>}
 
           {finished && (
             <div className="quiz-result">

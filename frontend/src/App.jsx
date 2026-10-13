@@ -28,6 +28,12 @@ function App() {
   const [game, setGame] = useState(null);
   const [showGameSetup, setShowGameSetup] = useState(false);
   const [gameError, setGameError] = useState('');
+  const [voiceMode, setVoiceMode] = useState(true);
+  const [listenReady, setListenReady] = useState(false);
+  const [listenAttempt, setListenAttempt] = useState(0);
+  const voiceModeRef = useRef(true);
+  const gameRef = useRef(null);
+  const narrationPendingRef = useRef(false);
 
   const audioRef = useRef(null);
   const mouthIntervalRef = useRef(null);
@@ -35,6 +41,12 @@ function App() {
 
   useEffect(() => {
     return () => {
+      abortControllerRef.current?.abort();
+      if (audioRef.current) {
+        audioRef.current.onended = null;
+        audioRef.current.onerror = null;
+        audioRef.current.pause();
+      }
       if (mouthIntervalRef.current) clearInterval(mouthIntervalRef.current);
     };
   }, []);
@@ -46,7 +58,7 @@ function App() {
     }
   }, [sfxEnabled]);
 
-  const playAudioWithMouthSync = (audioBase64) => {
+  const playAudioWithMouthSync = (audioBase64, onComplete) => {
     if (!audioBase64) return;
 
     if (audioRef.current) {
@@ -61,8 +73,21 @@ function App() {
       const audio = new Audio(audioBase64);
       audio.muted = !sfxEnabled; // Aplica el estado actual de volumen
       audioRef.current = audio;
+      setIsSpeaking(true);
+
+      const finish = (succeeded) => {
+        if (audioRef.current !== audio) return;
+        audioRef.current = null;
+        audio.onended = null;
+        audio.onerror = null;
+        setIsSpeaking(false);
+        setMouthFrame(0);
+        if (mouthIntervalRef.current) clearInterval(mouthIntervalRef.current);
+        onComplete?.(succeeded);
+      };
 
       audio.onplay = () => {
+        if (audioRef.current !== audio) return;
         setIsSpeaking(true);
         mouthIntervalRef.current = setInterval(() => {
           setMouthFrame((prev) => (prev + 1) % 4);
@@ -70,25 +95,22 @@ function App() {
       };
 
       audio.onended = () => {
-        setIsSpeaking(false);
-        setMouthFrame(0);
-        if (mouthIntervalRef.current) clearInterval(mouthIntervalRef.current);
+        finish(true);
       };
 
       audio.onerror = (e) => {
         console.warn("No se pudo reproducir audio sintetizado:", e);
-        setIsSpeaking(false);
-        setMouthFrame(0);
-        if (mouthIntervalRef.current) clearInterval(mouthIntervalRef.current);
+        finish(false);
       };
 
       audio.play().catch((err) => {
         console.warn("Autoplay bloqueado:", err);
-        setIsSpeaking(false);
-        setMouthFrame(0);
+        finish(false);
       });
     } catch (err) {
       console.error("Error Audio:", err);
+      setIsSpeaking(false);
+      onComplete?.(false);
     }
   };
 
@@ -166,14 +188,19 @@ function App() {
   };
 
   const handleStop = () => {
+    setListenReady(false);
+    narrationPendingRef.current = false;
     // 1. Detener petición de red si está pensando
     if (abortControllerRef.current) {
       abortControllerRef.current.abort();
     }
     // 2. Detener audio si está hablando
     if (audioRef.current) {
+      audioRef.current.onended = null;
+      audioRef.current.onerror = null;
       audioRef.current.pause();
       audioRef.current.currentTime = 0;
+      audioRef.current = null;
     }
     if (mouthIntervalRef.current) clearInterval(mouthIntervalRef.current);
     
@@ -182,12 +209,38 @@ function App() {
     setMouthFrame(0);
   };
 
+  const continueByVoice = (data) => {
+    if (!voiceModeRef.current || gameRef.current !== data) return;
+    if (data.phase === 'question') {
+      setListenAttempt((attempt) => attempt + 1);
+      setListenReady(true);
+    } else if (data.phase === 'feedback') {
+      requestQuiz('next', { session_id: data.session_id, question_id: data.question.id });
+    }
+  };
+
+  const pauseVoice = (message = '') => {
+    voiceModeRef.current = false;
+    setVoiceMode(false);
+    setListenReady(false);
+    if (message) setGameError(message);
+  };
+
+  const toggleVoiceMode = () => {
+    if (voiceModeRef.current) { pauseVoice(); return; }
+    voiceModeRef.current = true;
+    setVoiceMode(true);
+    setGameError('');
+    if (!narrationPendingRef.current && !isLoading && gameRef.current) continueByVoice(gameRef.current);
+  };
+
   const requestQuiz = async (action, payload) => {
     handleStop();
     setGameError('');
     setIsLoading(true);
     const controller = new AbortController();
     abortControllerRef.current = controller;
+    let retryAnswer = false;
     try {
       const response = await fetch(`${API_BASE_URL}/quiz/${action}`, {
         method: 'POST',
@@ -198,19 +251,31 @@ function App() {
       const data = await response.json();
       if (controller.signal.aborted) return;
       if (!response.ok) {
-        if (response.status === 404) { setGame(null); setShowGameSetup(true); }
+        retryAnswer = response.status === 422;
+        if (response.status === 404) { gameRef.current = null; setGame(null); setShowGameSetup(true); }
         throw new Error(typeof data.detail === 'string' ? data.detail : 'No pude preparar la dinámica. Inténtalo otra vez.');
       }
       setGame(data);
+      gameRef.current = data;
       setShowGameSetup(false);
       setShowBubble(true);
       setResponseText(data.response);
       setIsLoading(false);
-      if (data.audio) playAudioWithMouthSync(data.audio);
+      if (data.audio) {
+        narrationPendingRef.current = true;
+        playAudioWithMouthSync(data.audio, (succeeded) => {
+          narrationPendingRef.current = false;
+          if (succeeded) continueByVoice(data);
+          else pauseVoice('No pude reproducir la voz. Puedes continuar con los botones o reanudar el modo de voz.');
+        });
+      } else {
+        pauseVoice('La voz no está disponible. Puedes continuar con los botones.');
+      }
     } catch (error) {
       if (error.name === 'AbortError' || controller.signal.aborted) return;
       setGameError(error.message || 'No pude conectar con el servidor. Inténtalo otra vez.');
       setIsLoading(false);
+      if (retryAnswer && action === 'answer' && gameRef.current?.phase === 'question') continueByVoice(gameRef.current);
     }
   };
 
@@ -223,6 +288,7 @@ function App() {
       }).catch(() => {});
     }
     setGame(null);
+    gameRef.current = null;
     setShowGameSetup(openSetup);
     setGameError('');
     setShowBubble(true);
@@ -278,8 +344,14 @@ function App() {
 
         <section className="controls-section">
           <QuizPanel
-            game={game} setupOpen={showGameSetup} busy={isLoading || isListening} error={gameError}
-            onOpen={() => endGame(true)} onStart={(settings) => requestQuiz('start', settings)}
+            game={game} setupOpen={showGameSetup} busy={isLoading || isSpeaking} error={gameError}
+            voiceMode={voiceMode} onToggleVoice={toggleVoiceMode}
+            voiceStatus={isLoading ? 'Preparando…' : isSpeaking ? 'Escucha al Cimarrón…' : isListening ? 'Te escucho. Di tu respuesta.' : 'Puedes responder.'}
+            onOpen={() => endGame(true)} onStart={(settings) => {
+              voiceModeRef.current = true;
+              setVoiceMode(true);
+              requestQuiz('start', settings);
+            }}
             onAnswer={handleSendMessage}
             onNext={() => requestQuiz('next', { session_id: game.session_id, question_id: game.question.id })}
             onEnd={() => endGame(false)}
@@ -289,7 +361,12 @@ function App() {
             key={game?.question.id || 'chat'}
             placeholderText={game ? 'Escribe tu respuesta u opción A…' : 'Escribe tu pregunta aquí...'}
             onSpeechResult={handleSendMessage}
-            onStop={handleStop}
+            onStop={() => { if (game) pauseVoice(); handleStop(); }}
+            autoListen={Boolean(game && voiceMode && listenReady && !isLoading && !isSpeaking)}
+            autoListenKey={listenAttempt}
+            showVoiceError={!game}
+            onPauseAuto={() => pauseVoice()}
+            onVoiceError={(message) => { if (game) pauseVoice(message); }}
             isLoading={isLoading}
             isSpeaking={isSpeaking}
             disabled={isLoading || isSpeaking}

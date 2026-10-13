@@ -426,6 +426,8 @@ body {
 .quiz-score span { font-size: 1.5rem; }
 .quiz-result .quiz-primary { margin-top: .5rem; }
 .quiz-error { margin-top: 1rem; padding: .8rem; background: #FFF0C4; color: #57370A; border-radius: 12px; }
+.quiz-voice-controls { display: flex; align-items: center; justify-content: space-between; gap: .8rem; flex-wrap: wrap; color: #D1FAE5; font-size: .9rem; }
+.speech-error { margin-top: .8rem; color: #FFE77A; line-height: 1.5; }
 .game-active .main-stage { flex: 0; min-height: 230px; gap: 1.5rem; margin: 1.5rem 0; }
 .game-active .avatar-container { width: 230px; height: 230px; }
 .game-active .speech-bubble-wrapper { margin-top: 0; left: 0; }

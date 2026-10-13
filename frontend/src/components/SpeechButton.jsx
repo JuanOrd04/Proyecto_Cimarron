@@ -3,10 +3,16 @@ import Mic from 'lucide-react/dist/esm/icons/mic';
 import Send from 'lucide-react/dist/esm/icons/send';
 import Square from 'lucide-react/dist/esm/icons/square';
 import { playChimeOn, playChimeOff } from '../utils/sfx';
+import { createSpeechSession, speechErrorMessage } from '../utils/speechRecognitionSession';
 
-const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, sfxEnabled, onStop, isLoading, isSpeaking, placeholderText = 'Escribe tu pregunta aquí...' }) => {
+const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, sfxEnabled, onStop, isLoading, isSpeaking, autoListen = false, autoListenKey = 0, onPauseAuto, onVoiceError, showVoiceError = true, placeholderText = 'Escribe tu pregunta aquí...' }) => {
   const [textInput, setTextInput] = useState('');
-  const [recognition, setRecognition] = useState(null);
+  const [session, setSession] = useState(null);
+  const [voiceError, setVoiceError] = useState('');
+  const voiceErrorRef = useRef(onVoiceError);
+  voiceErrorRef.current = onVoiceError;
+  const autoStartedRef = useRef(false);
+  const lastAutoAttemptRef = useRef(null);
   const [supportsSpeech, setSupportsSpeech] = useState(true);
   const [micVolume, setMicVolume] = useState(0);
   
@@ -21,96 +27,62 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
     onSpeechResultRef.current = onSpeechResult;
   }, [onSpeechResult]);
 
-  const latestTranscriptRef = useRef('');
-  const hasSentRef = useRef(false);
 
   // Limpiar el recuadro de texto cuando el Cimarrón termina de responder
   const prevLoadingRef = useRef(isLoading);
   useEffect(() => {
     if (prevLoadingRef.current && !isLoading) {
       setTextInput('');
-      latestTranscriptRef.current = '';
     }
     prevLoadingRef.current = isLoading;
   }, [isLoading]);
 
   useEffect(() => {
-    let activeRecognition = null;
-    const SpeechRecognition = window.SpeechRecognition || window.webkitSpeechRecognition;
-    if (SpeechRecognition) {
-      const rec = new SpeechRecognition();
-      activeRecognition = rec;
-      rec.continuous = false;
-      rec.interimResults = true;
-      rec.lang = 'es-MX';
-
-      rec.onstart = () => {
-        setIsListening(true);
-        hasSentRef.current = false;
-        latestTranscriptRef.current = '';
-        startVolumeMeter();
-      };
-
-      rec.onresult = (event) => {
-        let interimTranscript = '';
-        let finalTranscript = '';
-
-        for (let i = 0; i < event.results.length; ++i) {
-          const piece = event.results[i][0].transcript;
-          if (event.results[i].isFinal) {
-            finalTranscript += piece;
-          } else {
-            interimTranscript += piece;
-          }
-        }
-
-        const currentText = finalTranscript || interimTranscript;
-        if (currentText) {
-          latestTranscriptRef.current = currentText;
-          setTextInput(currentText);
-        }
-
-        if (finalTranscript.trim() && !hasSentRef.current) {
-          hasSentRef.current = true;
-          if (onSpeechResultRef.current) {
-            onSpeechResultRef.current(finalTranscript.trim());
-          }
-        }
-      };
-
-      rec.onerror = (event) => {
-        console.warn('Error en Web Speech API:', event.error);
-        setIsListening(false);
-        stopVolumeMeter();
-      };
-
-      rec.onend = () => {
-        setIsListening(false);
-        stopVolumeMeter();
-        if (!hasSentRef.current && latestTranscriptRef.current.trim()) {
-          hasSentRef.current = true;
-          if (onSpeechResultRef.current) {
-            onSpeechResultRef.current(latestTranscriptRef.current.trim());
-          }
-        }
-      };
-
-      setRecognition(rec);
-    } else {
+    const Recognition = window.SpeechRecognition || window.webkitSpeechRecognition;
+    if (!Recognition) {
       setSupportsSpeech(false);
+      const message = speechErrorMessage('unsupported');
+      setVoiceError(message);
+      voiceErrorRef.current?.(message);
+      return;
     }
-
+    const rec = new Recognition();
+    rec.continuous = false;
+    rec.interimResults = true;
+    rec.lang = 'es-MX';
+    const activeSession = createSpeechSession(rec, {
+      onStart: () => { setIsListening(true); startVolumeMeter(); },
+      onText: setTextInput,
+      onAnswer: (answer) => onSpeechResultRef.current?.(answer),
+      onFinish: () => { setIsListening(false); stopVolumeMeter(); },
+      onError: (error) => {
+        const message = speechErrorMessage(error);
+        setVoiceError(message);
+        voiceErrorRef.current?.(message);
+      },
+    });
+    setSession(activeSession);
     return () => {
-      if (activeRecognition) {
-        activeRecognition.onresult = null;
-        activeRecognition.onerror = null;
-        activeRecognition.onend = null;
-        try { activeRecognition.abort(); } catch { /* El navegador puede haberlo detenido. */ }
-      }
+      activeSession.dispose();
       stopVolumeMeter();
       setIsListening(false);
     };
   }, [setIsListening]);
+
+  useEffect(() => {
+    if (!session) return;
+    if (disabled || (autoStartedRef.current && !autoListen)) {
+      autoStartedRef.current = false;
+      session.cancel();
+    }
+    if (autoListen && !disabled && lastAutoAttemptRef.current !== autoListenKey) {
+      lastAutoAttemptRef.current = autoListenKey;
+      autoStartedRef.current = true;
+      setVoiceError('');
+      setTextInput('');
+      session.start();
+    }
+  }, [session, disabled, autoListen, autoListenKey]);
 
   const startVolumeMeter = async () => {
     const request = ++volumeRequestRef.current;
@@ -170,26 +142,26 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
   };
 
   const toggleMic = () => {
-    if (!recognition) return;
+    if (!session) return;
     if (isListening) {
       if (sfxEnabled) playChimeOff();
-      recognition.stop();
+      session.cancel();
+      autoStartedRef.current = false;
+      if (autoListen) onPauseAuto?.();
     } else {
       setTextInput('');
-      latestTranscriptRef.current = '';
-      hasSentRef.current = false;
+      setVoiceError('');
+      // La escucha automática empieza sin campanilla para no transcribirla.
       if (sfxEnabled) playChimeOn();
-      try {
-        recognition.start();
-      } catch (err) {
-        console.error('Error al iniciar micrófono:', err);
-      }
+      session.start();
     }
   };
 
   const handleSubmitText = (e) => {
     e.preventDefault();
+    if (disabled || isListening) return;
     if (textInput.trim() && onSpeechResultRef.current) {
+      session?.cancel();
       onSpeechResultRef.current(textInput.trim());
       setTextInput('');
     }
@@ -257,6 +229,7 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
           </>
         )}
       </form>
+      {showVoiceError && voiceError && <p className="speech-error" role="status">{voiceError}</p>}
     </div>
   );
 };
