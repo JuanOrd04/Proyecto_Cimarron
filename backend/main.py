@@ -10,13 +10,14 @@ import logging
 from cimarron_agent import cimarron_agent, OLLAMA_URL
 from tts_engine import tts_service
 from quiz_api import router as quiz_router
+from quiz_engine import quiz_service
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("MainFastAPI")
 
 app = FastAPI(
     title="Asistente Interactivo Cimarrón UABC - API Backend",
-    description="Servidor local FastAPI para inferencia LLM (Ollama qwen2.5-coder:7b) y TTS local en formato WAV Base64.",
+    description="Servidor local para conversar con Ollama, evaluar respuestas de primaria por significado y generar voz con Supertonic.",
     version="1.0.0"
 )
 
@@ -59,17 +60,22 @@ qa_cache = load_cache()
 def health_check():
     """Verifica el estado del backend y la disponibilidad del servidor local Ollama."""
     ollama_online = False
+    quiz_model_available = False
     try:
         r = requests.get("http://127.0.0.1:11434/api/tags", timeout=3)
         if r.status_code == 200:
             ollama_online = True
+            models = {model['name'] for model in r.json().get('models', [])}
+            quiz_model_available = quiz_service.evaluator.model in models
     except Exception:
         ollama_online = False
 
     return {
         "status": "online",
         "backend": "FastAPI 100% Local",
-        "ollama_status": "conectado" if ollama_online else "desconectado (asegúrate de correr 'ollama serve')"
+        "ollama_status": "conectado" if ollama_online else "desconectado (asegúrate de correr 'ollama serve')",
+        "quiz_model": quiz_service.evaluator.model,
+        "quiz_model_status": "instalado" if quiz_model_available else "no disponible",
     }
 
 class TeachRequest(BaseModel):

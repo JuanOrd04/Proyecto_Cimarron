@@ -359,7 +359,7 @@ function App() {
           <QuickQuestions onSelectQuestion={handleSendMessage} disabled={isLoading || isSpeaking || Boolean(game) || showGameSetup} sfxEnabled={sfxEnabled} />
           {!showGameSetup && (!game || game.phase === 'question') && <SpeechButton
             key={game?.question.id || 'chat'}
-            placeholderText={game ? 'Escribe tu respuesta u opción A…' : 'Escribe tu pregunta aquí...'}
+            placeholderText={game ? 'Cuéntame lo que piensas…' : 'Escribe tu pregunta aquí...'}
             onSpeechResult={handleSendMessage}
             onStop={() => { if (game) pauseVoice(); handleStop(); }}
             autoListen={Boolean(game && voiceMode && listenReady && !isLoading && !isSpeaking)}

@@ -34,3 +34,5 @@ La configuración local sigue siendo la predeterminada. Para usar la Mac como se
 ## Dinámica de primaria
 
 El botón **Iniciar juego**, arriba de Preguntas rápidas, prepara una ronda de cinco preguntas según el grado y la materia. El Cimarrón lee las preguntas, explica las respuestas y muestra el resultado final. Consulta [la guía de la dinámica](docs/DINAMICA_PRIMARIA.md).
+
+Las respuestas libres se interpretan con un LLM local: acepta paráfrasis y explicaciones, y puede pedir aclaración sin descontar la pregunta. Descarga una vez el modelo de la dinámica con `ollama pull qwen2.5:7b`; el chat habitual conserva `gemma2:2b`. Las preguntas actuales siguen utilizando el banco educativo de referencia.

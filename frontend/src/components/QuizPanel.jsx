@@ -74,13 +74,13 @@ export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStar
                   </button>
                 ))}
               </div>
-              <p className="quiz-hint">{voiceMode ? 'Cuando termine de hablar, el micrófono se abrirá solo. ' : ''}Puedes decir tu respuesta o «opción A», elegir un botón o escribir abajo.</p>
+              <p className="quiz-hint">{voiceMode ? 'Cuando termine de hablar, el micrófono se abrirá solo. ' : ''}Cuéntame lo que piensas con tus propias palabras. También puedes elegir una opción o escribir abajo.</p>
             </>
           )}
 
           {game.feedback && (
             <div className={`quiz-feedback ${game.feedback.correct ? 'correct' : 'learning'}`} role="status">
-              <strong>{game.feedback.correct ? '¡Respuesta correcta!' : '¡Seguimos aprendiendo!'}</strong>
+              <strong>{game.feedback.kind === 'partial' ? '¡Vamos por buen camino!' : game.feedback.kind === 'unclear' ? 'Cuéntame un poco más' : game.feedback.correct ? '¡Respuesta correcta!' : '¡Seguimos aprendiendo!'}</strong>
               <p>{game.feedback.text}</p>
             </div>
           )}

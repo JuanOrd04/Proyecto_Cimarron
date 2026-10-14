@@ -4,6 +4,7 @@ from fastapi import APIRouter, HTTPException
 from pydantic import BaseModel, Field
 
 from quiz_engine import quiz_service
+from quiz_llm import QuizModelUnavailable
 from tts_engine import tts_service
 
 router = APIRouter(prefix='/quiz', tags=['Dinámica de primaria'])
@@ -23,7 +24,7 @@ class QuestionRequest(SessionRequest):
 
 
 class AnswerRequest(QuestionRequest):
-    answer: str = Field(min_length=1, max_length=300)
+    answer: str = Field(min_length=1, max_length=2000)
 
 
 def respond(action, *args):
@@ -33,6 +34,8 @@ def respond(action, *args):
         raise HTTPException(status_code=404, detail=exc.args[0]) from exc
     except ValueError as exc:
         raise HTTPException(status_code=422, detail=str(exc)) from exc
+    except QuizModelUnavailable as exc:
+        raise HTTPException(status_code=503, detail=str(exc)) from exc
     result['audio'] = tts_service.synthesize_to_base64_wav(result['response'])
     return result
 

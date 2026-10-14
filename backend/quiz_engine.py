@@ -2,11 +2,11 @@
 
 import copy
 import random
-import re
 import threading
 import time
-import unicodedata
 import uuid
+
+from quiz_llm import OllamaQuizEvaluator
 
 SUBJECTS = {
     'mixto': 'Un poco de todo',
@@ -116,21 +116,6 @@ BANK = {
 }
 
 
-def normalize(text):
-    text = ''.join(c for c in unicodedata.normalize('NFD', text.casefold()) if unicodedata.category(c) != 'Mn')
-    return ' '.join(re.sub(r'[^a-z0-9]+', ' ', text).split())
-
-
-def number_words(number):
-    small = ['cero', 'uno', 'dos', 'tres', 'cuatro', 'cinco', 'seis', 'siete', 'ocho', 'nueve', 'diez', 'once', 'doce', 'trece', 'catorce', 'quince', 'dieciseis', 'diecisiete', 'dieciocho', 'diecinueve', 'veinte', 'veintiuno', 'veintidos', 'veintitres', 'veinticuatro', 'veinticinco', 'veintiseis', 'veintisiete', 'veintiocho', 'veintinueve']
-    if 0 <= number < 30:
-        return small[number]
-    if 30 <= number < 100:
-        tens = {3: 'treinta', 4: 'cuarenta', 5: 'cincuenta', 6: 'sesenta', 7: 'setenta', 8: 'ochenta', 9: 'noventa'}
-        return tens[number // 10] + (' y ' + small[number % 10] if number % 10 else '')
-    return str(number)
-
-
 def math_question(grade, rng):
     if grade <= 2:
         maximum = 5 if grade == 1 else 25
@@ -196,46 +181,9 @@ def make_questions(grade, subject, rng):
     return rng.sample(pool, TOTAL)
 
 
-def pick_answer(text, question):
-    value = normalize(text)
-    options = question['options']
-    def aliases_for(option):
-        aliases = {normalize(option)}
-        if option.isdigit():
-            aliases.add(number_words(int(option)))
-            if option == '1':
-                aliases.update({'un', 'una'})
-        pronunciation = {'B': 'be', 'C': 'ce', 'D': 'de', 'F': 'efe', 'M': 'eme', 'P': 'pe', 'S': 'ese'}
-        if option in pronunciation:
-            aliases.add(pronunciation[option])
-        return aliases
-    # Las respuestas literales tienen prioridad: "a" puede ser una vocal.
-    for option in options:
-        if value in aliases_for(option):
-            return option
-    letter = re.fullmatch(r'(?:(?:la )?(?:opcion|letra|respuesta)(?: es)? )?([abcd]|be|ce|de)', value)
-    if letter:
-        code = {'be': 'b', 'ce': 'c', 'de': 'd'}.get(letter.group(1), letter.group(1))
-        return options[ord(code) - ord('a')]
-    prefix = r'^(?:(?:creo que )?(?:la respuesta es|es|son)|el|la|los|las|un|una|unos|unas) '
-    def strip_prefix(text):
-        while True:
-            stripped = re.sub(prefix, '', text)
-            if stripped == text:
-                return text
-            text = stripped
-    value = strip_prefix(value)
-    for option in options:
-        aliases = {strip_prefix(alias) for alias in aliases_for(option)}
-        if value in aliases:
-            return option
-    if value in {'no se', 'no lo se', 'no recuerdo', 'paso'}:
-        return None
-    raise ValueError('Elige una opción, escribe su texto o di la letra A, B, C o D. También puedes decir no sé.')
-
-
 class QuizService:
-    def __init__(self):
+    def __init__(self, evaluator=None):
+        self.evaluator = evaluator or OllamaQuizEvaluator()
         self.sessions = {}
         self.lock = threading.RLock()
 
@@ -253,7 +201,7 @@ class QuizService:
         intro = f'Pregunta {session["index"] + 1} de {TOTAL}. '
         spoken_options = '. '.join(f'{chr(65 + i)}, {option}' for i, option in enumerate(question['options']))
         response = intro + question['prompt'] + ' Opciones: ' + spoken_options + '.'
-        if phase in {'feedback', 'finished'}:
+        if session.get('feedback'):
             response = session['feedback']['text']
         if phase == 'finished':
             response += f' ¡Terminamos! Acertaste {session["score"]} de {TOTAL}. Cada pregunta nos ayuda a aprender. ¡Gracias por jugar conmigo!'
@@ -263,6 +211,7 @@ class QuizService:
             'score': session['score'], 'phase': phase,
             'question': {'id': question['id'], 'prompt': question['prompt'], 'subject': question['subject'], 'options': [{'label': chr(65 + i), 'text': option} for i, option in enumerate(question['options'])]},
             'feedback': copy.deepcopy(session.get('feedback')), 'response': response,
+            'evaluation': copy.deepcopy(session.get('evaluation')),
         }
 
     def start(self, grade, subject):
@@ -275,7 +224,7 @@ class QuizService:
                 oldest = min(self.sessions, key=lambda key: self.sessions[key]['updated'])
                 del self.sessions[oldest]
             questions = make_questions(grade, subject, random.Random())[:TOTAL]
-            session = {'id': str(uuid.uuid4()), 'grade': grade, 'subject': subject, 'questions': questions, 'index': 0, 'score': 0, 'phase': 'question', 'answers': {}, 'feedback': None, 'updated': now}
+            session = {'id': str(uuid.uuid4()), 'grade': grade, 'subject': subject, 'questions': questions, 'index': 0, 'score': 0, 'phase': 'question', 'answers': {}, 'feedback': None, 'updated': now, 'turns': [], 'clarifications': {}, 'turn_lock': threading.Lock()}
             self.sessions[session['id']] = session
             result = self._view(session)
             grade_name = {1: 'primero', 2: 'segundo', 3: 'tercero', 4: 'cuarto', 5: 'quinto', 6: 'sexto'}[grade]
@@ -283,24 +232,53 @@ class QuizService:
             return result
 
     def answer(self, session_id, question_id, text):
+        text = text.strip()
+        if not text or len(text) > 2000:
+            raise ValueError('Dime tu respuesta con tus propias palabras, en un texto de hasta 2000 caracteres.')
         with self.lock:
             session = self._get(session_id)
-            if question_id in session['answers']:
-                return copy.deepcopy(session['answers'][question_id])
-            question = session['questions'][session['index']]
-            if session['phase'] != 'question' or question['id'] != question_id:
-                raise ValueError('Esa pregunta ya no está activa. Continúa con la pregunta que aparece en pantalla.')
-            chosen = pick_answer(text, question)
-            correct = chosen == question['answer']
-            session['score'] += int(correct)
-            feedback = ('¡Muy bien! ' if correct else f'¡Buen intento! La respuesta es {question["answer"]}. ') + question['explanation']
-            session['feedback'] = {'correct': correct, 'text': feedback, 'correct_answer': question['answer']}
-            session['phase'] = 'finished' if session['index'] == TOTAL - 1 else 'feedback'
-            # Reservar la respuesta antes de construir el contador público.
-            session['answers'][question_id] = None
-            result = self._view(session)
-            session['answers'][question_id] = copy.deepcopy(result)
-            return result
+            turn_lock = session['turn_lock']
+        # Serializar reintentos del mismo participante, sin bloquear otras sesiones durante Ollama.
+        with turn_lock:
+            with self.lock:
+                session = self._get(session_id)
+                if question_id in session['answers']:
+                    return copy.deepcopy(session['answers'][question_id])
+                question = session['questions'][session['index']]
+                if session['phase'] != 'question' or question['id'] != question_id:
+                    raise ValueError('Esa pregunta ya no está activa. Continúa con la pregunta que aparece en pantalla.')
+                if text in session['clarifications']:
+                    return copy.deepcopy(session['clarifications'][text])
+                question = copy.deepcopy(question)
+                previous_turns = copy.deepcopy(session['turns'])
+                grade = session['grade']
+
+            evaluation = self.evaluator.evaluate(question, text, grade, previous_turns)
+
+            with self.lock:
+                session = self._get(session_id)
+                if session['questions'][session['index']]['id'] != question_id or session['phase'] != 'question':
+                    raise ValueError('Esa pregunta ya no está activa.')
+                kind = evaluation['status']
+                session['evaluation'] = {key: evaluation[key] for key in ('source', 'model', 'status', 'interpreted_answer', 'elapsed_ms')}
+                clarification = kind in {'partial', 'unclear'}
+                session['feedback'] = {'correct': None if clarification else kind == 'correct', 'kind': kind, 'text': evaluation['feedback']}
+                if clarification:
+                    session['turns'].append({'respuesta': text, 'aclaracion': evaluation['feedback']})
+                    session['turns'] = session['turns'][-3:]
+                    result = self._view(session)
+                    session['clarifications'][text] = copy.deepcopy(result)
+                    if len(session['clarifications']) > 20:
+                        session['clarifications'].pop(next(iter(session['clarifications'])))
+                    return result
+
+                session['score'] += int(kind == 'correct')
+                session['feedback']['correct_answer'] = question['answer']
+                session['phase'] = 'finished' if session['index'] == TOTAL - 1 else 'feedback'
+                session['answers'][question_id] = None
+                result = self._view(session)
+                session['answers'][question_id] = copy.deepcopy(result)
+                return result
 
     def next(self, session_id, question_id):
         with self.lock:
@@ -315,6 +293,9 @@ class QuizService:
             session['index'] += 1
             session['phase'] = 'question'
             session['feedback'] = None
+            session['evaluation'] = None
+            session['turns'] = []
+            session['clarifications'] = {}
             return self._view(session)
 
     def end(self, session_id):
