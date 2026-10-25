@@ -1,0 +1,1346 @@
+[
+  {
+    "id": "cn-12-01",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué nos da luz y calor durante el día?",
+    "answer": "El Sol",
+    "distractors": [
+      "La Luna",
+      "Una piedra",
+      "Una nube"
+    ],
+    "explanation": "El Sol es una estrella que nos proporciona luz y calor."
+  },
+  {
+    "id": "cn-12-02",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿En qué se convierte el agua cuando se congela?",
+    "answer": "Hielo",
+    "distractors": [
+      "Arena",
+      "Aceite",
+      "Humo"
+    ],
+    "explanation": "Al congelarse, el agua pasa de líquida a sólida y forma hielo."
+  },
+  {
+    "id": "cn-12-03",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Con qué sentido puedes escuchar una canción?",
+    "answer": "El oído",
+    "distractors": [
+      "La vista",
+      "El gusto",
+      "El olfato"
+    ],
+    "explanation": "El oído nos permite escuchar los sonidos."
+  },
+  {
+    "id": "cn-12-04",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué debes hacer con la basura para cuidar tu escuela?",
+    "answer": "Ponerla en el bote",
+    "distractors": [
+      "Tirarla al suelo",
+      "Dejarla en el río",
+      "Esconderla bajo una planta"
+    ],
+    "explanation": "Poner la basura en el bote ayuda a mantener limpio nuestro entorno."
+  },
+  {
+    "id": "cn-12-05",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué usamos para protegernos de la lluvia?",
+    "answer": "Un paraguas",
+    "distractors": [
+      "Un tenedor",
+      "Un cuaderno",
+      "Una pelota"
+    ],
+    "explanation": "El paraguas ayuda a evitar que la lluvia moje nuestro cuerpo."
+  },
+  {
+    "id": "cn-34-01",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cómo se llama el cambio del agua líquida a vapor?",
+    "answer": "Evaporación",
+    "distractors": [
+      "Congelación",
+      "Germinación",
+      "Digestión"
+    ],
+    "explanation": "En la evaporación, el agua líquida se transforma en vapor."
+  },
+  {
+    "id": "cn-34-02",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuál de estos materiales suele ser atraído por un imán?",
+    "answer": "Hierro",
+    "distractors": [
+      "Madera",
+      "Papel",
+      "Plástico"
+    ],
+    "explanation": "Los imanes atraen algunos metales, como el hierro."
+  },
+  {
+    "id": "cn-34-03",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuál es un ejemplo de agua en estado sólido?",
+    "answer": "Un cubo de hielo",
+    "distractors": [
+      "Agua de un vaso",
+      "Vapor de agua",
+      "Una gota de lluvia"
+    ],
+    "explanation": "El hielo es agua en estado sólido."
+  },
+  {
+    "id": "cn-34-04",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué instrumento sirve para medir la temperatura?",
+    "answer": "Termómetro",
+    "distractors": [
+      "Regla",
+      "Brújula",
+      "Balanza"
+    ],
+    "explanation": "El termómetro mide la temperatura."
+  },
+  {
+    "id": "cn-34-05",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué acción ayuda a ahorrar agua?",
+    "answer": "Cerrar la llave al cepillarse",
+    "distractors": [
+      "Dejar la llave abierta",
+      "Lavar la banqueta con mucha agua",
+      "Ignorar una fuga"
+    ],
+    "explanation": "Cerrar la llave cuando no la necesitamos evita desperdiciar agua."
+  },
+  {
+    "id": "cn-56-01",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué movimiento de la Tierra produce el día y la noche?",
+    "answer": "Rotación",
+    "distractors": [
+      "Traslación",
+      "Evaporación",
+      "Germinación"
+    ],
+    "explanation": "La rotación es el giro de la Tierra sobre su propio eje."
+  },
+  {
+    "id": "cn-56-02",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué necesita un circuito sencillo para que encienda su foco?",
+    "answer": "Estar cerrado",
+    "distractors": [
+      "Tener un cable cortado",
+      "Estar abierto",
+      "Estar desconectado"
+    ],
+    "explanation": "En un circuito cerrado, la corriente puede recorrer el camino completo."
+  },
+  {
+    "id": "cn-56-03",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cuál es una fuente de energía renovable?",
+    "answer": "El viento",
+    "distractors": [
+      "El petróleo",
+      "El carbón",
+      "El gas natural"
+    ],
+    "explanation": "El viento se renueva de forma natural y puede usarse para generar electricidad."
+  },
+  {
+    "id": "cn-56-04",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cómo se llama el cambio del vapor de agua a agua líquida?",
+    "answer": "Condensación",
+    "distractors": [
+      "Evaporación",
+      "Fusión",
+      "Congelación"
+    ],
+    "explanation": "La condensación ocurre cuando el vapor de agua se transforma en líquido."
+  },
+  {
+    "id": "cn-56-05",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué mezcla se puede separar usando un filtro?",
+    "answer": "Agua y arena",
+    "distractors": [
+      "Agua y sal disuelta",
+      "Agua y azúcar disuelta",
+      "Dos cantidades de agua"
+    ],
+    "explanation": "El filtro retiene los granos de arena y deja pasar el agua."
+  },
+  {
+    "id": "bio-12-01",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué parte de una planta absorbe agua del suelo?",
+    "answer": "La raíz",
+    "distractors": [
+      "La flor",
+      "El fruto",
+      "La semilla"
+    ],
+    "explanation": "Las raíces absorben agua del suelo y ayudan a sujetar la planta."
+  },
+  {
+    "id": "bio-12-02",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué animal es un mamífero?",
+    "answer": "El perro",
+    "distractors": [
+      "La mariposa",
+      "La gallina",
+      "La rana"
+    ],
+    "explanation": "El perro es un mamífero; las madres alimentan a sus crías con leche."
+  },
+  {
+    "id": "bio-12-03",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Con qué órganos respiramos las personas?",
+    "answer": "Los pulmones",
+    "distractors": [
+      "Los huesos",
+      "Los dientes",
+      "Los ojos"
+    ],
+    "explanation": "Los pulmones participan en la respiración."
+  },
+  {
+    "id": "bio-12-04",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué necesita una planta para crecer?",
+    "answer": "Agua y luz",
+    "distractors": [
+      "Solo juguetes",
+      "Solo piedras",
+      "Solo pintura"
+    ],
+    "explanation": "Las plantas necesitan agua y luz, además de aire y nutrientes."
+  },
+  {
+    "id": "bio-12-05",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué acción ayuda a evitar enfermedades antes de comer?",
+    "answer": "Lavarse las manos",
+    "distractors": [
+      "Ensuciar el plato",
+      "Comer tierra",
+      "Compartir un cepillo de dientes"
+    ],
+    "explanation": "Lavarse las manos ayuda a quitar suciedad y muchos microbios."
+  },
+  {
+    "id": "bio-34-01",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cómo se llama un animal que come principalmente plantas?",
+    "answer": "Herbívoro",
+    "distractors": [
+      "Carnívoro",
+      "Omnívoro",
+      "Invertebrado"
+    ],
+    "explanation": "Un herbívoro se alimenta principalmente de plantas."
+  },
+  {
+    "id": "bio-34-02",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué característica tienen los animales vertebrados?",
+    "answer": "Columna vertebral",
+    "distractors": [
+      "Siempre seis patas",
+      "Siempre alas",
+      "Siempre antenas"
+    ],
+    "explanation": "Los vertebrados tienen columna vertebral."
+  },
+  {
+    "id": "bio-34-03",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué órgano bombea la sangre?",
+    "answer": "El corazón",
+    "distractors": [
+      "El estómago",
+      "La lengua",
+      "La piel"
+    ],
+    "explanation": "El corazón impulsa la sangre por el cuerpo."
+  },
+  {
+    "id": "bio-34-04",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuántas patas tiene un insecto adulto?",
+    "answer": "6",
+    "distractors": [
+      "4",
+      "8",
+      "10"
+    ],
+    "explanation": "Los insectos adultos tienen seis patas."
+  },
+  {
+    "id": "bio-34-05",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué proceso permite que una semilla empiece a crecer?",
+    "answer": "Germinación",
+    "distractors": [
+      "Digestión",
+      "Evaporación",
+      "Rotación"
+    ],
+    "explanation": "La germinación es el inicio del crecimiento de una planta desde su semilla."
+  },
+  {
+    "id": "bio-56-01",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cuál es la unidad básica de los seres vivos?",
+    "answer": "La célula",
+    "distractors": [
+      "Una piedra",
+      "Un planeta",
+      "Una nube"
+    ],
+    "explanation": "La célula es la unidad básica de estructura y funcionamiento de los seres vivos."
+  },
+  {
+    "id": "bio-56-02",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué seres vivos son productores en una cadena alimentaria?",
+    "answer": "Las plantas",
+    "distractors": [
+      "Los leones",
+      "Los conejos",
+      "Las águilas"
+    ],
+    "explanation": "Las plantas producen su alimento mediante la fotosíntesis."
+  },
+  {
+    "id": "bio-56-03",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿En qué órgano se absorbe la mayor parte de los nutrientes de los alimentos?",
+    "answer": "Intestino delgado",
+    "distractors": [
+      "Esófago",
+      "Boca",
+      "Pulmones"
+    ],
+    "explanation": "El intestino delgado absorbe la mayor parte de los nutrientes de los alimentos."
+  },
+  {
+    "id": "bio-56-04",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué gas del aire utiliza nuestro cuerpo para la respiración?",
+    "answer": "Oxígeno",
+    "distractors": [
+      "Helio",
+      "Hidrógeno",
+      "Metano"
+    ],
+    "explanation": "Nuestro cuerpo utiliza oxígeno para obtener energía de los nutrientes."
+  },
+  {
+    "id": "bio-56-05",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué es un ecosistema?",
+    "answer": "Seres vivos y su ambiente",
+    "distractors": [
+      "Solo animales",
+      "Solo agua",
+      "Solo piedras"
+    ],
+    "explanation": "Un ecosistema incluye seres vivos, su ambiente y las relaciones entre ellos."
+  },
+  {
+    "id": "geo-12-01",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿En qué país está Mexicali?",
+    "answer": "México",
+    "distractors": [
+      "Canadá",
+      "Brasil",
+      "España"
+    ],
+    "explanation": "Mexicali es una ciudad de México."
+  },
+  {
+    "id": "geo-12-02",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué nos ayuda a encontrar lugares y caminos?",
+    "answer": "Un mapa",
+    "distractors": [
+      "Una cuchara",
+      "Una almohada",
+      "Un zapato"
+    ],
+    "explanation": "Un mapa representa lugares y nos ayuda a orientarnos."
+  },
+  {
+    "id": "geo-12-03",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Cuál de estos lugares contiene una gran cantidad de agua salada?",
+    "answer": "El mar",
+    "distractors": [
+      "Una montaña",
+      "Un desierto",
+      "Una escuela"
+    ],
+    "explanation": "El mar contiene agua salada."
+  },
+  {
+    "id": "geo-12-04",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Cuál es un punto cardinal?",
+    "answer": "Norte",
+    "distractors": [
+      "Caliente",
+      "Grande",
+      "Rápido"
+    ],
+    "explanation": "Los puntos cardinales principales son norte, sur, este y oeste."
+  },
+  {
+    "id": "geo-12-05",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Cómo se llama el planeta donde vivimos?",
+    "answer": "Tierra",
+    "distractors": [
+      "Marte",
+      "Júpiter",
+      "Venus"
+    ],
+    "explanation": "La Tierra es el planeta donde vivimos."
+  },
+  {
+    "id": "geo-34-01",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuál es la capital de México?",
+    "answer": "Ciudad de México",
+    "distractors": [
+      "Mexicali",
+      "Guadalajara",
+      "Monterrey"
+    ],
+    "explanation": "La capital de nuestro país es Ciudad de México."
+  },
+  {
+    "id": "geo-34-02",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿En qué continente está México?",
+    "answer": "América",
+    "distractors": [
+      "Europa",
+      "África",
+      "Oceanía"
+    ],
+    "explanation": "México se encuentra en América."
+  },
+  {
+    "id": "geo-34-03",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuál es la capital de Baja California?",
+    "answer": "Mexicali",
+    "distractors": [
+      "Tijuana",
+      "Ensenada",
+      "La Paz"
+    ],
+    "explanation": "Mexicali es la capital del estado de Baja California."
+  },
+  {
+    "id": "geo-34-04",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué océano está al oeste de México?",
+    "answer": "Pacífico",
+    "distractors": [
+      "Atlántico",
+      "Índico",
+      "Ártico"
+    ],
+    "explanation": "El océano Pacífico se encuentra al oeste de México."
+  },
+  {
+    "id": "geo-34-05",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué instrumento ayuda a encontrar el norte?",
+    "answer": "Brújula",
+    "distractors": [
+      "Termómetro",
+      "Balanza",
+      "Cronómetro"
+    ],
+    "explanation": "La brújula ayuda a orientarnos e identificar direcciones."
+  },
+  {
+    "id": "geo-56-01",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cómo se llama la línea imaginaria que divide la Tierra en hemisferios norte y sur?",
+    "answer": "Ecuador",
+    "distractors": [
+      "Meridiano de Greenwich",
+      "Trópico de Cáncer",
+      "Círculo polar ártico"
+    ],
+    "explanation": "El ecuador divide la Tierra en hemisferios norte y sur."
+  },
+  {
+    "id": "geo-56-02",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué coordenada indica qué tan al norte o al sur está un lugar?",
+    "answer": "Latitud",
+    "distractors": [
+      "Longitud",
+      "Altitud",
+      "Temperatura"
+    ],
+    "explanation": "La latitud mide la posición al norte o al sur del ecuador."
+  },
+  {
+    "id": "geo-56-03",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué describe el clima de un lugar?",
+    "answer": "Condiciones del tiempo durante muchos años",
+    "distractors": [
+      "Solo la lluvia de hoy",
+      "Solo la hora actual",
+      "Solo el nombre de una ciudad"
+    ],
+    "explanation": "El clima describe patrones del tiempo observados durante muchos años."
+  },
+  {
+    "id": "geo-56-04",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué representa la escala de un mapa?",
+    "answer": "Relación entre distancias del mapa y reales",
+    "distractors": [
+      "La temperatura",
+      "La cantidad de árboles",
+      "La edad del mapa"
+    ],
+    "explanation": "La escala relaciona una distancia del mapa con la distancia real."
+  },
+  {
+    "id": "geo-56-05",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué es la migración de personas?",
+    "answer": "Cambiar de lugar de residencia",
+    "distractors": [
+      "Leer un mapa",
+      "Medir una montaña",
+      "Cambiar de ropa"
+    ],
+    "explanation": "La migración consiste en cambiar de lugar de residencia, dentro de un país o hacia otro."
+  },
+  {
+    "id": "esp-12-01",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Con qué letra empieza la palabra casa?",
+    "answer": "C",
+    "distractors": [
+      "M",
+      "P",
+      "S"
+    ],
+    "explanation": "La palabra casa empieza con la letra c."
+  },
+  {
+    "id": "esp-12-02",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Cuál de estas letras es una vocal?",
+    "answer": "A",
+    "distractors": [
+      "B",
+      "D",
+      "F"
+    ],
+    "explanation": "Las vocales son a, e, i, o y u."
+  },
+  {
+    "id": "esp-12-03",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Cuántas sílabas tiene la palabra mesa?",
+    "answer": "2",
+    "distractors": [
+      "1",
+      "3",
+      "4"
+    ],
+    "explanation": "Mesa tiene dos sílabas: me y sa."
+  },
+  {
+    "id": "esp-12-04",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué palabra significa lo contrario de grande?",
+    "answer": "Pequeño",
+    "distractors": [
+      "Enorme",
+      "Gigante",
+      "Amplio"
+    ],
+    "explanation": "Grande y pequeño tienen significados opuestos."
+  },
+  {
+    "id": "esp-12-05",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué signo usamos normalmente al final de una oración que afirma algo?",
+    "answer": "Punto",
+    "distractors": [
+      "Signo de interrogación",
+      "Signo de suma",
+      "Signo de igual"
+    ],
+    "explanation": "El punto marca el final de una oración que afirma algo."
+  },
+  {
+    "id": "esp-34-01",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "En la oración Ana corre, ¿qué palabra es el verbo?",
+    "answer": "Corre",
+    "distractors": [
+      "Ana",
+      "La",
+      "Una"
+    ],
+    "explanation": "Corre es el verbo porque expresa la acción."
+  },
+  {
+    "id": "esp-34-02",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuál es un sinónimo de feliz?",
+    "answer": "Contento",
+    "distractors": [
+      "Triste",
+      "Enojado",
+      "Cansado"
+    ],
+    "explanation": "Feliz y contento tienen significados semejantes."
+  },
+  {
+    "id": "esp-34-03",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuál es el plural de lápiz?",
+    "answer": "Lápices",
+    "distractors": [
+      "Lápizs",
+      "Lapiz",
+      "Lápiza"
+    ],
+    "explanation": "El plural de lápiz se escribe lápices."
+  },
+  {
+    "id": "esp-34-04",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "En la frase pelota roja, ¿qué palabra describe a la pelota?",
+    "answer": "Roja",
+    "distractors": [
+      "Pelota",
+      "Frase",
+      "Una"
+    ],
+    "explanation": "Roja es un adjetivo porque describe una característica de la pelota."
+  },
+  {
+    "id": "esp-34-05",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué signos rodean una pregunta escrita en español?",
+    "answer": "Signos de interrogación",
+    "distractors": [
+      "Solo comas",
+      "Paréntesis siempre",
+      "Signos de suma"
+    ],
+    "explanation": "En español usamos un signo de interrogación al inicio y otro al final de la pregunta."
+  },
+  {
+    "id": "esp-56-01",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "En la oración María lee un cuento, ¿quién es el sujeto?",
+    "answer": "María",
+    "distractors": [
+      "Lee",
+      "Un cuento",
+      "Un"
+    ],
+    "explanation": "María es el sujeto porque es quien realiza la acción."
+  },
+  {
+    "id": "esp-56-02",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cuál de estas palabras es aguda y lleva tilde?",
+    "answer": "Café",
+    "distractors": [
+      "Mesa",
+      "Árbol",
+      "Pájaro"
+    ],
+    "explanation": "Café es aguda: su sílaba más fuerte es la última y lleva tilde porque termina en vocal."
+  },
+  {
+    "id": "esp-56-03",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cuál es un sustantivo colectivo?",
+    "answer": "Rebaño",
+    "distractors": [
+      "Oveja",
+      "Lápiz",
+      "Niño"
+    ],
+    "explanation": "Rebaño nombra un conjunto de animales, por eso es un sustantivo colectivo."
+  },
+  {
+    "id": "esp-56-04",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué palabra puede sustituir a Ana en Ana canta?",
+    "answer": "Ella",
+    "distractors": [
+      "Nosotros",
+      "Ellos",
+      "Yo"
+    ],
+    "explanation": "Ella es un pronombre que puede sustituir a Ana en esa oración."
+  },
+  {
+    "id": "esp-56-05",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué texto cuenta una historia con personajes?",
+    "answer": "Un cuento",
+    "distractors": [
+      "Una lista de compras",
+      "Un horario",
+      "Una tabla de números"
+    ],
+    "explanation": "Un cuento narra una historia que tiene personajes y acontecimientos."
+  },
+  {
+    "id": "mat-1-01",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 5 lápices y prestas 2. ¿Cuántos te quedan?",
+    "answer": "3",
+    "distractors": [
+      "4",
+      "0",
+      "5"
+    ],
+    "explanation": "Restamos 2 a 5 y nos quedan 3."
+  },
+  {
+    "id": "mat-1-02",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 2 lápices y te regalan 5 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "7",
+    "distractors": [
+      "6",
+      "8",
+      "5"
+    ],
+    "explanation": "Sumamos 2 más 5 y obtenemos 7."
+  },
+  {
+    "id": "mat-1-03",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 3 lápices y te regalan 4 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "7",
+    "distractors": [
+      "6",
+      "5",
+      "10"
+    ],
+    "explanation": "Sumamos 3 más 4 y obtenemos 7."
+  },
+  {
+    "id": "mat-1-04",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 4 lápices y prestas 1. ¿Cuántos te quedan?",
+    "answer": "3",
+    "distractors": [
+      "1",
+      "4",
+      "2"
+    ],
+    "explanation": "Restamos 1 a 4 y nos quedan 3."
+  },
+  {
+    "id": "mat-1-05",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 4 lápices y prestas 2. ¿Cuántos te quedan?",
+    "answer": "2",
+    "distractors": [
+      "1",
+      "0",
+      "4"
+    ],
+    "explanation": "Restamos 2 a 4 y nos quedan 2."
+  },
+  {
+    "id": "mat-1-06",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 4 lápices y te regalan 3 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "7",
+    "distractors": [
+      "4",
+      "10",
+      "9"
+    ],
+    "explanation": "Sumamos 4 más 3 y obtenemos 7."
+  },
+  {
+    "id": "mat-2-01",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 25 lápices y prestas 13. ¿Cuántos te quedan?",
+    "answer": "12",
+    "distractors": [
+      "13",
+      "10",
+      "15"
+    ],
+    "explanation": "Restamos 13 a 25 y nos quedan 12."
+  },
+  {
+    "id": "mat-2-02",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 22 lápices y te regalan 13 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "35",
+    "distractors": [
+      "36",
+      "40",
+      "38"
+    ],
+    "explanation": "Sumamos 22 más 13 y obtenemos 35."
+  },
+  {
+    "id": "mat-2-03",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 17 lápices y prestas 2. ¿Cuántos te quedan?",
+    "answer": "15",
+    "distractors": [
+      "13",
+      "20",
+      "16"
+    ],
+    "explanation": "Restamos 2 a 17 y nos quedan 15."
+  },
+  {
+    "id": "mat-2-04",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 21 lápices y te regalan 20 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "41",
+    "distractors": [
+      "46",
+      "42",
+      "40"
+    ],
+    "explanation": "Sumamos 21 más 20 y obtenemos 41."
+  },
+  {
+    "id": "mat-2-05",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 16 lápices y prestas 5. ¿Cuántos te quedan?",
+    "answer": "11",
+    "distractors": [
+      "12",
+      "14",
+      "8"
+    ],
+    "explanation": "Restamos 5 a 16 y nos quedan 11."
+  },
+  {
+    "id": "mat-2-06",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 17 lápices y prestas 8. ¿Cuántos te quedan?",
+    "answer": "9",
+    "distractors": [
+      "10",
+      "14",
+      "12"
+    ],
+    "explanation": "Restamos 8 a 17 y nos quedan 9."
+  },
+  {
+    "id": "mat-3-01",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 2 cajas con 5 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "10",
+    "distractors": [
+      "7",
+      "12",
+      "13"
+    ],
+    "explanation": "Multiplicamos 2 por 5 y obtenemos 10."
+  },
+  {
+    "id": "mat-3-02",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 6 cajas con 8 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "48",
+    "distractors": [
+      "49",
+      "53",
+      "50"
+    ],
+    "explanation": "Multiplicamos 6 por 8 y obtenemos 48."
+  },
+  {
+    "id": "mat-3-03",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 3 cajas con 6 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "18",
+    "distractors": [
+      "20",
+      "15",
+      "19"
+    ],
+    "explanation": "Multiplicamos 3 por 6 y obtenemos 18."
+  },
+  {
+    "id": "mat-3-04",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Repartes 36 colores por igual entre 9 niños. ¿Cuántos recibe cada niño?",
+    "answer": "4",
+    "distractors": [
+      "1",
+      "6",
+      "5"
+    ],
+    "explanation": "Dividimos 36 entre 9 y cada niño recibe 4."
+  },
+  {
+    "id": "mat-3-05",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 6 cajas con 2 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "12",
+    "distractors": [
+      "10",
+      "11",
+      "17"
+    ],
+    "explanation": "Multiplicamos 6 por 2 y obtenemos 12."
+  },
+  {
+    "id": "mat-3-06",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Repartes 20 colores por igual entre 5 niños. ¿Cuántos recibe cada niño?",
+    "answer": "4",
+    "distractors": [
+      "9",
+      "1",
+      "2"
+    ],
+    "explanation": "Dividimos 20 entre 5 y cada niño recibe 4."
+  },
+  {
+    "id": "mat-4-01",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 3 cajas con 8 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "24",
+    "distractors": [
+      "26",
+      "21",
+      "29"
+    ],
+    "explanation": "Multiplicamos 3 por 8 y obtenemos 24."
+  },
+  {
+    "id": "mat-4-02",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 3 cajas con 7 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "21",
+    "distractors": [
+      "22",
+      "18",
+      "24"
+    ],
+    "explanation": "Multiplicamos 3 por 7 y obtenemos 21."
+  },
+  {
+    "id": "mat-4-03",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 12 cajas con 9 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "108",
+    "distractors": [
+      "110",
+      "105",
+      "106"
+    ],
+    "explanation": "Multiplicamos 12 por 9 y obtenemos 108."
+  },
+  {
+    "id": "mat-4-04",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 12 cajas con 4 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "48",
+    "distractors": [
+      "46",
+      "50",
+      "53"
+    ],
+    "explanation": "Multiplicamos 12 por 4 y obtenemos 48."
+  },
+  {
+    "id": "mat-4-05",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Repartes 48 colores por igual entre 8 niños. ¿Cuántos recibe cada niño?",
+    "answer": "6",
+    "distractors": [
+      "8",
+      "3",
+      "5"
+    ],
+    "explanation": "Dividimos 48 entre 8 y cada niño recibe 6."
+  },
+  {
+    "id": "mat-4-06",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 7 cajas con 5 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "35",
+    "distractors": [
+      "32",
+      "34",
+      "40"
+    ],
+    "explanation": "Multiplicamos 7 por 5 y obtenemos 35."
+  },
+  {
+    "id": "mat-5-01",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un tercio de 18?",
+    "answer": "6",
+    "distractors": [
+      "11",
+      "5",
+      "9"
+    ],
+    "explanation": "Dividimos 18 entre 3 y obtenemos 6."
+  },
+  {
+    "id": "mat-5-02",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un cuarto de 36?",
+    "answer": "9",
+    "distractors": [
+      "8",
+      "11",
+      "12"
+    ],
+    "explanation": "Dividimos 36 entre 4 y obtenemos 9."
+  },
+  {
+    "id": "mat-5-03",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un cuarto de 8?",
+    "answer": "2",
+    "distractors": [
+      "4",
+      "5",
+      "7"
+    ],
+    "explanation": "Dividimos 8 entre 4 y obtenemos 2."
+  },
+  {
+    "id": "mat-5-04",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un décimo de 100?",
+    "answer": "10",
+    "distractors": [
+      "13",
+      "15",
+      "7"
+    ],
+    "explanation": "Dividimos 100 entre 10 y obtenemos 10."
+  },
+  {
+    "id": "mat-5-05",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un cuarto de 40?",
+    "answer": "10",
+    "distractors": [
+      "11",
+      "8",
+      "7"
+    ],
+    "explanation": "Dividimos 40 entre 4 y obtenemos 10."
+  },
+  {
+    "id": "mat-5-06",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un medio de 12?",
+    "answer": "6",
+    "distractors": [
+      "5",
+      "4",
+      "9"
+    ],
+    "explanation": "Dividimos 12 entre 2 y obtenemos 6."
+  },
+  {
+    "id": "mat-6-01",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 50 por ciento de 20?",
+    "answer": "10",
+    "distractors": [
+      "9",
+      "13",
+      "11"
+    ],
+    "explanation": "El 50 por ciento de 20 equivale a 10."
+  },
+  {
+    "id": "mat-6-02",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 50 por ciento de 60?",
+    "answer": "30",
+    "distractors": [
+      "28",
+      "31",
+      "33"
+    ],
+    "explanation": "El 50 por ciento de 60 equivale a 30."
+  },
+  {
+    "id": "mat-6-03",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 25 por ciento de 40?",
+    "answer": "10",
+    "distractors": [
+      "13",
+      "8",
+      "9"
+    ],
+    "explanation": "El 25 por ciento de 40 equivale a 10."
+  },
+  {
+    "id": "mat-6-04",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 10 por ciento de 60?",
+    "answer": "6",
+    "distractors": [
+      "7",
+      "5",
+      "3"
+    ],
+    "explanation": "El 10 por ciento de 60 equivale a 6."
+  },
+  {
+    "id": "mat-6-05",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 50 por ciento de 80?",
+    "answer": "40",
+    "distractors": [
+      "37",
+      "41",
+      "42"
+    ],
+    "explanation": "El 50 por ciento de 80 equivale a 40."
+  },
+  {
+    "id": "mat-6-06",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 10 por ciento de 80?",
+    "answer": "8",
+    "distractors": [
+      "6",
+      "10",
+      "5"
+    ],
+    "explanation": "El 10 por ciento de 80 equivale a 8."
+  }
+]

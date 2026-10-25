@@ -1,4 +1,5 @@
 import os
+from pathlib import Path
 from PIL import Image
 
 images = [
@@ -9,7 +10,7 @@ images = [
     'Cimarron_Pensandoo.png'
 ]
 
-public_dir = os.path.join('frontend', 'public')
+public_dir = Path(__file__).resolve().parents[1] / 'frontend' / 'public'
 
 for img_name in images:
     try:

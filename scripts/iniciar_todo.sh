@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 
 # Directorio raíz del proyecto
-PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+PROJECT_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$PROJECT_ROOT"
 
 echo "======================================================================"
@@ -30,12 +30,12 @@ trap cleanup SIGINT SIGTERM EXIT
 
 # [1/3] Backend
 echo "[1/3] Iniciando Servidor Backend (FastAPI - http://127.0.0.1:8000)..."
-"$PROJECT_ROOT/backend/start_backend.sh" &
+bash "$PROJECT_ROOT/backend/start_backend.sh" &
 BACKEND_PID=$!
 
 # [2/3] Frontend
 echo "[2/3] Iniciando Servidor Frontend (Vite - http://127.0.0.1:5173)..."
-"$PROJECT_ROOT/frontend/start_frontend.sh" &
+bash "$PROJECT_ROOT/frontend/start_frontend.sh" &
 FRONTEND_PID=$!
 
 # Esperar unos segundos a que los servidores levanten

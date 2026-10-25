@@ -1,16 +1,14 @@
 import os
-import requests
 import logging
 from langchain_community.embeddings import OllamaEmbeddings
 from langchain_chroma import Chroma
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from langchain_core.documents import Document
+from ollama_client import MODEL_NAME, OLLAMA_BASE_URL, OLLAMA_URL, OllamaClient, ollama_client
 
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("CimarronAgent")
 
-OLLAMA_URL = "http://127.0.0.1:11434/api/generate"
-MODEL_NAME = "gemma2:2b"
 DB_DIR = os.path.join(os.path.dirname(__file__), "chroma_db")
 
 SYSTEM_PROMPT = (
@@ -25,9 +23,13 @@ SYSTEM_PROMPT = (
 )
 
 class CimarronAgent:
-    def __init__(self, model_name: str = MODEL_NAME, ollama_url: str = OLLAMA_URL):
-        self.model_name = model_name
-        self.ollama_url = ollama_url
+    def __init__(self, model_name: str = MODEL_NAME, ollama_url: str = OLLAMA_URL, llm=None):
+        self.llm = llm or (
+            ollama_client if model_name == MODEL_NAME and ollama_url == OLLAMA_URL
+            else OllamaClient(model_name, ollama_url)
+        )
+        self.model_name = self.llm.model_name
+        self.ollama_url = self.llm.url
         self.vectorstore = None
         self.history = []
         
@@ -36,7 +38,7 @@ class CimarronAgent:
             try:
                 embeddings = OllamaEmbeddings(
                     model="nomic-embed-text",
-                    base_url="http://127.0.0.1:11434"
+                    base_url=OLLAMA_BASE_URL
                 )
                 self.vectorstore = Chroma(
                     persist_directory=DB_DIR, 
@@ -76,30 +78,13 @@ class CimarronAgent:
         historial_texto = "\n".join(self.history)
         prompt_final = f"{SYSTEM_PROMPT}{contexto_extra}\n\nHISTORIAL DE CONVERSACIÓN:\n{historial_texto}\nCimarrón:"
 
-        payload = {
-            "model": self.model_name,
-            "prompt": prompt_final,
-            "stream": False,
-            "options": {
-                "temperature": 0.1,
-                "num_predict": 250,
-                "num_ctx": 4096 # Ampliado a 4096 tokens para que quepa todo el .txt
-            }
-        }
-        
         try:
             logger.info(f"Enviando consulta a Ollama ({self.model_name})...")
-            response = requests.post(self.ollama_url, json=payload, timeout=120)
-            if response.status_code == 200:
-                result = response.json()
-                text = result.get("response", "").strip()
-                if not text:
-                    text = "¡Hola! Bienvenido a la Facultad de Ingeniería de la UABC."
-                self.history.append(f"Cimarrón: {text}")
-                return text
-            else:
-                logger.error(f"Ollama retornó código {response.status_code}: {response.text}")
-                return "¡Hola! Qué gusto saludarte. La ingeniería en la UABC es asombrosa."
+            text = self.llm.generate(prompt_final)
+            if not text:
+                text = "¡Hola! Bienvenido a la Facultad de Ingeniería de la UABC."
+            self.history.append(f"Cimarrón: {text}")
+            return text
         except Exception as e:
             logger.error(f"Error al comunicar con Ollama local: {e}")
             return "¡Hola! Bienvenido a la Facultad de Ingeniería de la UABC. Estoy aquí para ayudarte."

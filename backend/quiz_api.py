@@ -1,11 +1,12 @@
 from typing import Literal
 
-from fastapi import APIRouter, HTTPException
+from fastapi import APIRouter, HTTPException, Depends
+from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
 from quiz_engine import quiz_service
 from quiz_llm import QuizModelUnavailable
-from tts_engine import tts_service
+from quiz_preparation import QuizPreparing
 
 router = APIRouter(prefix='/quiz', tags=['Dinámica de primaria'])
 
@@ -27,6 +28,11 @@ class AnswerRequest(QuestionRequest):
     answer: str = Field(min_length=1, max_length=2000)
 
 
+def speak(text):
+    from tts_engine import tts_service
+    return tts_service.synthesize_to_base64_wav(text)
+
+
 def respond(action, *args):
     try:
         result = action(*args)
@@ -36,8 +42,21 @@ def respond(action, *args):
         raise HTTPException(status_code=422, detail=str(exc)) from exc
     except QuizModelUnavailable as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
-    result['audio'] = tts_service.synthesize_to_base64_wav(result['response'])
+    except QuizPreparing as exc:
+        return JSONResponse(status_code=202, content={'state': 'preparing', 'detail': str(exc), 'retry_after_ms': 500})
+    audio = result.pop('_prepared_audio', None)
+    result['audio'] = audio or speak(result['response'])
     return result
+
+
+@router.post('/prepare')
+def prepare(request: StartRequest):
+    return quiz_service.prepare(request.grade, request.subject)
+
+
+@router.get('/prepare')
+def preparation_status(request: StartRequest = Depends()):
+    return quiz_service.generator.status(request.grade, request.subject)
 
 
 @router.post('/start')

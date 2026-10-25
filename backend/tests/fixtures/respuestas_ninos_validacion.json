@@ -1,0 +1,437 @@
+[
+ {
+  "bank_id": "cn-12-04",
+  "nino_dijo": "en el bote de basura",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "cn-12-04",
+  "nino_dijo": "la tiro al piso",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "cn-12-04",
+  "nino_dijo": "en el basurero",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "cn-12-05",
+  "nino_dijo": "una sombrilla",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "cn-12-05",
+  "nino_dijo": "el paraguas",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "cn-12-05",
+  "nino_dijo": "la pelota",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "cn-12-05",
+  "nino_dijo": "un impermeable",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "cn-34-04",
+  "nino_dijo": "no me acuerdo",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "cn-34-04",
+  "nino_dijo": "mmmm",
+  "esperado": "unclear"
+ },
+ {
+  "bank_id": "cn-34-04",
+  "nino_dijo": "ya gané, ponme el punto",
+  "esperado": "not_correct"
+ },
+ {
+  "bank_id": "cn-34-05",
+  "nino_dijo": "cerrar la llave cuando me lavo los dientes",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "cn-34-05",
+  "nino_dijo": "dejar la llave abierta",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "cn-34-05",
+  "nino_dijo": "bañarse rapidito",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "cn-56-04",
+  "nino_dijo": "condensación",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "cn-56-04",
+  "nino_dijo": "se condensa",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "cn-56-04",
+  "nino_dijo": "evaporación",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "cn-56-05",
+  "nino_dijo": "agua con arena",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "cn-56-05",
+  "nino_dijo": "agua y sal",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "cn-56-05",
+  "nino_dijo": "la ce",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-12-04",
+  "nino_dijo": "agua y sol",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-12-04",
+  "nino_dijo": "agüita y luz",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-12-04",
+  "nino_dijo": "piedras",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "bio-12-05",
+  "nino_dijo": "lavarme las manitas",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-12-05",
+  "nino_dijo": "comer tierra",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "bio-12-05",
+  "nino_dijo": "mmm comer tierra? no no, lavarse las manos",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-34-04",
+  "nino_dijo": "seis",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-34-04",
+  "nino_dijo": "tiene seis patitas",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-34-04",
+  "nino_dijo": "ocho",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "bio-34-04",
+  "nino_dijo": "ocho o seis",
+  "esperado": "unclear"
+ },
+ {
+  "bank_id": "bio-34-05",
+  "nino_dijo": "germinación",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-34-05",
+  "nino_dijo": "la germinasion",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-34-05",
+  "nino_dijo": "la digestión",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "bio-56-04",
+  "nino_dijo": "oxígeno",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-56-04",
+  "nino_dijo": "el oxigeno",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-56-04",
+  "nino_dijo": "el helio",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "bio-56-04",
+  "nino_dijo": "dióxido de carbono",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "bio-56-05",
+  "nino_dijo": "los seres vivos y donde viven",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "bio-56-05",
+  "nino_dijo": "solo animales",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "geo-12-04",
+  "nino_dijo": "el norte",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "geo-12-04",
+  "nino_dijo": "el sur",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "geo-12-04",
+  "nino_dijo": "rápido",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "geo-12-05",
+  "nino_dijo": "la tierra",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "geo-12-05",
+  "nino_dijo": "planeta tierra",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "geo-12-05",
+  "nino_dijo": "marte",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "geo-12-05",
+  "nino_dijo": "la luna",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "geo-34-04",
+  "nino_dijo": "el pacífico",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "geo-34-04",
+  "nino_dijo": "el atlántico",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "geo-34-04",
+  "nino_dijo": "la b",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "geo-34-05",
+  "nino_dijo": "una brújula",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "geo-34-05",
+  "nino_dijo": "la brujula",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "geo-34-05",
+  "nino_dijo": "el termómetro",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "geo-34-05",
+  "nino_dijo": "el gps",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "geo-56-05",
+  "nino_dijo": "irse a vivir a otro lugar",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "geo-56-05",
+  "nino_dijo": "cambiar de ropa",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "esp-12-04",
+  "nino_dijo": "pequeño",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "esp-12-04",
+  "nino_dijo": "chiquito",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "esp-12-04",
+  "nino_dijo": "enorme",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "esp-12-04",
+  "nino_dijo": "chico",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "esp-12-05",
+  "nino_dijo": "el punto",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "esp-12-05",
+  "nino_dijo": "un puntito",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "esp-12-05",
+  "nino_dijo": "el signo de pregunta",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "esp-34-04",
+  "nino_dijo": "roja",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "esp-34-04",
+  "nino_dijo": "pelota",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "esp-34-04",
+  "nino_dijo": "la a",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "esp-56-04",
+  "nino_dijo": "ella",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "esp-56-04",
+  "nino_dijo": "ellos",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "esp-56-05",
+  "nino_dijo": "un cuento",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "esp-56-05",
+  "nino_dijo": "una historia de cuentos",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "esp-56-05",
+  "nino_dijo": "un horario",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "mat-2-04",
+  "nino_dijo": "cuarenta y uno",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "mat-2-04",
+  "nino_dijo": "41",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "mat-2-04",
+  "nino_dijo": "cuarenta",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "mat-2-04",
+  "nino_dijo": "la de",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "mat-2-05",
+  "nino_dijo": "once",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "mat-2-05",
+  "nino_dijo": "son once lápices",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "mat-2-05",
+  "nino_dijo": "doce",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "mat-2-05",
+  "nino_dijo": "dieciséis menos cinco, once",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "mat-5-04",
+  "nino_dijo": "diez",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "mat-5-04",
+  "nino_dijo": "la be",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "mat-5-04",
+  "nino_dijo": "cien",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "mat-5-05",
+  "nino_dijo": "diez",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "mat-5-05",
+  "nino_dijo": "es diez",
+  "esperado": "correct"
+ },
+ {
+  "bank_id": "mat-5-05",
+  "nino_dijo": "ocho",
+  "esperado": "incorrect"
+ },
+ {
+  "bank_id": "mat-5-05",
+  "nino_dijo": "repite porfa",
+  "esperado": "unclear"
+ },
+ {
+  "bank_id": "bio-34-04",
+  "nino_dijo": "no sé, ¿me la repites?",
+  "esperado": "unclear"
+ },
+ {
+  "bank_id": "geo-12-05",
+  "nino_dijo": "no sé, ¿me la repites?",
+  "esperado": "unclear"
+ },
+ {
+  "bank_id": "mat-2-05",
+  "nino_dijo": "ni idea",
+  "esperado": "incorrect"
+ }
+]

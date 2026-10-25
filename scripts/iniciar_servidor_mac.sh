@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 set -euo pipefail
 
-CIMARRON_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")" && pwd)"
+CIMARRON_ROOT="$(cd "$(dirname "${BASH_SOURCE[0]}")/.." && pwd)"
 cd "$CIMARRON_ROOT/backend"
 
 if [ ! -x venv/bin/python ]; then

@@ -2,14 +2,14 @@
 setlocal
 
 if "%~1"=="" (
-    echo Uso: iniciar_cliente_windows.bat http://IP_DE_LA_MAC:8000
-    echo Ejemplo: iniciar_cliente_windows.bat http://192.168.1.50:8000
+    echo Uso: scripts\iniciar_cliente_windows.bat http://IP_DE_LA_MAC:8000
+    echo Ejemplo: scripts\iniciar_cliente_windows.bat http://192.168.1.50:8000
     exit /b 1
 )
 
 set "CIMARRON_BACKEND_URL=%~1"
 set "VITE_API_BASE_URL=/api"
-cd /d "%~dp0frontend"
+cd /d "%~dp0..\frontend"
 
 where node >nul 2>&1
 if errorlevel 1 (

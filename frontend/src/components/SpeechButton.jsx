@@ -5,7 +5,7 @@ import Square from 'lucide-react/dist/esm/icons/square';
 import { playChimeOn, playChimeOff } from '../utils/sfx';
 import { createSpeechSession, speechErrorMessage } from '../utils/speechRecognitionSession';
 
-const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, sfxEnabled, onStop, isLoading, isSpeaking, autoListen = false, autoListenKey = 0, onPauseAuto, onVoiceError, showVoiceError = true, placeholderText = 'Escribe tu pregunta aquí...' }) => {
+const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, sfxEnabled, onStop, isLoading, isSpeaking, autoListen = false, autoListenKey = 0, onPauseAuto, onVoiceError, showVoiceError = true, placeholderText = 'Escribe tu pregunta aquí...', compact = false }) => {
   const [textInput, setTextInput] = useState('');
   const [session, setSession] = useState(null);
   const [voiceError, setVoiceError] = useState('');
@@ -180,7 +180,7 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
           type="text"
           value={textInput}
           onChange={(e) => setTextInput(e.target.value)}
-          placeholder={isListening ? "🎙️ Escuchando... Te escucho..." : placeholderText}
+          placeholder={isListening ? compact ? 'Escuchando…' : '🎙️ Escuchando... Te escucho...' : placeholderText}
           aria-label={placeholderText}
           disabled={disabled}
           readOnly={isListening}

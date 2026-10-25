@@ -5,6 +5,7 @@ import wave
 import math
 import struct
 import logging
+import threading
 
 try:
     from supertonic import TTS
@@ -19,6 +20,7 @@ class LocalTTSEngine:
     def __init__(self):
         self.tts = None
         self.style = None
+        self.lock = threading.Lock()
         self._init_supertonic()
 
     def _init_supertonic(self):
@@ -36,6 +38,10 @@ class LocalTTSEngine:
             logger.warning("Librería 'supertonic' no instalada. Se utilizará el generador WAV de respaldo.")
 
     def synthesize_to_base64_wav(self, text: str) -> str:
+        with self.lock:
+            return self._synthesize(text)
+
+    def _synthesize(self, text: str) -> str:
         """
         Sintetiza texto a audio WAV localmente usando Supertonic 3 y retorna un Data URI en Base64.
         """

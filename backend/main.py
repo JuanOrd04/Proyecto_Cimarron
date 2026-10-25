@@ -6,8 +6,10 @@ from pydantic import BaseModel
 import requests
 import uvicorn
 import logging
+from contextlib import asynccontextmanager
 
-from cimarron_agent import cimarron_agent, OLLAMA_URL
+from cimarron_agent import cimarron_agent
+from ollama_client import OLLAMA_BASE_URL, MODEL_NAME
 from tts_engine import tts_service
 from quiz_api import router as quiz_router
 from quiz_engine import quiz_service
@@ -15,10 +17,19 @@ from quiz_engine import quiz_service
 logging.basicConfig(level=logging.INFO)
 logger = logging.getLogger("MainFastAPI")
 
+
+@asynccontextmanager
+async def lifespan(app):
+    quiz_service.generator.warm_audio()
+    yield
+    quiz_service.generator.close()
+
+
 app = FastAPI(
     title="Asistente Interactivo Cimarrón UABC - API Backend",
     description="Servidor local para conversar con Ollama, evaluar respuestas de primaria por significado y generar voz con Supertonic.",
-    version="1.0.0"
+    version="1.0.0",
+    lifespan=lifespan,
 )
 
 # Permitir CORS desde el frontend local (Vite)
@@ -62,7 +73,7 @@ def health_check():
     ollama_online = False
     quiz_model_available = False
     try:
-        r = requests.get("http://127.0.0.1:11434/api/tags", timeout=3)
+        r = requests.get(f"{OLLAMA_BASE_URL}/api/tags", timeout=3)
         if r.status_code == 200:
             ollama_online = True
             models = {model['name'] for model in r.json().get('models', [])}
@@ -74,6 +85,7 @@ def health_check():
         "status": "online",
         "backend": "FastAPI 100% Local",
         "ollama_status": "conectado" if ollama_online else "desconectado (asegúrate de correr 'ollama serve')",
+        "llm_model": MODEL_NAME,
         "quiz_model": quiz_service.evaluator.model,
         "quiz_model_status": "instalado" if quiz_model_available else "no disponible",
     }

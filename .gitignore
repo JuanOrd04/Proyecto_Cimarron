@@ -4,7 +4,10 @@
 backend/venv/
 backend/__pycache__/
 backend/chroma_db/
+backend/chroma_education/
 backend/qa_cache.json
+backend/quiz_cache.sqlite3*
+backend/quiz_audio.sqlite3
 *.pyc
 *.pyo
 *.pyd

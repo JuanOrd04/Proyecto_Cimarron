@@ -8,6 +8,6 @@ echo                      (Ejecutando en Linux / WSL)
 echo ======================================================================
 echo.
 
-wsl bash -c "cd /home/zombs/Proyecto_Cimarron && ./iniciar_todo.sh"
+wsl bash -c "cd /home/zombs/Proyecto_Cimarron && bash scripts/iniciar_todo.sh"
 
 pause

@@ -250,6 +250,11 @@ function App() {
       });
       const data = await response.json();
       if (controller.signal.aborted) return;
+      if (response.status === 202) {
+        setGameError(data.detail || 'Estoy terminando de preparar el juego.');
+        setIsLoading(false);
+        return;
+      }
       if (!response.ok) {
         retryAnswer = response.status === 422;
         if (response.status === 404) { gameRef.current = null; setGame(null); setShowGameSetup(true); }
@@ -295,10 +300,21 @@ function App() {
     setResponseText(openSetup ? '¡Vamos a jugar! Elige tu grado de primaria y la materia que quieres practicar.' : '¡Gracias por jugar! Puedes preguntarme sobre la UABC y sus ingenierías.');
   };
 
+  const avatar = (
+    <CimarronAvatar
+      isSpeaking={isSpeaking}
+      isThinking={isLoading}
+      isListening={isListening}
+      mouthFrame={mouthFrame}
+      onAvatarClick={() => setShowBubble(!showBubble)}
+      sfxEnabled={sfxEnabled}
+    />
+  );
+
   return (
     <>
       <ParticlesBackground />
-      <div className={`app-container ${game || showGameSetup ? 'game-active' : ''}`}>
+      <div className={`app-container ${game || showGameSetup ? 'game-active' : ''} ${game ? 'quiz-playing' : ''}`}>
         {/* Botón de Enseñar (Esquina superior izquierda general) */}
         <button 
           className="teach-toggle-btn"
@@ -325,28 +341,23 @@ function App() {
           {/* El subtítulo ha sido eliminado a petición del usuario */}
         </header>
 
-        <main className="main-stage">
-          <CimarronAvatar 
-            isSpeaking={isSpeaking} 
-            isThinking={isLoading}
-            isListening={isListening}
-            mouthFrame={mouthFrame} 
-            onAvatarClick={() => setShowBubble(!showBubble)}
-            sfxEnabled={sfxEnabled}
-          />
-          <SpeechBubble 
+        {!game && !showGameSetup && <main className="main-stage">
+          {avatar}
+          {!game && !showGameSetup && <SpeechBubble
             text={responseText} 
             isSpeaking={isSpeaking} 
             isLoading={isLoading}
             isVisible={showBubble}
-          />
-        </main>
+          />}
+        </main>}
 
         <section className="controls-section">
           <QuizPanel
-            game={game} setupOpen={showGameSetup} busy={isLoading || isSpeaking} error={gameError}
+            avatar={avatar}
+            apiBaseUrl={API_BASE_URL}
+            game={game} setupOpen={showGameSetup} busy={isLoading} error={gameError}
             voiceMode={voiceMode} onToggleVoice={toggleVoiceMode}
-            voiceStatus={isLoading ? 'Preparando…' : isSpeaking ? 'Escucha al Cimarrón…' : isListening ? 'Te escucho. Di tu respuesta.' : 'Puedes responder.'}
+            voiceStatus={isLoading ? 'Pensando…' : isSpeaking ? 'Hablando' : isListening ? 'Escuchando' : 'Listo'}
             onOpen={() => endGame(true)} onStart={(settings) => {
               voiceModeRef.current = true;
               setVoiceMode(true);
@@ -356,10 +367,11 @@ function App() {
             onNext={() => requestQuiz('next', { session_id: game.session_id, question_id: game.question.id })}
             onEnd={() => endGame(false)}
           />
-          <QuickQuestions onSelectQuestion={handleSendMessage} disabled={isLoading || isSpeaking || Boolean(game) || showGameSetup} sfxEnabled={sfxEnabled} />
+          {!game && !showGameSetup && <QuickQuestions onSelectQuestion={handleSendMessage} disabled={isLoading || isSpeaking} sfxEnabled={sfxEnabled} />}
           {!showGameSetup && (!game || game.phase === 'question') && <SpeechButton
+            compact={Boolean(game)}
             key={game?.question.id || 'chat'}
-            placeholderText={game ? 'Cuéntame lo que piensas…' : 'Escribe tu pregunta aquí...'}
+            placeholderText={game ? 'Tu respuesta…' : 'Escribe tu pregunta aquí...'}
             onSpeechResult={handleSendMessage}
             onStop={() => { if (game) pauseVoice(); handleStop(); }}
             autoListen={Boolean(game && voiceMode && listenReady && !isLoading && !isSpeaking)}

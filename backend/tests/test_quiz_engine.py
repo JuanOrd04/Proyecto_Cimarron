@@ -4,6 +4,8 @@ import unittest
 from unittest.mock import Mock
 
 from quiz_engine import QuizService, SUBJECTS
+from quiz_generation import OllamaQuestionGenerator
+import uuid
 from quiz_llm import QuizModelUnavailable
 
 
@@ -17,7 +19,14 @@ class QuizTests(unittest.TestCase):
         self.evaluator = Mock()
         self.evaluator.evaluate.side_effect = lambda q, text, grade, turns: result(
             'correct' if text == q['answer'] else 'incorrect', f"La respuesta es {q['answer']}. {q['explanation']}")
-        self.service = QuizService(self.evaluator)
+        self.generator = Mock()
+        self.generator.plan.side_effect = OllamaQuestionGenerator().plan
+        self.generator.generate.side_effect = lambda grade, subject, previous=(), rng=None: {
+            'id': str(uuid.uuid4()), 'prompt': f'Pregunta de prueba {len(previous) + 1}',
+            'answer': '4', 'options': ['4', '5', '6', '7'],
+            'explanation': 'Una explicación de prueba.', 'subject': SUBJECTS[subject],
+        }
+        self.service = QuizService(self.evaluator, self.generator)
 
     def test_five_questions_for_every_grade_and_subject(self):
         for grade in range(1, 7):
@@ -40,6 +49,69 @@ class QuizTests(unittest.TestCase):
                     self.assertEqual(response['phase'], 'finished')
                     self.assertEqual(response['score'], 5)
                     self.assertEqual(len(ids), 5)
+
+    def test_generation_failure_preserves_progress_and_can_be_retried(self):
+        game = self.service.start(3, 'matematicas')
+        qid = game['question']['id']
+        self.service.answer(game['session_id'], qid, '4')
+        generate = self.generator.generate.side_effect
+        self.generator.generate.side_effect = QuizModelUnavailable('Propuesta no válida')
+        with self.assertRaises(QuizModelUnavailable):
+            self.service.next(game['session_id'], qid)
+        session = self.service.sessions[game['session_id']]
+        self.assertEqual(session['index'], 0)
+        self.assertEqual(session['score'], 1)
+        self.assertEqual(session['phase'], 'feedback')
+        self.assertEqual(len(session['questions']), 1)
+        self.generator.generate.side_effect = generate
+        following = self.service.next(game['session_id'], qid)
+        self.assertNotEqual(following['question']['id'], qid)
+        self.assertEqual(following['score'], 1)
+
+    def test_initial_generation_failure_does_not_create_an_empty_session(self):
+        self.generator.generate.side_effect = QuizModelUnavailable('Sin material')
+        with self.assertRaises(QuizModelUnavailable):
+            self.service.start(2, 'biologia')
+        self.assertEqual(self.service.sessions, {})
+
+    def test_next_retries_generate_only_one_new_question(self):
+        game = self.service.start(2, 'biologia')
+        qid = game['question']['id']
+        self.service.answer(game['session_id'], qid, '4')
+        first = self.service.next(game['session_id'], qid)
+        retry = self.service.next(game['session_id'], qid)
+        self.assertEqual(first, retry)
+        self.assertEqual(self.generator.generate.call_count, 2)
+        previous = self.generator.generate.call_args.args[2]
+        self.assertEqual(previous[0]['id'], qid)
+
+    def test_next_generation_does_not_block_another_session_and_end_does_not_restore_it(self):
+        game = self.service.start(2, 'biologia')
+        other = self.service.start(2, 'espanol')
+        qid = game['question']['id']
+        self.service.answer(game['session_id'], qid, '4')
+        started, release = threading.Event(), threading.Event()
+        generate = self.generator.generate.side_effect
+
+        def delayed(*args, **kwargs):
+            started.set()
+            if not release.wait(5):
+                raise RuntimeError('Tiempo agotado')
+            return generate(*args, **kwargs)
+
+        self.generator.generate.side_effect = delayed
+        with concurrent.futures.ThreadPoolExecutor() as pool:
+            pending = pool.submit(self.service.next, game['session_id'], qid)
+            self.assertTrue(started.wait(2))
+            try:
+                response = self.service.answer(other['session_id'], other['question']['id'], '4')
+                self.assertEqual(response['score'], 1)
+                self.service.end(game['session_id'])
+            finally:
+                release.set()
+            with self.assertRaises(KeyError):
+                pending.result(timeout=2)
+        self.assertNotIn(game['session_id'], self.service.sessions)
 
     def test_free_long_answer_is_sent_intact_to_model_and_uses_its_feedback(self):
         game = self.service.start(2, 'biologia')
@@ -72,6 +144,25 @@ class QuizTests(unittest.TestCase):
         self.assertIsNone(following['feedback'])
         self.assertIsNone(following['evaluation'])
         self.assertEqual(self.service.sessions[game['session_id']]['turns'], [])
+
+    def test_concepts_reach_api_view_without_exposing_solution_in_feedback(self):
+        game = self.service.start(2, 'biologia')
+        self.evaluator.evaluate.side_effect = None
+        evaluation = {**result('partial', 'Mencionaste agua. ¿Qué otra cosa falta?'),
+                      'concepts': [{'name': 'Agua', 'state': 'recognized'}, {'name': 'Luz', 'state': 'missing'}],
+                      'matched_concepts': ['Agua'], 'missing_concepts': ['Luz'], 'concepts_evaluated': True}
+        self.evaluator.evaluate.return_value = evaluation
+        response = self.service.answer(game['session_id'], game['question']['id'], 'Creo que agua')
+        self.assertEqual(response['evaluation']['matched_concepts'], ['Agua'])
+        self.assertEqual(response['evaluation']['missing_concepts'], ['Luz'])
+        self.assertEqual(response['phase'], 'question')
+        self.assertEqual(response['score'], 0)
+        self.assertEqual(response['answered'], 0)
+        self.assertNotIn('correct_answer', response['feedback'])
+        response['evaluation']['concepts'][0]['name'] = 'Modificado'
+        evaluation['concepts'][0]['name'] = 'Otro'
+        retry = self.service.answer(game['session_id'], game['question']['id'], 'Creo que agua')
+        self.assertEqual(retry['evaluation']['concepts'][0]['name'], 'Agua')
 
     def test_wrong_answer_gives_explanation_without_a_point(self):
         game = self.service.start(2, 'biologia')

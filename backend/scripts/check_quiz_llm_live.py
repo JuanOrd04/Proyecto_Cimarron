@@ -1,11 +1,10 @@
-"""Prueba semántica opcional con Ollama real; no mide voz ni sustituye la revisión docente."""
 import argparse
 import json
 from pathlib import Path
 import sys
 
 sys.path.insert(0, str(Path(__file__).resolve().parents[1]))
-from quiz_engine import BANK, SUBJECTS
+from quiz_curriculum import SUBJECTS
 from quiz_llm import OllamaQuizEvaluator
 
 
@@ -13,13 +12,13 @@ def main():
     parser = argparse.ArgumentParser()
     parser.add_argument('--output', help='Ruta opcional para guardar el registro JSON')
     args = parser.parse_args()
-    questions = {}
-    for subject, levels in BANK.items():
-        for entries in levels:
-            for prompt, answer, distractors, explanation in entries:
-                questions[prompt] = {'prompt': prompt, 'answer': answer, 'explanation': explanation,
-                                     'options': [answer, *distractors], 'subject': SUBJECTS[subject]}
+    fixture_path = Path(__file__).resolve().parents[1] / 'tests' / 'fixtures' / 'semantic_questions.json'
+    questions = {row['prompt']: {**row, 'subject': SUBJECTS[row['subject']]}
+                 for row in json.loads(fixture_path.read_text(encoding='utf-8'))}
     plant = questions['¿Qué necesita una planta para crecer?']
+    lungs = questions['¿Con qué órganos respiramos las personas?']
+    heart = questions['¿Qué órgano bombea la sangre?']
+    ecosystem = questions['¿Qué es un ecosistema?']
     sun = questions['¿Qué nos da luz y calor durante el día?']
     sun['options'] = ['Una piedra', 'La Luna', 'El Sol', 'Una nube']
     math = {'prompt': 'Tienes 2 lápices y te regalan 2 más. ¿Cuántos tienes?', 'answer': '4',
@@ -38,6 +37,13 @@ def main():
         ('parafrasis_sol', sun, 'Yo pienso que es esa estrella amarilla que vemos en el cielo de día.', 'correct', []),
         ('letra_en_frase', sun, 'Me parece que la opción C, porque calienta en el día.', 'correct', []),
         ('numero_en_explicacion', math, 'Pues creo que son cuatro porque ya tenía dos y me dieron otros dos.', 'correct', []),
+        ('palabra_mal_dicha', lungs, 'Creo que con los pulomones, por donde entra el aire.', 'correct', []),
+        ('otra_palabra_mal_dicha', heart, 'Yo creo que el corason, porque hace pum pum.', 'correct', []),
+        ('solo_riego', plant, 'Hay que regarla todos los días.', 'partial', []),
+        ('solo_sol', plant, 'Que le pegue el sol.', 'partial', []),
+        ('opcion_compuesta', plant, 'Elijo la opción A.', 'correct', []),
+        ('otro_tema_incompleto', ecosystem, 'Los animales y las plantas que viven ahí.', 'partial', []),
+        ('otro_tema_completo', ecosystem, 'Los animales, las plantas y el lugar donde viven.', 'correct', []),
         ('numero_corregido', math, 'Cuatro no, espera, creo que son cinco.', 'incorrect', []),
     ]
     evaluator = OllamaQuizEvaluator()
