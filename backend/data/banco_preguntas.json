@@ -11,7 +11,8 @@
       "Una piedra",
       "Una nube"
     ],
-    "explanation": "El Sol es una estrella que nos proporciona luz y calor."
+    "explanation": "El Sol es una estrella que nos proporciona luz y calor.",
+    "hint": "Piensa en lo que ves brillar en el cielo cuando es de día y sales a jugar al patio."
   },
   {
     "id": "cn-12-02",
@@ -25,7 +26,8 @@
       "Aceite",
       "Humo"
     ],
-    "explanation": "Al congelarse, el agua pasa de líquida a sólida y forma hielo."
+    "explanation": "Al congelarse, el agua pasa de líquida a sólida y forma hielo.",
+    "hint": "Imagina que metes un vaso con agua al congelador toda la noche. ¿Cómo lo encuentras en la mañana?"
   },
   {
     "id": "cn-12-03",
@@ -39,7 +41,8 @@
       "El gusto",
       "El olfato"
     ],
-    "explanation": "El oído nos permite escuchar los sonidos."
+    "explanation": "El oído nos permite escuchar los sonidos.",
+    "hint": "Piensa qué parte de tu cabeza usas cuando alguien te habla bajito y pones atención."
   },
   {
     "id": "cn-12-04",
@@ -53,7 +56,8 @@
       "Dejarla en el río",
       "Esconderla bajo una planta"
     ],
-    "explanation": "Poner la basura en el bote ayuda a mantener limpio nuestro entorno."
+    "explanation": "Poner la basura en el bote ayuda a mantener limpio nuestro entorno.",
+    "hint": "Piensa en el lugar del salón donde van los papelitos y las cáscaras para que todo quede limpio."
   },
   {
     "id": "cn-12-05",
@@ -67,7 +71,8 @@
       "Un cuaderno",
       "Una pelota"
     ],
-    "explanation": "El paraguas ayuda a evitar que la lluvia moje nuestro cuerpo."
+    "explanation": "El paraguas ayuda a evitar que la lluvia moje nuestro cuerpo.",
+    "hint": "Piensa en lo que abren las personas sobre su cabeza cuando empieza a llover en la calle."
   },
   {
     "id": "cn-34-01",
@@ -81,7 +86,8 @@
       "Germinación",
       "Digestión"
     ],
-    "explanation": "En la evaporación, el agua líquida se transforma en vapor."
+    "explanation": "En la evaporación, el agua líquida se transforma en vapor.",
+    "hint": "Piensa en lo que pasa con un charco cuando sale un sol muy fuerte: el agua se va al aire."
   },
   {
     "id": "cn-34-02",
@@ -95,7 +101,8 @@
       "Papel",
       "Plástico"
     ],
-    "explanation": "Los imanes atraen algunos metales, como el hierro."
+    "explanation": "Los imanes atraen algunos metales, como el hierro.",
+    "hint": "Los imanes atraen algunos metales. ¿Cuál de las opciones es un metal?"
   },
   {
     "id": "cn-34-03",
@@ -109,7 +116,8 @@
       "Vapor de agua",
       "Una gota de lluvia"
     ],
-    "explanation": "El hielo es agua en estado sólido."
+    "explanation": "El hielo es agua en estado sólido.",
+    "hint": "Sólido quiere decir duro, que conserva su forma y lo puedes agarrar con la mano."
   },
   {
     "id": "cn-34-04",
@@ -123,7 +131,8 @@
       "Brújula",
       "Balanza"
     ],
-    "explanation": "El termómetro mide la temperatura."
+    "explanation": "El termómetro mide la temperatura.",
+    "hint": "Piensa en lo que te ponen cuando tienes fiebre para saber si estás muy caliente."
   },
   {
     "id": "cn-34-05",
@@ -137,7 +146,8 @@
       "Lavar la banqueta con mucha agua",
       "Ignorar una fuga"
     ],
-    "explanation": "Cerrar la llave cuando no la necesitamos evita desperdiciar agua."
+    "explanation": "Cerrar la llave cuando no la necesitamos evita desperdiciar agua.",
+    "hint": "Piensa qué haces con la llave del lavabo mientras te tallas los dientes con el cepillo."
   },
   {
     "id": "cn-56-01",
@@ -151,7 +161,8 @@
       "Evaporación",
       "Germinación"
     ],
-    "explanation": "La rotación es el giro de la Tierra sobre su propio eje."
+    "explanation": "La rotación es el giro de la Tierra sobre su propio eje.",
+    "hint": "La Tierra gira como un trompo sobre sí misma; mientras gira, a veces nos toca el Sol y a veces no."
   },
   {
     "id": "cn-56-02",
@@ -165,7 +176,8 @@
       "Estar abierto",
       "Estar desconectado"
     ],
-    "explanation": "En un circuito cerrado, la corriente puede recorrer el camino completo."
+    "explanation": "En un circuito cerrado, la corriente puede recorrer el camino completo.",
+    "hint": "Para que la luz llegue al foco, la electricidad necesita un camino completo, sin interrupciones."
   },
   {
     "id": "cn-56-03",
@@ -179,7 +191,8 @@
       "El carbón",
       "El gas natural"
     ],
-    "explanation": "El viento se renueva de forma natural y puede usarse para generar electricidad."
+    "explanation": "El viento se renueva de forma natural y puede usarse para generar electricidad.",
+    "hint": "Renovable quiere decir que la naturaleza lo vuelve a producir y no se acaba."
   },
   {
     "id": "cn-56-04",
@@ -193,7 +206,8 @@
       "Fusión",
       "Congelación"
     ],
-    "explanation": "La condensación ocurre cuando el vapor de agua se transforma en líquido."
+    "explanation": "La condensación ocurre cuando el vapor de agua se transforma en líquido.",
+    "hint": "Piensa en las gotitas que aparecen en el espejo del baño después de bañarte con agua caliente."
   },
   {
     "id": "cn-56-05",
@@ -207,7 +221,8 @@
       "Agua y azúcar disuelta",
       "Dos cantidades de agua"
     ],
-    "explanation": "El filtro retiene los granos de arena y deja pasar el agua."
+    "explanation": "El filtro retiene los granos de arena y deja pasar el agua.",
+    "hint": "Un filtro deja pasar el líquido y atrapa los pedacitos que no se disuelven, como cuando se cuela algo."
   },
   {
     "id": "bio-12-01",
@@ -221,7 +236,8 @@
       "El fruto",
       "La semilla"
     ],
-    "explanation": "Las raíces absorben agua del suelo y ayudan a sujetar la planta."
+    "explanation": "Las raíces absorben agua del suelo y ayudan a sujetar la planta.",
+    "hint": "Piensa en la parte de la planta que vive escondida bajo la tierra."
   },
   {
     "id": "bio-12-02",
@@ -235,7 +251,8 @@
       "La gallina",
       "La rana"
     ],
-    "explanation": "El perro es un mamífero; las madres alimentan a sus crías con leche."
+    "explanation": "El perro es un mamífero; las madres alimentan a sus crías con leche.",
+    "hint": "Los mamíferos tienen pelo y sus crías toman leche de su mamá."
   },
   {
     "id": "bio-12-03",
@@ -249,7 +266,8 @@
       "Los dientes",
       "Los ojos"
     ],
-    "explanation": "Los pulmones participan en la respiración."
+    "explanation": "Los pulmones participan en la respiración.",
+    "hint": "Pon tu mano en el pecho y respira profundo: ¿qué se infla dentro de ti?"
   },
   {
     "id": "bio-12-04",
@@ -263,7 +281,8 @@
       "Solo piedras",
       "Solo pintura"
     ],
-    "explanation": "Las plantas necesitan agua y luz, además de aire y nutrientes."
+    "explanation": "Las plantas necesitan agua y luz, además de aire y nutrientes.",
+    "hint": "Piensa en lo que le das a una planta en su maceta y dónde la pones para que esté contenta."
   },
   {
     "id": "bio-12-05",
@@ -277,7 +296,8 @@
       "Comer tierra",
       "Compartir un cepillo de dientes"
     ],
-    "explanation": "Lavarse las manos ayuda a quitar suciedad y muchos microbios."
+    "explanation": "Lavarse las manos ayuda a quitar suciedad y muchos microbios.",
+    "hint": "Piensa en lo que hacemos con agua y jabón justo antes de sentarnos a comer."
   },
   {
     "id": "bio-34-01",
@@ -291,7 +311,8 @@
       "Omnívoro",
       "Invertebrado"
     ],
-    "explanation": "Un herbívoro se alimenta principalmente de plantas."
+    "explanation": "Un herbívoro se alimenta principalmente de plantas.",
+    "hint": "Piensa en una vaca que pasa el día comiendo pasto."
   },
   {
     "id": "bio-34-02",
@@ -305,7 +326,8 @@
       "Siempre alas",
       "Siempre antenas"
     ],
-    "explanation": "Los vertebrados tienen columna vertebral."
+    "explanation": "Los vertebrados tienen columna vertebral.",
+    "hint": "Vertebrado viene de vértebras, unos huesitos que tienes en la espalda."
   },
   {
     "id": "bio-34-03",
@@ -319,7 +341,8 @@
       "La lengua",
       "La piel"
     ],
-    "explanation": "El corazón impulsa la sangre por el cuerpo."
+    "explanation": "El corazón impulsa la sangre por el cuerpo.",
+    "hint": "Pon tu mano en el pecho, un poco a la izquierda. ¿Qué sientes latir?"
   },
   {
     "id": "bio-34-04",
@@ -333,7 +356,8 @@
       "8",
       "10"
     ],
-    "explanation": "Los insectos adultos tienen seis patas."
+    "explanation": "Los insectos adultos tienen seis patas.",
+    "hint": "Piensa en una hormiga o una mosca y cuenta cuántas patitas tiene de cada lado."
   },
   {
     "id": "bio-34-05",
@@ -347,7 +371,8 @@
       "Evaporación",
       "Rotación"
     ],
-    "explanation": "La germinación es el inicio del crecimiento de una planta desde su semilla."
+    "explanation": "La germinación es el inicio del crecimiento de una planta desde su semilla.",
+    "hint": "Es lo que pasa cuando pones un frijol en un algodón mojado y a los días le sale un brotecito."
   },
   {
     "id": "bio-56-01",
@@ -361,7 +386,8 @@
       "Un planeta",
       "Una nube"
     ],
-    "explanation": "La célula es la unidad básica de estructura y funcionamiento de los seres vivos."
+    "explanation": "La célula es la unidad básica de estructura y funcionamiento de los seres vivos.",
+    "hint": "Es algo tan pequeño que solo se ve con microscopio, y todos los seres vivos están hechos de muchas de ellas."
   },
   {
     "id": "bio-56-02",
@@ -375,7 +401,8 @@
       "Los conejos",
       "Las águilas"
     ],
-    "explanation": "Las plantas producen su alimento mediante la fotosíntesis."
+    "explanation": "Las plantas producen su alimento mediante la fotosíntesis.",
+    "hint": "Productor quiere decir que fabrica su propio alimento usando la luz del Sol."
   },
   {
     "id": "bio-56-03",
@@ -389,7 +416,8 @@
       "Boca",
       "Pulmones"
     ],
-    "explanation": "El intestino delgado absorbe la mayor parte de los nutrientes de los alimentos."
+    "explanation": "El intestino delgado absorbe la mayor parte de los nutrientes de los alimentos.",
+    "hint": "Piensa en el tubo muy largo y enrollado que hay en tu panza, después del estómago."
   },
   {
     "id": "bio-56-04",
@@ -403,7 +431,8 @@
       "Hidrógeno",
       "Metano"
     ],
-    "explanation": "Nuestro cuerpo utiliza oxígeno para obtener energía de los nutrientes."
+    "explanation": "Nuestro cuerpo utiliza oxígeno para obtener energía de los nutrientes.",
+    "hint": "Es el gas que tomamos del aire cada vez que respiramos y que las plantas sueltan."
   },
   {
     "id": "bio-56-05",
@@ -417,7 +446,8 @@
       "Solo agua",
       "Solo piedras"
     ],
-    "explanation": "Un ecosistema incluye seres vivos, su ambiente y las relaciones entre ellos."
+    "explanation": "Un ecosistema incluye seres vivos, su ambiente y las relaciones entre ellos.",
+    "hint": "Piensa en un bosque: ahí hay animales, plantas, agua, tierra y aire, y todos se relacionan."
   },
   {
     "id": "geo-12-01",
@@ -431,7 +461,8 @@
       "Brasil",
       "España"
     ],
-    "explanation": "Mexicali es una ciudad de México."
+    "explanation": "Mexicali es una ciudad de México.",
+    "hint": "Mexicali es la ciudad donde está la UABC. ¿En qué país vivimos?"
   },
   {
     "id": "geo-12-02",
@@ -445,7 +476,8 @@
       "Una almohada",
       "Un zapato"
     ],
-    "explanation": "Un mapa representa lugares y nos ayuda a orientarnos."
+    "explanation": "Un mapa representa lugares y nos ayuda a orientarnos.",
+    "hint": "Piensa en el papel con dibujos de calles y ríos que usan los exploradores para no perderse."
   },
   {
     "id": "geo-12-03",
@@ -459,7 +491,8 @@
       "Un desierto",
       "Una escuela"
     ],
-    "explanation": "El mar contiene agua salada."
+    "explanation": "El mar contiene agua salada.",
+    "hint": "Piensa en el lugar con olas y playa donde el agua sabe saladita."
   },
   {
     "id": "geo-12-04",
@@ -473,7 +506,8 @@
       "Grande",
       "Rápido"
     ],
-    "explanation": "Los puntos cardinales principales son norte, sur, este y oeste."
+    "explanation": "Los puntos cardinales principales son norte, sur, este y oeste.",
+    "hint": "Los puntos cardinales nos dicen hacia dónde ir; son cuatro direcciones."
   },
   {
     "id": "geo-12-05",
@@ -487,7 +521,8 @@
       "Júpiter",
       "Venus"
     ],
-    "explanation": "La Tierra es el planeta donde vivimos."
+    "explanation": "La Tierra es el planeta donde vivimos.",
+    "hint": "Es el planeta azul donde está tu casa, tu escuela y todos nosotros."
   },
   {
     "id": "geo-34-01",
@@ -501,7 +536,8 @@
       "Guadalajara",
       "Monterrey"
     ],
-    "explanation": "La capital de nuestro país es Ciudad de México."
+    "explanation": "La capital de nuestro país es Ciudad de México.",
+    "hint": "Es la ciudad más grande del país, donde está el Zócalo y el Palacio Nacional."
   },
   {
     "id": "geo-34-02",
@@ -515,7 +551,8 @@
       "África",
       "Oceanía"
     ],
-    "explanation": "México se encuentra en América."
+    "explanation": "México se encuentra en América.",
+    "hint": "Es el continente donde también están Estados Unidos, Canadá y Brasil."
   },
   {
     "id": "geo-34-03",
@@ -529,7 +566,8 @@
       "Ensenada",
       "La Paz"
     ],
-    "explanation": "Mexicali es la capital del estado de Baja California."
+    "explanation": "Mexicali es la capital del estado de Baja California.",
+    "hint": "Es la ciudad donde estamos ahora, la que tiene mucho calor en verano."
   },
   {
     "id": "geo-34-04",
@@ -543,7 +581,8 @@
       "Índico",
       "Ártico"
     ],
-    "explanation": "El océano Pacífico se encuentra al oeste de México."
+    "explanation": "El océano Pacífico se encuentra al oeste de México.",
+    "hint": "Es el océano más grande del mundo y está del lado de Ensenada y Tijuana."
   },
   {
     "id": "geo-34-05",
@@ -557,7 +596,8 @@
       "Balanza",
       "Cronómetro"
     ],
-    "explanation": "La brújula ayuda a orientarnos e identificar direcciones."
+    "explanation": "La brújula ayuda a orientarnos e identificar direcciones.",
+    "hint": "Es un aparato con una aguja magnética que siempre apunta hacia el mismo lado."
   },
   {
     "id": "geo-56-01",
@@ -571,7 +611,8 @@
       "Trópico de Cáncer",
       "Círculo polar ártico"
     ],
-    "explanation": "El ecuador divide la Tierra en hemisferios norte y sur."
+    "explanation": "El ecuador divide la Tierra en hemisferios norte y sur.",
+    "hint": "Es la línea que pasa justo por la mitad de la Tierra, como un cinturón."
   },
   {
     "id": "geo-56-02",
@@ -585,7 +626,8 @@
       "Altitud",
       "Temperatura"
     ],
-    "explanation": "La latitud mide la posición al norte o al sur del ecuador."
+    "explanation": "La latitud mide la posición al norte o al sur del ecuador.",
+    "hint": "Piensa en las líneas que van de lado a lado en un globo terráqueo, paralelas a la mitad de la Tierra."
   },
   {
     "id": "geo-56-03",
@@ -599,7 +641,8 @@
       "Solo la hora actual",
       "Solo el nombre de una ciudad"
     ],
-    "explanation": "El clima describe patrones del tiempo observados durante muchos años."
+    "explanation": "El clima describe patrones del tiempo observados durante muchos años.",
+    "hint": "No es lo que pasa solo hoy: piensa en cómo suele ser el lugar año tras año."
   },
   {
     "id": "geo-56-04",
@@ -613,7 +656,8 @@
       "La cantidad de árboles",
       "La edad del mapa"
     ],
-    "explanation": "La escala relaciona una distancia del mapa con la distancia real."
+    "explanation": "La escala relaciona una distancia del mapa con la distancia real.",
+    "hint": "Un mapa es mucho más pequeño que el lugar real; la escala nos dice cuánto lo achicaron."
   },
   {
     "id": "geo-56-05",
@@ -627,7 +671,8 @@
       "Medir una montaña",
       "Cambiar de ropa"
     ],
-    "explanation": "La migración consiste en cambiar de lugar de residencia, dentro de un país o hacia otro."
+    "explanation": "La migración consiste en cambiar de lugar de residencia, dentro de un país o hacia otro.",
+    "hint": "Piensa en una familia que se va de una ciudad a otra para quedarse a vivir allá."
   },
   {
     "id": "esp-12-01",
@@ -641,7 +686,8 @@
       "P",
       "S"
     ],
-    "explanation": "La palabra casa empieza con la letra c."
+    "explanation": "La palabra casa empieza con la letra c.",
+    "hint": "Di la palabra despacito y escucha el primer sonido: ca, ca, ca."
   },
   {
     "id": "esp-12-02",
@@ -655,7 +701,8 @@
       "D",
       "F"
     ],
-    "explanation": "Las vocales son a, e, i, o y u."
+    "explanation": "Las vocales son a, e, i, o y u.",
+    "hint": "Las vocales son las letras que puedes cantar solas, como en la canción de a, e, i, o, u."
   },
   {
     "id": "esp-12-03",
@@ -669,7 +716,8 @@
       "3",
       "4"
     ],
-    "explanation": "Mesa tiene dos sílabas: me y sa."
+    "explanation": "Mesa tiene dos sílabas: me y sa.",
+    "hint": "Di la palabra despacio y da un aplauso por cada golpe de voz."
   },
   {
     "id": "esp-12-04",
@@ -683,7 +731,8 @@
       "Gigante",
       "Amplio"
     ],
-    "explanation": "Grande y pequeño tienen significados opuestos."
+    "explanation": "Grande y pequeño tienen significados opuestos.",
+    "hint": "Piensa en un elefante y en una hormiga. ¿Cómo es la hormiga?"
   },
   {
     "id": "esp-12-05",
@@ -697,7 +746,8 @@
       "Signo de suma",
       "Signo de igual"
     ],
-    "explanation": "El punto marca el final de una oración que afirma algo."
+    "explanation": "El punto marca el final de una oración que afirma algo.",
+    "hint": "Es el signo más chiquito: una bolita al final de lo que escribimos."
   },
   {
     "id": "esp-34-01",
@@ -711,7 +761,8 @@
       "La",
       "Una"
     ],
-    "explanation": "Corre es el verbo porque expresa la acción."
+    "explanation": "Corre es el verbo porque expresa la acción.",
+    "hint": "El verbo es la palabra que dice qué acción se hace."
   },
   {
     "id": "esp-34-02",
@@ -725,7 +776,8 @@
       "Enojado",
       "Cansado"
     ],
-    "explanation": "Feliz y contento tienen significados semejantes."
+    "explanation": "Feliz y contento tienen significados semejantes.",
+    "hint": "Un sinónimo es una palabra que significa casi lo mismo. ¿Cómo te sientes cuando estás feliz?"
   },
   {
     "id": "esp-34-03",
@@ -739,7 +791,8 @@
       "Lapiz",
       "Lápiza"
     ],
-    "explanation": "El plural de lápiz se escribe lápices."
+    "explanation": "El plural de lápiz se escribe lápices.",
+    "hint": "Plural quiere decir más de uno. Si tienes muchos en tu estuche, ¿cómo los nombras?"
   },
   {
     "id": "esp-34-04",
@@ -753,7 +806,8 @@
       "Frase",
       "Una"
     ],
-    "explanation": "Roja es un adjetivo porque describe una característica de la pelota."
+    "explanation": "Roja es un adjetivo porque describe una característica de la pelota.",
+    "hint": "La palabra que describe nos dice cómo es algo, por ejemplo su color."
   },
   {
     "id": "esp-34-05",
@@ -767,7 +821,8 @@
       "Paréntesis siempre",
       "Signos de suma"
     ],
-    "explanation": "En español usamos un signo de interrogación al inicio y otro al final de la pregunta."
+    "explanation": "En español usamos un signo de interrogación al inicio y otro al final de la pregunta.",
+    "hint": "Mira la pregunta escrita en la pantalla: tiene unos ganchitos al principio y al final. ¿Cómo se llaman?"
   },
   {
     "id": "esp-56-01",
@@ -781,7 +836,8 @@
       "Un cuento",
       "Un"
     ],
-    "explanation": "María es el sujeto porque es quien realiza la acción."
+    "explanation": "María es el sujeto porque es quien realiza la acción.",
+    "hint": "El sujeto es quien hace la acción. Pregúntate: ¿quién lee?"
   },
   {
     "id": "esp-56-02",
@@ -795,7 +851,8 @@
       "Árbol",
       "Pájaro"
     ],
-    "explanation": "Café es aguda: su sílaba más fuerte es la última y lleva tilde porque termina en vocal."
+    "explanation": "Café es aguda: su sílaba más fuerte es la última y lleva tilde porque termina en vocal.",
+    "hint": "Una palabra aguda suena más fuerte en la última parte. Dilas en voz alta y fíjate dónde cae la fuerza."
   },
   {
     "id": "esp-56-03",
@@ -809,7 +866,8 @@
       "Lápiz",
       "Niño"
     ],
-    "explanation": "Rebaño nombra un conjunto de animales, por eso es un sustantivo colectivo."
+    "explanation": "Rebaño nombra un conjunto de animales, por eso es un sustantivo colectivo.",
+    "hint": "Un sustantivo colectivo nombra a un grupo de muchos, aunque esté en singular."
   },
   {
     "id": "esp-56-04",
@@ -823,7 +881,8 @@
       "Ellos",
       "Yo"
     ],
-    "explanation": "Ella es un pronombre que puede sustituir a Ana en esa oración."
+    "explanation": "Ella es un pronombre que puede sustituir a Ana en esa oración.",
+    "hint": "Necesitas una palabra que diga quién canta sin decir su nombre, y Ana es una sola niña."
   },
   {
     "id": "esp-56-05",
@@ -837,7 +896,8 @@
       "Un horario",
       "Una tabla de números"
     ],
-    "explanation": "Un cuento narra una historia que tiene personajes y acontecimientos."
+    "explanation": "Un cuento narra una historia que tiene personajes y acontecimientos.",
+    "hint": "Piensa en lo que te leen antes de dormir, con personajes, un problema y un final."
   },
   {
     "id": "mat-1-01",
@@ -851,7 +911,8 @@
       "0",
       "5"
     ],
-    "explanation": "Restamos 2 a 5 y nos quedan 3."
+    "explanation": "Restamos 2 a 5 y nos quedan 3.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
   },
   {
     "id": "mat-1-02",
@@ -865,7 +926,8 @@
       "8",
       "5"
     ],
-    "explanation": "Sumamos 2 más 5 y obtenemos 7."
+    "explanation": "Sumamos 2 más 5 y obtenemos 7.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
   },
   {
     "id": "mat-1-03",
@@ -879,7 +941,8 @@
       "5",
       "10"
     ],
-    "explanation": "Sumamos 3 más 4 y obtenemos 7."
+    "explanation": "Sumamos 3 más 4 y obtenemos 7.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
   },
   {
     "id": "mat-1-04",
@@ -893,7 +956,8 @@
       "4",
       "2"
     ],
-    "explanation": "Restamos 1 a 4 y nos quedan 3."
+    "explanation": "Restamos 1 a 4 y nos quedan 3.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
   },
   {
     "id": "mat-1-05",
@@ -907,7 +971,8 @@
       "0",
       "4"
     ],
-    "explanation": "Restamos 2 a 4 y nos quedan 2."
+    "explanation": "Restamos 2 a 4 y nos quedan 2.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
   },
   {
     "id": "mat-1-06",
@@ -921,7 +986,8 @@
       "10",
       "9"
     ],
-    "explanation": "Sumamos 4 más 3 y obtenemos 7."
+    "explanation": "Sumamos 4 más 3 y obtenemos 7.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
   },
   {
     "id": "mat-2-01",
@@ -935,7 +1001,8 @@
       "10",
       "15"
     ],
-    "explanation": "Restamos 13 a 25 y nos quedan 12."
+    "explanation": "Restamos 13 a 25 y nos quedan 12.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
   },
   {
     "id": "mat-2-02",
@@ -949,7 +1016,8 @@
       "40",
       "38"
     ],
-    "explanation": "Sumamos 22 más 13 y obtenemos 35."
+    "explanation": "Sumamos 22 más 13 y obtenemos 35.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
   },
   {
     "id": "mat-2-03",
@@ -963,7 +1031,8 @@
       "20",
       "16"
     ],
-    "explanation": "Restamos 2 a 17 y nos quedan 15."
+    "explanation": "Restamos 2 a 17 y nos quedan 15.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
   },
   {
     "id": "mat-2-04",
@@ -977,7 +1046,8 @@
       "42",
       "40"
     ],
-    "explanation": "Sumamos 21 más 20 y obtenemos 41."
+    "explanation": "Sumamos 21 más 20 y obtenemos 41.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
   },
   {
     "id": "mat-2-05",
@@ -991,7 +1061,8 @@
       "14",
       "8"
     ],
-    "explanation": "Restamos 5 a 16 y nos quedan 11."
+    "explanation": "Restamos 5 a 16 y nos quedan 11.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
   },
   {
     "id": "mat-2-06",
@@ -1005,7 +1076,8 @@
       "14",
       "12"
     ],
-    "explanation": "Restamos 8 a 17 y nos quedan 9."
+    "explanation": "Restamos 8 a 17 y nos quedan 9.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
   },
   {
     "id": "mat-3-01",
@@ -1019,7 +1091,8 @@
       "12",
       "13"
     ],
-    "explanation": "Multiplicamos 2 por 5 y obtenemos 10."
+    "explanation": "Multiplicamos 2 por 5 y obtenemos 10.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
   },
   {
     "id": "mat-3-02",
@@ -1033,7 +1106,8 @@
       "53",
       "50"
     ],
-    "explanation": "Multiplicamos 6 por 8 y obtenemos 48."
+    "explanation": "Multiplicamos 6 por 8 y obtenemos 48.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
   },
   {
     "id": "mat-3-03",
@@ -1047,7 +1121,8 @@
       "15",
       "19"
     ],
-    "explanation": "Multiplicamos 3 por 6 y obtenemos 18."
+    "explanation": "Multiplicamos 3 por 6 y obtenemos 18.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
   },
   {
     "id": "mat-3-04",
@@ -1061,7 +1136,8 @@
       "6",
       "5"
     ],
-    "explanation": "Dividimos 36 entre 9 y cada niño recibe 4."
+    "explanation": "Dividimos 36 entre 9 y cada niño recibe 4.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
   },
   {
     "id": "mat-3-05",
@@ -1075,7 +1151,8 @@
       "11",
       "17"
     ],
-    "explanation": "Multiplicamos 6 por 2 y obtenemos 12."
+    "explanation": "Multiplicamos 6 por 2 y obtenemos 12.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
   },
   {
     "id": "mat-3-06",
@@ -1089,7 +1166,8 @@
       "1",
       "2"
     ],
-    "explanation": "Dividimos 20 entre 5 y cada niño recibe 4."
+    "explanation": "Dividimos 20 entre 5 y cada niño recibe 4.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
   },
   {
     "id": "mat-4-01",
@@ -1103,7 +1181,8 @@
       "21",
       "29"
     ],
-    "explanation": "Multiplicamos 3 por 8 y obtenemos 24."
+    "explanation": "Multiplicamos 3 por 8 y obtenemos 24.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
   },
   {
     "id": "mat-4-02",
@@ -1117,7 +1196,8 @@
       "18",
       "24"
     ],
-    "explanation": "Multiplicamos 3 por 7 y obtenemos 21."
+    "explanation": "Multiplicamos 3 por 7 y obtenemos 21.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
   },
   {
     "id": "mat-4-03",
@@ -1131,7 +1211,8 @@
       "105",
       "106"
     ],
-    "explanation": "Multiplicamos 12 por 9 y obtenemos 108."
+    "explanation": "Multiplicamos 12 por 9 y obtenemos 108.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
   },
   {
     "id": "mat-4-04",
@@ -1145,7 +1226,8 @@
       "50",
       "53"
     ],
-    "explanation": "Multiplicamos 12 por 4 y obtenemos 48."
+    "explanation": "Multiplicamos 12 por 4 y obtenemos 48.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
   },
   {
     "id": "mat-4-05",
@@ -1159,7 +1241,8 @@
       "3",
       "5"
     ],
-    "explanation": "Dividimos 48 entre 8 y cada niño recibe 6."
+    "explanation": "Dividimos 48 entre 8 y cada niño recibe 6.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
   },
   {
     "id": "mat-4-06",
@@ -1173,7 +1256,8 @@
       "34",
       "40"
     ],
-    "explanation": "Multiplicamos 7 por 5 y obtenemos 35."
+    "explanation": "Multiplicamos 7 por 5 y obtenemos 35.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
   },
   {
     "id": "mat-5-01",
@@ -1187,7 +1271,8 @@
       "5",
       "9"
     ],
-    "explanation": "Dividimos 18 entre 3 y obtenemos 6."
+    "explanation": "Dividimos 18 entre 3 y obtenemos 6.",
+    "hint": "Imagina que partes esa cantidad en tres partes iguales. ¿Cuánto queda en una parte?"
   },
   {
     "id": "mat-5-02",
@@ -1201,7 +1286,8 @@
       "11",
       "12"
     ],
-    "explanation": "Dividimos 36 entre 4 y obtenemos 9."
+    "explanation": "Dividimos 36 entre 4 y obtenemos 9.",
+    "hint": "Imagina que partes esa cantidad en cuatro partes iguales. ¿Cuánto queda en una parte?"
   },
   {
     "id": "mat-5-03",
@@ -1215,7 +1301,8 @@
       "5",
       "7"
     ],
-    "explanation": "Dividimos 8 entre 4 y obtenemos 2."
+    "explanation": "Dividimos 8 entre 4 y obtenemos 2.",
+    "hint": "Imagina que partes esa cantidad en cuatro partes iguales. ¿Cuánto queda en una parte?"
   },
   {
     "id": "mat-5-04",
@@ -1229,7 +1316,8 @@
       "15",
       "7"
     ],
-    "explanation": "Dividimos 100 entre 10 y obtenemos 10."
+    "explanation": "Dividimos 100 entre 10 y obtenemos 10.",
+    "hint": "Imagina que partes esa cantidad en diez partes iguales. ¿Cuánto queda en una parte?"
   },
   {
     "id": "mat-5-05",
@@ -1243,7 +1331,8 @@
       "8",
       "7"
     ],
-    "explanation": "Dividimos 40 entre 4 y obtenemos 10."
+    "explanation": "Dividimos 40 entre 4 y obtenemos 10.",
+    "hint": "Imagina que partes esa cantidad en cuatro partes iguales. ¿Cuánto queda en una parte?"
   },
   {
     "id": "mat-5-06",
@@ -1257,7 +1346,8 @@
       "4",
       "9"
     ],
-    "explanation": "Dividimos 12 entre 2 y obtenemos 6."
+    "explanation": "Dividimos 12 entre 2 y obtenemos 6.",
+    "hint": "Imagina que partes esa cantidad en dos partes iguales. ¿Cuánto queda en una parte?"
   },
   {
     "id": "mat-6-01",
@@ -1271,7 +1361,8 @@
       "13",
       "11"
     ],
-    "explanation": "El 50 por ciento de 20 equivale a 10."
+    "explanation": "El 50 por ciento de 20 equivale a 10.",
+    "hint": "El 50 por ciento es la mitad de algo."
   },
   {
     "id": "mat-6-02",
@@ -1285,7 +1376,8 @@
       "31",
       "33"
     ],
-    "explanation": "El 50 por ciento de 60 equivale a 30."
+    "explanation": "El 50 por ciento de 60 equivale a 30.",
+    "hint": "El 50 por ciento es la mitad de algo."
   },
   {
     "id": "mat-6-03",
@@ -1299,7 +1391,8 @@
       "8",
       "9"
     ],
-    "explanation": "El 25 por ciento de 40 equivale a 10."
+    "explanation": "El 25 por ciento de 40 equivale a 10.",
+    "hint": "El 25 por ciento es la cuarta parte: parte la cantidad en cuatro partes iguales."
   },
   {
     "id": "mat-6-04",
@@ -1313,7 +1406,8 @@
       "5",
       "3"
     ],
-    "explanation": "El 10 por ciento de 60 equivale a 6."
+    "explanation": "El 10 por ciento de 60 equivale a 6.",
+    "hint": "El 10 por ciento es la décima parte: parte la cantidad en diez partes iguales."
   },
   {
     "id": "mat-6-05",
@@ -1327,7 +1421,8 @@
       "41",
       "42"
     ],
-    "explanation": "El 50 por ciento de 80 equivale a 40."
+    "explanation": "El 50 por ciento de 80 equivale a 40.",
+    "hint": "El 50 por ciento es la mitad de algo."
   },
   {
     "id": "mat-6-06",
@@ -1341,6 +1436,3037 @@
       "10",
       "5"
     ],
-    "explanation": "El 10 por ciento de 80 equivale a 8."
+    "explanation": "El 10 por ciento de 80 equivale a 8.",
+    "hint": "El 10 por ciento es la décima parte: parte la cantidad en diez partes iguales."
+  },
+  {
+    "id": "cn-12-06",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué necesitamos encender para ver en un cuarto oscuro?",
+    "answer": "La luz",
+    "distractors": [
+      "El agua",
+      "La almohada",
+      "El jabón"
+    ],
+    "explanation": "Sin luz no podemos ver; por eso prendemos un foco o una lámpara.",
+    "hint": "Piensa en lo que haces con el apagador cuando entras de noche a tu cuarto."
+  },
+  {
+    "id": "cn-12-07",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué estado tiene el agua que tomamos de un vaso?",
+    "answer": "Líquido",
+    "distractors": [
+      "Sólido",
+      "Gaseoso",
+      "Polvo"
+    ],
+    "explanation": "El agua del vaso es líquida: toma la forma del recipiente y se puede servir.",
+    "hint": "Piensa en cómo se mueve el agua cuando la sirves: corre y toma la forma del vaso."
+  },
+  {
+    "id": "cn-12-08",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué sentido usamos para oler una flor?",
+    "answer": "El olfato",
+    "distractors": [
+      "El oído",
+      "La vista",
+      "El tacto"
+    ],
+    "explanation": "Con el olfato, gracias a la nariz, percibimos los olores.",
+    "hint": "Piensa en la parte de tu cara que acercas a la flor para saber a qué huele."
+  },
+  {
+    "id": "cn-12-09",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué pasa con un helado si lo dejamos al sol?",
+    "answer": "Se derrite",
+    "distractors": [
+      "Se congela",
+      "Se hace más grande",
+      "Se vuelve piedra"
+    ],
+    "explanation": "El calor del sol hace que el helado pase de sólido a líquido.",
+    "hint": "Piensa en lo que le pasa a tu helado en un día de mucho calor si no te lo comes rápido."
+  },
+  {
+    "id": "cn-12-10",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué usamos para protegernos del sol en la piel?",
+    "answer": "Bloqueador solar",
+    "distractors": [
+      "Pasta de dientes",
+      "Pegamento",
+      "Agua de limón"
+    ],
+    "explanation": "El bloqueador solar protege la piel de los rayos del sol.",
+    "hint": "Piensa en la crema que te pones antes de ir a la playa o a la alberca."
+  },
+  {
+    "id": "cn-12-11",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué objeto flota en el agua?",
+    "answer": "Una pelota de plástico",
+    "distractors": [
+      "Una piedra",
+      "Una llave de metal",
+      "Una canica"
+    ],
+    "explanation": "La pelota de plástico es ligera y tiene aire por dentro, por eso flota.",
+    "hint": "Piensa en los juguetes que se quedan arriba del agua cuando juegas en la alberca."
+  },
+  {
+    "id": "cn-12-12",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿De dónde sale la lluvia?",
+    "answer": "De las nubes",
+    "distractors": [
+      "De los árboles",
+      "De las montañas",
+      "De las casas"
+    ],
+    "explanation": "El agua se junta en las nubes y cae como lluvia.",
+    "hint": "Mira al cielo cuando va a llover: ¿qué se pone gris allá arriba?"
+  },
+  {
+    "id": "cn-12-13",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué necesitamos para escuchar música en una bocina?",
+    "answer": "Electricidad",
+    "distractors": [
+      "Arena",
+      "Hielo",
+      "Hojas secas"
+    ],
+    "explanation": "La bocina funciona con electricidad, ya sea de un enchufe o de una pila.",
+    "hint": "Piensa en lo que pasa con la bocina si se le acaba la pila o la desconectas."
+  },
+  {
+    "id": "cn-12-14",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué parte del día es más fría normalmente?",
+    "answer": "La noche",
+    "distractors": [
+      "El mediodía",
+      "La tarde soleada",
+      "La hora del recreo"
+    ],
+    "explanation": "En la noche no hay sol que caliente, por eso suele hacer más frío.",
+    "hint": "Piensa en cuándo necesitas taparte con una cobija porque ya no hay sol."
+  },
+  {
+    "id": "cn-12-15",
+    "subject": "ciencias_naturales",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué material es transparente?",
+    "answer": "El vidrio",
+    "distractors": [
+      "La madera",
+      "El cartón",
+      "La piedra"
+    ],
+    "explanation": "El vidrio deja pasar la luz y podemos ver a través de él.",
+    "hint": "Piensa en el material de las ventanas por donde ves la calle."
+  },
+  {
+    "id": "cn-34-06",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cómo se llama el cambio del agua de sólido a líquido?",
+    "answer": "Fusión",
+    "distractors": [
+      "Evaporación",
+      "Condensación",
+      "Germinación"
+    ],
+    "explanation": "En la fusión, el hielo recibe calor y se convierte en agua líquida.",
+    "hint": "Piensa en lo que le pasa a un cubo de hielo cuando lo sacas del congelador."
+  },
+  {
+    "id": "cn-34-07",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué fuerza hace que los objetos caigan al suelo?",
+    "answer": "La gravedad",
+    "distractors": [
+      "El viento",
+      "El magnetismo",
+      "La luz"
+    ],
+    "explanation": "La gravedad de la Tierra atrae a los objetos hacia el suelo.",
+    "hint": "Piensa en por qué una pelota siempre vuelve a bajar cuando la avientas hacia arriba."
+  },
+  {
+    "id": "cn-34-08",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué tipo de energía produce un panel solar?",
+    "answer": "Eléctrica",
+    "distractors": [
+      "Sonora",
+      "Química",
+      "Muscular"
+    ],
+    "explanation": "Los paneles solares transforman la luz del sol en electricidad.",
+    "hint": "Piensa en para qué se ponen paneles en los techos: para prender focos y aparatos."
+  },
+  {
+    "id": "cn-34-09",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué material conduce bien la electricidad?",
+    "answer": "El cobre",
+    "distractors": [
+      "La madera",
+      "El plástico",
+      "El hule"
+    ],
+    "explanation": "El cobre es un metal que deja pasar la electricidad; por eso se usa en los cables.",
+    "hint": "Piensa en el metal rojizo que va por dentro de los cables de la luz."
+  },
+  {
+    "id": "cn-34-10",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué es una mezcla?",
+    "answer": "La unión de dos o más materiales",
+    "distractors": [
+      "Un solo material puro",
+      "Un tipo de animal",
+      "Un instrumento de medición"
+    ],
+    "explanation": "En una mezcla se juntan dos o más materiales, como agua con arena.",
+    "hint": "Piensa en lo que haces cuando pones leche y cereal en el mismo plato."
+  },
+  {
+    "id": "cn-34-11",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué produce las sombras?",
+    "answer": "Un objeto que tapa la luz",
+    "distractors": [
+      "El agua que corre",
+      "El sonido fuerte",
+      "El aire frío"
+    ],
+    "explanation": "Cuando un objeto bloquea la luz, detrás de él se forma una sombra.",
+    "hint": "Piensa en lo que pasa cuando pones tu mano frente a una lámpara."
+  },
+  {
+    "id": "cn-34-12",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué hace un termómetro cuando hace más calor?",
+    "answer": "Marca una temperatura más alta",
+    "distractors": [
+      "Se apaga",
+      "Marca una temperatura más baja",
+      "Se rompe siempre"
+    ],
+    "explanation": "Con más calor, el termómetro sube y marca más grados.",
+    "hint": "Piensa en qué pasa con el número de grados en un día muy caluroso."
+  },
+  {
+    "id": "cn-34-13",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué cambio es reversible?",
+    "answer": "Congelar agua",
+    "distractors": [
+      "Quemar un papel",
+      "Cocer un huevo",
+      "Hornear un pastel"
+    ],
+    "explanation": "El agua congelada puede volver a ser líquida; por eso es un cambio reversible.",
+    "hint": "Reversible quiere decir que se puede regresar a como estaba antes."
+  },
+  {
+    "id": "cn-34-14",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué transmite el sonido hasta nuestros oídos en un salón?",
+    "answer": "El aire",
+    "distractors": [
+      "La luz",
+      "El vacío",
+      "La sombra"
+    ],
+    "explanation": "El sonido viaja como vibraciones a través del aire.",
+    "hint": "Piensa en lo que está entre tú y la maestra cuando te habla, aunque no lo veas."
+  },
+  {
+    "id": "cn-34-15",
+    "subject": "ciencias_naturales",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué recurso natural no se renueva rápido?",
+    "answer": "El petróleo",
+    "distractors": [
+      "La luz del sol",
+      "El viento",
+      "El agua de lluvia"
+    ],
+    "explanation": "El petróleo tardó millones de años en formarse y se puede acabar.",
+    "hint": "Piensa en algo que sacamos de debajo de la tierra para hacer gasolina."
+  },
+  {
+    "id": "cn-56-06",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué movimiento de la Tierra produce las estaciones del año?",
+    "answer": "Traslación",
+    "distractors": [
+      "Rotación",
+      "Evaporación",
+      "Fusión"
+    ],
+    "explanation": "La traslación es la vuelta de la Tierra alrededor del Sol, que dura un año.",
+    "hint": "Piensa en el viaje largo que hace la Tierra alrededor del Sol y que tarda 365 días."
+  },
+  {
+    "id": "cn-56-07",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cuál es el planeta más cercano al Sol?",
+    "answer": "Mercurio",
+    "distractors": [
+      "Marte",
+      "Júpiter",
+      "Neptuno"
+    ],
+    "explanation": "Mercurio es el primer planeta del sistema solar, el más cercano al Sol.",
+    "hint": "Es el planeta más pequeño y el primero de la fila contando desde el Sol."
+  },
+  {
+    "id": "cn-56-08",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué tipo de energía tiene una pila?",
+    "answer": "Química",
+    "distractors": [
+      "Solar",
+      "Eólica",
+      "Sonora"
+    ],
+    "explanation": "La pila guarda energía química que se transforma en electricidad.",
+    "hint": "Por dentro de la pila hay sustancias que reaccionan entre sí para dar energía."
+  },
+  {
+    "id": "cn-56-09",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué pasa con la mayoría de los materiales cuando se calientan?",
+    "answer": "Se dilatan",
+    "distractors": [
+      "Se encogen siempre",
+      "Desaparecen",
+      "Se vuelven imanes"
+    ],
+    "explanation": "Al calentarse, la mayoría de los materiales aumentan un poco su tamaño.",
+    "hint": "Piensa en por qué los puentes tienen pequeñas separaciones: en el calor crecen un poquito."
+  },
+  {
+    "id": "cn-56-10",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué gas liberan las plantas durante la fotosíntesis?",
+    "answer": "Oxígeno",
+    "distractors": [
+      "Dióxido de carbono",
+      "Helio",
+      "Gas natural"
+    ],
+    "explanation": "Las plantas usan la luz para hacer su alimento y liberan oxígeno al aire.",
+    "hint": "Es el gas que nosotros necesitamos para respirar."
+  },
+  {
+    "id": "cn-56-11",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué instrumento permite observar objetos muy lejanos en el cielo?",
+    "answer": "Telescopio",
+    "distractors": [
+      "Microscopio",
+      "Termómetro",
+      "Báscula"
+    ],
+    "explanation": "El telescopio acerca la imagen de estrellas, planetas y la Luna.",
+    "hint": "Lo usan los astrónomos para mirar las estrellas desde un observatorio."
+  },
+  {
+    "id": "cn-56-12",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué es un circuito eléctrico en serie?",
+    "answer": "Un solo camino para la corriente",
+    "distractors": [
+      "Varios caminos separados",
+      "Un cable sin pila",
+      "Un foco sin cables"
+    ],
+    "explanation": "En serie, la corriente pasa por un solo camino; si un foco se funde, se apagan todos.",
+    "hint": "Piensa en una fila de foquitos navideños donde, si uno falla, se apagan todos."
+  },
+  {
+    "id": "cn-56-13",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué capa de gases rodea a la Tierra?",
+    "answer": "La atmósfera",
+    "distractors": [
+      "El núcleo",
+      "La corteza",
+      "El océano"
+    ],
+    "explanation": "La atmósfera es la capa de aire que rodea al planeta y nos protege.",
+    "hint": "Es el aire que envuelve a todo el planeta, donde están las nubes."
+  },
+  {
+    "id": "cn-56-14",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué método separa la sal que está disuelta en el agua?",
+    "answer": "La evaporación",
+    "distractors": [
+      "El filtrado",
+      "El imán",
+      "La congelación rápida"
+    ],
+    "explanation": "Al evaporar el agua, la sal se queda en el recipiente.",
+    "hint": "Piensa en cómo se obtiene la sal de mar en las salinas con ayuda del sol."
+  },
+  {
+    "id": "cn-56-15",
+    "subject": "ciencias_naturales",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cuál es la principal fuente de energía para la Tierra?",
+    "answer": "El Sol",
+    "distractors": [
+      "La Luna",
+      "Los volcanes",
+      "Las estrellas lejanas"
+    ],
+    "explanation": "El Sol da la luz y el calor que permiten la vida en la Tierra.",
+    "hint": "Piensa en la estrella que vemos todos los días y que ilumina nuestro planeta."
+  },
+  {
+    "id": "bio-12-06",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué animal pone huevos?",
+    "answer": "La gallina",
+    "distractors": [
+      "El perro",
+      "La vaca",
+      "El gato"
+    ],
+    "explanation": "Las gallinas son aves y nacen de huevos.",
+    "hint": "Piensa en el animal de la granja que nos da los huevos del desayuno."
+  },
+  {
+    "id": "bio-12-07",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué animal vive en el agua y respira por branquias?",
+    "answer": "El pez",
+    "distractors": [
+      "El caballo",
+      "El perro",
+      "La paloma"
+    ],
+    "explanation": "Los peces respiran por branquias y viven en el agua.",
+    "hint": "Piensa en el animal que nada en una pecera y nunca sale a respirar."
+  },
+  {
+    "id": "bio-12-08",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué parte del cuerpo usamos para ver?",
+    "answer": "Los ojos",
+    "distractors": [
+      "Las orejas",
+      "La nariz",
+      "Las manos"
+    ],
+    "explanation": "Con los ojos vemos colores, formas y todo lo que nos rodea.",
+    "hint": "Piensa en lo que cierras cuando te vas a dormir."
+  },
+  {
+    "id": "bio-12-09",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué alimento ayuda a tener huesos fuertes?",
+    "answer": "La leche",
+    "distractors": [
+      "Los dulces",
+      "Los refrescos",
+      "Las papitas"
+    ],
+    "explanation": "La leche tiene calcio, que ayuda a tener huesos y dientes fuertes.",
+    "hint": "Piensa en una bebida blanca que viene de la vaca."
+  },
+  {
+    "id": "bio-12-10",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué necesita un animal para vivir?",
+    "answer": "Agua y alimento",
+    "distractors": [
+      "Juguetes",
+      "Televisión",
+      "Zapatos"
+    ],
+    "explanation": "Todos los animales necesitan agua y alimento para vivir.",
+    "hint": "Piensa en lo que le pones en sus platos a una mascota todos los días."
+  },
+  {
+    "id": "bio-12-11",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Cuál es la cría de la vaca?",
+    "answer": "El becerro",
+    "distractors": [
+      "El pollito",
+      "El cachorro",
+      "El renacuajo"
+    ],
+    "explanation": "La cría de la vaca se llama becerro o ternero.",
+    "hint": "Es el bebé de la vaca, que toma leche de su mamá en el establo."
+  },
+  {
+    "id": "bio-12-12",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué hace una oruga antes de convertirse en mariposa?",
+    "answer": "Forma un capullo",
+    "distractors": [
+      "Pone leche",
+      "Se vuelve pez",
+      "Construye un nido de lodo"
+    ],
+    "explanation": "La oruga se envuelve en un capullo y ahí se transforma en mariposa.",
+    "hint": "Piensa en la casita que forma la oruga para dormir mientras cambia."
+  },
+  {
+    "id": "bio-12-13",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Con qué parte del cuerpo saboreamos la comida?",
+    "answer": "La lengua",
+    "distractors": [
+      "Los codos",
+      "Las rodillas",
+      "El cabello"
+    ],
+    "explanation": "En la lengua tenemos papilas que nos dejan sentir los sabores.",
+    "hint": "Piensa en lo que sacas de la boca cuando haces una cara chistosa."
+  },
+  {
+    "id": "bio-12-14",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué parte de la planta suele tener colores y atrae a las abejas?",
+    "answer": "La flor",
+    "distractors": [
+      "La raíz",
+      "El tallo",
+      "La tierra"
+    ],
+    "explanation": "Las flores atraen a las abejas, que ayudan a las plantas a formar frutos y semillas.",
+    "hint": "Piensa en lo que se regala el Día de las Madres en un ramo."
+  },
+  {
+    "id": "bio-12-15",
+    "subject": "biologia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué animal es un insecto?",
+    "answer": "La hormiga",
+    "distractors": [
+      "El perro",
+      "La tortuga",
+      "El pez"
+    ],
+    "explanation": "La hormiga es un insecto: tiene seis patas y su cuerpo está dividido en tres partes.",
+    "hint": "Piensa en un animalito muy pequeño que camina en fila y carga migajas."
+  },
+  {
+    "id": "bio-34-06",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cómo se llama un animal que come carne?",
+    "answer": "Carnívoro",
+    "distractors": [
+      "Herbívoro",
+      "Vegetal",
+      "Mineral"
+    ],
+    "explanation": "Los carnívoros, como el león, se alimentan de otros animales.",
+    "hint": "Piensa en lo que come un león o un tiburón."
+  },
+  {
+    "id": "bio-34-07",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué órgano usamos para pensar?",
+    "answer": "El cerebro",
+    "distractors": [
+      "El estómago",
+      "Los pulmones",
+      "El hígado"
+    ],
+    "explanation": "El cerebro, dentro de la cabeza, controla lo que pensamos y hacemos.",
+    "hint": "Está protegido por los huesos de tu cabeza y te ayuda a estudiar."
+  },
+  {
+    "id": "bio-34-08",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué sistema del cuerpo forma los huesos?",
+    "answer": "El sistema óseo",
+    "distractors": [
+      "El sistema digestivo",
+      "El sistema respiratorio",
+      "El sistema solar"
+    ],
+    "explanation": "El sistema óseo está formado por los huesos que sostienen el cuerpo.",
+    "hint": "Piensa en el esqueleto que ves en el salón de ciencias."
+  },
+  {
+    "id": "bio-34-09",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué animal es un reptil?",
+    "answer": "La tortuga",
+    "distractors": [
+      "El perro",
+      "La gallina",
+      "La ballena"
+    ],
+    "explanation": "La tortuga es un reptil: tiene piel con escamas y pone huevos.",
+    "hint": "Piensa en un animal lento con caparazón."
+  },
+  {
+    "id": "bio-34-10",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué parte de la planta transporta el agua de la raíz a las hojas?",
+    "answer": "El tallo",
+    "distractors": [
+      "La flor",
+      "El fruto",
+      "La semilla"
+    ],
+    "explanation": "El tallo sostiene la planta y lleva el agua hacia arriba.",
+    "hint": "Piensa en la parte larga de la planta que une la raíz con las hojas."
+  },
+  {
+    "id": "bio-34-11",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué grupo de alimentos nos da mucha energía, como el arroz y la tortilla?",
+    "answer": "Cereales",
+    "distractors": [
+      "Lácteos sin azúcar",
+      "Verduras de hoja",
+      "Agua natural"
+    ],
+    "explanation": "Los cereales, como el maíz y el arroz, nos dan energía para jugar y estudiar.",
+    "hint": "Piensa en el maíz con el que se hacen las tortillas."
+  },
+  {
+    "id": "bio-34-12",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué hacen las abejas al ir de flor en flor?",
+    "answer": "Polinizan",
+    "distractors": [
+      "Hibernan",
+      "Mudan la piel",
+      "Fabrican leche"
+    ],
+    "explanation": "Al llevar polen de una flor a otra, las abejas ayudan a que se formen frutos.",
+    "hint": "Piensa en el polvito amarillo que se les pega en las patas."
+  },
+  {
+    "id": "bio-34-13",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué animal hace metamorfosis de renacuajo a adulto?",
+    "answer": "La rana",
+    "distractors": [
+      "El perro",
+      "El caballo",
+      "La gallina"
+    ],
+    "explanation": "La rana nace como renacuajo en el agua y luego le salen patas.",
+    "hint": "Piensa en un animal que croa en el estanque."
+  },
+  {
+    "id": "bio-34-14",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué órgano filtra la sangre y forma la orina?",
+    "answer": "Los riñones",
+    "distractors": [
+      "El corazón",
+      "Los pulmones",
+      "Los ojos"
+    ],
+    "explanation": "Los riñones limpian la sangre y forman la orina.",
+    "hint": "Son dos órganos con forma de frijol en la parte baja de la espalda."
+  },
+  {
+    "id": "bio-34-15",
+    "subject": "biologia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cómo se llama el animal que come plantas y carne?",
+    "answer": "Omnívoro",
+    "distractors": [
+      "Herbívoro",
+      "Carnívoro",
+      "Insectívoro"
+    ],
+    "explanation": "Un omnívoro, como el oso o las personas, come plantas y animales.",
+    "hint": "Piensa en una palabra que quiere decir que come de todo."
+  },
+  {
+    "id": "bio-56-06",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué órgano produce la bilis para digerir las grasas?",
+    "answer": "El hígado",
+    "distractors": [
+      "El corazón",
+      "El páncreas",
+      "Los riñones"
+    ],
+    "explanation": "El hígado produce bilis, que ayuda a digerir las grasas.",
+    "hint": "Es el órgano más grande dentro del cuerpo, del lado derecho del abdomen."
+  },
+  {
+    "id": "bio-56-07",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué parte de la célula contiene la información genética?",
+    "answer": "El núcleo",
+    "distractors": [
+      "La pared",
+      "La membrana",
+      "El citoplasma"
+    ],
+    "explanation": "El núcleo guarda el ADN, que tiene las instrucciones de la célula.",
+    "hint": "Piensa en el centro de control de la célula."
+  },
+  {
+    "id": "bio-56-08",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cómo se llama el proceso en el que las plantas fabrican su alimento?",
+    "answer": "Fotosíntesis",
+    "distractors": [
+      "Respiración",
+      "Digestión",
+      "Germinación"
+    ],
+    "explanation": "En la fotosíntesis la planta usa luz, agua y dióxido de carbono para hacer su alimento.",
+    "hint": "Pasa en las hojas verdes cuando les da la luz del sol."
+  },
+  {
+    "id": "bio-56-09",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué sistema del cuerpo lleva la sangre por todo el organismo?",
+    "answer": "El sistema circulatorio",
+    "distractors": [
+      "El sistema óseo",
+      "El sistema digestivo",
+      "El sistema muscular"
+    ],
+    "explanation": "El sistema circulatorio, con el corazón y los vasos sanguíneos, reparte la sangre.",
+    "hint": "Piensa en el corazón y en las venas que circulan la sangre."
+  },
+  {
+    "id": "bio-56-10",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué son los descomponedores en un ecosistema?",
+    "answer": "Hongos y bacterias",
+    "distractors": [
+      "Leones y tigres",
+      "Árboles y flores",
+      "Piedras y arena"
+    ],
+    "explanation": "Los hongos y bacterias descomponen restos de seres vivos y devuelven nutrientes al suelo.",
+    "hint": "Piensa en lo que hace que una fruta olvidada se pudra con el tiempo."
+  },
+  {
+    "id": "bio-56-11",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué tipo de reproducción necesita dos padres?",
+    "answer": "Sexual",
+    "distractors": [
+      "Asexual",
+      "Por gemación siempre",
+      "Por división de rocas"
+    ],
+    "explanation": "En la reproducción sexual participan dos progenitores.",
+    "hint": "Piensa en cómo nacen los cachorros: necesitan papá y mamá."
+  },
+  {
+    "id": "bio-56-12",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué vitamina produce la piel con ayuda del sol?",
+    "answer": "Vitamina D",
+    "distractors": [
+      "Vitamina C",
+      "Vitamina A",
+      "Vitamina B12"
+    ],
+    "explanation": "Con la luz del sol, la piel produce vitamina D, que ayuda a los huesos.",
+    "hint": "Es la vitamina que ganas cuando juegas al aire libre de día y que ayuda a tus huesos."
+  },
+  {
+    "id": "bio-56-13",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué órgano del sistema respiratorio intercambia oxígeno con la sangre?",
+    "answer": "Los pulmones",
+    "distractors": [
+      "El estómago",
+      "El intestino",
+      "La vejiga"
+    ],
+    "explanation": "En los pulmones el oxígeno pasa a la sangre y sale el dióxido de carbono.",
+    "hint": "Son los órganos que se inflan cuando respiras profundo."
+  },
+  {
+    "id": "bio-56-14",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué es una especie en peligro de extinción?",
+    "answer": "Una especie que podría desaparecer",
+    "distractors": [
+      "Una especie muy abundante",
+      "Un animal doméstico",
+      "Una planta de plástico"
+    ],
+    "explanation": "Si quedan muy pocos individuos de una especie, podría desaparecer para siempre.",
+    "hint": "Piensa en animales como la vaquita marina, de los que quedan muy pocos."
+  },
+  {
+    "id": "bio-56-15",
+    "subject": "biologia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué estructura protege al cerebro?",
+    "answer": "El cráneo",
+    "distractors": [
+      "Las costillas",
+      "La rodilla",
+      "La columna"
+    ],
+    "explanation": "El cráneo es el conjunto de huesos de la cabeza que protege al cerebro.",
+    "hint": "Piensa en los huesos duros de tu cabeza, como un casco natural."
+  },
+  {
+    "id": "geo-12-06",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué forma tiene nuestro planeta?",
+    "answer": "Redonda",
+    "distractors": [
+      "Cuadrada",
+      "Triangular",
+      "Plana como mesa"
+    ],
+    "explanation": "La Tierra es casi como una esfera, redonda como una pelota.",
+    "hint": "Piensa en la forma de un globo terráqueo del salón."
+  },
+  {
+    "id": "geo-12-07",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué hay en un desierto?",
+    "answer": "Mucha arena y poca lluvia",
+    "distractors": [
+      "Mucha nieve",
+      "Un gran lago",
+      "Selva con mucha lluvia"
+    ],
+    "explanation": "En el desierto llueve muy poco y hay arena, rocas y cactus.",
+    "hint": "Piensa en un lugar muy seco donde crecen los cactus."
+  },
+  {
+    "id": "geo-12-08",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Por dónde sale el Sol en la mañana?",
+    "answer": "Por el este",
+    "distractors": [
+      "Por el oeste",
+      "Por el sur",
+      "Por abajo"
+    ],
+    "explanation": "El Sol sale por el este, también llamado oriente.",
+    "hint": "Piensa en el lado por donde amanece, contrario al lado por donde se mete el Sol."
+  },
+  {
+    "id": "geo-12-09",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué es una montaña?",
+    "answer": "Una elevación grande del terreno",
+    "distractors": [
+      "Un río muy largo",
+      "Un hoyo en el mar",
+      "Una calle de la ciudad"
+    ],
+    "explanation": "Una montaña es un terreno muy alto, más que una colina.",
+    "hint": "Piensa en algo muy alto que la gente sube caminando con mochila."
+  },
+  {
+    "id": "geo-12-10",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué usamos para ver los países de todo el mundo en una esfera?",
+    "answer": "Un globo terráqueo",
+    "distractors": [
+      "Un reloj",
+      "Una regla",
+      "Un termómetro"
+    ],
+    "explanation": "El globo terráqueo es una esfera que representa a la Tierra.",
+    "hint": "Es una pelota grande con el dibujo de los continentes y océanos."
+  },
+  {
+    "id": "geo-12-11",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué hay en un río?",
+    "answer": "Agua que corre",
+    "distractors": [
+      "Arena sin agua",
+      "Edificios",
+      "Nieve todo el año"
+    ],
+    "explanation": "Un río es una corriente de agua que corre hasta el mar o un lago.",
+    "hint": "Piensa en el agua que se mueve y donde a veces nadan peces."
+  },
+  {
+    "id": "geo-12-12",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Cómo se llama el lugar donde vivimos con nuestra familia?",
+    "answer": "Casa",
+    "distractors": [
+      "Escuela",
+      "Hospital",
+      "Mercado"
+    ],
+    "explanation": "La casa es el lugar donde vivimos con nuestra familia.",
+    "hint": "Piensa en el lugar a donde regresas después de la escuela."
+  },
+  {
+    "id": "geo-12-13",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué estación del año es la más calurosa?",
+    "answer": "Verano",
+    "distractors": [
+      "Invierno",
+      "Otoño",
+      "Primavera fría"
+    ],
+    "explanation": "En verano hace más calor y los días son más largos.",
+    "hint": "Piensa en la temporada de vacaciones largas y de ir a la alberca."
+  },
+  {
+    "id": "geo-12-14",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué color se usa en los mapas para el agua?",
+    "answer": "Azul",
+    "distractors": [
+      "Rojo",
+      "Negro",
+      "Morado"
+    ],
+    "explanation": "En los mapas el azul representa mares, ríos y lagos.",
+    "hint": "Piensa en el color del mar en un dibujo."
+  },
+  {
+    "id": "geo-12-15",
+    "subject": "geografia",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué punto cardinal es lo contrario del norte?",
+    "answer": "Sur",
+    "distractors": [
+      "Este",
+      "Oeste",
+      "Arriba"
+    ],
+    "explanation": "El sur es el punto cardinal opuesto al norte.",
+    "hint": "Si el norte está arriba en el mapa, piensa en lo que está abajo."
+  },
+  {
+    "id": "geo-34-06",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuántos estados tiene México?",
+    "answer": "32",
+    "distractors": [
+      "20",
+      "12",
+      "50"
+    ],
+    "explanation": "México tiene 32 entidades federativas: 31 estados y la Ciudad de México.",
+    "hint": "Son más de treinta; cuenta Baja California, Sonora, Jalisco y todos los demás."
+  },
+  {
+    "id": "geo-34-07",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué país está al norte de México?",
+    "answer": "Estados Unidos",
+    "distractors": [
+      "Guatemala",
+      "Belice",
+      "Cuba"
+    ],
+    "explanation": "Al norte de México está Estados Unidos; Mexicali está junto a esa frontera.",
+    "hint": "Piensa en el país al que se cruza por la garita de Mexicali."
+  },
+  {
+    "id": "geo-34-08",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué golfo está al este de México?",
+    "answer": "Golfo de México",
+    "distractors": [
+      "Golfo de California",
+      "Golfo Pérsico",
+      "Golfo de Alaska"
+    ],
+    "explanation": "El Golfo de México está al este del país, junto a Veracruz y Tamaulipas.",
+    "hint": "Está del lado de Veracruz y Tamaulipas, frente al océano Atlántico."
+  },
+  {
+    "id": "geo-34-09",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué mar separa a Baja California de Sonora?",
+    "answer": "Mar de Cortés",
+    "distractors": [
+      "Mar Caribe",
+      "Mar Mediterráneo",
+      "Mar Negro"
+    ],
+    "explanation": "El Mar de Cortés, o Golfo de California, separa la península de Sonora y Sinaloa.",
+    "hint": "Es el mar que se ve en San Felipe, entre la península y Sonora."
+  },
+  {
+    "id": "geo-34-10",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué es una península?",
+    "answer": "Tierra rodeada de agua casi por completo",
+    "distractors": [
+      "Un lago en una montaña",
+      "Un río muy corto",
+      "Un desierto sin arena"
+    ],
+    "explanation": "Una península está rodeada de agua por casi todos lados, como Baja California.",
+    "hint": "Baja California es una; piensa en cómo se ve en el mapa con mar de dos lados."
+  },
+  {
+    "id": "geo-34-11",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué río forma parte de la frontera entre México y Estados Unidos?",
+    "answer": "Río Bravo",
+    "distractors": [
+      "Río Nilo",
+      "Río Amazonas",
+      "Río Danubio"
+    ],
+    "explanation": "El Río Bravo marca una parte de la frontera norte de México.",
+    "hint": "En Estados Unidos le dicen Río Grande y pasa junto a Ciudad Juárez."
+  },
+  {
+    "id": "geo-34-12",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué tipo de clima tiene Mexicali en verano?",
+    "answer": "Muy caluroso y seco",
+    "distractors": [
+      "Frío y con nieve",
+      "Lluvioso todo el día",
+      "Templado y húmedo"
+    ],
+    "explanation": "Mexicali está en el desierto: en verano hace mucho calor y llueve poco.",
+    "hint": "Piensa en cómo se siente salir a la calle en Mexicali en julio."
+  },
+  {
+    "id": "geo-34-13",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué representa la rosa de los vientos en un mapa?",
+    "answer": "Los puntos cardinales",
+    "distractors": [
+      "La temperatura",
+      "La cantidad de gente",
+      "Las flores del lugar"
+    ],
+    "explanation": "La rosa de los vientos indica el norte, sur, este y oeste.",
+    "hint": "Es un dibujo con forma de estrella en la esquina del mapa que te dice para dónde ir."
+  },
+  {
+    "id": "geo-34-14",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿En qué estado está la ciudad de Guadalajara?",
+    "answer": "Jalisco",
+    "distractors": [
+      "Sonora",
+      "Yucatán",
+      "Chiapas"
+    ],
+    "explanation": "Guadalajara es la capital de Jalisco.",
+    "hint": "Es el estado famoso por el mariachi y el tequila."
+  },
+  {
+    "id": "geo-34-15",
+    "subject": "geografia",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuál es el país más grande de América del Norte?",
+    "answer": "Canadá",
+    "distractors": [
+      "México",
+      "Cuba",
+      "Panamá"
+    ],
+    "explanation": "Canadá es el país con más territorio de América del Norte.",
+    "hint": "Está aún más al norte que Estados Unidos y hace mucho frío."
+  },
+  {
+    "id": "geo-56-06",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cuántos continentes se enseñan comúnmente en la escuela?",
+    "answer": "5",
+    "distractors": [
+      "3",
+      "9",
+      "12"
+    ],
+    "explanation": "En la escuela se enseñan cinco continentes: América, Europa, Asia, África y Oceanía.",
+    "hint": "Cuéntalos con los dedos de una mano: América, Europa, Asia, África y uno más."
+  },
+  {
+    "id": "geo-56-07",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cuál es el océano más grande del mundo?",
+    "answer": "Pacífico",
+    "distractors": [
+      "Atlántico",
+      "Índico",
+      "Ártico"
+    ],
+    "explanation": "El océano Pacífico es el más grande y profundo del planeta.",
+    "hint": "Es el océano que está frente a Ensenada."
+  },
+  {
+    "id": "geo-56-08",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué línea imaginaria marca la longitud cero?",
+    "answer": "Meridiano de Greenwich",
+    "distractors": [
+      "Ecuador",
+      "Trópico de Capricornio",
+      "Círculo polar antártico"
+    ],
+    "explanation": "El meridiano de Greenwich pasa por Inglaterra y marca la longitud cero.",
+    "hint": "Es una línea de polo a polo que pasa por Londres."
+  },
+  {
+    "id": "geo-56-09",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué es la población de un lugar?",
+    "answer": "Las personas que viven ahí",
+    "distractors": [
+      "Los ríos que tiene",
+      "Las montañas que tiene",
+      "Su clima"
+    ],
+    "explanation": "La población es el número de personas que habitan un lugar.",
+    "hint": "Piensa en todos los vecinos y familias de tu ciudad."
+  },
+  {
+    "id": "geo-56-10",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué continente es el más poblado?",
+    "answer": "Asia",
+    "distractors": [
+      "Oceanía",
+      "Europa",
+      "Antártida"
+    ],
+    "explanation": "Asia es el continente con más habitantes; ahí están China e India.",
+    "hint": "Es el continente donde están China e India, los países con más gente."
+  },
+  {
+    "id": "geo-56-11",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué actividad económica es la agricultura?",
+    "answer": "Cultivar la tierra",
+    "distractors": [
+      "Fabricar autos",
+      "Vender en tiendas",
+      "Construir puentes"
+    ],
+    "explanation": "La agricultura es sembrar y cosechar plantas, como el trigo del Valle de Mexicali.",
+    "hint": "Piensa en el trabajo en el campo del Valle de Mexicali."
+  },
+  {
+    "id": "geo-56-12",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué son los recursos naturales?",
+    "answer": "Lo que tomamos de la naturaleza",
+    "distractors": [
+      "Los juguetes de plástico",
+      "Los programas de televisión",
+      "Los edificios"
+    ],
+    "explanation": "Los recursos naturales, como el agua, el suelo o los minerales, vienen de la naturaleza.",
+    "hint": "Piensa en cosas que no fabricamos nosotros, como el agua o la madera."
+  },
+  {
+    "id": "geo-56-13",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué hemisferio está al sur del ecuador?",
+    "answer": "Hemisferio sur",
+    "distractors": [
+      "Hemisferio norte",
+      "Hemisferio este",
+      "Hemisferio oeste"
+    ],
+    "explanation": "Todo lo que está al sur del ecuador es el hemisferio sur.",
+    "hint": "El ecuador parte la Tierra en dos mitades: la de arriba y la de abajo."
+  },
+  {
+    "id": "geo-56-14",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué es una sequía?",
+    "answer": "Un tiempo largo sin lluvia",
+    "distractors": [
+      "Una inundación",
+      "Un temblor",
+      "Una nevada"
+    ],
+    "explanation": "Una sequía es un periodo largo con muy poca lluvia.",
+    "hint": "Piensa en lo que pasa cuando no llueve en muchos meses y se secan las presas."
+  },
+  {
+    "id": "geo-56-15",
+    "subject": "geografia",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué fenómeno natural se mide con la escala de Richter?",
+    "answer": "Los sismos",
+    "distractors": [
+      "La lluvia",
+      "El viento",
+      "La temperatura"
+    ],
+    "explanation": "La escala de Richter mide la fuerza de los sismos o temblores.",
+    "hint": "Piensa en lo que hace que se muevan las casas y suene la alerta en la escuela."
+  },
+  {
+    "id": "esp-12-06",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué palabra rima con gato?",
+    "answer": "Pato",
+    "distractors": [
+      "Perro",
+      "Mesa",
+      "Sol"
+    ],
+    "explanation": "Gato y pato terminan igual: ato.",
+    "hint": "Di gato en voz alta y busca otra palabra que termine con el mismo sonido."
+  },
+  {
+    "id": "esp-12-07",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Cuál es lo contrario de frío?",
+    "answer": "Caliente",
+    "distractors": [
+      "Helado",
+      "Congelado",
+      "Fresco"
+    ],
+    "explanation": "Frío y caliente tienen significados opuestos.",
+    "hint": "Piensa en cómo está la sopa recién servida."
+  },
+  {
+    "id": "esp-12-08",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué palabra nombra a un animal?",
+    "answer": "Perro",
+    "distractors": [
+      "Correr",
+      "Azul",
+      "Rápido"
+    ],
+    "explanation": "Perro es un sustantivo: nombra a un animal.",
+    "hint": "Busca la palabra que es un ser que tiene patas y ladra."
+  },
+  {
+    "id": "esp-12-09",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Cuál es el femenino de niño?",
+    "answer": "Niña",
+    "distractors": [
+      "Niños",
+      "Niñito",
+      "Nene"
+    ],
+    "explanation": "El femenino de niño es niña.",
+    "hint": "Piensa en cómo le dices a una compañera del salón."
+  },
+  {
+    "id": "esp-12-10",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué palabra es un color?",
+    "answer": "Rojo",
+    "distractors": [
+      "Saltar",
+      "Mesa",
+      "Feliz"
+    ],
+    "explanation": "Rojo es el nombre de un color.",
+    "hint": "Piensa en el color de una manzana o de un tomate."
+  },
+  {
+    "id": "esp-12-11",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Cuántas letras tiene la palabra sol?",
+    "answer": "3",
+    "distractors": [
+      "2",
+      "5",
+      "4"
+    ],
+    "explanation": "Sol tiene tres letras: s, o y l.",
+    "hint": "Escribe la palabra con el dedo en el aire y cuenta cada letra."
+  },
+  {
+    "id": "esp-12-12",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué palabra empieza con la misma letra que mamá?",
+    "answer": "Mano",
+    "distractors": [
+      "Papá",
+      "Casa",
+      "Luna"
+    ],
+    "explanation": "Mamá y mano empiezan con la letra m.",
+    "hint": "Di mamá despacio y busca otra palabra que empiece con el mismo sonido."
+  },
+  {
+    "id": "esp-12-13",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Cuál es el plural de flor?",
+    "answer": "Flores",
+    "distractors": [
+      "Flors",
+      "Florecita",
+      "Florero"
+    ],
+    "explanation": "El plural de flor es flores, porque termina en consonante y se agrega es.",
+    "hint": "Plural quiere decir muchas. Si tienes un ramo, ¿cómo las llamas?"
+  },
+  {
+    "id": "esp-12-14",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué palabra describe cómo se siente alguien que llora?",
+    "answer": "Triste",
+    "distractors": [
+      "Contento",
+      "Alegre",
+      "Divertido"
+    ],
+    "explanation": "Cuando alguien llora, normalmente se siente triste.",
+    "hint": "Piensa en cómo te sientes cuando se te pierde tu juguete favorito."
+  },
+  {
+    "id": "esp-12-15",
+    "subject": "espanol",
+    "min_grade": 1,
+    "max_grade": 2,
+    "prompt": "¿Qué usamos para separar las palabras al escribir?",
+    "answer": "Espacios",
+    "distractors": [
+      "Números",
+      "Dibujos",
+      "Colores"
+    ],
+    "explanation": "Entre una palabra y otra dejamos un espacio para poder leer bien.",
+    "hint": "Mira cómo están escritas las palabras de un libro: ¿qué hay entre una y otra?"
+  },
+  {
+    "id": "esp-34-06",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuál es un antónimo de rápido?",
+    "answer": "Lento",
+    "distractors": [
+      "Veloz",
+      "Ligero",
+      "Ágil"
+    ],
+    "explanation": "Un antónimo es una palabra de significado opuesto: rápido y lento.",
+    "hint": "Piensa en cómo camina una tortuga."
+  },
+  {
+    "id": "esp-34-07",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "En la frase el perro ladra, ¿qué palabra es el sustantivo?",
+    "answer": "Perro",
+    "distractors": [
+      "Ladra",
+      "El",
+      "Ninguna"
+    ],
+    "explanation": "Perro es el sustantivo porque nombra al animal.",
+    "hint": "El sustantivo nombra a una persona, animal o cosa. ¿Quién está en la frase?"
+  },
+  {
+    "id": "esp-34-08",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué tipo de texto da instrucciones para preparar comida?",
+    "answer": "Una receta",
+    "distractors": [
+      "Un poema",
+      "Una leyenda",
+      "Una adivinanza"
+    ],
+    "explanation": "La receta tiene ingredientes y pasos para preparar un platillo.",
+    "hint": "Piensa en lo que lees en la cocina para hacer un pastel."
+  },
+  {
+    "id": "esp-34-09",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué palabra es un diminutivo?",
+    "answer": "Perrito",
+    "distractors": [
+      "Perrote",
+      "Perros",
+      "Perrera"
+    ],
+    "explanation": "El diminutivo indica algo pequeño o dicho con cariño: perrito.",
+    "hint": "Diminutivo es para decir que algo es pequeñito, como cuando hablas con cariño de un cachorro."
+  },
+  {
+    "id": "esp-34-10",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué es una adivinanza?",
+    "answer": "Un juego de palabras para descubrir algo",
+    "distractors": [
+      "Una lista de compras",
+      "Un recibo de pago",
+      "Un mapa de calles"
+    ],
+    "explanation": "La adivinanza da pistas para que descubras de qué se trata.",
+    "hint": "Piensa en un juego que empieza con: blanco por dentro, verde por fuera..."
+  },
+  {
+    "id": "esp-34-11",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuál es el aumentativo de casa?",
+    "answer": "Casota",
+    "distractors": [
+      "Casita",
+      "Casas",
+      "Casero"
+    ],
+    "explanation": "El aumentativo indica algo grande: casota.",
+    "hint": "Aumentativo es para decir que algo es muy grande, lo contrario de casita."
+  },
+  {
+    "id": "esp-34-12",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué signo se usa para mostrar emoción o sorpresa?",
+    "answer": "Signos de admiración",
+    "distractors": [
+      "Punto final",
+      "Coma",
+      "Guion"
+    ],
+    "explanation": "Los signos de admiración se usan para expresar emoción, como en ¡qué bonito!",
+    "hint": "Piensa en los signos que pones cuando escribes ¡hurra!"
+  },
+  {
+    "id": "esp-34-13",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué palabra es un verbo?",
+    "answer": "Saltar",
+    "distractors": [
+      "Mesa",
+      "Bonito",
+      "Azul"
+    ],
+    "explanation": "Saltar es un verbo porque expresa una acción.",
+    "hint": "El verbo es algo que puedes hacer. ¿Cuál de las opciones puedes hacer con tu cuerpo?"
+  },
+  {
+    "id": "esp-34-14",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Cuántas sílabas tiene la palabra mariposa?",
+    "answer": "4",
+    "distractors": [
+      "2",
+      "3",
+      "5"
+    ],
+    "explanation": "Mariposa tiene cuatro sílabas: ma, ri, po, sa.",
+    "hint": "Di la palabra despacio y da un aplauso por cada golpe de voz."
+  },
+  {
+    "id": "esp-34-15",
+    "subject": "espanol",
+    "min_grade": 3,
+    "max_grade": 4,
+    "prompt": "¿Qué es un cuento?",
+    "answer": "Una narración corta con personajes",
+    "distractors": [
+      "Una lista de números",
+      "Un horario de clases",
+      "Un diccionario"
+    ],
+    "explanation": "El cuento narra una historia breve con personajes, problema y final.",
+    "hint": "Piensa en lo que te leen antes de dormir, como el de los tres cochinitos."
+  },
+  {
+    "id": "esp-56-06",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué es un verbo en tiempo pasado?",
+    "answer": "Una acción que ya ocurrió",
+    "distractors": [
+      "Una acción que ocurrirá",
+      "Un nombre de persona",
+      "Un color"
+    ],
+    "explanation": "El pasado indica que la acción ya pasó, como comí o jugué.",
+    "hint": "Piensa en cómo cuentas lo que hiciste ayer."
+  },
+  {
+    "id": "esp-56-07",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Cuál palabra es esdrújula?",
+    "answer": "Pájaro",
+    "distractors": [
+      "Mesa",
+      "Café",
+      "Reloj"
+    ],
+    "explanation": "En pájaro la sílaba más fuerte es la antepenúltima: pá; las esdrújulas siempre llevan tilde.",
+    "hint": "Una esdrújula suena fuerte en la tercera sílaba contando desde el final."
+  },
+  {
+    "id": "esp-56-08",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué es un sinónimo?",
+    "answer": "Una palabra con significado parecido",
+    "distractors": [
+      "Una palabra contraria",
+      "Una palabra en otro idioma",
+      "Una palabra sin significado"
+    ],
+    "explanation": "Los sinónimos significan casi lo mismo, como bonito y lindo.",
+    "hint": "Piensa en bonito y lindo: ¿qué tienen en común?"
+  },
+  {
+    "id": "esp-56-09",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué tipo de texto presenta noticias reales?",
+    "answer": "Una nota periodística",
+    "distractors": [
+      "Un cuento de hadas",
+      "Una fábula",
+      "Una canción de cuna"
+    ],
+    "explanation": "La nota periodística informa sobre hechos reales y recientes.",
+    "hint": "Piensa en lo que se publica en el periódico o en las noticias."
+  },
+  {
+    "id": "esp-56-10",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué enseña una fábula al final?",
+    "answer": "Una moraleja",
+    "distractors": [
+      "Una receta",
+      "Un mapa",
+      "Una suma"
+    ],
+    "explanation": "Las fábulas terminan con una moraleja, una enseñanza para la vida.",
+    "hint": "Piensa en la enseñanza al final de la liebre y la tortuga."
+  },
+  {
+    "id": "esp-56-11",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué palabra es un adverbio de tiempo?",
+    "answer": "Ayer",
+    "distractors": [
+      "Casa",
+      "Grande",
+      "Correr"
+    ],
+    "explanation": "Ayer es un adverbio de tiempo porque dice cuándo ocurre algo.",
+    "hint": "Busca la palabra que responde a la pregunta cuándo."
+  },
+  {
+    "id": "esp-56-12",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué es una biografía?",
+    "answer": "La historia de la vida de una persona",
+    "distractors": [
+      "Un cuento inventado",
+      "Una receta de cocina",
+      "Un poema corto"
+    ],
+    "explanation": "La biografía cuenta la vida de una persona real.",
+    "hint": "Piensa en un libro que cuenta la vida de Benito Juárez."
+  },
+  {
+    "id": "esp-56-13",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué indica el prefijo des en deshacer?",
+    "answer": "Lo contrario",
+    "distractors": [
+      "Mucho",
+      "Pequeño",
+      "Antes"
+    ],
+    "explanation": "El prefijo des cambia el significado a lo contrario: hacer y deshacer.",
+    "hint": "Compara hacer con deshacer, o atar con desatar."
+  },
+  {
+    "id": "esp-56-14",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué signo se usa para separar elementos de una lista?",
+    "answer": "La coma",
+    "distractors": [
+      "El punto final",
+      "Los paréntesis",
+      "El signo de pregunta"
+    ],
+    "explanation": "La coma separa los elementos de una lista, como manzanas, peras y uvas.",
+    "hint": "Piensa en el signo que pones entre manzanas, peras y uvas."
+  },
+  {
+    "id": "esp-56-15",
+    "subject": "espanol",
+    "min_grade": 5,
+    "max_grade": 6,
+    "prompt": "¿Qué es una metáfora?",
+    "answer": "Una comparación sin usar como",
+    "distractors": [
+      "Una mentira",
+      "Una pregunta",
+      "Una lista de palabras"
+    ],
+    "explanation": "La metáfora dice que algo es otra cosa para describirlo, como tus ojos son dos luceros.",
+    "hint": "Piensa en la frase tus ojos son dos luceros."
+  },
+  {
+    "id": "mat-1-07",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 5 lápices y prestas 1. ¿Cuántos te quedan?",
+    "answer": "4",
+    "distractors": [
+      "3",
+      "7",
+      "6"
+    ],
+    "explanation": "Restamos 1 a 5 y nos quedan 4.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-1-08",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 2 lápices y prestas 1. ¿Cuántos te quedan?",
+    "answer": "1",
+    "distractors": [
+      "2",
+      "0",
+      "3"
+    ],
+    "explanation": "Restamos 1 a 2 y nos queda 1.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-1-09",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 5 lápices y prestas 3. ¿Cuántos te quedan?",
+    "answer": "2",
+    "distractors": [
+      "1",
+      "4",
+      "7"
+    ],
+    "explanation": "Restamos 3 a 5 y nos quedan 2.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-1-10",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 3 lápices y prestas 2. ¿Cuántos te quedan?",
+    "answer": "1",
+    "distractors": [
+      "6",
+      "4",
+      "0"
+    ],
+    "explanation": "Restamos 2 a 3 y nos queda 1.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-1-11",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 2 lápices y te regalan 2 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "4",
+    "distractors": [
+      "1",
+      "2",
+      "6"
+    ],
+    "explanation": "Sumamos 2 más 2 y obtenemos 4.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-1-12",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 5 lápices y prestas 4. ¿Cuántos te quedan?",
+    "answer": "1",
+    "distractors": [
+      "6",
+      "4",
+      "0"
+    ],
+    "explanation": "Restamos 4 a 5 y nos queda 1.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-1-13",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 1 lápices y te regalan 1 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "2",
+    "distractors": [
+      "5",
+      "4",
+      "7"
+    ],
+    "explanation": "Sumamos 1 más 1 y obtenemos 2.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-1-14",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 4 lápices y prestas 3. ¿Cuántos te quedan?",
+    "answer": "1",
+    "distractors": [
+      "3",
+      "4",
+      "2"
+    ],
+    "explanation": "Restamos 3 a 4 y nos queda 1.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-1-15",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 4 lápices y te regalan 1 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "5",
+    "distractors": [
+      "10",
+      "3",
+      "6"
+    ],
+    "explanation": "Sumamos 4 más 1 y obtenemos 5.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-1-16",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 3 lápices y te regalan 1 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "4",
+    "distractors": [
+      "9",
+      "7",
+      "3"
+    ],
+    "explanation": "Sumamos 3 más 1 y obtenemos 4.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-1-17",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 3 lápices y te regalan 3 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "6",
+    "distractors": [
+      "7",
+      "9",
+      "5"
+    ],
+    "explanation": "Sumamos 3 más 3 y obtenemos 6.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-1-18",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 1 lápices y te regalan 3 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "4",
+    "distractors": [
+      "3",
+      "2",
+      "6"
+    ],
+    "explanation": "Sumamos 1 más 3 y obtenemos 4.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-1-19",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 4 lápices y te regalan 4 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "8",
+    "distractors": [
+      "10",
+      "13",
+      "6"
+    ],
+    "explanation": "Sumamos 4 más 4 y obtenemos 8.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-1-20",
+    "subject": "matematicas",
+    "min_grade": 1,
+    "max_grade": 1,
+    "prompt": "Tienes 3 lápices y prestas 1. ¿Cuántos te quedan?",
+    "answer": "2",
+    "distractors": [
+      "7",
+      "3",
+      "1"
+    ],
+    "explanation": "Restamos 1 a 3 y nos quedan 2.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-2-07",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 21 lápices y prestas 15. ¿Cuántos te quedan?",
+    "answer": "6",
+    "distractors": [
+      "8",
+      "7",
+      "9"
+    ],
+    "explanation": "Restamos 15 a 21 y nos quedan 6.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-2-08",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 20 lápices y te regalan 24 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "44",
+    "distractors": [
+      "45",
+      "46",
+      "43"
+    ],
+    "explanation": "Sumamos 20 más 24 y obtenemos 44.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-2-09",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 16 lápices y prestas 8. ¿Cuántos te quedan?",
+    "answer": "8",
+    "distractors": [
+      "7",
+      "10",
+      "5"
+    ],
+    "explanation": "Restamos 8 a 16 y nos quedan 8.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-2-10",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 11 lápices y prestas 1. ¿Cuántos te quedan?",
+    "answer": "10",
+    "distractors": [
+      "15",
+      "12",
+      "13"
+    ],
+    "explanation": "Restamos 1 a 11 y nos quedan 10.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-2-11",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 19 lápices y te regalan 13 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "32",
+    "distractors": [
+      "31",
+      "29",
+      "34"
+    ],
+    "explanation": "Sumamos 19 más 13 y obtenemos 32.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-2-12",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 5 lápices y te regalan 4 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "9",
+    "distractors": [
+      "10",
+      "8",
+      "7"
+    ],
+    "explanation": "Sumamos 5 más 4 y obtenemos 9.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-2-13",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 12 lápices y te regalan 21 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "33",
+    "distractors": [
+      "38",
+      "32",
+      "30"
+    ],
+    "explanation": "Sumamos 12 más 21 y obtenemos 33.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-2-14",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 23 lápices y prestas 7. ¿Cuántos te quedan?",
+    "answer": "16",
+    "distractors": [
+      "13",
+      "17",
+      "19"
+    ],
+    "explanation": "Restamos 7 a 23 y nos quedan 16.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-2-15",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 3 lápices y te regalan 12 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "15",
+    "distractors": [
+      "18",
+      "14",
+      "20"
+    ],
+    "explanation": "Sumamos 3 más 12 y obtenemos 15.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-2-16",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 25 lápices y prestas 23. ¿Cuántos te quedan?",
+    "answer": "2",
+    "distractors": [
+      "7",
+      "4",
+      "3"
+    ],
+    "explanation": "Restamos 23 a 25 y nos quedan 2.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-2-17",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 21 lápices y te regalan 8 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "29",
+    "distractors": [
+      "30",
+      "31",
+      "26"
+    ],
+    "explanation": "Sumamos 21 más 8 y obtenemos 29.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-2-18",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 7 lápices y te regalan 17 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "24",
+    "distractors": [
+      "26",
+      "22",
+      "21"
+    ],
+    "explanation": "Sumamos 7 más 17 y obtenemos 24.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-2-19",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 9 lápices y te regalan 13 más. ¿Cuántos lápices tienes ahora?",
+    "answer": "22",
+    "distractors": [
+      "24",
+      "27",
+      "21"
+    ],
+    "explanation": "Sumamos 9 más 13 y obtenemos 22.",
+    "hint": "Si te regalan más, vas a tener más que antes. Junta las dos cantidades."
+  },
+  {
+    "id": "mat-2-20",
+    "subject": "matematicas",
+    "min_grade": 2,
+    "max_grade": 2,
+    "prompt": "Tienes 17 lápices y prestas 7. ¿Cuántos te quedan?",
+    "answer": "10",
+    "distractors": [
+      "13",
+      "7",
+      "9"
+    ],
+    "explanation": "Restamos 7 a 17 y nos quedan 10.",
+    "hint": "Si prestas algunos, te quedan menos. Quita los que prestaste a los que tenías."
+  },
+  {
+    "id": "mat-3-07",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 7 cajas con 8 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "56",
+    "distractors": [
+      "59",
+      "58",
+      "57"
+    ],
+    "explanation": "Multiplicamos 7 por 8 y obtenemos 56.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-3-08",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 5 cajas con 5 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "25",
+    "distractors": [
+      "22",
+      "30",
+      "27"
+    ],
+    "explanation": "Multiplicamos 5 por 5 y obtenemos 25.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-3-09",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Repartes 36 colores por igual entre 6 niños. ¿Cuántos recibe cada niño?",
+    "answer": "6",
+    "distractors": [
+      "3",
+      "11",
+      "9"
+    ],
+    "explanation": "Dividimos 36 entre 6 y cada niño recibe 6.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
+  },
+  {
+    "id": "mat-3-10",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 8 cajas con 5 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "40",
+    "distractors": [
+      "43",
+      "38",
+      "39"
+    ],
+    "explanation": "Multiplicamos 8 por 5 y obtenemos 40.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-3-11",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 9 cajas con 4 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "36",
+    "distractors": [
+      "38",
+      "34",
+      "35"
+    ],
+    "explanation": "Multiplicamos 9 por 4 y obtenemos 36.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-3-12",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 9 cajas con 7 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "63",
+    "distractors": [
+      "62",
+      "68",
+      "66"
+    ],
+    "explanation": "Multiplicamos 9 por 7 y obtenemos 63.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-3-13",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Repartes 15 colores por igual entre 3 niños. ¿Cuántos recibe cada niño?",
+    "answer": "5",
+    "distractors": [
+      "4",
+      "2",
+      "10"
+    ],
+    "explanation": "Dividimos 15 entre 3 y cada niño recibe 5.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
+  },
+  {
+    "id": "mat-3-14",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Repartes 6 colores por igual entre 3 niños. ¿Cuántos recibe cada niño?",
+    "answer": "2",
+    "distractors": [
+      "3",
+      "0",
+      "4"
+    ],
+    "explanation": "Dividimos 6 entre 3 y cada niño recibe 2.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
+  },
+  {
+    "id": "mat-3-15",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 3 cajas con 3 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "9",
+    "distractors": [
+      "10",
+      "12",
+      "8"
+    ],
+    "explanation": "Multiplicamos 3 por 3 y obtenemos 9.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-3-16",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Repartes 49 colores por igual entre 7 niños. ¿Cuántos recibe cada niño?",
+    "answer": "7",
+    "distractors": [
+      "8",
+      "5",
+      "12"
+    ],
+    "explanation": "Dividimos 49 entre 7 y cada niño recibe 7.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
+  },
+  {
+    "id": "mat-3-17",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 2 cajas con 4 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "8",
+    "distractors": [
+      "6",
+      "7",
+      "10"
+    ],
+    "explanation": "Multiplicamos 2 por 4 y obtenemos 8.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-3-18",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 3 cajas con 8 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "24",
+    "distractors": [
+      "23",
+      "27",
+      "25"
+    ],
+    "explanation": "Multiplicamos 3 por 8 y obtenemos 24.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-3-19",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Hay 8 cajas con 3 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "24",
+    "distractors": [
+      "27",
+      "26",
+      "23"
+    ],
+    "explanation": "Multiplicamos 8 por 3 y obtenemos 24.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-3-20",
+    "subject": "matematicas",
+    "min_grade": 3,
+    "max_grade": 3,
+    "prompt": "Repartes 20 colores por igual entre 4 niños. ¿Cuántos recibe cada niño?",
+    "answer": "5",
+    "distractors": [
+      "4",
+      "10",
+      "6"
+    ],
+    "explanation": "Dividimos 20 entre 4 y cada niño recibe 5.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
+  },
+  {
+    "id": "mat-4-07",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Repartes 39 colores por igual entre 3 niños. ¿Cuántos recibe cada niño?",
+    "answer": "13",
+    "distractors": [
+      "18",
+      "10",
+      "11"
+    ],
+    "explanation": "Dividimos 39 entre 3 y cada niño recibe 13.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
+  },
+  {
+    "id": "mat-4-08",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Repartes 32 colores por igual entre 8 niños. ¿Cuántos recibe cada niño?",
+    "answer": "4",
+    "distractors": [
+      "9",
+      "3",
+      "2"
+    ],
+    "explanation": "Dividimos 32 entre 8 y cada niño recibe 4.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
+  },
+  {
+    "id": "mat-4-09",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Repartes 9 colores por igual entre 3 niños. ¿Cuántos recibe cada niño?",
+    "answer": "3",
+    "distractors": [
+      "4",
+      "1",
+      "2"
+    ],
+    "explanation": "Dividimos 9 entre 3 y cada niño recibe 3.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
+  },
+  {
+    "id": "mat-4-10",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 14 cajas con 4 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "56",
+    "distractors": [
+      "55",
+      "54",
+      "53"
+    ],
+    "explanation": "Multiplicamos 14 por 4 y obtenemos 56.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-4-11",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 11 cajas con 4 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "44",
+    "distractors": [
+      "49",
+      "47",
+      "46"
+    ],
+    "explanation": "Multiplicamos 11 por 4 y obtenemos 44.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-4-12",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Repartes 56 colores por igual entre 8 niños. ¿Cuántos recibe cada niño?",
+    "answer": "7",
+    "distractors": [
+      "8",
+      "4",
+      "5"
+    ],
+    "explanation": "Dividimos 56 entre 8 y cada niño recibe 7.",
+    "hint": "Repartir por igual es hacer grupos del mismo tamaño, uno para cada niño."
+  },
+  {
+    "id": "mat-4-13",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 3 cajas con 3 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "9",
+    "distractors": [
+      "10",
+      "7",
+      "12"
+    ],
+    "explanation": "Multiplicamos 3 por 3 y obtenemos 9.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-4-14",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 12 cajas con 3 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "36",
+    "distractors": [
+      "35",
+      "37",
+      "34"
+    ],
+    "explanation": "Multiplicamos 12 por 3 y obtenemos 36.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-4-15",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 13 cajas con 9 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "117",
+    "distractors": [
+      "116",
+      "122",
+      "114"
+    ],
+    "explanation": "Multiplicamos 13 por 9 y obtenemos 117.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-4-16",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 7 cajas con 6 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "42",
+    "distractors": [
+      "39",
+      "41",
+      "47"
+    ],
+    "explanation": "Multiplicamos 7 por 6 y obtenemos 42.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-4-17",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 14 cajas con 9 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "126",
+    "distractors": [
+      "123",
+      "131",
+      "125"
+    ],
+    "explanation": "Multiplicamos 14 por 9 y obtenemos 126.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-4-18",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 11 cajas con 8 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "88",
+    "distractors": [
+      "93",
+      "87",
+      "85"
+    ],
+    "explanation": "Multiplicamos 11 por 8 y obtenemos 88.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-4-19",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 12 cajas con 8 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "96",
+    "distractors": [
+      "99",
+      "98",
+      "97"
+    ],
+    "explanation": "Multiplicamos 12 por 8 y obtenemos 96.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-4-20",
+    "subject": "matematicas",
+    "min_grade": 4,
+    "max_grade": 4,
+    "prompt": "Hay 6 cajas con 7 colores en cada caja. ¿Cuántos colores hay en total?",
+    "answer": "42",
+    "distractors": [
+      "39",
+      "41",
+      "40"
+    ],
+    "explanation": "Multiplicamos 6 por 7 y obtenemos 42.",
+    "hint": "Cada caja tiene la misma cantidad. Cuenta cuántas veces se repite ese grupo."
+  },
+  {
+    "id": "mat-5-07",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un tercio de 36?",
+    "answer": "12",
+    "distractors": [
+      "11",
+      "15",
+      "14"
+    ],
+    "explanation": "Dividimos 36 entre 3 y obtenemos 12.",
+    "hint": "Imagina que partes esa cantidad en tres partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-08",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un décimo de 40?",
+    "answer": "4",
+    "distractors": [
+      "3",
+      "1",
+      "7"
+    ],
+    "explanation": "Dividimos 40 entre 10 y obtenemos 4.",
+    "hint": "Imagina que partes esa cantidad en diez partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-09",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un décimo de 120?",
+    "answer": "12",
+    "distractors": [
+      "14",
+      "13",
+      "11"
+    ],
+    "explanation": "Dividimos 120 entre 10 y obtenemos 12.",
+    "hint": "Imagina que partes esa cantidad en diez partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-10",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un quinto de 35?",
+    "answer": "7",
+    "distractors": [
+      "8",
+      "5",
+      "6"
+    ],
+    "explanation": "Dividimos 35 entre 5 y obtenemos 7.",
+    "hint": "Imagina que partes esa cantidad en cinco partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-11",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un tercio de 12?",
+    "answer": "4",
+    "distractors": [
+      "6",
+      "2",
+      "1"
+    ],
+    "explanation": "Dividimos 12 entre 3 y obtenemos 4.",
+    "hint": "Imagina que partes esa cantidad en tres partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-12",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un cuarto de 24?",
+    "answer": "6",
+    "distractors": [
+      "7",
+      "3",
+      "4"
+    ],
+    "explanation": "Dividimos 24 entre 4 y obtenemos 6.",
+    "hint": "Imagina que partes esa cantidad en cuatro partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-13",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un cuarto de 20?",
+    "answer": "5",
+    "distractors": [
+      "8",
+      "10",
+      "6"
+    ],
+    "explanation": "Dividimos 20 entre 4 y obtenemos 5.",
+    "hint": "Imagina que partes esa cantidad en cuatro partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-14",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un medio de 18?",
+    "answer": "9",
+    "distractors": [
+      "6",
+      "8",
+      "7"
+    ],
+    "explanation": "Dividimos 18 entre 2 y obtenemos 9.",
+    "hint": "Imagina que partes esa cantidad en dos partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-15",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un quinto de 20?",
+    "answer": "4",
+    "distractors": [
+      "1",
+      "5",
+      "2"
+    ],
+    "explanation": "Dividimos 20 entre 5 y obtenemos 4.",
+    "hint": "Imagina que partes esa cantidad en cinco partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-16",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un tercio de 6?",
+    "answer": "2",
+    "distractors": [
+      "5",
+      "4",
+      "1"
+    ],
+    "explanation": "Dividimos 6 entre 3 y obtenemos 2.",
+    "hint": "Imagina que partes esa cantidad en tres partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-17",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un cuarto de 32?",
+    "answer": "8",
+    "distractors": [
+      "10",
+      "13",
+      "6"
+    ],
+    "explanation": "Dividimos 32 entre 4 y obtenemos 8.",
+    "hint": "Imagina que partes esa cantidad en cuatro partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-18",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un quinto de 10?",
+    "answer": "2",
+    "distractors": [
+      "0",
+      "4",
+      "3"
+    ],
+    "explanation": "Dividimos 10 entre 5 y obtenemos 2.",
+    "hint": "Imagina que partes esa cantidad en cinco partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-19",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un cuarto de 44?",
+    "answer": "11",
+    "distractors": [
+      "14",
+      "16",
+      "12"
+    ],
+    "explanation": "Dividimos 44 entre 4 y obtenemos 11.",
+    "hint": "Imagina que partes esa cantidad en cuatro partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-5-20",
+    "subject": "matematicas",
+    "min_grade": 5,
+    "max_grade": 5,
+    "prompt": "¿Cuánto es un medio de 14?",
+    "answer": "7",
+    "distractors": [
+      "8",
+      "12",
+      "10"
+    ],
+    "explanation": "Dividimos 14 entre 2 y obtenemos 7.",
+    "hint": "Imagina que partes esa cantidad en dos partes iguales. ¿Cuánto queda en una parte?"
+  },
+  {
+    "id": "mat-6-07",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 50 por ciento de 100?",
+    "answer": "50",
+    "distractors": [
+      "47",
+      "55",
+      "49"
+    ],
+    "explanation": "El 50 por ciento de 100 equivale a 50.",
+    "hint": "El 50 por ciento es la mitad de algo."
+  },
+  {
+    "id": "mat-6-08",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 10 por ciento de 200?",
+    "answer": "20",
+    "distractors": [
+      "22",
+      "23",
+      "19"
+    ],
+    "explanation": "El 10 por ciento de 200 equivale a 20.",
+    "hint": "El 10 por ciento es la décima parte: parte la cantidad en diez partes iguales."
+  },
+  {
+    "id": "mat-6-09",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 50 por ciento de 200?",
+    "answer": "100",
+    "distractors": [
+      "98",
+      "101",
+      "102"
+    ],
+    "explanation": "El 50 por ciento de 200 equivale a 100.",
+    "hint": "El 50 por ciento es la mitad de algo."
+  },
+  {
+    "id": "mat-6-10",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 25 por ciento de 60?",
+    "answer": "15",
+    "distractors": [
+      "14",
+      "16",
+      "20"
+    ],
+    "explanation": "El 25 por ciento de 60 equivale a 15.",
+    "hint": "El 25 por ciento es la cuarta parte: parte la cantidad en cuatro partes iguales."
+  },
+  {
+    "id": "mat-6-11",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 50 por ciento de 40?",
+    "answer": "20",
+    "distractors": [
+      "25",
+      "22",
+      "19"
+    ],
+    "explanation": "El 50 por ciento de 40 equivale a 20.",
+    "hint": "El 50 por ciento es la mitad de algo."
+  },
+  {
+    "id": "mat-6-12",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 25 por ciento de 80?",
+    "answer": "20",
+    "distractors": [
+      "17",
+      "19",
+      "22"
+    ],
+    "explanation": "El 25 por ciento de 80 equivale a 20.",
+    "hint": "El 25 por ciento es la cuarta parte: parte la cantidad en cuatro partes iguales."
+  },
+  {
+    "id": "mat-6-13",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 25 por ciento de 100?",
+    "answer": "25",
+    "distractors": [
+      "23",
+      "26",
+      "24"
+    ],
+    "explanation": "El 25 por ciento de 100 equivale a 25.",
+    "hint": "El 25 por ciento es la cuarta parte: parte la cantidad en cuatro partes iguales."
+  },
+  {
+    "id": "mat-6-14",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 10 por ciento de 20?",
+    "answer": "2",
+    "distractors": [
+      "0",
+      "7",
+      "5"
+    ],
+    "explanation": "El 10 por ciento de 20 equivale a 2.",
+    "hint": "El 10 por ciento es la décima parte: parte la cantidad en diez partes iguales."
+  },
+  {
+    "id": "mat-6-15",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 25 por ciento de 20?",
+    "answer": "5",
+    "distractors": [
+      "7",
+      "2",
+      "3"
+    ],
+    "explanation": "El 25 por ciento de 20 equivale a 5.",
+    "hint": "El 25 por ciento es la cuarta parte: parte la cantidad en cuatro partes iguales."
+  },
+  {
+    "id": "mat-6-16",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 25 por ciento de 200?",
+    "answer": "50",
+    "distractors": [
+      "48",
+      "55",
+      "49"
+    ],
+    "explanation": "El 25 por ciento de 200 equivale a 50.",
+    "hint": "El 25 por ciento es la cuarta parte: parte la cantidad en cuatro partes iguales."
+  },
+  {
+    "id": "mat-6-17",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 10 por ciento de 40?",
+    "answer": "4",
+    "distractors": [
+      "6",
+      "5",
+      "2"
+    ],
+    "explanation": "El 10 por ciento de 40 equivale a 4.",
+    "hint": "El 10 por ciento es la décima parte: parte la cantidad en diez partes iguales."
+  },
+  {
+    "id": "mat-6-18",
+    "subject": "matematicas",
+    "min_grade": 6,
+    "max_grade": 6,
+    "prompt": "¿Cuánto es el 10 por ciento de 100?",
+    "answer": "10",
+    "distractors": [
+      "13",
+      "11",
+      "9"
+    ],
+    "explanation": "El 10 por ciento de 100 equivale a 10.",
+    "hint": "El 10 por ciento es la décima parte: parte la cantidad en diez partes iguales."
   }
 ]

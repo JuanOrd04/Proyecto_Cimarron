@@ -1,11 +1,12 @@
 import concurrent.futures
+import tempfile
 import threading
 import unittest
+from pathlib import Path
 from unittest.mock import Mock
 
+from quiz_bank import AudioCache, BankQuestionProvider
 from quiz_engine import QuizService, SUBJECTS
-from quiz_generation import OllamaQuestionGenerator
-import uuid
 from quiz_llm import QuizModelUnavailable
 
 
@@ -17,16 +18,14 @@ def result(status, text='Una explicación para el niño.'):
 class QuizTests(unittest.TestCase):
     def setUp(self):
         self.evaluator = Mock()
-        self.evaluator.evaluate.side_effect = lambda q, text, grade, turns: result(
+        self.evaluator.evaluate.side_effect = lambda q, text, grade, turns, context=None: result(
             'correct' if text == q['answer'] else 'incorrect', f"La respuesta es {q['answer']}. {q['explanation']}")
-        self.generator = Mock()
-        self.generator.plan.side_effect = OllamaQuestionGenerator().plan
-        self.generator.generate.side_effect = lambda grade, subject, previous=(), rng=None: {
-            'id': str(uuid.uuid4()), 'prompt': f'Pregunta de prueba {len(previous) + 1}',
-            'answer': '4', 'options': ['4', '5', '6', '7'],
-            'explanation': 'Una explicación de prueba.', 'subject': SUBJECTS[subject],
-        }
+        self.temp = tempfile.TemporaryDirectory()
+        self.generator = BankQuestionProvider(audio=AudioCache(Path(self.temp.name) / 'audio.sqlite3'), synthesize=None)
         self.service = QuizService(self.evaluator, self.generator)
+
+    def tearDown(self):
+        self.temp.cleanup()
 
     def test_five_questions_for_every_grade_and_subject(self):
         for grade in range(1, 7):
@@ -50,68 +49,11 @@ class QuizTests(unittest.TestCase):
                     self.assertEqual(response['score'], 5)
                     self.assertEqual(len(ids), 5)
 
-    def test_generation_failure_preserves_progress_and_can_be_retried(self):
-        game = self.service.start(3, 'matematicas')
-        qid = game['question']['id']
-        self.service.answer(game['session_id'], qid, '4')
-        generate = self.generator.generate.side_effect
-        self.generator.generate.side_effect = QuizModelUnavailable('Propuesta no válida')
-        with self.assertRaises(QuizModelUnavailable):
-            self.service.next(game['session_id'], qid)
-        session = self.service.sessions[game['session_id']]
-        self.assertEqual(session['index'], 0)
-        self.assertEqual(session['score'], 1)
-        self.assertEqual(session['phase'], 'feedback')
-        self.assertEqual(len(session['questions']), 1)
-        self.generator.generate.side_effect = generate
-        following = self.service.next(game['session_id'], qid)
-        self.assertNotEqual(following['question']['id'], qid)
-        self.assertEqual(following['score'], 1)
-
-    def test_initial_generation_failure_does_not_create_an_empty_session(self):
-        self.generator.generate.side_effect = QuizModelUnavailable('Sin material')
-        with self.assertRaises(QuizModelUnavailable):
+    def test_unavailable_bank_round_does_not_create_an_empty_session(self):
+        self.generator.generate_round = Mock(side_effect=ValueError('Sin preguntas'))
+        with self.assertRaises(ValueError):
             self.service.start(2, 'biologia')
         self.assertEqual(self.service.sessions, {})
-
-    def test_next_retries_generate_only_one_new_question(self):
-        game = self.service.start(2, 'biologia')
-        qid = game['question']['id']
-        self.service.answer(game['session_id'], qid, '4')
-        first = self.service.next(game['session_id'], qid)
-        retry = self.service.next(game['session_id'], qid)
-        self.assertEqual(first, retry)
-        self.assertEqual(self.generator.generate.call_count, 2)
-        previous = self.generator.generate.call_args.args[2]
-        self.assertEqual(previous[0]['id'], qid)
-
-    def test_next_generation_does_not_block_another_session_and_end_does_not_restore_it(self):
-        game = self.service.start(2, 'biologia')
-        other = self.service.start(2, 'espanol')
-        qid = game['question']['id']
-        self.service.answer(game['session_id'], qid, '4')
-        started, release = threading.Event(), threading.Event()
-        generate = self.generator.generate.side_effect
-
-        def delayed(*args, **kwargs):
-            started.set()
-            if not release.wait(5):
-                raise RuntimeError('Tiempo agotado')
-            return generate(*args, **kwargs)
-
-        self.generator.generate.side_effect = delayed
-        with concurrent.futures.ThreadPoolExecutor() as pool:
-            pending = pool.submit(self.service.next, game['session_id'], qid)
-            self.assertTrue(started.wait(2))
-            try:
-                response = self.service.answer(other['session_id'], other['question']['id'], '4')
-                self.assertEqual(response['score'], 1)
-                self.service.end(game['session_id'])
-            finally:
-                release.set()
-            with self.assertRaises(KeyError):
-                pending.result(timeout=2)
-        self.assertNotIn(game['session_id'], self.service.sessions)
 
     def test_free_long_answer_is_sent_intact_to_model_and_uses_its_feedback(self):
         game = self.service.start(2, 'biologia')
@@ -200,7 +142,7 @@ class QuizTests(unittest.TestCase):
         second = self.service.start(6, 'espanol')
         started, release = threading.Event(), threading.Event()
         first_id = first['question']['id']
-        def evaluate(q, text, grade, turns):
+        def evaluate(q, text, grade, turns, context=None):
             if q['id'] == first_id:
                 started.set()
                 if not release.wait(5):

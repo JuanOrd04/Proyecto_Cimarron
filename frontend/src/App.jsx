@@ -34,6 +34,7 @@ function App() {
   const voiceModeRef = useRef(true);
   const gameRef = useRef(null);
   const narrationPendingRef = useRef(false);
+  const fillersRef = useRef([]); // Muletillas con voz para cubrir el tiempo en que el LLM piensa
 
   const audioRef = useRef(null);
   const mouthIntervalRef = useRef(null);
@@ -234,6 +235,24 @@ function App() {
     if (!narrationPendingRef.current && !isLoading && gameRef.current) continueByVoice(gameRef.current);
   };
 
+  const loadFillers = () => {
+    fetch(`${API_BASE_URL}/quiz/fillers`)
+      .then((response) => (response.ok ? response.json() : { fillers: [] }))
+      .then((data) => { if (data.fillers?.length) fillersRef.current = data.fillers; })
+      .catch(() => {});
+  };
+
+  const playFiller = () => {
+    const fillers = fillersRef.current;
+    if (!fillers.length) return Promise.resolve();
+    const filler = fillers[Math.floor(Math.random() * fillers.length)];
+    setShowBubble(true);
+    setResponseText(filler.text);
+    const played = new Promise((resolve) => playAudioWithMouthSync(filler.audio, () => resolve()));
+    // Si la muletilla se interrumpe, no se detiene la respuesta del Cimarrón.
+    return Promise.race([played, new Promise((resolve) => setTimeout(resolve, 4000))]);
+  };
+
   const requestQuiz = async (action, payload) => {
     handleStop();
     setGameError('');
@@ -241,6 +260,8 @@ function App() {
     const controller = new AbortController();
     abortControllerRef.current = controller;
     let retryAnswer = false;
+    const fillerDone = action === 'answer' ? playFiller() : Promise.resolve();
+    if (action === 'start' || !fillersRef.current.length) loadFillers();
     try {
       const response = await fetch(`${API_BASE_URL}/quiz/${action}`, {
         method: 'POST',
@@ -260,6 +281,8 @@ function App() {
         if (response.status === 404) { gameRef.current = null; setGame(null); setShowGameSetup(true); }
         throw new Error(typeof data.detail === 'string' ? data.detail : 'No pude preparar la dinámica. Inténtalo otra vez.');
       }
+      await fillerDone;
+      if (controller.signal.aborted) return;
       setGame(data);
       gameRef.current = data;
       setShowGameSetup(false);

@@ -8,25 +8,37 @@ function fixture() {
     start() { events.push('start'); this.onstart?.(); },
     abort() { events.push('abort'); this.onend?.(); },
   };
+  const timers = new Map();
+  let nextTimer = 0;
   const session = createSpeechSession(rec, {
     onStart: () => events.push('listening'), onText: () => {},
     onFinish: () => events.push('finish'),
     onAnswer: (answer) => { events.push('answer'); answers.push(answer); },
     onError: (error) => errors.push(error),
+  }, {
+    setTimer: (fn) => { nextTimer += 1; timers.set(nextTimer, fn); return nextTimer; },
+    clearTimer: (id) => timers.delete(id),
   });
+  const results = [];
   const result = (text, final = false) => {
     const piece = [{ transcript: text }];
     piece.isFinal = final;
-    rec.onresult?.({ results: [piece] });
+    if (results.length && !results[results.length - 1].isFinal) results.pop();
+    results.push(piece);
+    rec.onresult?.({ results: [...results] });
   };
-  return { rec, session, result, answers, errors, events };
+  // Simula que el niño se quedó callado el tiempo suficiente.
+  const silence = () => { const pending = [...timers.values()]; timers.clear(); pending.forEach((fn) => fn()); };
+  return { rec, session, result, silence, answers, errors, events };
 }
 
-test('Una respuesta final cierra el micrófono antes de enviar y se envía una sola vez', () => {
+test('La respuesta se envía tras el silencio, cierra el micrófono antes y se envía una sola vez', () => {
   const f = fixture();
   f.session.start();
   f.result('opción B', true);
-  f.result('opción B', true);
+  assert.deepEqual(f.answers, []);
+  f.silence();
+  f.silence();
   f.rec.onend();
   assert.deepEqual(f.answers, ['opción B']);
   assert.ok(f.events.indexOf('finish') < f.events.indexOf('answer'));
@@ -62,6 +74,7 @@ test('Los errores no envían resultados parciales y permiten un reintento explí
   assert.deepEqual(f.errors, ['network']);
   f.session.start();
   f.result('cuatro', true);
+  f.silence();
   assert.deepEqual(f.answers, ['cuatro']);
 });
 
@@ -99,4 +112,15 @@ test('Reanudar inmediatamente espera el fin de la escucha anterior', () => {
   f.rec.onend();
   assert.deepEqual(f.answers, ['ocho']);
   assert.deepEqual(f.errors, []);
+});
+
+test('Las pausas del niño no cortan la respuesta: se juntan los pedazos hasta el silencio', () => {
+  const f = fixture();
+  f.session.start();
+  f.result('eeh la', true);
+  f.result('la del');
+  f.result('la del sol', true);
+  assert.deepEqual(f.answers, []);
+  f.silence();
+  assert.deepEqual(f.answers, ['eeh la la del sol']);
 });

@@ -1,7 +1,6 @@
 """Dinámicas de primaria con respuestas verificables y sesiones independientes."""
 
 import copy
-import random
 import threading
 import time
 import uuid
@@ -10,7 +9,7 @@ from quiz_llm import OllamaQuizEvaluator
 
 from quiz_curriculum import SUBJECTS, TOTAL
 from quiz_bank import BankQuestionProvider
-from quiz_narration import feedback_texts, question_narration
+from quiz_narration import question_narration
 
 
 class QuizService:
@@ -32,12 +31,10 @@ class QuizService:
         question = session['questions'][session['index']]
         phase = session['phase']
         narration = question_narration(question)
-        prepared_audio = {text: question.get('feedback_audio', {}).get(status) for status, text in feedback_texts(question).items()}
-        prepared_audio[narration] = question.get('audio')
         response = narration
         if session.get('feedback'):
             response = session['feedback']['text']
-        if phase == 'finished':
+        if phase == 'finished' and not (session.get('feedback') or {}).get('closing'):
             response += f' ¡Terminamos! Acertaste {session["score"]} de {TOTAL}.'
         feedback = copy.deepcopy(session.get('feedback'))
         if feedback and 'correct_answer' in feedback and question['answer'] in question['options']:
@@ -50,7 +47,8 @@ class QuizService:
                          'source': {key: question.get('generation', {}).get(key) for key in ('source_title', 'source_url', 'model')}},
             'feedback': feedback, 'response': response,
             'evaluation': copy.deepcopy(session.get('evaluation')),
-            '_prepared_audio': prepared_audio.get(response),
+            # Solo la narración de la pregunta tiene voz preparada; lo que dice el LLM se sintetiza al momento.
+            '_prepared_audio': question.get('audio') if response == narration else None,
         }
 
     def prepare(self, grade, subject):
@@ -61,22 +59,15 @@ class QuizService:
     def start(self, grade, subject):
         if grade not in range(1, 7) or subject not in SUBJECTS:
             raise ValueError('Elige un grado de primero a sexto y una materia válida.')
-        rng = random.Random()
-        plan = self.generator.plan(subject, rng)
-        if getattr(self.generator, 'prepares_rounds', False) is True:
-            questions = self.generator.generate_round(grade, subject)
-        else:
-            questions = [self.generator.generate(grade, plan[0], rng=rng)]
+        questions = self.generator.generate_round(grade, subject)
         with self.lock:
             now = time.monotonic()
             self.sessions = {key: value for key, value in self.sessions.items() if now - value['updated'] <= 7200}
             if len(self.sessions) >= 500:
                 oldest = min(self.sessions, key=lambda key: self.sessions[key]['updated'])
                 del self.sessions[oldest]
-            session = {'id': str(uuid.uuid4()), 'grade': grade, 'subject': subject, 'questions': questions, 'plan': plan, 'index': 0, 'score': 0, 'phase': 'question', 'answers': {}, 'feedback': None, 'updated': now, 'turns': [], 'clarifications': {}, 'turn_lock': threading.Lock()}
+            session = {'id': str(uuid.uuid4()), 'grade': grade, 'subject': subject, 'questions': questions, 'index': 0, 'score': 0, 'phase': 'question', 'answers': {}, 'feedback': None, 'updated': now, 'turns': [], 'clarifications': {}, 'turn_lock': threading.Lock()}
             self.sessions[session['id']] = session
-            if getattr(self.generator, 'prepares_rounds', False) is True:
-                self.generator.hold(session['id'])
             result = self._view(session)
             return result
 
@@ -100,10 +91,11 @@ class QuizService:
                 question = copy.deepcopy(question)
                 previous_turns = copy.deepcopy(session['turns'])
                 grade = session['grade']
-                if getattr(self.generator, 'prepares_rounds', False) is True:
-                    self.generator.hold(session_id)
+                context = {'numero_de_pregunta': session['index'] + 1, 'total': TOTAL,
+                           'aciertos_hasta_ahora': session['score'],
+                           'resultados_anteriores': copy.deepcopy(session.get('history', []))[-4:]}
 
-            evaluation = self.evaluator.evaluate(question, text, grade, previous_turns)
+            evaluation = self.evaluator.evaluate(question, text, grade, previous_turns, context)
 
             with self.lock:
                 session = self._get(session_id)
@@ -126,10 +118,11 @@ class QuizService:
                     return result
 
                 session['score'] += int(kind == 'correct')
+                session['feedback']['closing'] = bool(evaluation.get('closing_included'))
+                session.setdefault('history', []).append({'pregunta': question['prompt'],
+                                                          'resultado': 'acertó' if kind == 'correct' else 'falló'})
                 session['feedback']['correct_answer'] = question['answer']
                 session['phase'] = 'finished' if session['index'] == TOTAL - 1 else 'feedback'
-                if session['phase'] == 'finished' and getattr(self.generator, 'prepares_rounds', False) is True:
-                    self.generator.release(session_id)
                 session['answers'][question_id] = None
                 result = self._view(session)
                 session['answers'][question_id] = copy.deepcopy(result)
@@ -149,21 +142,6 @@ class QuizService:
                     return self._view(session)
                 if session['phase'] != 'feedback' or current['id'] != question_id:
                     raise ValueError('Responde la pregunta actual antes de continuar.')
-                if session['index'] + 1 < len(session['questions']):
-                    session['index'] += 1
-                    session['phase'] = 'question'
-                    session['feedback'] = None
-                    session['evaluation'] = None
-                    session['turns'] = []
-                    session['clarifications'] = {}
-                    return self._view(session)
-                grade = session['grade']
-                subject = session['plan'][session['index'] + 1]
-                previous = copy.deepcopy(session['questions'])
-            question = self.generator.generate(grade, subject, previous)
-            with self.lock:
-                session = self._get(session_id)
-                session['questions'].append(question)
                 session['index'] += 1
                 session['phase'] = 'question'
                 session['feedback'] = None
@@ -175,8 +153,6 @@ class QuizService:
     def end(self, session_id):
         with self.lock:
             self.sessions.pop(session_id, None)
-            if getattr(self.generator, 'prepares_rounds', False) is True:
-                self.generator.release(session_id)
 
 
 quiz_service = QuizService()

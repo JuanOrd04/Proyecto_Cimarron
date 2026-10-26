@@ -11,7 +11,8 @@ const bundle = await build({ entryPoints: ['src/components/QuizPanel.jsx'], bund
 const module = { exports: {} };
 new Function('require', 'module', 'exports', bundle.outputFiles[0].text)(require, module, module.exports);
 const QuizPanel = module.exports.default;
-const fixture = JSON.parse(await readFile(new URL('../../backend/tests/fixtures/semantic_questions.json', import.meta.url), 'utf8'))[0];
+const row = JSON.parse(await readFile(new URL('../../backend/data/banco_preguntas.json', import.meta.url), 'utf8'))[0];
+const fixture = { prompt: row.prompt, subject: 'Ciencias naturales', answer: row.answer, explanation: row.explanation, options: [row.answer, ...row.distractors] };
 const game = {
   session_id: 'test-session', grade: 2, subject_label: fixture.subject, total: 5, answered: 0, phase: 'question',
   question: { id: 'test-question', prompt: fixture.prompt, subject: fixture.subject,

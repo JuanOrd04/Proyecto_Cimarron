@@ -433,5 +433,25 @@
   "bank_id": "mat-2-05",
   "nino_dijo": "ni idea",
   "esperado": "incorrect"
+ },
+ {
+  "bank_id": "bio-12-02",
+  "nino_dijo": "¿qué es un mamífero?",
+  "esperado": "unclear"
+ },
+ {
+  "bank_id": "cn-12-01",
+  "nino_dijo": "¿me das una pista?",
+  "esperado": "unclear"
+ },
+ {
+  "bank_id": "mat-1-01",
+  "nino_dijo": "¿qué es prestar?",
+  "esperado": "unclear"
+ },
+ {
+  "bank_id": "geo-34-01",
+  "nino_dijo": "¿es la ce?",
+  "esperado": "correct"
  }
 ]

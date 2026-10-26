@@ -47,7 +47,7 @@ const SpeechButton = ({ onSpeechResult, disabled, isListening, setIsListening, s
       return;
     }
     const rec = new Recognition();
-    rec.continuous = false;
+    rec.continuous = true; // La sesión decide cuándo terminó el niño, por silencio
     rec.interimResults = true;
     rec.lang = 'es-MX';
     const activeSession = createSpeechSession(rec, {

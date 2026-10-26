@@ -7,6 +7,8 @@ import struct
 import logging
 import threading
 
+import numpy as np
+
 try:
     from supertonic import TTS
     SUPERTONIC_AVAILABLE = True
@@ -52,9 +54,14 @@ class LocalTTSEngine:
                     text=text,
                     voice_style=self.style,
                     lang="es",
-                    speed=1.3,
+                    speed=1.0,
                     total_steps=5
                 )
+                if wav is not None:
+                    # Silencio al inicio y al final: el navegador suele comerse la primera sílaba de audios cortos.
+                    rate = getattr(self.tts, 'sample_rate', 44100)
+                    wav = np.concatenate([np.zeros((wav.shape[0], int(rate * 0.25)), dtype=wav.dtype), wav,
+                                          np.zeros((wav.shape[0], int(rate * 0.3)), dtype=wav.dtype)], axis=1)
                 
                 # Guardar el audio usando el método integrado de supertonic
                 if wav is not None:

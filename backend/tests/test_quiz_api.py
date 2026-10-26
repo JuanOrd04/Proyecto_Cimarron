@@ -5,7 +5,6 @@ from fastapi import FastAPI
 from fastapi.testclient import TestClient
 
 import quiz_api
-from quiz_preparation import QuizPreparing
 
 
 class QuizApiTests(unittest.TestCase):
@@ -27,11 +26,10 @@ class QuizApiTests(unittest.TestCase):
         self.speak.assert_not_called()
         self.assertEqual(self.client.get('/quiz/prepare?grade=9&subject=mixto').status_code, 422)
 
-    def test_unprepared_game_returns_progress_not_a_broken_round(self):
-        self.service.start.side_effect = QuizPreparing('Preparando tus preguntas.')
-        response = self.client.post('/quiz/start', json={'grade': 2, 'subject': 'mixto'})
-        self.assertEqual(response.status_code, 202)
-        self.assertEqual(response.json()['state'], 'preparing')
+    def test_fillers_endpoint_returns_only_prepared_fillers(self):
+        self.service.generator.fillers.return_value = [{'text': '¡A ver!', 'audio': 'wav'}]
+        response = self.client.get('/quiz/fillers')
+        self.assertEqual(response.json(), {'fillers': [{'text': '¡A ver!', 'audio': 'wav'}]})
         self.speak.assert_not_called()
 
     def test_question_audio_is_reused_and_internal_audio_field_is_removed(self):

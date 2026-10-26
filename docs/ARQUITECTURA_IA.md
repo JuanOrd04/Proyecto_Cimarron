@@ -4,7 +4,7 @@ Cimarrón conserva React, FastAPI, Ollama, Chroma y Supertonic. El chat instituc
 
 ## Por qué cambió el diseño
 
-La versión anterior generaba preguntas y distractores con Gemma a partir de un corpus recuperado por RAG, los revisaba con el mismo modelo y los guardaba en una caché. Durante el desarrollo aparecieron preguntas mal formuladas que el propio modelo aprobaba. Por indicación del maestro, el contenido pasó a un banco de 96 preguntas escritas y revisadas por personas, y el esfuerzo de IA se concentró en lo que no puede resolverse con una lista: entender a un niño que responde hablando, con sus palabras, dudas y errores del reconocimiento de voz.
+La versión anterior generaba preguntas y distractores con Gemma a partir de un corpus recuperado por RAG, los revisaba con el mismo modelo y los guardaba en una caché. Durante el desarrollo aparecieron preguntas mal formuladas que el propio modelo aprobaba. Por indicación del maestro, el contenido pasó a un banco de preguntas escritas y revisadas por personas, y el esfuerzo de IA se concentró en lo que no puede resolverse con una lista: entender a un niño que responde hablando, con sus palabras, dudas y errores del reconocimiento de voz.
 
 ## Recorrido para demostrar el código
 
@@ -12,7 +12,7 @@ Abre estos archivos en este orden. Las rutas de esta guía parten de la raíz de
 
 | Orden | Archivo y punto de entrada | Qué explicar al mostrarlo |
 | --- | --- | --- |
-| 1 | [backend/data/banco_preguntas.json](../backend/data/banco_preguntas.json) | El contenido del juego: cada pregunta tiene `id`, `subject`, `min_grade`/`max_grade`, `prompt`, `answer`, tres `distractors` y `explanation`. Se edita a mano; [la guía del banco](GENERACION_PREGUNTAS.md) explica cómo. |
+| 1 | [backend/data/banco_preguntas.json](../backend/data/banco_preguntas.json) | El contenido del juego: cada pregunta tiene `id`, `subject`, `min_grade`/`max_grade`, `prompt`, `answer`, tres `distractors`, `explanation` y `hint` (pista). Se edita a mano; [la guía del banco](GENERACION_PREGUNTAS.md) explica cómo. |
 | 2 | [backend/quiz_bank.py](../backend/quiz_bank.py), `BankQuestion`, `load_bank()` y `to_question()` | Valida cada fila con Pydantic (materia, grados, longitudes, cuatro opciones distintas, ids únicos) y la convierte en pregunta de juego. Mezcla las opciones con una semilla igual al `id`: el orden es estable entre partidas, así la narración se sintetiza una sola vez, y la respuesta correcta no ocupa una letra fija. Si `answer` es un número en dígitos, la pregunta es numérica. |
 | 3 | [backend/quiz_bank.py](../backend/quiz_bank.py), `BankQuestionProvider.generate_round()` y `warm_audio()` | Arma la ronda: en «Un poco de todo», una pregunta de cada una de las cinco materias; en una materia, cinco preguntas distintas de su grado. Al arrancar, un hilo de fondo sintetiza las voces que falten y las guarda en `backend/quiz_audio.sqlite3` (`AudioCache`). |
 | 4 | [backend/quiz_narration.py](../backend/quiz_narration.py), `question_narration()` y `feedback_texts()` | El texto hablado de la pregunta con sus letras A–D y la retroalimentación fija de acierto o error («¡Muy bien!…», «Buen intento. La respuesta es…»), armada con la `explanation` del banco. El LLM no redacta la retroalimentación. |
@@ -77,13 +77,14 @@ La materia «Un poco de todo» toma una pregunta de cada materia (Matemáticas, 
 
 Esta es la parte de IA del juego. Todas las consultas piden JSON con un esquema que Ollama obliga a respetar, a temperatura 0, y tratan lo que dijo el niño como datos, no como instrucciones.
 
-**Opciones de texto: el árbitro.** `choice_prompt()` recibe las cuatro opciones y la transcripción, pero no la pregunta ni cuál es la correcta. Primero resume lo que dijo el niño con sus palabras (si se corrige, se queda con lo último) y después elige la opción cuyo *significado* coincide: la letra («la be»), el texto, un sinónimo, un diminutivo, una descripción o una duda («creo que…»). El esquema solo admite `A) …` a `D) …` o una de cuatro categorías:
+**Opciones de texto: el árbitro.** `choice_prompt()` recibe las cuatro opciones y la transcripción, pero no la pregunta ni cuál es la correcta. Primero resume lo que dijo el niño con sus palabras (si se corrige, se queda con lo último) y después elige la opción cuyo *significado* coincide: la letra («la be»), el texto, un sinónimo, un diminutivo, una descripción o una duda («creo que…»). El esquema solo admite `A) …` a `D) …` o una de cinco categorías:
 
 | Categoría | Cuándo | Qué pasa |
 | --- | --- | --- |
 | `PEDIR_REPETIR` | «repítemela», «no escuché» | `unclear`; se repite la narración con su audio ya guardado. |
 | `NO_SABE` | «no sé», «ni idea» | Pasa por el juez; si no hay idea válida, `incorrect` con la explicación. |
-| `RUIDO_O_INDECISION` | ruido, «eeh», dos opciones sin elegir, «ponme el punto» | `unclear`; pide la letra o la respuesta. |
+| `RUIDO_O_INDECISION` | ruido, «eeh», dos opciones sin elegir, «ponme el punto» | `unclear`; el Cimarrón dice lo que alcanzó a entender y pide que elija. |
+| `PREGUNTA_DEL_NINO` | «¿qué es un mamífero?», «¿me das una pista?» | `unclear`; el Cimarrón dice la pista escrita en el banco. |
 | `RESPUESTA_FUERA_DE_OPCIONES` | propone otra cosa | Pasa por el juez. |
 
 No mostrarle la pregunta es una decisión deliberada: un modelo que conoce la respuesta tiende a «ayudar» y a leer en lo que dijo el niño la opción correcta. Sin la pregunta, solo puede decidir qué opción se parece a lo dicho. Cuando elige una opción, Python compara esa opción con `answer`; nunca se comparan las palabras del niño con un texto.
@@ -92,7 +93,9 @@ No mostrarle la pregunta es una decisión deliberada: un modelo que conoce la re
 
 **Números.** Las preguntas cuya respuesta es un número usan `number_choice_prompt()`, que recibe únicamente la transcripción: ni el problema ni las opciones. El modelo anota el número final que dijo el niño («siete, no, mejor ocho» → 8; «tiene seis patitas» → 6), o la letra si eligió una. Python convierte la letra en el valor de esa opción y compara con la respuesta. Así el modelo no puede resolver el problema por su cuenta y darle al niño un resultado que no dijo.
 
-**Retroalimentación.** Los textos de acierto y error se arman con la `explanation` del banco y se sintetizan con anticipación. El modelo no escribe lo que dice el Cimarrón, así que no puede inventar explicaciones ni responder en inglés. Las aclaraciones (`unclear`) conservan la pregunta y no suman ni restan; cada intervención se interpreta por sí sola.
+**Retroalimentación: el conversador.** Después del árbitro, el mismo LLM redacta todo lo que dice el Cimarrón (`reply_prompt()` en `quiz_dialogue.py`), con su personalidad: celebra retomando las palabras del niño, corrige con cariño, responde dudas y lleva la cuenta de la ronda (pregunta actual, aciertos, resultados anteriores). En la última pregunta cierra el juego con el total. El conversador solo recibe la respuesta correcta y la `explanation` cuando el árbitro ya calificó. Cuando el niño pregunta o pide ayuda, recibe la `hint` del banco como guía, nunca la respuesta. `reveals_answer()` revisa esa frase: si la revela, se le pide reescribirla una vez y, si insiste, se dice la pista escrita. Si el LLM falla, se usa un texto de respaldo y la calificación no cambia.
+
+**Muletillas.** Mientras el árbitro y el conversador trabajan (unos 3–5 s con la voz), el frontend reproduce al instante una muletilla al azar («¡A ver, a ver!», «Mmm, déjame pensar…»). Son 14, con voz preparada al arrancar, y se sirven en `GET /quiz/fillers`. No califican ni responden nada: solo cubren la espera. Las aclaraciones (`unclear`) conservan la pregunta y no suman ni restan; cada intervención se interpreta por sí sola.
 
 ## 4. Voces guardadas
 
@@ -126,7 +129,7 @@ Necesitan Ollama abierto con `qwen2.5:7b`. Las pruebas unitarias (`./venv/bin/py
 
 | Archivo | Responsabilidad |
 | --- | --- |
-| `backend/data/banco_preguntas.json` | Las 96 preguntas del juego. |
+| `backend/data/banco_preguntas.json` | Las 298 preguntas del juego. |
 | `backend/quiz_bank.py`, `quiz_curriculum.py` | Validación del banco, rondas, materias y caché de voces. |
 | `backend/quiz_narration.py` | Texto hablado de pregunta, opciones y retroalimentación. |
 | `backend/quiz_dialogue.py`, `quiz_llm.py` | Árbitro, juez, ruta numérica y llamada al modelo. |
@@ -137,7 +140,7 @@ Necesitan Ollama abierto con `qwen2.5:7b`. Las pruebas unitarias (`./venv/bin/py
 | `frontend/src/components/QuizPanel.jsx`, `components/QuizAnswers.jsx`, `quizPreparation.js` | Juego, tarjetas y consulta de disponibilidad. |
 | `frontend/src/App.jsx` | Audio, voz automática y comunicación con la API. |
 
-Siguen en disco, pero el juego actual ya no los usa: `quiz_generation.py`, `quiz_generation_prompts.py`, `quiz_preparation.py` (solo se importa su excepción `QuizPreparing`), `quiz_cache.py`, `quiz_knowledge.py`, `data/educacion_primaria.json`, el índice `chroma_education/`, la caché `quiz_cache.sqlite3` y los scripts `prepare_quiz.py`, `check_prepared_round_live.py` y `check_quiz_generation_live.py`. `quiz_prompts.py`, `quiz_concepts.py` y `quiz_language.py` pertenecen a la ruta de evaluación anterior que `quiz_llm.py` conserva para preguntas sin `answer_kind`; las del banco no pasan por ella.
+`backend/quiz_language.py` revisa que lo que redacta el LLM esté en español; si no, se usa el texto de respaldo. Los módulos de la versión que generaba preguntas con el LLM (generación, preparación, caché y RAG educativo) se retiraron del proyecto; siguen disponibles en el historial de git, en el commit `4fadaf2`.
 
 ## Cómo responder al asesor
 

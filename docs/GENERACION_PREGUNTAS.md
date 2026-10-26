@@ -4,11 +4,11 @@ Las preguntas del juego ya no se generan con el LLM. Salen de un banco revisado,
 
 ## Por qué ya no se generan
 
-La versión anterior pedía a `gemma2:2b` que eligiera un concepto de un corpus recuperado por RAG, redactara la pregunta, propusiera tres distractores y revisara su propio trabajo; todo se preparaba antes de la ronda y se guardaba en una caché. Funcionaba, pero se observaron preguntas mal formuladas que el mismo modelo aprobaba, y una revisión hecha por el mismo modelo no equivale a una revisión docente. Por indicación del maestro se cambió a un banco escrito y revisado por personas: el contenido es fijo y verificable, y el trabajo de IA se concentra en interpretar respuestas habladas. Los módulos de generación (`quiz_generation.py`, `quiz_preparation.py`, `quiz_cache.py`, `quiz_knowledge.py`) siguen en disco pero el juego ya no los usa.
+La versión anterior pedía a `gemma2:2b` que eligiera un concepto de un corpus recuperado por RAG, redactara la pregunta, propusiera tres distractores y revisara su propio trabajo; todo se preparaba antes de la ronda y se guardaba en una caché. Funcionaba, pero se observaron preguntas mal formuladas que el mismo modelo aprobaba, y una revisión hecha por el mismo modelo no equivale a una revisión docente. Por indicación del maestro se cambió a un banco escrito y revisado por personas: el contenido es fijo y verificable, y el trabajo de IA se concentra en interpretar respuestas habladas. Esos módulos de generación se retiraron del proyecto; siguen en el historial de git (commit `4fadaf2`).
 
 ## Qué contiene
 
-96 preguntas de opción múltiple, cada una con su respuesta, tres distractores y una explicación breve.
+298 preguntas de opción múltiple (15 por materia y par de grados, y de 18 a 20 de matemáticas por grado), cada una con su respuesta, tres distractores, una explicación breve y una pista. Las 202 más recientes son un borrador pendiente de revisión docente.
 
 | Materia | Preguntas | Reparto por grado |
 | --- | --- | --- |
@@ -33,7 +33,8 @@ Una ronda tiene cinco preguntas. En «Un poco de todo» toca una de cada materia
   "prompt": "¿Qué nos da luz y calor durante el día?",
   "answer": "El Sol",
   "distractors": ["La Luna", "Una piedra", "Una nube"],
-  "explanation": "El Sol es una estrella que nos proporciona luz y calor."
+  "explanation": "El Sol es una estrella que nos proporciona luz y calor.",
+  "hint": "Piensa en lo que ves brillar en el cielo cuando es de día y sales a jugar al patio."
 }
 ```
 
@@ -48,6 +49,7 @@ Una ronda tiene cinco preguntas. En «Un poco de todo» toca una de cada materia
 | `answer` | La respuesta correcta, de 1 a 80 caracteres. |
 | `distractors` | Exactamente tres respuestas incorrectas. Las cuatro opciones deben ser distintas, sin importar mayúsculas. |
 | `explanation` | De 5 a 300 caracteres. Se dice tanto al acertar como al fallar. |
+| `hint` | De 5 a 300 caracteres. La pista que da el Cimarrón cuando el niño pregunta algo o pide ayuda. No debe contener la respuesta ni nombrar las opciones. |
 
 No se admiten campos adicionales.
 

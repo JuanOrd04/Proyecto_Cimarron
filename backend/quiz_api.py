@@ -1,12 +1,10 @@
 from typing import Literal
 
 from fastapi import APIRouter, HTTPException, Depends
-from fastapi.responses import JSONResponse
 from pydantic import BaseModel, Field
 
 from quiz_engine import quiz_service
 from quiz_llm import QuizModelUnavailable
-from quiz_preparation import QuizPreparing
 
 router = APIRouter(prefix='/quiz', tags=['Dinámica de primaria'])
 
@@ -42,8 +40,6 @@ def respond(action, *args):
         raise HTTPException(status_code=422, detail=str(exc)) from exc
     except QuizModelUnavailable as exc:
         raise HTTPException(status_code=503, detail=str(exc)) from exc
-    except QuizPreparing as exc:
-        return JSONResponse(status_code=202, content={'state': 'preparing', 'detail': str(exc), 'retry_after_ms': 500})
     audio = result.pop('_prepared_audio', None)
     result['audio'] = audio or speak(result['response'])
     return result
@@ -57,6 +53,12 @@ def prepare(request: StartRequest):
 @router.get('/prepare')
 def preparation_status(request: StartRequest = Depends()):
     return quiz_service.generator.status(request.grade, request.subject)
+
+
+@router.get('/fillers')
+def fillers():
+    get = getattr(quiz_service.generator, 'fillers', None)
+    return {'fillers': get() if get else []}
 
 
 @router.post('/start')

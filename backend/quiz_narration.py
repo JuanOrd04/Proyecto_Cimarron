@@ -6,6 +6,10 @@ def question_narration(question):
     return f'{question["prompt"]} {choices}.'
 
 
+def hint_text(question):
+    return f'Te doy una pista: {question["hint"]} ¿Cuál opción eliges?'
+
+
 def feedback_texts(question):
     """Retroalimentación de cada resultado; se fija al preparar la pregunta para sintetizar su voz con anticipación."""
     explanation = question['explanation']

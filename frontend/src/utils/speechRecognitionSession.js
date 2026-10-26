@@ -1,9 +1,18 @@
 // Una sesión entrega una sola respuesta y descarta transcripciones al cancelarse.
-export function createSpeechSession(recognition, { onStart, onText, onAnswer, onFinish, onError }) {
+// Escucha de forma continua y entrega la respuesta cuando el niño lleva un rato en silencio, para no cortarlo
+// cuando hace pausas ("eeh... la... la del sol").
+export function createSpeechSession(recognition, { onStart, onText, onAnswer, onFinish, onError },
+  { silenceMs = 1800, setTimer = setTimeout, clearTimer = clearTimeout } = {}) {
   let active = false;
   let transcript = '';
   let ending = false;
   let pendingStart = false;
+  let silenceTimer = null;
+
+  const stopTimer = () => {
+    if (silenceTimer !== null) clearTimer(silenceTimer);
+    silenceTimer = null;
+  };
 
   const start = () => {
     if (ending) { pendingStart = true; return; }
@@ -21,6 +30,7 @@ export function createSpeechSession(recognition, { onStart, onText, onAnswer, on
 
   const cancel = () => {
     pendingStart = false;
+    stopTimer();
     if (!active) return;
     active = false;
     transcript = '';
@@ -29,24 +39,30 @@ export function createSpeechSession(recognition, { onStart, onText, onAnswer, on
     try { recognition.abort(); } catch { ending = false; }
   };
 
+  const deliver = () => {
+    stopTimer();
+    if (!active) return;
+    const answer = transcript;
+    cancel();
+    if (answer) onAnswer(answer);
+  };
+
   recognition.onstart = () => { if (active) onStart(); };
   recognition.onresult = (event) => {
     if (!active) return;
     let final = '';
     let interim = '';
     for (const result of Array.from(event.results)) {
-      if (result.isFinal) final += result[0].transcript;
-      else interim += result[0].transcript;
+      if (result.isFinal) final += ` ${result[0].transcript}`;
+      else interim += ` ${result[0].transcript}`;
     }
-    transcript = (final || interim).trim();
+    transcript = `${final} ${interim}`.replace(/\s+/g, ' ').trim();
     onText(transcript);
-    if (final.trim()) {
-      const answer = final.trim();
-      cancel();
-      onAnswer(answer);
-    }
+    stopTimer();
+    if (transcript) silenceTimer = setTimer(deliver, silenceMs);
   };
   recognition.onend = () => {
+    stopTimer();
     if (!active) {
       ending = false;
       if (pendingStart) { pendingStart = false; start(); }
@@ -61,6 +77,7 @@ export function createSpeechSession(recognition, { onStart, onText, onAnswer, on
   };
   recognition.onerror = (event) => {
     if (!active) return;
+    if (event.error === 'no-speech' && transcript) { deliver(); return; }
     cancel();
     onError(event.error);
   };

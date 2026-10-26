@@ -34,14 +34,14 @@ class SharedModelTests(unittest.TestCase):
 
     def test_shared_client_does_not_mix_chat_history_with_quiz(self):
         llm = Mock(model_name='gemma2:2b', url=ollama_client.url)
-        llm.generate.side_effect = [json.dumps({'intent': 'answer', 'answer': 'El perro'}),
-                                    json.dumps({'concepts': ['El perro']}),
-                                    json.dumps({'status': 'correct', 'feedback': '¡Muy bien!'})]
+        llm.generate.side_effect = [json.dumps({'lo_que_dijo': 'el perrito', 'eleccion': 'A) El perro'}),
+                                    json.dumps({'feedback': '¡Eso, el perrito!'})]
         with patch('cimarron_agent.os.path.exists', return_value=False):
             agent = CimarronAgent(llm=llm)
         agent.history = ['Usuario: Cuéntame sobre ingeniería']
         question = {'prompt': '¿Qué animal es un mamífero?', 'answer': 'El perro',
-                    'options': ['El perro', 'La gallina'], 'explanation': 'Alimenta a sus crías con leche.'}
+                    'options': ['El perro', 'La gallina'], 'explanation': 'Alimenta a sus crías con leche.',
+                    'answer_kind': 'fact', 'hint': 'Piensa en un animal con pelo.'}
         response = OllamaQuizEvaluator(llm).evaluate(question, 'El perrito', 2)
         self.assertEqual(response['status'], 'correct')
         self.assertEqual(agent.history, ['Usuario: Cuéntame sobre ingeniería'])

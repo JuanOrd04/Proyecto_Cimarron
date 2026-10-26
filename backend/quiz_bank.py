@@ -9,17 +9,25 @@ from pathlib import Path
 import random
 import sqlite3
 import threading
+import time
 import uuid
 
 from pydantic import BaseModel, ConfigDict, Field, model_validator
 
 from quiz_curriculum import SUBJECTS, TOTAL
-from quiz_narration import feedback_texts, question_narration
+from quiz_narration import question_narration
 
 
 logger = logging.getLogger('QuizBank')
 BANK_PATH = Path(__file__).parent / 'data' / 'banco_preguntas.json'
 AUDIO_PATH = Path(__file__).parent / 'quiz_audio.sqlite3'
+# Muletillas que el Cimarrón dice mientras el LLM piensa su respuesta; no califican ni responden nada.
+FILLERS = [
+    '¡A ver, a ver!', 'Mmm, déjame pensar...', '¡Uy, interesante!', 'Órale, a ver qué me dijiste...',
+    'Déjame ver...', '¡Ajá! Un momentito...', 'Mmm, ¿será?', 'A ver, a ver, a ver...', '¡Ooh! Déjame revisar...',
+    'Mmm, okey, okey...', '¡Ándale! Déjame ver...', 'Eeh, un segundito...', 'Mmm, ¿qué será, qué será?',
+    '¡Uf! Déjame pensarle tantito...',
+]
 
 
 class BankQuestion(BaseModel):
@@ -32,6 +40,7 @@ class BankQuestion(BaseModel):
     answer: str = Field(min_length=1, max_length=80)
     distractors: list[str] = Field(min_length=3, max_length=3)
     explanation: str = Field(min_length=5, max_length=300)
+    hint: str = Field(min_length=5, max_length=300)
 
     @model_validator(mode='after')
     def valid_question(self):
@@ -56,13 +65,14 @@ def to_question(row):
     return {
         'id': row.id, 'bank_id': row.id, 'prompt': row.prompt, 'answer': row.answer, 'options': options,
         'answer_kind': 'number' if row.answer.isdigit() else 'fact', 'explanation': row.explanation,
-        'subject': SUBJECTS[row.subject], 'support': row.explanation, 'generation': {'source': 'bank'},
+        'hint': row.hint, 'subject': SUBJECTS[row.subject], 'support': row.explanation, 'generation': {'source': 'bank'},
         'grades': [row.min_grade, row.max_grade],
     }
 
 
 def spoken_texts(question):
-    return [question_narration(question), *feedback_texts(question).values()]
+    # La retroalimentación la redacta el LLM en cada turno; solo la narración de la pregunta se prepara.
+    return [question_narration(question)]
 
 
 class AudioCache:
@@ -70,6 +80,7 @@ class AudioCache:
         self.path = Path(path)
         with self._connect() as connection:
             connection.execute('CREATE TABLE IF NOT EXISTS audio (key TEXT PRIMARY KEY, wav TEXT)')
+            connection.execute('CREATE TABLE IF NOT EXISTS usage (bank_id TEXT PRIMARY KEY, times INTEGER, last REAL)')
 
     @contextmanager
     def _connect(self):
@@ -94,6 +105,17 @@ class AudioCache:
         with self._connect() as connection:
             connection.execute('INSERT OR REPLACE INTO audio VALUES (?, ?)', (self.key(text), wav))
 
+    def usage(self):
+        with self._connect() as connection:
+            return {row[0]: (row[1], row[2]) for row in connection.execute('SELECT bank_id, times, last FROM usage')}
+
+    def record_use(self, bank_ids):
+        now = time.time()
+        with self._connect() as connection:
+            for bank_id in bank_ids:
+                connection.execute('INSERT INTO usage VALUES (?, 1, ?) ON CONFLICT(bank_id) DO UPDATE '
+                                   'SET times = times + 1, last = excluded.last', (bank_id, now))
+
 
 def synthesize(text):
     from tts_engine import tts_service
@@ -101,8 +123,6 @@ def synthesize(text):
 
 
 class BankQuestionProvider:
-    prepares_rounds = True
-
     def __init__(self, bank=None, audio=None, synthesize=synthesize):
         self.questions = [to_question(row) for row in (bank if bank is not None else load_bank())]
         self.audio = audio or AudioCache()
@@ -132,27 +152,27 @@ class BankQuestionProvider:
 
     def generate_round(self, grade, subject, rng=None):
         rng = rng or random.Random()
+        usage = self.audio.usage()
         chosen = []
         for name in self.plan(subject, rng):
             pool = [q for q in self._pool(grade, name) if q not in chosen]
             if pool:
-                chosen.append(rng.choice(pool))
+                # Primero las que menos han salido, aunque se reinicie el servidor; entre ellas, al azar.
+                fewest = min(usage.get(q['bank_id'], (0, 0))[0] for q in pool)
+                chosen.append(rng.choice([q for q in pool if usage.get(q['bank_id'], (0, 0))[0] == fewest]))
         if len(chosen) < TOTAL:
             raise ValueError('El banco no tiene suficientes preguntas para ese grado y materia.')
+        self.audio.record_use([question['bank_id'] for question in chosen[:TOTAL]])
         round_questions = []
         for question in chosen[:TOTAL]:
             item = copy.deepcopy(question)
             item['id'] = str(uuid.uuid4())
             item['audio'] = self.audio.get(question_narration(item))
-            item['feedback_audio'] = {status: self.audio.get(text) for status, text in feedback_texts(item).items()}
             round_questions.append(item)
         return round_questions
 
-    def hold(self, session_id):
-        pass
-
-    def release(self, session_id):
-        pass
+    def fillers(self):
+        return [{'text': text, 'audio': audio} for text in FILLERS if (audio := self.audio.get(text))]
 
     def warm_audio(self):
         """Sintetiza en segundo plano las voces del banco que aún no están guardadas."""
@@ -161,7 +181,7 @@ class BankQuestionProvider:
             self.worker.start()
 
     def _warm(self):
-        pending = [text for question in self.questions for text in spoken_texts(question)]
+        pending = FILLERS + [text for question in self.questions for text in spoken_texts(question)]
         for text in pending:
             if self.closed:
                 return

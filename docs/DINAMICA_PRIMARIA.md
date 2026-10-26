@@ -15,7 +15,7 @@ El permiso de micrófono puede requerir una acción del usuario. Ante silencio, 
 
 ## De dónde salen las preguntas
 
-Del banco revisado [backend/data/banco_preguntas.json](../backend/data/banco_preguntas.json): 96 preguntas con respuesta, tres distractores, explicación, materia y rango de grados. «Un poco de todo» toma una pregunta de cada materia; una materia sola toma cinco preguntas distintas de ese grado. Las opciones se mezclan con un orden fijo por pregunta, así que la respuesta correcta no está siempre en la misma letra y la voz puede prepararse una sola vez. Para agregar o corregir preguntas consulta [la guía del banco](GENERACION_PREGUNTAS.md).
+Del banco revisado [backend/data/banco_preguntas.json](../backend/data/banco_preguntas.json): 298 preguntas (borrador por revisar con el maestro) con respuesta, tres distractores, explicación, pista, materia y rango de grados. «Un poco de todo» toma una pregunta de cada materia; una materia sola toma cinco preguntas distintas de ese grado. El programa recuerda qué preguntas ya salieron, aunque se reinicie, y elige primero las que menos se han usado, así que no se repiten hasta recorrer el banco. Las opciones se mezclan con un orden fijo por pregunta, así que la respuesta correcta no está siempre en la misma letra y la voz puede prepararse una sola vez. Para agregar o corregir preguntas consulta [la guía del banco](GENERACION_PREGUNTAS.md).
 
 ## Qué hace el modelo
 
