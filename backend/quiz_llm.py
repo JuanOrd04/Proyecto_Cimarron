@@ -45,8 +45,7 @@ class OllamaQuizEvaluator:
             result = assess_open_answer(self._request, question, text, grade, previous_turns, context)
         except (OllamaError, ValidationError, ValueError) as exc:
             logger.warning('Evaluación no disponible con %s: %s', self.model, type(exc).__name__)
-            raise QuizModelUnavailable('No pude interpretar tu respuesta en este momento. Revisa que Ollama esté abierto '
-                                       'y vuelve a intentarlo; tu pregunta sigue pendiente.') from exc
+            raise QuizModelUnavailable('¡Uy! Me quedé pensando. ¿Me lo dices otra vez?') from exc
         elapsed_ms = round((time.monotonic() - started) * 1000)
         logger.info('Respuesta interpretada por %s: %s (%s ms)', self.model, result['status'], elapsed_ms)
         return {**result, 'source': 'ollama', 'model': self.model, 'elapsed_ms': elapsed_ms}

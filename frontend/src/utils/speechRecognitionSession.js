@@ -96,9 +96,9 @@ export function createSpeechSession(recognition, { onStart, onText, onAnswer, on
 }
 
 export function speechErrorMessage(error) {
-  if (error === 'not-allowed' || error === 'service-not-allowed') return 'Permite el micrófono en el navegador y pulsa Reanudar voz. También puedes responder con los botones.';
-  if (error === 'no-speech') return 'No escuché una respuesta. Pulsa Hablar para intentarlo otra vez o Reanudar voz.';
-  if (error === 'network') return 'El navegador no pudo reconocer la voz. Revisa su conexión o responde con los botones.';
-  if (error === 'unsupported') return 'Este navegador no admite reconocimiento de voz. Puedes responder con los botones o escribiendo.';
-  return 'No pude activar el reconocimiento de voz. Pulsa Hablar para reintentar o responde con los botones.';
+  if (error === 'not-allowed' || error === 'service-not-allowed') return 'Necesito permiso para usar el micrófono. Pide ayuda a un adulto o toca una tarjeta.';
+  if (error === 'no-speech') return 'No te escuché. Pulsa Hablar y dime tu respuesta, o toca una tarjeta.';
+  if (error === 'network') return 'No te pude escuchar bien. Pulsa Hablar otra vez o toca una tarjeta.';
+  if (error === 'unsupported') return 'Aquí no te puedo escuchar. Toca una tarjeta o escribe tu respuesta.';
+  return 'No te pude escuchar. Pulsa Hablar otra vez o toca una tarjeta.';
 }

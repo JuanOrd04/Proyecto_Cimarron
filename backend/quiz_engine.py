@@ -23,7 +23,7 @@ class QuizService:
         session = self.sessions.get(session_id)
         if session is None or time.monotonic() - session['updated'] > 7200:
             self.sessions.pop(session_id, None)
-            raise KeyError('Esta dinámica terminó o se reinició el servidor. Inicia un juego nuevo.')
+            raise KeyError('Este juego ya terminó. ¡Empecemos otro!')
         session['updated'] = time.monotonic()
         return session
 

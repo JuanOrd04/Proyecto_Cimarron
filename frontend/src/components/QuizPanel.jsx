@@ -23,6 +23,8 @@ export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStar
   const [errorPreparacion, actualizarErrorPreparacion] = useState('');
   const [intentoPreparacion, actualizarIntentoPreparacion] = useState(0);
   const finished = game?.phase === 'finished';
+  // El Cimarrón reacciona a cada respuesta: brinca de gusto si acierta y anima si se equivoca.
+  const mood = game?.feedback?.correct === true ? 'mascot-happy' : game?.feedback?.correct === false ? 'mascot-cheer' : '';
 
   useEffect(() => {
     if (!setupOpen || game) return;
@@ -43,7 +45,7 @@ export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStar
         )}
         {(game || setupOpen) && <div className="quiz-actions">
           {game && !finished && <>
-            <span className={`quiz-voice-status ${voiceMode ? 'active' : ''}`} role="status"><span className="quiz-status-dot" aria-hidden="true" />{voiceMode ? voiceStatus : 'Voz pausada'}</span>
+            <span className={`quiz-voice-status ${voiceMode ? 'active' : ''}`} role="status"><span className="quiz-status-dot" aria-hidden="true" />{voiceMode ? voiceStatus : 'En pausa'}</span>
             <button className="quiz-voice-toggle" onClick={onToggleVoice} aria-pressed={voiceMode} aria-label={voiceMode ? 'Pausar voz automática' : 'Reanudar voz automática'} title={voiceMode ? 'Pausar voz' : 'Reanudar voz'}>{voiceMode ? <Mic size={20} /> : <MicOff size={20} />}</button>
           </>}
           <button className="quiz-exit" onClick={onEnd}>Volver al chat</button>
@@ -52,7 +54,10 @@ export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStar
 
       {setupOpen && !game && (
         <div className="quiz-setup-layout">
-          {avatar && <div className="quiz-setup-mascot">{avatar}</div>}
+          {avatar && <div className="quiz-setup-mascot">
+            <p className="mascot-hello">¡Hola! Soy el Cimarrón. ¿Jugamos?</p>
+            <div className="mascot-stage mascot-wave">{avatar}</div>
+          </div>}
           <form className="quiz-setup" onSubmit={(event) => { event.preventDefault(); onStart({ grade, subject }); }}>
             <div className="quiz-setup-welcome">
               <h3>¡Vamos a jugar!</h3>
@@ -70,12 +75,8 @@ export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStar
                 </select>
               </label>
             </div>
-            <div className="quiz-preparation" role="status">
-              <span>{preparacion?.state === 'ready' ? 'Listo' : errorPreparacion ? 'Preparación pendiente' : 'Preparando'}</span>
-              <span>{preparacion?.ready || 0} / {preparacion?.required || 5}</span>
-            </div>
-            {errorPreparacion && <p role="alert">{errorPreparacion} <button type="button" className="quiz-exit" onClick={() => actualizarIntentoPreparacion((intento) => intento + 1)}>Reintentar</button></p>}
-            <button type="submit" className="quiz-primary" disabled={busy || preparacion?.state !== 'ready'}>{busy ? 'Comenzando…' : 'Comenzar'}</button>
+            {errorPreparacion && <p className="quiz-kid-alert" role="alert">¡Uy! El Cimarrón todavía no está listo. <button type="button" className="quiz-exit" onClick={() => actualizarIntentoPreparacion((intento) => intento + 1)}>Intentar otra vez</button></p>}
+            <button type="submit" className="quiz-primary quiz-start" disabled={busy || preparacion?.state !== 'ready'}>{busy ? '¡Ahí vamos!' : preparacion?.state === 'ready' ? '¡Comenzar!' : 'Alistándome…'}</button>
           </form>
         </div>
       )}
@@ -93,7 +94,7 @@ export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStar
           {!finished && (
             <>
               <div className="quiz-presenter">
-                {avatar && <div className="quiz-mascot">{avatar}</div>}
+                {avatar && <div className={`quiz-mascot mascot-stage ${mood}`} key={mood + game.answered}>{avatar}</div>}
                 <h3 className="quiz-question">{game.question.prompt}</h3>
               </div>
               <QuizAnswers question={game.question} feedback={game.feedback} busy={busy} onAnswer={onAnswer} />
@@ -113,7 +114,7 @@ export default function QuizPanel({ game, setupOpen, busy, error, onOpen, onStar
 
           {finished && (
             <div className="quiz-presenter">
-              {avatar && <div className="quiz-mascot">{avatar}</div>}
+              {avatar && <div className="quiz-mascot mascot-stage mascot-happy">{avatar}</div>}
               <div className="quiz-result">
                 <Trophy size={38} aria-hidden="true" />
                 <h3>¡Ronda completa!</h3>

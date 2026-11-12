@@ -279,7 +279,9 @@ function App() {
       if (!response.ok) {
         retryAnswer = response.status === 422;
         if (response.status === 404) { gameRef.current = null; setGame(null); setShowGameSetup(true); }
-        throw new Error(typeof data.detail === 'string' ? data.detail : 'No pude preparar la dinámica. Inténtalo otra vez.');
+        // Los detalles técnicos se quedan en el servidor; al niño solo se le muestra un mensaje amable.
+        throw new Error(response.status === 422 && typeof data.detail === 'string' ? data.detail
+          : response.status === 404 ? 'Este juego ya terminó. ¡Empecemos otro!' : '¡Uy! Me quedé pensando. ¿Me lo dices otra vez?');
       }
       await fillerDone;
       if (controller.signal.aborted) return;
@@ -294,14 +296,14 @@ function App() {
         playAudioWithMouthSync(data.audio, (succeeded) => {
           narrationPendingRef.current = false;
           if (succeeded) continueByVoice(data);
-          else pauseVoice('No pude reproducir la voz. Puedes continuar con los botones o reanudar el modo de voz.');
+          else pauseVoice('No pude hablar esta vez. Toca una tarjeta para responder.');
         });
       } else {
-        pauseVoice('La voz no está disponible. Puedes continuar con los botones.');
+        pauseVoice('Ahorita no puedo hablar. Toca una tarjeta para responder.');
       }
     } catch (error) {
       if (error.name === 'AbortError' || controller.signal.aborted) return;
-      setGameError(error.message || 'No pude conectar con el servidor. Inténtalo otra vez.');
+      setGameError(error.message || '¡Uy! Me distraje. Inténtalo otra vez.');
       setIsLoading(false);
       if (retryAnswer && action === 'answer' && gameRef.current?.phase === 'question') continueByVoice(gameRef.current);
     }
@@ -380,7 +382,7 @@ function App() {
             apiBaseUrl={API_BASE_URL}
             game={game} setupOpen={showGameSetup} busy={isLoading} error={gameError}
             voiceMode={voiceMode} onToggleVoice={toggleVoiceMode}
-            voiceStatus={isLoading ? 'Pensando…' : isSpeaking ? 'Hablando' : isListening ? 'Escuchando' : 'Listo'}
+            voiceStatus={isLoading ? 'Pensando…' : isSpeaking ? 'Hablando' : isListening ? 'Te escucho' : 'Tu turno'}
             onOpen={() => endGame(true)} onStart={(settings) => {
               voiceModeRef.current = true;
               setVoiceMode(true);
